@@ -1,0 +1,55 @@
+---
+input_text: |
+  4.1 If: (a) an APP entity receives personal information; and (b) the entity did not solicit the information; the entity must, within a reasonable period after receiving the information, determine whether or not the entity could have collected the information under Australian Privacy Principle 3 if the entity had solicited the information.
+raw_completion_output: |-
+  provision_id: 4.1  
+  norms: The entity must, within a reasonable period after receiving the information, determine whether or not the entity could have collected the information under Australian Privacy Principle 3 if the entity did not solicit the information and receives personal information.  
+  disapplies:   
+  cross_references: Australian Privacy Principle 3  
+prompt: |+
+  Split the following piece of text into fields in the following format:
+
+  statement: <The condition in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this condition when the text points elsewhere for it, e.g. "4.3". Blank when the condition is stated here.>
+
+
+  Text:
+  receives personal information
+
+  ===
+
+extracted_object:
+  provision_id: '4.1'
+  norms:
+    - deontic_modality: OBLIGATION
+      bearer: AUTO:entity
+      action: 
+        AUTO:determine%20whether%20or%20not%20the%20entity%20could%20have%20collected%20the%20information
+      object: AUTO:the%20information
+      conditions:
+        - statement: <the entity did not solicit the information>
+          source_provision: <Blank>
+        - statement: <receives personal information>
+          source_provision: <Blank>
+named_entities:
+  - id: AUTO:entity
+    label: entity
+    original_spans:
+      - 19:24
+      - 69:74
+      - 113:118
+      - 215:220
+      - 303:308
+  - id: 
+      AUTO:determine%20whether%20or%20not%20the%20entity%20could%20have%20collected%20the%20information
+    label: determine whether or not the entity could have collected the 
+      information
+    original_spans:
+      - 186:257
+  - id: AUTO:the%20information
+    label: the information
+    original_spans:
+      - 92:106
+      - 169:183
+      - 243:257
+      - 324:338

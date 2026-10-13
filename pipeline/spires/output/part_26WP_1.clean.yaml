@@ -1,0 +1,10 @@
+provision_id: 26WP(1)
+norms:
+- deontic_modality: APPLICABILITY
+  bearer: AUTO:%5BNone%20specified%5D
+  action: AUTO:%5BNone%20specified%5D
+  object: AUTO:%5BNone%20specified%5D
+  conditions:
+  - statement: For the purposes of a secrecy provision that is a provision of a law of the Commonwealth.
+  exceptions:
+  - statement: other than this Act

@@ -1,0 +1,74 @@
+---
+input_text: |
+  26WL(1) (1) This section applies if: (a) an entity is aware that there are reasonable grounds to believe that there has been an eligible data breach of the entity; and (b) the entity has prepared a statement that: (i) complies with subsection 26WK(3); and (ii) relates to the eligible data breach that the entity has reasonable grounds to believe has happened. Notification
+raw_completion_output: |-
+  provision_id: 26WL(1)  
+  norms: This section applies if an entity is aware that there are reasonable grounds to believe that there has been an eligible data breach of the entity; This section applies if the entity has prepared a statement that complies with subsection 26WK(3); This section applies if the statement relates to the eligible data breach that the entity has reasonable grounds to believe has happened.
+  disapplies:   
+  cross_references: 26WK(3)
+prompt: |+
+  From the text below, extract the following entities in the following format:
+
+  statement: <The condition in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this condition when the text points elsewhere for it, e.g. "4.3". Blank when the condition is stated here.>
+
+
+  Text:
+  the entity has reasonable grounds to believe the eligible data breach has happened
+
+  ===
+
+extracted_object:
+  provision_id: 26WL(1)
+  norms:
+    - deontic_modality: APPLICABILITY
+      bearer: AUTO:entity
+      action: AUTO:applies
+    - deontic_modality: APPLICABILITY
+      bearer: AUTO:the%20entity
+      action: AUTO:applies
+      object: AUTO:This%20section
+      conditions:
+        - statement: <The entity has prepared a statement that complies with 
+            subsection 26WK(3).>
+          source_provision: <26WK(3)>
+    - deontic_modality: APPLICABILITY
+      bearer: AUTO:the%20entity
+      action: AUTO:relates
+      object: AUTO:the%20eligible%20data%20breach
+      conditions:
+        - statement: <The statement relates to the eligible data breach.>
+          source_provision: <Blank>
+        - statement: <The entity has reasonable grounds to believe the eligible 
+            data breach has happened.>
+          source_provision: <Blank>
+named_entities:
+  - id: AUTO:entity
+    label: entity
+    original_spans:
+      - 44:49
+      - 156:161
+      - 176:181
+      - 306:311
+  - id: AUTO:applies
+    label: applies
+    original_spans:
+      - 25:31
+  - id: AUTO:the%20entity
+    label: the entity
+    original_spans:
+      - 152:161
+      - 172:181
+      - 302:311
+  - id: AUTO:This%20section
+    label: This section
+    original_spans:
+      - 12:23
+  - id: AUTO:relates
+    label: relates
+    original_spans:
+      - 261:267
+  - id: AUTO:the%20eligible%20data%20breach
+    label: the eligible data breach
+    original_spans:
+      - 272:295

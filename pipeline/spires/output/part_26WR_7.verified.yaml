@@ -1,0 +1,6 @@
+provision_id: 26WR(7)
+norms:
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:Paragraph%20%286%29%28a%29
+  action: AUTO:limit
+  object: AUTO:the%20advice

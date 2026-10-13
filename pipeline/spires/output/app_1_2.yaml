@@ -1,0 +1,61 @@
+---
+input_text: |
+  1.2 An APP entity must take such steps as are reasonable in the circumstances to implement practices, procedures and systems relating to the entity's functions or activities that: (a) will ensure that the entity complies with the Australian Privacy Principles and a registered APP code (if any) that binds the entity; and (b) will enable the entity to deal with inquiries or complaints from individuals about the entity's compliance with the Australian Privacy Principles or such a code. APP Privacy policy
+raw_completion_output: |-
+  provision_id: 1.2  
+  norms: An APP entity must take such steps as are reasonable in the circumstances to implement practices, procedures and systems relating to the entity's functions or activities that will ensure that the entity complies with the Australian Privacy Principles and a registered APP code (if any) that binds the entity; An APP entity must take such steps as are reasonable in the circumstances to implement practices, procedures and systems relating to the entity's functions or activities that will enable the entity to deal with inquiries or complaints from individuals about the entity's compliance with the Australian Privacy Principles or such a code.  
+  disapplies:  
+  cross_references: Australian Privacy Principles
+prompt: |+
+  From the text below, extract the following entities in the following format:
+
+  deontic_modality: <The normative force. "must" is an OBLIGATION; "must not" is a PROHIBITION; "may" or "is authorised to" is a PERMISSION. If the provision's own work is to switch another provision OFF -- it says some other subclause "does not apply" -- then it is a DISAPPLICATION, whatever verbs appear in its limbs. If it merely states that other provisions apply, or is purely definitional, it is NONE.Must be one of: OBLIGATION, PROHIBITION, PERMISSION, DISAPPLICATION, NONE>
+  bearer: <The party on whom the norm falls, e.g. "APP entity", "organisation", "agency".>
+  action: <The regulated act, as a verb phrase, e.g. "use or disclose", "destroy", "de-identify", "deal with individuals who have identified themselves".>
+  object: <What the action is performed on, e.g. "personal information", "sensitive information", "biometric information".>
+  conditions: <The circumstances that must hold for this norm to apply at all, as a semicolon-separated list. These are triggers, not exceptions. A norm reading "if an entity holds information collected for a primary purpose, it must not use it for a secondary purpose" has both of those circumstances as conditions.>
+  exceptions: <The circumstances that switch this norm OFF, as a semicolon-separated list. Anything introduced by "unless", "does not apply if" or "other than" is an exception, not a condition. If the text contains such a clause you MUST return an entry here -- a norm stating "must not X unless Y" always has Y as an exception.>
+  scope_qualifier: <Any limit on the norm's reach, e.g. "in relation to that matter", "as soon as practicable", "within a reasonable period". Leave blank if unqualified.>
+
+
+  Text:
+  An APP entity must take such steps as are reasonable in the circumstances to implement practices, procedures and systems relating to the entity's functions or activities that will enable the entity to deal with inquiries or complaints from individuals about the entity's compliance with the Australian Privacy Principles or such a code.
+
+  ===
+
+extracted_object:
+  provision_id: '1.2'
+  norms:
+    - deontic_modality: OBLIGATION
+      bearer: AUTO:APP%20entity
+      action: 
+        AUTO:take%20such%20steps%20as%20are%20reasonable%20in%20the%20circumstances%20to%20implement%20practices%2C%20procedures%20and%20systems
+      object: 
+        AUTO:the%20entity%27s%20functions%20or%20activities%20that%20will%20ensure%20that%20the%20entity%20complies%20with%20the%20Australian%20Privacy%20Principles%20and%20a%20registered%20APP%20code%20%28if%20any%29%20that%20binds%20the%20entity
+    - deontic_modality: OBLIGATION
+      bearer: AUTO:APP%20entity
+      action: 
+        AUTO:take%20such%20steps%20as%20are%20reasonable%20in%20the%20circumstances%20to%20implement%20practices%2C%20procedures%20and%20systems
+      object: 
+        AUTO:the%20entity%27s%20functions%20or%20activities%20that%20will%20enable%20the%20entity%20to%20deal%20with%20inquiries%20or%20complaints%20from%20individuals%20about%20the%20entity%27s%20compliance%20with%20the%20Australian%20Privacy%20Principles%20or%20such%20a%20code
+named_entities:
+  - id: AUTO:APP%20entity
+    label: APP entity
+    original_spans:
+      - 7:16
+  - id: 
+      AUTO:take%20such%20steps%20as%20are%20reasonable%20in%20the%20circumstances%20to%20implement%20practices%2C%20procedures%20and%20systems
+    label: take such steps as are reasonable in the circumstances to implement 
+      practices, procedures and systems
+    original_spans:
+      - 23:123
+  - id: 
+      AUTO:the%20entity%27s%20functions%20or%20activities%20that%20will%20ensure%20that%20the%20entity%20complies%20with%20the%20Australian%20Privacy%20Principles%20and%20a%20registered%20APP%20code%20%28if%20any%29%20that%20binds%20the%20entity
+    label: the entity's functions or activities that will ensure that the entity
+      complies with the Australian Privacy Principles and a registered APP code 
+      (if any) that binds the entity
+  - id: 
+      AUTO:the%20entity%27s%20functions%20or%20activities%20that%20will%20enable%20the%20entity%20to%20deal%20with%20inquiries%20or%20complaints%20from%20individuals%20about%20the%20entity%27s%20compliance%20with%20the%20Australian%20Privacy%20Principles%20or%20such%20a%20code
+    label: the entity's functions or activities that will enable the entity to 
+      deal with inquiries or complaints from individuals about the entity's 
+      compliance with the Australian Privacy Principles or such a code

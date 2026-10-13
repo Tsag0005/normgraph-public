@@ -1,0 +1,30 @@
+provision_id: '12.9'
+norms:
+- deontic_modality: OBLIGATION
+  bearer: AUTO:APP%20entity
+  action: AUTO:give
+  object: AUTO:the%20individual%20a%20written%20notice%20that%20sets%20out%20the%20reasons%20for%20the%20refusal
+  conditions:
+  - statement: The APP entity refuses to give access to the personal information because of subclause
+      12.2 or 12.3, or to give access in the manner requested by the individual.
+    source_provision: 12.2, 12.3
+  exceptions:
+  - statement: except to the extent that, having regard to the grounds for the refusal, it would be unreasonable
+      to do so
+- deontic_modality: OBLIGATION
+  bearer: AUTO:APP%20entity
+  action: AUTO:give
+  object: AUTO:the%20individual%20a%20written%20notice%20that%20sets%20out%20the%20mechanisms%20available%20to%20complain%20about%20the%20refusal
+  conditions:
+  - statement: The APP entity refuses to give access to the personal information because of subclause
+      12.2 or 12.3.
+    source_provision: 12.2 or 12.3
+  - statement: The APP entity refuses to give access in the manner requested by the individual.
+- deontic_modality: OBLIGATION
+  bearer: AUTO:APP%20entity
+  action: AUTO:give
+  object: AUTO:the%20individual%20a%20written%20notice%20that%20sets%20out%20any%20other%20matter%20prescribed%20by%20the%20regulations
+  conditions:
+  - statement: The APP entity refuses to give access to the personal information.
+    source_provision: 12.2 or 12.3
+  - statement: The APP entity refuses to give access in the manner requested by the individual.

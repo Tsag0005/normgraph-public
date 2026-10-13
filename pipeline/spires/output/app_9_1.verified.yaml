@@ -1,0 +1,13 @@
+provision_id: '9.1'
+norms:
+- deontic_modality: PROHIBITION
+  bearer: AUTO:organisation
+  action: AUTO:adopt
+  object: AUTO:government%20related%20identifier%20of%20an%20individual%20as%20its%20own%20identifier%20of%20the%20individual
+  exceptions:
+  - statement: unless the adoption of the government related identifier is required or authorised by or
+      under an Australian law or a court/tribunal order
+    verified: true
+  - statement: unless subclause 9.3 applies in relation to the adoption
+    verified: true
+    source_provision: '9.3'

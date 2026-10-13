@@ -1,0 +1,117 @@
+---
+input_text: |
+  12.3 If the APP entity is an organisation then, despite subclause 12.1, the entity is not required to give the individual access to the personal information to the extent that: (a) the entity reasonably believes that giving access would pose a serious threat to the life, health or safety of any individual, or to public health or public safety; or (b) giving access would have an unreasonable impact on the privacy of other individuals; or (c) the request for access is frivolous or vexatious; or (d) the information relates to existing or anticipated legal proceedings between the entity and the individual, and would not be accessible by the process of discovery in those proceedings; or (e) giving access would reveal the intentions of the entity in relation to negotiations with the individual in such a way as to prejudice those negotiations; or (f) giving access would be unlawful; or (g) denying access is required or authorised by or under an Australian law or a court/tribunal order; or (h) both of the following apply: (i) the entity has reason to suspect that unlawful activity, or misconduct of a serious nature, that relates to the entity's functions or activities has been, is being or may be engaged in; (ii) giving access would be likely to prejudice the taking of appropriate action in relation to the matter; or (i) giving access would be likely to prejudice one or more enforcement related activities conducted by, or on behalf of, an enforcement body; or (j) giving access would reveal evaluative information generated within the entity in connection with a commercially sensitive decision-making process. Dealing with requests for access
+raw_completion_output: |-
+  ```plaintext
+  provision_id: 12.3
+  norms: Subclause 12.1 does not apply if the APP entity is an organisation and the entity reasonably believes that giving access would pose a serious threat to the life, health or safety of any individual, or to public health or public safety; Subclause 12.1 does not apply if the APP entity is an organisation and giving access would have an unreasonable impact on the privacy of other individuals; Subclause 12.1 does not apply if the APP entity is an organisation and the request for access is frivolous or vexatious; Subclause 12.1 does not apply if the APP entity is an organisation and the information relates to existing or anticipated legal proceedings between the entity and the individual, and would not be accessible by the process of discovery in those proceedings; Subclause 12.1 does not apply if the APP entity is an organisation and giving access would reveal the intentions of the entity in relation to negotiations with the individual in such a way as to prejudice those negotiations; Subclause 12.1 does not apply if the APP entity is an organisation and giving access would be unlawful; Subclause 12.1 does not apply if the APP entity is an organisation and denying access is required or authorised by or under an Australian law or a court/tribunal order; Subclause 12.1 does not apply if the APP entity is an organisation and both of the following apply: the entity has reason to suspect that unlawful activity, or misconduct of a serious nature, that relates to the entity's functions or activities has been, is being or may be engaged in, and giving access would be likely to prejudice the taking of appropriate action in relation to the matter; Subclause 12.1 does not apply if the APP entity is an organisation and giving access would be likely to prejudice one or more enforcement related activities conducted by, or on behalf of, an enforcement body; Subclause 12.1 does not apply if the APP entity is an organisation and giving access would reveal evaluative information generated within the entity in connection with a commercially sensitive decision-making process.
+  disapplies: 12.1
+  cross_references: 
+  ```
+prompt: |+
+  Split the following piece of text into fields in the following format:
+
+  statement: <The condition in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this condition when the text points elsewhere for it, e.g. "4.3". Blank when the condition is stated here.>
+
+
+  Text:
+  giving access would reveal evaluative information
+
+  ===
+
+extracted_object:
+  provision_id: '12.3'
+  norms:
+    - deontic_modality: DISAPPLICATION
+      bearer: AUTO:APP%20entity
+      action: AUTO:giving%20access
+    - deontic_modality: DISAPPLICATION
+      bearer: AUTO:APP%20entity
+      action: AUTO:Subclause%2012.1%20does%20not%20apply
+    - deontic_modality: DISAPPLICATION
+      bearer: AUTO:APP%20entity
+    - deontic_modality: DISAPPLICATION
+      bearer: AUTO:APP%20entity
+      action: AUTO:Subclause%2012.1%20apply
+    - deontic_modality: DISAPPLICATION
+      bearer: AUTO:APP%20entity
+    - deontic_modality: DISAPPLICATION
+      bearer: AUTO:APP%20entity
+    - deontic_modality: DISAPPLICATION
+      bearer: AUTO:APP%20entity
+      action: AUTO:%5Bnone%2C%20as%20this%20is%20a%20DISAPPLICATION%5D
+      object: AUTO:%5Bnone%2C%20as%20this%20is%20a%20DISAPPLICATION%5D
+      conditions:
+        - statement: <subclause 12.1 applies>
+          source_provision: <Blank>
+      exceptions:
+        - statement: <Denying access is required or authorised by or under an 
+            Australian law or a court/tribunal order.>
+          source_provision: <Blank>
+          is_exhaustive: <Blank>
+      scope_qualifier: '[none, as this is a DISAPPLICATION]'
+    - deontic_modality: DISAPPLICATION
+      bearer: AUTO:APP%20entity
+      action: AUTO:Subclause%2012.1%20does%20not%20apply
+    - deontic_modality: DISAPPLICATION
+      bearer: AUTO:APP%20entity
+      action: 
+        AUTO:%5BNo%20specific%20action%20is%20regulated%20as%20the%20provision%20is%20a%20disapplication.%5D
+      object: 
+        AUTO:%5BNo%20specific%20object%20is%20regulated%20as%20the%20provision%20is%20a%20disapplication.%5D
+      conditions:
+        - statement: <No specific conditions as the provision itself is the 
+            disapplication of another rule.>
+          source_provision: <Blank>
+      exceptions:
+        - statement: <The APP entity is an organisation.>
+          source_provision: <>
+          is_exhaustive: <>
+        - statement: <giving access would be likely to prejudice one or more 
+            enforcement-related activities conducted by, or on behalf of, an 
+            enforcement body>
+          source_provision: <>
+          is_exhaustive: <>
+      scope_qualifier: '[Leave blank as there is no scope qualifier present.]'
+    - deontic_modality: DISAPPLICATION
+      bearer: AUTO:APP%20entity
+      action: AUTO:giving%20access
+      object: AUTO:evaluative%20information%20generated%20within%20the%20entity
+      conditions:
+        - statement: the APP entity is an organisation
+        - statement: <giving access would reveal evaluative information>
+          source_provision: <Blank>
+  disapplies:
+    - '12.1'
+named_entities:
+  - id: AUTO:APP%20entity
+    label: APP entity
+    original_spans:
+      - 12:21
+  - id: AUTO:giving%20access
+    label: giving access
+    original_spans:
+      - 217:229
+      - 353:365
+      - 695:707
+      - 856:868
+      - 1225:1237
+      - 1335:1347
+      - 1480:1492
+  - id: AUTO:Subclause%2012.1%20does%20not%20apply
+    label: Subclause 12.1 does not apply
+  - id: AUTO:Subclause%2012.1%20apply
+    label: Subclause 12.1 apply
+  - id: AUTO:%5Bnone%2C%20as%20this%20is%20a%20DISAPPLICATION%5D
+    label: '[none, as this is a DISAPPLICATION]'
+  - id: 
+      AUTO:%5BNo%20specific%20action%20is%20regulated%20as%20the%20provision%20is%20a%20disapplication.%5D
+    label: '[No specific action is regulated as the provision is a disapplication.]'
+  - id: 
+      AUTO:%5BNo%20specific%20object%20is%20regulated%20as%20the%20provision%20is%20a%20disapplication.%5D
+    label: '[No specific object is regulated as the provision is a disapplication.]'
+  - id: AUTO:evaluative%20information%20generated%20within%20the%20entity
+    label: evaluative information generated within the entity
+    original_spans:
+      - 1507:1556

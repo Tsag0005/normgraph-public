@@ -1,0 +1,9 @@
+provision_id: 26WS
+norms:
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:Subsection%2026WR%281%29
+  action: AUTO:apply
+disapplies:
+- 26WR(1)
+cross_references:
+- 26WR(1)

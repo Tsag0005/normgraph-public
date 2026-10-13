@@ -1,0 +1,23 @@
+provision_id: '6.1'
+norms:
+- deontic_modality: PROHIBITION
+  bearer: AUTO:entity
+  action: AUTO:use%20or%20disclose
+  object: AUTO:the%20information
+  conditions:
+  - statement: the information is for a secondary purpose
+  exceptions:
+  - statement: the individual has consented to the use or disclosure of the information
+  - statement: unless the individual has consented to the use or disclosure of the information
+    verified: true
+- deontic_modality: PROHIBITION
+  bearer: AUTO:entity
+  action: AUTO:use%20or%20disclose
+  object: AUTO:the%20information
+  conditions:
+  - statement: for a secondary purpose
+  exceptions:
+  - statement: subclause 6.2 or 6.3 applies in relation to the use or disclosure of the information
+  - statement: unless subclause 6.2 or 6.3 applies in relation to the use or disclosure of the information
+    verified: true
+    source_provision: 6.2 or 6.3

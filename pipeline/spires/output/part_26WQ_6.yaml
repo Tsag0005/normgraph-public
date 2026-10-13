@@ -1,0 +1,83 @@
+---
+input_text: |
+  26WQ(6) (6) An application by an entity under paragraph (5)(b) may be expressed to be: (a) an application for a paragraph (1)(c) declaration; or (b) an application for a paragraph (1)(d) declaration; or (c) an application for: (i) a paragraph (1)(c) declaration; or (ii) in the event that the Commissioner is not disposed to make such a declaration - a paragraph (1)(d) declaration.
+raw_completion_output: |-
+  provision_id: 26WQ(6)  
+  norms: An application by an entity under paragraph (5)(b) may be expressed to be an application for a paragraph (1)(c) declaration; An application by an entity under paragraph (5)(b) may be expressed to be an application for a paragraph (1)(d) declaration; An application by an entity under paragraph (5)(b) may be expressed to be an application for a paragraph (1)(c) declaration or, in the event that the Commissioner is not disposed to make such a declaration, a paragraph (1)(d) declaration.  
+  disapplies:   
+  cross_references: (5)(b); (1)(c); (1)(d)
+prompt: |+
+  Split the following piece of text into fields in the following format:
+
+  statement: <The condition in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this condition when the text points elsewhere for it, e.g. "4.3". Blank when the condition is stated here.>
+
+
+  Text:
+  application by an entity under paragraph (5)(b)
+
+  ===
+
+extracted_object:
+  provision_id: 26WQ(6)
+  norms:
+    - deontic_modality: PERMISSION
+      bearer: AUTO:entity
+      action: 
+        AUTO:be%20expressed%20to%20be%20an%20application%20for%20a%20paragraph%20%281%29%28c%29%20declaration
+      object: 
+        AUTO:An%20application%20by%20an%20entity%20under%20paragraph%20%285%29%28b%29
+      conditions:
+        - statement: <None>
+          source_provision: <Blank>
+      exceptions:
+        - statement: None
+      scope_qualifier: None
+    - deontic_modality: PERMISSION
+      bearer: AUTO:entity
+      action: AUTO:be%20expressed
+      object: 
+        AUTO:an%20application%20for%20a%20paragraph%20%281%29%28d%29%20declaration
+      conditions:
+        - statement: <an application by an entity>
+          source_provision: <paragraph (5)(b)>
+    - deontic_modality: PERMISSION
+      bearer: AUTO:entity
+      action: AUTO:express
+      object: AUTO:application
+      conditions:
+        - statement: <application by an entity>
+          source_provision: <(5)(b)>
+named_entities:
+  - id: AUTO:entity
+    label: entity
+    original_spans:
+      - 33:38
+  - id: 
+      AUTO:be%20expressed%20to%20be%20an%20application%20for%20a%20paragraph%20%281%29%28c%29%20declaration
+    label: be expressed to be an application for a paragraph (1)(c) declaration
+  - id: 
+      AUTO:An%20application%20by%20an%20entity%20under%20paragraph%20%285%29%28b%29
+    label: An application by an entity under paragraph (5)(b)
+    original_spans:
+      - 12:61
+  - id: AUTO:be%20expressed
+    label: be expressed
+    original_spans:
+      - 67:78
+  - id: 
+      AUTO:an%20application%20for%20a%20paragraph%20%281%29%28d%29%20declaration
+    label: an application for a paragraph (1)(d) declaration
+    original_spans:
+      - 149:197
+  - id: AUTO:express
+    label: express
+    original_spans:
+      - 70:76
+  - id: AUTO:application
+    label: application
+    original_spans:
+      - 15:25
+      - 94:104
+      - 152:162
+      - 210:220

@@ -1,0 +1,47 @@
+provision_id: '5.2'
+norms:
+- deontic_modality: NONE
+  bearer: AUTO:APP%20entity
+- deontic_modality: NONE
+  bearer: AUTO:APP%20entity
+  action: AUTO:collects
+  object: AUTO:personal%20information
+  conditions:
+  - statement: The APP entity collects the personal information from someone other than the individual.
+  - statement: The individual may not be aware that the APP entity has collected the personal information.
+- deontic_modality: NONE
+- deontic_modality: NONE
+  bearer: AUTO:APP%20entity
+  action: AUTO:collects
+  object: AUTO:the%20personal%20information
+- deontic_modality: NONE
+  bearer: AUTO:APP%20entity
+  action: AUTO:discloses
+  object: AUTO:personal%20information%20of%20the%20kind%20collected%20by%20the%20entity
+  conditions:
+  - statement: any other APP entity, body or person, or the types of any other APP entities, bodies or
+      persons
+- deontic_modality: NONE
+  bearer: AUTO:APP%20entity
+  action: AUTO:contains%20information
+  object: AUTO:APP%20privacy%20policy
+- deontic_modality: NONE
+  bearer: AUTO:APP%20entity
+  action: AUTO:contains%20information
+  object: AUTO:how%20the%20individual%20may%20complain%20about%20a%20breach%20of%20the%20Australian%20Privacy%20Principles%2C%20or%20a%20registered%20APP%20code%2C%20if%20any%2C%20that%20binds%20the%20entity%2C%20and%20how%20the%20entity%20will%20deal%20with%20such%20a%20complaint
+  conditions:
+  - statement: for the purposes of subclause 5.1
+    source_provision: '5.1'
+- deontic_modality: NONE
+  bearer: AUTO:APP%20entity
+  action: AUTO:disclose
+  object: AUTO:personal%20information
+  conditions:
+  - statement: The APP entity is likely to disclose the personal information to overseas recipients.
+- deontic_modality: NONE
+  bearer: AUTO:APP%20entity
+  action: AUTO:disclose
+  object: AUTO:personal%20information
+  conditions:
+  - statement: APP entity is likely to disclose the personal information to overseas recipients.
+  - statement: It is practicable to specify those countries in the notification.

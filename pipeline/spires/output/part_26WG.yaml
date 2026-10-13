@@ -1,0 +1,133 @@
+---
+input_text: |
+  26WG Whether access or disclosure would be likely, or would not be likely, to result in serious harm - relevant matters For the purposes of this Division, in determining whether a reasonable person would conclude that an access to, or a disclosure of, information: (a) would be likely; or (b) would not be likely; to result in serious harm to any of the individuals to whom the information relates, have regard to the following: (c) the kind or kinds of information; (d) the sensitivity of the information; (e) whether the information is protected by one or more security measures; (f) if the information is protected by one or more security measures - the likelihood that any of those security measures could be overcome; (g) the persons, or the kinds of persons, who have obtained, or who could obtain, the information; (h) if a security technology or methodology: (i) was used in relation to the information; and (ii) was designed to make the information unintelligible or meaningless to persons who are not authorised to obtain the information; the likelihood that the persons, or the kinds of persons, who: (iii) have obtained, or who could obtain, the information; and (iv) have, or are likely to have, the intention of causing harm to any of the individuals to whom the information relates; have obtained, or could obtain, information or knowledge required to circumvent the security technology or methodology; (i) the nature of the harm; (j) any other relevant matters. Note: If the security technology or methodology mentioned in paragraph (h) is encryption, an encryption key is an example of information required to circumvent the security technology or methodology.
+raw_completion_output: |-
+  provision_id: 26WG  
+  norms: In determining whether a reasonable person would conclude that an access to, or a disclosure of, information would be likely to result in serious harm to any of the individuals to whom the information relates, have regard to the kind or kinds of information; In determining whether a reasonable person would conclude that an access to, or a disclosure of, information would be likely to result in serious harm to any of the individuals to whom the information relates, have regard to the sensitivity of the information; In determining whether a reasonable person would conclude that an access to, or a disclosure of, information would be likely to result in serious harm to any of the individuals to whom the information relates, have regard to whether the information is protected by one or more security measures; In determining whether a reasonable person would conclude that an access to, or a disclosure of, information would be likely to result in serious harm to any of the individuals to whom the information relates, have regard to the likelihood that any of those security measures could be overcome if the information is protected by one or more security measures; In determining whether a reasonable person would conclude that an access to, or a disclosure of, information would be likely to result in serious harm to any of the individuals to whom the information relates, have regard to the persons, or the kinds of persons, who have obtained, or who could obtain, the information; In determining whether a reasonable person would conclude that an access to, or a disclosure of, information would be likely to result in serious harm to any of the individuals to whom the information relates, have regard to the likelihood that the persons, or the kinds of persons, who have obtained, or who could obtain, the information, and who have, or are likely to have, the intention of causing harm to any of the individuals to whom the information relates, have obtained, or could obtain, information or knowledge required to circumvent the security technology or methodology if a security technology or methodology was used in relation to the information and was designed to make the information unintelligible or meaningless to persons who are not authorised to obtain the information; In determining whether a reasonable person would conclude that an access to, or a disclosure of, information would be likely to result in serious harm to any of the individuals to whom the information relates, have regard to the nature of the harm; In determining whether a reasonable person would conclude that an access to, or a disclosure of, information would be likely to result in serious harm to any of the individuals to whom the information relates, have regard to any other relevant matters.  
+  disapplies:  
+  cross_references:  
+prompt: |+
+  From the text below, extract the following entities in the following format:
+
+  statement: <The condition in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this condition when the text points elsewhere for it, e.g. "4.3". Blank when the condition is stated here.>
+
+
+  Text:
+  In determining whether a reasonable person would conclude that an access to, or a disclosure of, information would be likely to result in serious harm to any of the individuals to whom the information relates
+
+  ===
+
+extracted_object:
+  provision_id: 26WG
+  norms:
+    - deontic_modality: NONE
+      object: AUTO:the%20kind%20or%20kinds%20of%20information
+      conditions:
+        - statement: <An access to, or a disclosure of, information would be 
+            likely to result in serious harm to any of the individuals to whom 
+            the information relates.>
+          source_provision: <Blank>
+    - deontic_modality: NONE
+      object: AUTO:the%20sensitivity%20of%20the%20information
+      conditions:
+        - statement: <An access to, or a disclosure of, information would be 
+            likely to result in serious harm to any of the individuals to whom 
+            the information relates.>
+          source_provision: <Blank>
+    - deontic_modality: NONE
+      bearer: AUTO:reasonable%20person
+      action: AUTO:conclude
+      object: AUTO:access%20to%2C%20or%20a%20disclosure%20of%2C%20information
+      conditions:
+        - statement: <determining whether access or disclosure would likely 
+            result in serious harm to any of the individuals to whom the 
+            information relates.>
+          source_provision: <Blank>
+    - deontic_modality: NONE
+      object: 
+        AUTO:likelihood%20that%20any%20of%20those%20security%20measures%20could%20be%20overcome%20if%20the%20information%20is%20protected%20by%20one%20or%20more%20security%20measures
+      conditions:
+        - statement: <An access to, or a disclosure of, information would be 
+            likely to result in serious harm to any of the individuals to whom 
+            the information relates.>
+          source_provision: <Blank>
+    - deontic_modality: NONE
+      object: 
+        AUTO:the%20persons%2C%20or%20the%20kinds%20of%20persons%2C%20who%20have%20obtained%2C%20or%20who%20could%20obtain%2C%20the%20information
+      conditions:
+        - statement: <An access to, or a disclosure of, information would be 
+            likely to result in serious harm to any of the individuals to whom 
+            the information relates.>
+          source_provision: <Blank>
+    - deontic_modality: NONE
+      bearer: AUTO:reasonable%20person
+      action: AUTO:conclude
+      object: AUTO:access%20to%2C%20or%20a%20disclosure%20of%2C%20information
+      conditions:
+        - statement: <An access to, or a disclosure of, information would be 
+            likely to result in serious harm to any of the individuals to whom 
+            the information relates.>
+          source_provision: <Blank>
+    - deontic_modality: NONE
+      bearer: AUTO:reasonable%20person
+      action: AUTO:conclude
+      object: AUTO:access%20to%2C%20or%20a%20disclosure%20of%2C%20information
+      conditions:
+        - statement: <Access to, or disclosure of, information would likely 
+            result in serious harm to individuals to whom the information 
+            relates.>
+          source_provision: <Blank>
+    - deontic_modality: NONE
+      bearer: 
+        AUTO:%28Not%20explicitly%20stated%2C%20but%20implied%20to%20be%20the%20evaluating%20entity%20or%20person%29
+      action: AUTO:have%20regard
+      object: AUTO:any%20other%20relevant%20matters
+      conditions:
+        - statement: <An access to, or a disclosure of, information would be 
+            likely to result in serious harm to any of the individuals to whom 
+            the information relates.>
+          source_provision: <Blank>
+named_entities:
+  - id: AUTO:the%20kind%20or%20kinds%20of%20information
+    label: the kind or kinds of information
+    original_spans:
+      - 433:464
+  - id: AUTO:the%20sensitivity%20of%20the%20information
+    label: the sensitivity of the information
+    original_spans:
+      - 471:504
+  - id: AUTO:reasonable%20person
+    label: reasonable person
+    original_spans:
+      - 180:196
+  - id: AUTO:conclude
+    label: conclude
+    original_spans:
+      - 204:211
+  - id: AUTO:access%20to%2C%20or%20a%20disclosure%20of%2C%20information
+    label: access to, or a disclosure of, information
+    original_spans:
+      - 221:262
+  - id: 
+      AUTO:likelihood%20that%20any%20of%20those%20security%20measures%20could%20be%20overcome%20if%20the%20information%20is%20protected%20by%20one%20or%20more%20security%20measures
+    label: likelihood that any of those security measures could be overcome if 
+      the information is protected by one or more security measures
+  - id: 
+      AUTO:the%20persons%2C%20or%20the%20kinds%20of%20persons%2C%20who%20have%20obtained%2C%20or%20who%20could%20obtain%2C%20the%20information
+    label: the persons, or the kinds of persons, who have obtained, or who could
+      obtain, the information
+    original_spans:
+      - 727:819
+  - id: 
+      AUTO:%28Not%20explicitly%20stated%2C%20but%20implied%20to%20be%20the%20evaluating%20entity%20or%20person%29
+    label: (Not explicitly stated, but implied to be the evaluating entity or 
+      person)
+  - id: AUTO:have%20regard
+    label: have regard
+    original_spans:
+      - 399:409
+  - id: AUTO:any%20other%20relevant%20matters
+    label: any other relevant matters
+    original_spans:
+      - 1450:1475

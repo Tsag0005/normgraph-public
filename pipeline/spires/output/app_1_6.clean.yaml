@@ -1,0 +1,9 @@
+provision_id: '1.6'
+norms:
+- deontic_modality: OBLIGATION
+  bearer: AUTO:APP%20entity
+  action: AUTO:take%20such%20steps%20as%20are%20reasonable%20in%20the%20circumstances%20to%20give%20the%20person%20or%20body%20a%20copy%20in%20that%20form
+  object: AUTO:APP%20privacy%20policy
+  conditions:
+  - statement: A person or body requests a copy of the APP privacy policy of an APP entity in a particular
+      form.

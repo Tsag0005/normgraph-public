@@ -1,0 +1,57 @@
+---
+input_text: |
+  13.2 If: (a) the APP entity corrects personal information about an individual that the entity previously disclosed to another APP entity; and (b) the individual requests the entity to notify the other APP entity of the correction; the entity must take such steps (if any) as are reasonable in the circumstances to give that notification unless it is impracticable or unlawful to do so. Refusal to correct information
+raw_completion_output: |-
+  provision_id: 13.2  
+  norms: The APP entity must take such steps (if any) as are reasonable in the circumstances to notify the other APP entity of the correction if the APP entity corrects personal information about an individual that the entity previously disclosed to another APP entity and the individual requests the entity to notify the other APP entity of the correction unless it is impracticable or unlawful to do so.  
+  disapplies:  
+  cross_references:  
+prompt: |+
+  Split the following piece of text into fields in the following format:
+
+  statement: <The exception in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this exception, e.g. "6.2" or "6.2(b)". Blank when the exception is stated here in full.>
+  is_exhaustive: <"true" if the text signals these are the only exceptions, otherwise blank.>
+
+
+  Text:
+  unless it is impracticable or unlawful to do so
+
+  ===
+
+extracted_object:
+  provision_id: '13.2'
+  norms:
+    - deontic_modality: OBLIGATION
+      bearer: AUTO:APP%20entity
+      action: AUTO:notify%20the%20other%20APP%20entity%20of%20the%20correction
+      object: AUTO:personal%20information%20about%20an%20individual
+      conditions:
+        - statement: <The APP entity corrects personal information about an 
+            individual that the entity previously disclosed to another APP 
+            entity.>
+          source_provision: <Blank>
+        - statement: <The individual requests the entity to notify the other APP
+            entity of the correction.>
+          source_provision: <Blank>
+      exceptions:
+        - statement: <unless it is impracticable or unlawful to do so>
+          source_provision: <>
+          is_exhaustive: <>
+      scope_qualifier: take such steps (if any) as are reasonable in the 
+        circumstances
+named_entities:
+  - id: AUTO:APP%20entity
+    label: APP entity
+    original_spans:
+      - 17:26
+      - 126:135
+      - 201:210
+  - id: AUTO:notify%20the%20other%20APP%20entity%20of%20the%20correction
+    label: notify the other APP entity of the correction
+    original_spans:
+      - 184:228
+  - id: AUTO:personal%20information%20about%20an%20individual
+    label: personal information about an individual
+    original_spans:
+      - 37:76

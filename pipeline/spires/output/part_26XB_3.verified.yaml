@@ -1,0 +1,8 @@
+provision_id: 26XB(3)
+norms:
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:entity
+  action: AUTO:be%20liable%20to%20any%20proceedings
+  object: AUTO:duty%20of%20confidence%20in%20respect%20of%20a%20disclosure%20of%20personal%20information
+  conditions:
+  - statement: Disclosure of personal information is authorised by subsection (1).

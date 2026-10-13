@@ -1,0 +1,6 @@
+provision_id: '1.3'
+norms:
+- deontic_modality: OBLIGATION
+  bearer: AUTO:APP%20entity
+  action: AUTO:have
+  object: AUTO:a%20clearly%20expressed%20and%20up-to-date%20policy%20about%20the%20management%20of%20personal%20information%20by%20the%20entity

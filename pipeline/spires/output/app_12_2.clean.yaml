@@ -1,0 +1,24 @@
+provision_id: '12.2'
+norms:
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:APP%20entity
+  action: AUTO:give%20access
+  object: AUTO:personal%20information
+  conditions:
+  - statement: APP entity is an agency
+  exceptions:
+  - statement: APP entity is required or authorised to refuse by or under the Freedom of Information Act.
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:APP%20entity
+  action: AUTO:give%20access%20to
+  object: AUTO:personal%20information
+  conditions:
+  - statement: APP entity is an agency
+  - statement: APP entity is required or authorised by or under any other Act of the Commonwealth, or
+      a law in force in an external Territory, to refuse access.
+  - statement: law provides for access by persons to documents
+disapplies:
+- '12.1'
+cross_references:
+- '12.1'
+- Freedom of Information Act

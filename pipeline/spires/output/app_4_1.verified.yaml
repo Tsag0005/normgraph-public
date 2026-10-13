@@ -1,0 +1,9 @@
+provision_id: '4.1'
+norms:
+- deontic_modality: OBLIGATION
+  bearer: AUTO:entity
+  action: AUTO:determine%20whether%20or%20not%20the%20entity%20could%20have%20collected%20the%20information
+  object: AUTO:the%20information
+  conditions:
+  - statement: the entity did not solicit the information
+  - statement: receives personal information

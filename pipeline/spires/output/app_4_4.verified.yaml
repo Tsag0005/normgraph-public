@@ -1,0 +1,14 @@
+provision_id: '4.4'
+norms:
+- deontic_modality: DISAPPLICATION
+- deontic_modality: NONE
+  bearer: AUTO:Australian%20Privacy%20Principles%205%20to%2013
+  action: AUTO:apply
+  object: AUTO:the%20information
+  conditions:
+  - statement: The entity had collected the information under Australian Privacy Principle 3.
+disapplies:
+- '4.3'
+cross_references:
+- Australian Privacy Principle 3
+- Australian Privacy Principles 5 to 13

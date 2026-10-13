@@ -1,0 +1,48 @@
+---
+input_text: |
+  26XH(2) (2) If the Commonwealth and the person do not agree on the amount of the compensation, the person may institute proceedings in the Federal Court of Australia or the Supreme Court of a State or Territory for the recovery from the Commonwealth of such reasonable amount of compensation as the court determines.
+raw_completion_output: |-
+  provision_id: 26XH(2)  
+  norms: If the Commonwealth and the person do not agree on the amount of the compensation, the person may institute proceedings in the Federal Court of Australia or the Supreme Court of a State or Territory for the recovery from the Commonwealth of such reasonable amount of compensation as the court determines.  
+  disapplies:   
+  cross_references:   
+prompt: |+
+  From the text below, extract the following entities in the following format:
+
+  statement: <The condition in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this condition when the text points elsewhere for it, e.g. "4.3". Blank when the condition is stated here.>
+
+
+  Text:
+  If the Commonwealth and the person do not agree on the amount of the compensation
+
+  ===
+
+extracted_object:
+  provision_id: 26XH(2)
+  norms:
+    - deontic_modality: PERMISSION
+      bearer: AUTO:the%20person
+      action: AUTO:institute%20proceedings
+      object: 
+        AUTO:the%20recovery%20from%20the%20Commonwealth%20of%20such%20reasonable%20amount%20of%20compensation%20as%20the%20court%20determines
+      conditions:
+        - statement: <If the Commonwealth and the person do not agree on the 
+            amount of the compensation>
+          source_provision: <Blank>
+named_entities:
+  - id: AUTO:the%20person
+    label: the person
+    original_spans:
+      - 36:45
+      - 95:104
+  - id: AUTO:institute%20proceedings
+    label: institute proceedings
+    original_spans:
+      - 110:130
+  - id: 
+      AUTO:the%20recovery%20from%20the%20Commonwealth%20of%20such%20reasonable%20amount%20of%20compensation%20as%20the%20court%20determines
+    label: the recovery from the Commonwealth of such reasonable amount of 
+      compensation as the court determines
+    original_spans:
+      - 215:314

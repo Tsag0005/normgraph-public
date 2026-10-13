@@ -1,0 +1,42 @@
+provision_id: '12.3'
+norms:
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:APP%20entity
+  action: AUTO:giving%20access
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:APP%20entity
+  action: AUTO:Subclause%2012.1%20does%20not%20apply
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:APP%20entity
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:APP%20entity
+  action: AUTO:Subclause%2012.1%20apply
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:APP%20entity
+  action: AUTO:%5Bnone%2C%20as%20this%20is%20a%20DISAPPLICATION%5D
+  object: AUTO:%5Bnone%2C%20as%20this%20is%20a%20DISAPPLICATION%5D
+  scope_qualifier: '[none, as this is a DISAPPLICATION]'
+  conditions:
+  - statement: subclause 12.1 applies
+  exceptions:
+  - statement: Denying access is required or authorised by or under an Australian law or a court/tribunal
+      order.
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:APP%20entity
+  action: AUTO:%5BNo%20specific%20action%20is%20regulated%20as%20the%20provision%20is%20a%20disapplication.%5D
+  object: AUTO:%5BNo%20specific%20object%20is%20regulated%20as%20the%20provision%20is%20a%20disapplication.%5D
+  conditions:
+  - statement: No specific conditions as the provision itself is the disapplication of another rule.
+  exceptions:
+  - statement: The APP entity is an organisation.
+  - statement: giving access would be likely to prejudice one or more enforcement-related activities conducted
+      by, or on behalf of, an enforcement body
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:APP%20entity
+  action: AUTO:giving%20access
+  object: AUTO:evaluative%20information%20generated%20within%20the%20entity
+  conditions:
+  - statement: the APP entity is an organisation
+  - statement: giving access would reveal evaluative information
+disapplies:
+- '12.1'

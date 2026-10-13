@@ -1,0 +1,6 @@
+provision_id: 26WQ(4)
+norms:
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:Commissioner
+  action: AUTO:have%20regard
+  object: AUTO:advice

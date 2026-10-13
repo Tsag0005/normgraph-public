@@ -1,0 +1,17 @@
+provision_id: '13.1'
+norms:
+- deontic_modality: OBLIGATION
+  bearer: AUTO:APP%20entity
+  action: AUTO:take%20such%20steps%20%28if%20any%29%20as%20are%20reasonable%20in%20the%20circumstances%20to%20correct%20that%20information
+  object: AUTO:personal%20information
+  conditions:
+  - statement: APP entity holds personal information about an individual.
+  - statement: The entity is satisfied that, having regard to a purpose for which the information is held,
+      the information is inaccurate, out-of-date, incomplete, irrelevant or misleading.
+- deontic_modality: OBLIGATION
+  bearer: AUTO:APP%20entity
+  action: AUTO:take%20such%20steps%20%28if%20any%29%20as%20are%20reasonable%20in%20the%20circumstances%20to%20correct%20that%20information
+  object: AUTO:personal%20information%20about%20an%20individual
+  conditions:
+  - statement: APP entity holds personal information about an individual.
+  - statement: The individual requests the entity to correct the information.

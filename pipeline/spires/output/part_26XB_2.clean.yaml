@@ -1,0 +1,11 @@
+provision_id: 26XB(2)
+norms:
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:entity
+  action: AUTO:contravening
+  object: AUTO:a%20secrecy%20provision%20in%20respect%20of%20a%20use%20or%20disclosure%20of%20personal%20information
+  conditions:
+  - statement: use or disclosure of personal information authorised by subsection (1)
+    source_provision: (1)
+  exceptions:
+  - statement: unless the secrecy provision is a designated secrecy provision

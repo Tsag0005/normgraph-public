@@ -1,0 +1,23 @@
+provision_id: '12.4'
+norms:
+- deontic_modality: OBLIGATION
+  bearer: AUTO:APP%20entity
+  action: AUTO:respond%20to%20the%20request%20for%20access
+  object: AUTO:personal%20information
+  conditions:
+  - statement: The entity is an agency.
+  - statement: the request for access to the personal information
+- deontic_modality: OBLIGATION
+  bearer: AUTO:APP%20entity
+  action: AUTO:respond%20to%20the%20request%20for%20access
+  object: AUTO:personal%20information
+  conditions:
+  - statement: The entity is an organisation.
+  - statement: the request is made
+- deontic_modality: OBLIGATION
+  bearer: AUTO:APP%20entity
+  action: AUTO:give%20access
+  object: AUTO:the%20information
+  conditions:
+  - statement: the individual requests access in a certain manner
+  - statement: it is reasonable and practicable to do so

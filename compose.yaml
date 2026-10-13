@@ -1,0 +1,34 @@
+services:
+  api:
+    build:
+      context: .
+      target: api
+    restart: unless-stopped
+    environment:
+      PIPELINE_UI_HOST: 0.0.0.0
+      PORT: 8765
+      PIPELINE_UI_SCRATCH: /tmp/normgraph-visitors
+      ONTOGPT: /app/.venv-ontogpt/bin/ontogpt
+    tmpfs:
+      - /tmp/normgraph-visitors:size=1g,mode=1777
+    security_opt:
+      - no-new-privileges:true
+  web:
+    build:
+      context: .
+      target: web
+    depends_on:
+      - api
+    restart: unless-stopped
+    environment:
+      SITE_ADDRESS: ${SITE_ADDRESS:-:80}
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - caddy_data:/data
+      - caddy_config:/config
+
+volumes:
+  caddy_data:
+  caddy_config:

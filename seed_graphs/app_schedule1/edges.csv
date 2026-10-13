@@ -1,0 +1,786 @@
+from_key,rel,to_key
+provision:1.1,SP_HAS_NORM,norm:1.1:1
+norm:1.1:1,SP_BEARER,SP_Actor:app entities
+norm:1.1:1,SP_ACTION,SP_Action:manage
+norm:1.1:1,SP_OBJECT,SP_InfoType:personal information
+provision:1.2,SP_HAS_NORM,norm:1.2:1
+norm:1.2:1,SP_BEARER,SP_Actor:app entity
+norm:1.2:1,SP_ACTION,"SP_Action:take such steps as are reasonable in the circumstances to implement practices, procedures and systems"
+norm:1.2:1,SP_OBJECT,SP_InfoType:the entity's functions or activities that will ensure that the entity complies with the australian privacy principles and a registered app code (if any) that binds the entity
+provision:1.2,SP_HAS_NORM,norm:1.2:2
+norm:1.2:2,SP_BEARER,SP_Actor:app entity
+norm:1.2:2,SP_ACTION,"SP_Action:take such steps as are reasonable in the circumstances to implement practices, procedures and systems"
+norm:1.2:2,SP_OBJECT,SP_InfoType:the entity's functions or activities that will enable the entity to deal with inquiries or complaints from individuals about the entity's compliance with the australian privacy principles or such a code
+provision:1.3,SP_HAS_NORM,norm:1.3:1
+norm:1.3:1,SP_BEARER,SP_Actor:app entity
+norm:1.3:1,SP_ACTION,SP_Action:have
+norm:1.3:1,SP_OBJECT,SP_InfoType:a clearly expressed and up-to-date policy about the management of personal information by the entity
+provision:1.4,SP_HAS_NORM,norm:1.4:1
+norm:1.4:1,SP_BEARER,SP_Actor:app entity
+norm:1.4:1,SP_ACTION,SP_Action:contain
+norm:1.4:1,SP_OBJECT,SP_InfoType:the kinds of personal information that the entity collects and holds
+norm:1.4:1,SP_CONDITION,sp_condition:1.4:1:1
+provision:1.4,SP_HAS_NORM,norm:1.4:2
+norm:1.4:2,SP_BEARER,SP_Actor:app entity
+norm:1.4:2,SP_ACTION,SP_Action:contain
+norm:1.4:2,SP_OBJECT,SP_InfoType:how the entity collects and holds personal information
+provision:1.4,SP_HAS_NORM,norm:1.4:3
+norm:1.4:3,SP_BEARER,SP_Actor:app entity
+norm:1.4:3,SP_ACTION,SP_Action:contain
+norm:1.4:3,SP_OBJECT,"SP_InfoType:the purposes for which the entity collects, holds, uses and discloses personal information"
+provision:1.4,SP_HAS_NORM,norm:1.4:4
+norm:1.4:4,SP_BEARER,SP_Actor:app entity
+norm:1.4:4,SP_ACTION,SP_Action:contain
+norm:1.4:4,SP_OBJECT,SP_InfoType:how an individual may access personal information about the individual that is held by the entity and seek the correction of such information
+norm:1.4:4,SP_CONDITION,sp_condition:1.4:4:1
+provision:1.4,SP_HAS_NORM,norm:1.4:5
+norm:1.4:5,SP_BEARER,SP_Actor:app entity
+norm:1.4:5,SP_ACTION,SP_Action:contain
+norm:1.4:5,SP_OBJECT,"SP_InfoType:how an individual may complain about a breach of the australian privacy principles, or a registered app code (if any) that binds the entity, and how the entity will deal with such a complaint"
+norm:1.4:5,SP_CONDITION,sp_condition:1.4:5:1
+provision:1.4,SP_HAS_NORM,norm:1.4:6
+norm:1.4:6,SP_BEARER,SP_Actor:app entity
+norm:1.4:6,SP_ACTION,SP_Action:contain
+norm:1.4:6,SP_OBJECT,SP_InfoType:whether the entity is likely to disclose personal information to overseas recipients
+provision:1.4,SP_HAS_NORM,norm:1.4:7
+norm:1.4:7,SP_BEARER,SP_Actor:app entity
+norm:1.4:7,SP_ACTION,SP_Action:contain
+norm:1.4:7,SP_OBJECT,SP_InfoType:the countries in which overseas recipients are likely to be located
+norm:1.4:7,SP_CONDITION,sp_condition:1.4:7:1
+provision:1.5,SP_HAS_NORM,norm:1.5:1
+norm:1.5:1,SP_BEARER,SP_Actor:app entity
+norm:1.5:1,SP_ACTION,SP_Action:take such steps as are reasonable in the circumstances to make its app privacy policy available free of charge
+norm:1.5:1,SP_OBJECT,SP_InfoType:app privacy policy
+provision:1.5,SP_HAS_NORM,norm:1.5:2
+norm:1.5:2,SP_BEARER,SP_Actor:app entity
+norm:1.5:2,SP_ACTION,SP_Action:take such steps as are reasonable in the circumstances to make available
+norm:1.5:2,SP_OBJECT,SP_InfoType:its app privacy policy
+provision:1.6,SP_HAS_NORM,norm:1.6:1
+norm:1.6:1,SP_BEARER,SP_Actor:app entity
+norm:1.6:1,SP_ACTION,SP_Action:take such steps as are reasonable in the circumstances to give the person or body a copy in that form
+norm:1.6:1,SP_OBJECT,SP_InfoType:app privacy policy
+norm:1.6:1,SP_CONDITION,sp_condition:1.6:1:1
+provision:10.1,SP_HAS_NORM,norm:10.1:1
+norm:10.1:1,SP_BEARER,SP_Actor:app entity
+norm:10.1:1,SP_ACTION,SP_Action:take such steps as are reasonable in the circumstances to ensure
+norm:10.1:1,SP_OBJECT,SP_InfoType:personal information that the entity collects
+provision:10.2,SP_HAS_NORM,norm:10.2:1
+norm:10.2:1,SP_BEARER,SP_Actor:app entity
+norm:10.2:1,SP_ACTION,SP_Action:take such steps as are reasonable in the circumstances to ensure
+norm:10.2:1,SP_OBJECT,SP_InfoType:the personal information that the entity uses or discloses
+norm:10.2:1,SP_CONDITION,sp_condition:10.2:1:1
+provision:11.1,SP_HAS_NORM,norm:11.1:1
+norm:11.1:1,SP_BEARER,SP_Actor:app entity
+norm:11.1:1,SP_ACTION,SP_Action:take such steps as are reasonable in the circumstances to protect
+norm:11.1:1,SP_OBJECT,SP_InfoType:the information
+norm:11.1:1,SP_CONDITION,sp_condition:11.1:1:1
+provision:11.1,SP_HAS_NORM,norm:11.1:2
+norm:11.1:2,SP_BEARER,SP_Actor:app entity
+norm:11.1:2,SP_ACTION,SP_Action:take such steps as are reasonable in the circumstances to protect
+norm:11.1:2,SP_OBJECT,SP_InfoType:personal information
+norm:11.1:2,SP_CONDITION,sp_condition:11.1:2:1
+provision:11.2,SP_HAS_NORM,norm:11.2:1
+norm:11.2:1,SP_BEARER,SP_Actor:app entity
+norm:11.2:1,SP_ACTION,SP_Action:take such steps as are reasonable in the circumstances to destroy the information or to ensure that the information is de-identified
+norm:11.2:1,SP_OBJECT,SP_InfoType:personal information about an individual
+norm:11.2:1,SP_CONDITION,sp_condition:11.2:1:1
+norm:11.2:1,SP_CONDITION,sp_condition:11.2:1:2
+norm:11.2:1,SP_CONDITION,sp_condition:11.2:1:3
+norm:11.2:1,SP_EXCEPTION,sp_exemption:11.2:1:1
+provision:11.3,SP_HAS_NORM,norm:11.3:1
+provision:12.1,SP_HAS_NORM,norm:12.1:1
+norm:12.1:1,SP_BEARER,SP_Actor:app entity
+norm:12.1:1,SP_ACTION,SP_Action:give access
+norm:12.1:1,SP_OBJECT,SP_InfoType:the information
+norm:12.1:1,SP_CONDITION,sp_condition:12.1:1:1
+norm:12.1:1,SP_CONDITION,sp_condition:12.1:1:2
+provision:12.10,SP_HAS_NORM,norm:12.10:1
+norm:12.10:1,SP_BEARER,SP_Actor:app entity
+norm:12.10:1,SP_ACTION,SP_Action:refuse to give access
+norm:12.10:1,SP_OBJECT,SP_InfoType:personal information
+norm:12.10:1,SP_CONDITION,sp_condition:12.10:1:1
+provision:12.2,SP_HAS_NORM,norm:12.2:1
+norm:12.2:1,SP_BEARER,SP_Actor:app entity
+norm:12.2:1,SP_ACTION,SP_Action:give access
+norm:12.2:1,SP_OBJECT,SP_InfoType:personal information
+norm:12.2:1,SP_CONDITION,sp_condition:12.2:1:1
+norm:12.2:1,SP_EXCEPTION,sp_exemption:12.2:1:1
+provision:12.2,SP_HAS_NORM,norm:12.2:2
+norm:12.2:2,SP_BEARER,SP_Actor:app entity
+norm:12.2:2,SP_ACTION,SP_Action:give access to
+norm:12.2:2,SP_OBJECT,SP_InfoType:personal information
+norm:12.2:2,SP_CONDITION,sp_condition:12.2:2:1
+norm:12.2:2,SP_CONDITION,sp_condition:12.2:2:2
+norm:12.2:2,SP_CONDITION,sp_condition:12.2:2:3
+provision:12.3,SP_HAS_NORM,norm:12.3:1
+norm:12.3:1,SP_BEARER,SP_Actor:app entity
+norm:12.3:1,SP_ACTION,SP_Action:giving access
+provision:12.3,SP_HAS_NORM,norm:12.3:2
+norm:12.3:2,SP_BEARER,SP_Actor:app entity
+norm:12.3:2,SP_ACTION,SP_Action:subclause 12.1 does not apply
+provision:12.3,SP_HAS_NORM,norm:12.3:3
+norm:12.3:3,SP_BEARER,SP_Actor:app entity
+provision:12.3,SP_HAS_NORM,norm:12.3:4
+norm:12.3:4,SP_BEARER,SP_Actor:app entity
+norm:12.3:4,SP_ACTION,SP_Action:subclause 12.1 apply
+provision:12.3,SP_HAS_NORM,norm:12.3:5
+norm:12.3:5,SP_BEARER,SP_Actor:app entity
+norm:12.3:5,SP_ACTION,"SP_Action:[none, as this is a disapplication]"
+norm:12.3:5,SP_OBJECT,"SP_InfoType:[none, as this is a disapplication]"
+norm:12.3:5,SP_CONDITION,sp_condition:12.3:5:1
+norm:12.3:5,SP_EXCEPTION,sp_exemption:12.3:5:1
+provision:12.3,SP_HAS_NORM,norm:12.3:6
+norm:12.3:6,SP_BEARER,SP_Actor:app entity
+norm:12.3:6,SP_ACTION,SP_Action:[no specific action is regulated as the provision is a disapplication.]
+norm:12.3:6,SP_OBJECT,SP_InfoType:[no specific object is regulated as the provision is a disapplication.]
+norm:12.3:6,SP_CONDITION,sp_condition:12.3:6:1
+norm:12.3:6,SP_EXCEPTION,sp_exemption:12.3:6:1
+norm:12.3:6,SP_EXCEPTION,sp_exemption:12.3:6:2
+provision:12.3,SP_HAS_NORM,norm:12.3:7
+norm:12.3:7,SP_BEARER,SP_Actor:app entity
+norm:12.3:7,SP_ACTION,SP_Action:giving access
+norm:12.3:7,SP_OBJECT,SP_InfoType:evaluative information generated within the entity
+norm:12.3:7,SP_CONDITION,sp_condition:12.3:7:1
+norm:12.3:7,SP_CONDITION,sp_condition:12.3:7:2
+provision:12.4,SP_HAS_NORM,norm:12.4:1
+norm:12.4:1,SP_BEARER,SP_Actor:app entity
+norm:12.4:1,SP_ACTION,SP_Action:respond to the request for access
+norm:12.4:1,SP_OBJECT,SP_InfoType:personal information
+norm:12.4:1,SP_CONDITION,sp_condition:12.4:1:1
+norm:12.4:1,SP_CONDITION,sp_condition:12.4:1:2
+provision:12.4,SP_HAS_NORM,norm:12.4:2
+norm:12.4:2,SP_BEARER,SP_Actor:app entity
+norm:12.4:2,SP_ACTION,SP_Action:respond to the request for access
+norm:12.4:2,SP_OBJECT,SP_InfoType:personal information
+norm:12.4:2,SP_CONDITION,sp_condition:12.4:2:1
+norm:12.4:2,SP_CONDITION,sp_condition:12.4:2:2
+provision:12.4,SP_HAS_NORM,norm:12.4:3
+norm:12.4:3,SP_BEARER,SP_Actor:app entity
+norm:12.4:3,SP_ACTION,SP_Action:give access
+norm:12.4:3,SP_OBJECT,SP_InfoType:the information
+norm:12.4:3,SP_CONDITION,sp_condition:12.4:3:1
+norm:12.4:3,SP_CONDITION,sp_condition:12.4:3:2
+provision:12.5,SP_HAS_NORM,norm:12.5:1
+norm:12.5:1,SP_BEARER,SP_Actor:the entity
+norm:12.5:1,SP_ACTION,SP_Action:take such steps as are reasonable in the circumstances to give access in a way that meets the needs of the entity and the individual
+norm:12.5:1,SP_OBJECT,SP_InfoType:personal information
+norm:12.5:1,SP_CONDITION,sp_condition:12.5:1:1
+provision:12.5,SP_HAS_NORM,norm:12.5:2
+norm:12.5:2,SP_BEARER,SP_Actor:entity
+norm:12.5:2,SP_ACTION,SP_Action:take such steps as are reasonable in the circumstances to give access in a way that meets the needs of the entity and the individual
+norm:12.5:2,SP_OBJECT,SP_InfoType:access
+norm:12.5:2,SP_CONDITION,sp_condition:12.5:2:1
+provision:12.6,SP_HAS_NORM,norm:12.6:1
+norm:12.6:1,SP_BEARER,SP_Actor:[not explicitly mentioned in the text]
+norm:12.6:1,SP_ACTION,SP_Action:give
+norm:12.6:1,SP_OBJECT,SP_InfoType:access
+norm:12.6:1,SP_CONDITION,sp_condition:12.6:1:1
+provision:12.7,SP_HAS_NORM,norm:12.7:1
+norm:12.7:1,SP_BEARER,SP_Actor:app entity
+norm:12.7:1,SP_ACTION,SP_Action:charge
+norm:12.7:1,SP_OBJECT,SP_InfoType:the individual for the making of the request
+norm:12.7:1,SP_CONDITION,sp_condition:12.7:1:1
+provision:12.7,SP_HAS_NORM,norm:12.7:2
+norm:12.7:2,SP_BEARER,SP_Actor:app entity
+norm:12.7:2,SP_ACTION,SP_Action:charge
+norm:12.7:2,SP_OBJECT,SP_InfoType:individual
+norm:12.7:2,SP_CONDITION,sp_condition:12.7:2:1
+provision:12.8,SP_HAS_NORM,norm:12.8:1
+norm:12.8:1,SP_BEARER,SP_Actor:app entity
+norm:12.8:1,SP_ACTION,SP_Action:charge
+norm:12.8:1,SP_OBJECT,SP_InfoType:the individual for giving access to the personal information
+norm:12.8:1,SP_CONDITION,sp_condition:12.8:1:1
+norm:12.8:1,SP_CONDITION,sp_condition:12.8:1:2
+provision:12.8,SP_HAS_NORM,norm:12.8:2
+norm:12.8:2,SP_BEARER,SP_Actor:app entity
+norm:12.8:2,SP_ACTION,SP_Action:apply
+norm:12.8:2,SP_OBJECT,SP_InfoType:charge
+norm:12.8:2,SP_CONDITION,sp_condition:12.8:2:1
+norm:12.8:2,SP_CONDITION,sp_condition:12.8:2:2
+provision:12.9,SP_HAS_NORM,norm:12.9:1
+norm:12.9:1,SP_BEARER,SP_Actor:app entity
+norm:12.9:1,SP_ACTION,SP_Action:give
+norm:12.9:1,SP_OBJECT,SP_InfoType:the individual a written notice that sets out the reasons for the refusal
+norm:12.9:1,SP_CONDITION,sp_condition:12.9:1:1
+norm:12.9:1,SP_EXCEPTION,sp_exemption:12.9:1:1
+provision:12.9,SP_HAS_NORM,norm:12.9:2
+norm:12.9:2,SP_BEARER,SP_Actor:app entity
+norm:12.9:2,SP_ACTION,SP_Action:give
+norm:12.9:2,SP_OBJECT,SP_InfoType:the individual a written notice that sets out the mechanisms available to complain about the refusal
+norm:12.9:2,SP_CONDITION,sp_condition:12.9:2:1
+norm:12.9:2,SP_CONDITION,sp_condition:12.9:2:2
+provision:12.9,SP_HAS_NORM,norm:12.9:3
+norm:12.9:3,SP_BEARER,SP_Actor:app entity
+norm:12.9:3,SP_ACTION,SP_Action:give
+norm:12.9:3,SP_OBJECT,SP_InfoType:the individual a written notice that sets out any other matter prescribed by the regulations
+norm:12.9:3,SP_CONDITION,sp_condition:12.9:3:1
+norm:12.9:3,SP_CONDITION,sp_condition:12.9:3:2
+provision:13.1,SP_HAS_NORM,norm:13.1:1
+norm:13.1:1,SP_BEARER,SP_Actor:app entity
+norm:13.1:1,SP_ACTION,SP_Action:take such steps (if any) as are reasonable in the circumstances to correct that information
+norm:13.1:1,SP_OBJECT,SP_InfoType:personal information
+norm:13.1:1,SP_CONDITION,sp_condition:13.1:1:1
+norm:13.1:1,SP_CONDITION,sp_condition:13.1:1:2
+provision:13.1,SP_HAS_NORM,norm:13.1:2
+norm:13.1:2,SP_BEARER,SP_Actor:app entity
+norm:13.1:2,SP_ACTION,SP_Action:take such steps (if any) as are reasonable in the circumstances to correct that information
+norm:13.1:2,SP_OBJECT,SP_InfoType:personal information about an individual
+norm:13.1:2,SP_CONDITION,sp_condition:13.1:2:1
+norm:13.1:2,SP_CONDITION,sp_condition:13.1:2:2
+provision:13.2,SP_HAS_NORM,norm:13.2:1
+norm:13.2:1,SP_BEARER,SP_Actor:app entity
+norm:13.2:1,SP_ACTION,SP_Action:notify the other app entity of the correction
+norm:13.2:1,SP_OBJECT,SP_InfoType:personal information about an individual
+norm:13.2:1,SP_CONDITION,sp_condition:13.2:1:1
+norm:13.2:1,SP_CONDITION,sp_condition:13.2:1:2
+norm:13.2:1,SP_EXCEPTION,sp_exemption:13.2:1:1
+provision:13.3,SP_HAS_NORM,norm:13.3:1
+norm:13.3:1,SP_BEARER,SP_Actor:app entity
+norm:13.3:1,SP_ACTION,SP_Action:give
+norm:13.3:1,SP_OBJECT,SP_InfoType:the individual a written notice that sets out the reasons for the refusal
+norm:13.3:1,SP_CONDITION,sp_condition:13.3:1:1
+norm:13.3:1,SP_EXCEPTION,sp_exemption:13.3:1:1
+norm:13.3:1,SP_EXCEPTION,sp_exemption:13.3:1:2
+provision:13.3,SP_HAS_NORM,norm:13.3:2
+norm:13.3:2,SP_BEARER,SP_Actor:app entity
+norm:13.3:2,SP_ACTION,SP_Action:give
+norm:13.3:2,SP_OBJECT,SP_InfoType:a written notice that sets out the mechanisms available to complain about the refusal
+norm:13.3:2,SP_CONDITION,sp_condition:13.3:2:1
+norm:13.3:2,SP_CONDITION,sp_condition:13.3:2:2
+provision:13.3,SP_HAS_NORM,norm:13.3:3
+norm:13.3:3,SP_BEARER,SP_Actor:app entity
+norm:13.3:3,SP_ACTION,SP_Action:give
+norm:13.3:3,SP_OBJECT,SP_InfoType:a written notice that sets out any other matter prescribed by the regulations
+norm:13.3:3,SP_CONDITION,sp_condition:13.3:3:1
+provision:13.4,SP_HAS_NORM,norm:13.4:1
+norm:13.4:1,SP_BEARER,SP_Actor:app entity
+norm:13.4:1,SP_ACTION,SP_Action:associate the statement in such a way that will make the statement apparent to users of the information
+norm:13.4:1,SP_OBJECT,SP_InfoType:the statement
+norm:13.4:1,SP_CONDITION,sp_condition:13.4:1:1
+norm:13.4:1,SP_CONDITION,sp_condition:13.4:1:2
+provision:13.5,SP_HAS_NORM,norm:13.5:1
+norm:13.5:1,SP_BEARER,SP_Actor:app entity
+norm:13.5:1,SP_ACTION,SP_Action:charge the individual
+norm:13.5:1,SP_OBJECT,SP_InfoType:the making of the request; correcting the personal information; associating the statement with the personal information
+norm:13.5:1,SP_CONDITION,sp_condition:13.5:1:1
+provision:2.1,SP_HAS_NORM,norm:2.1:1
+norm:2.1:1,SP_BEARER,SP_Actor:individuals
+norm:2.1:1,SP_ACTION,SP_Action:have the option of not identifying themselves
+provision:2.1,SP_HAS_NORM,norm:2.1:2
+norm:2.1:2,SP_BEARER,SP_Actor:individuals
+norm:2.1:2,SP_ACTION,SP_Action:have the option of using a pseudonym
+provision:2.2,SP_HAS_NORM,norm:2.2:1
+norm:2.2:1,SP_BEARER,SP_Actor:app entity
+norm:2.2:1,SP_ACTION,SP_Action:deal with
+norm:2.2:1,SP_OBJECT,SP_InfoType:individuals who have identified themselves
+provision:2.2,SP_HAS_NORM,norm:2.2:2
+norm:2.2:2,SP_BEARER,SP_Actor:subclause 2.1
+norm:2.2:2,SP_ACTION,SP_Action:apply
+provision:3.1,SP_HAS_NORM,norm:3.1:1
+norm:3.1:1,SP_BEARER,SP_Actor:app entity that is an agency
+norm:3.1:1,SP_ACTION,SP_Action:collect
+norm:3.1:1,SP_OBJECT,SP_InfoType:personal information
+norm:3.1:1,SP_EXCEPTION,sp_exemption:3.1:1:1
+norm:3.1:1,SP_EXCEPTION,sp_exemption:3.1:1:2
+provision:3.2,SP_HAS_NORM,norm:3.2:1
+norm:3.2:1,SP_BEARER,SP_Actor:entity
+norm:3.2:1,SP_ACTION,SP_Action:collect
+norm:3.2:1,SP_OBJECT,SP_InfoType:personal information
+norm:3.2:1,SP_EXCEPTION,sp_exemption:3.2:1:1
+provision:3.3,SP_HAS_NORM,norm:3.3:1
+norm:3.3:1,SP_BEARER,SP_Actor:app entity
+norm:3.3:1,SP_ACTION,SP_Action:collect
+norm:3.3:1,SP_OBJECT,SP_InfoType:sensitive information about an individual
+norm:3.3:1,SP_EXCEPTION,sp_exemption:3.3:1:1
+norm:3.3:1,SP_EXCEPTION,sp_exemption:3.3:1:2
+norm:3.3:1,SP_EXCEPTION,sp_exemption:3.3:1:3
+norm:3.3:1,SP_EXCEPTION,sp_exemption:3.3:1:4
+provision:3.4,SP_HAS_NORM,norm:3.4:1
+provision:3.4,SP_HAS_NORM,norm:3.4:2
+norm:3.4:2,SP_BEARER,SP_Actor:app entity
+norm:3.4:2,SP_ACTION,SP_Action:collect
+norm:3.4:2,SP_OBJECT,SP_InfoType:sensitive information about an individual
+norm:3.4:2,SP_CONDITION,sp_condition:3.4:2:1
+provision:3.4,SP_HAS_NORM,norm:3.4:3
+norm:3.4:3,SP_BEARER,SP_Actor:app entity
+provision:3.4,SP_HAS_NORM,norm:3.4:4
+norm:3.4:4,SP_BEARER,SP_Actor:app entity
+norm:3.4:4,SP_CONDITION,sp_condition:3.4:4:1
+norm:3.4:4,SP_CONDITION,sp_condition:3.4:4:2
+norm:3.4:4,SP_CONDITION,sp_condition:3.4:4:3
+provision:3.5,SP_HAS_NORM,norm:3.5:1
+norm:3.5:1,SP_BEARER,SP_Actor:app entity
+norm:3.5:1,SP_ACTION,SP_Action:collect
+norm:3.5:1,SP_OBJECT,SP_InfoType:personal information
+provision:3.6,SP_HAS_NORM,norm:3.6:1
+norm:3.6:1,SP_BEARER,SP_Actor:app entity
+norm:3.6:1,SP_ACTION,SP_Action:collect
+norm:3.6:1,SP_OBJECT,SP_InfoType:personal information about an individual
+norm:3.6:1,SP_CONDITION,sp_condition:3.6:1:1
+norm:3.6:1,SP_EXCEPTION,sp_exemption:3.6:1:1
+norm:3.6:1,SP_EXCEPTION,sp_exemption:3.6:1:2
+norm:3.6:1,SP_EXCEPTION,sp_exemption:3.6:1:3
+norm:3.6:1,SP_EXCEPTION,sp_exemption:3.6:1:4
+provision:3.7,SP_HAS_NORM,norm:3.7:1
+norm:3.7:1,SP_BEARER,SP_Actor:app entity
+norm:3.7:1,SP_ACTION,SP_Action:apply
+norm:3.7:1,SP_OBJECT,SP_InfoType:principle
+norm:3.7:1,SP_CONDITION,sp_condition:3.7:1:1
+norm:3.7:1,SP_CONDITION,sp_condition:3.7:1:2
+provision:4.1,SP_HAS_NORM,norm:4.1:1
+norm:4.1:1,SP_BEARER,SP_Actor:entity
+norm:4.1:1,SP_ACTION,SP_Action:determine whether or not the entity could have collected the information
+norm:4.1:1,SP_OBJECT,SP_InfoType:the information
+norm:4.1:1,SP_CONDITION,sp_condition:4.1:1:1
+norm:4.1:1,SP_CONDITION,sp_condition:4.1:1:2
+provision:4.2,SP_HAS_NORM,norm:4.2:1
+norm:4.2:1,SP_BEARER,SP_Actor:app entity
+norm:4.2:1,SP_ACTION,SP_Action:use or disclose
+norm:4.2:1,SP_OBJECT,SP_InfoType:personal information
+norm:4.2:1,SP_CONDITION,sp_condition:4.2:1:1
+provision:4.3,SP_HAS_NORM,norm:4.3:1
+norm:4.3:1,SP_BEARER,SP_Actor:entity
+norm:4.3:1,SP_ACTION,SP_Action:destroy
+norm:4.3:1,SP_OBJECT,SP_InfoType:the information
+norm:4.3:1,SP_CONDITION,sp_condition:4.3:1:1
+norm:4.3:1,SP_CONDITION,sp_condition:4.3:1:2
+norm:4.3:1,SP_CONDITION,sp_condition:4.3:1:3
+provision:4.3,SP_HAS_NORM,norm:4.3:2
+norm:4.3:2,SP_BEARER,SP_Actor:the entity
+norm:4.3:2,SP_ACTION,SP_Action:ensure that the information is de-identified
+norm:4.3:2,SP_OBJECT,SP_InfoType:the information
+norm:4.3:2,SP_CONDITION,sp_condition:4.3:2:1
+norm:4.3:2,SP_CONDITION,sp_condition:4.3:2:2
+norm:4.3:2,SP_CONDITION,sp_condition:4.3:2:3
+provision:4.4,SP_HAS_NORM,norm:4.4:1
+provision:4.4,SP_HAS_NORM,norm:4.4:2
+norm:4.4:2,SP_BEARER,SP_Actor:australian privacy principles 5 to 13
+norm:4.4:2,SP_ACTION,SP_Action:apply
+norm:4.4:2,SP_OBJECT,SP_InfoType:the information
+norm:4.4:2,SP_CONDITION,sp_condition:4.4:2:1
+provision:5.1,SP_HAS_NORM,norm:5.1:1
+norm:5.1:1,SP_BEARER,SP_Actor:app entity
+norm:5.1:1,SP_ACTION,SP_Action:take such steps as are reasonable in the circumstances to notify the individual of such matters referred to in subclause 5.2
+norm:5.1:1,SP_OBJECT,SP_InfoType:personal information
+norm:5.1:1,SP_CONDITION,sp_condition:5.1:1:1
+norm:5.1:1,SP_CONDITION,sp_condition:5.1:1:2
+provision:5.1,SP_HAS_NORM,norm:5.1:2
+norm:5.1:2,SP_BEARER,SP_Actor:app entity
+norm:5.1:2,SP_ACTION,SP_Action:take such steps as are reasonable in the circumstances to otherwise ensure that the individual is aware of any such matters
+norm:5.1:2,SP_OBJECT,"SP_InfoType:(none explicitly specified, but implied to be the awareness of the individual regarding certain matters)"
+norm:5.1:2,SP_CONDITION,sp_condition:5.1:2:1
+norm:5.1:2,SP_EXCEPTION,sp_exemption:5.1:2:1
+provision:5.2,SP_HAS_NORM,norm:5.2:1
+norm:5.2:1,SP_BEARER,SP_Actor:app entity
+provision:5.2,SP_HAS_NORM,norm:5.2:2
+norm:5.2:2,SP_BEARER,SP_Actor:app entity
+norm:5.2:2,SP_ACTION,SP_Action:collects
+norm:5.2:2,SP_OBJECT,SP_InfoType:personal information
+norm:5.2:2,SP_CONDITION,sp_condition:5.2:2:1
+norm:5.2:2,SP_CONDITION,sp_condition:5.2:2:2
+provision:5.2,SP_HAS_NORM,norm:5.2:3
+provision:5.2,SP_HAS_NORM,norm:5.2:4
+norm:5.2:4,SP_BEARER,SP_Actor:app entity
+norm:5.2:4,SP_ACTION,SP_Action:collects
+norm:5.2:4,SP_OBJECT,SP_InfoType:the personal information
+provision:5.2,SP_HAS_NORM,norm:5.2:5
+norm:5.2:5,SP_BEARER,SP_Actor:app entity
+norm:5.2:5,SP_ACTION,SP_Action:discloses
+norm:5.2:5,SP_OBJECT,SP_InfoType:personal information of the kind collected by the entity
+norm:5.2:5,SP_CONDITION,sp_condition:5.2:5:1
+provision:5.2,SP_HAS_NORM,norm:5.2:6
+norm:5.2:6,SP_BEARER,SP_Actor:app entity
+norm:5.2:6,SP_ACTION,SP_Action:contains information
+norm:5.2:6,SP_OBJECT,SP_InfoType:app privacy policy
+provision:5.2,SP_HAS_NORM,norm:5.2:7
+norm:5.2:7,SP_BEARER,SP_Actor:app entity
+norm:5.2:7,SP_ACTION,SP_Action:contains information
+norm:5.2:7,SP_OBJECT,"SP_InfoType:how the individual may complain about a breach of the australian privacy principles, or a registered app code, if any, that binds the entity, and how the entity will deal with such a complaint"
+norm:5.2:7,SP_CONDITION,sp_condition:5.2:7:1
+provision:5.2,SP_HAS_NORM,norm:5.2:8
+norm:5.2:8,SP_BEARER,SP_Actor:app entity
+norm:5.2:8,SP_ACTION,SP_Action:disclose
+norm:5.2:8,SP_OBJECT,SP_InfoType:personal information
+norm:5.2:8,SP_CONDITION,sp_condition:5.2:8:1
+provision:5.2,SP_HAS_NORM,norm:5.2:9
+norm:5.2:9,SP_BEARER,SP_Actor:app entity
+norm:5.2:9,SP_ACTION,SP_Action:disclose
+norm:5.2:9,SP_OBJECT,SP_InfoType:personal information
+norm:5.2:9,SP_CONDITION,sp_condition:5.2:9:1
+norm:5.2:9,SP_CONDITION,sp_condition:5.2:9:2
+provision:6.1,SP_HAS_NORM,norm:6.1:1
+norm:6.1:1,SP_BEARER,SP_Actor:entity
+norm:6.1:1,SP_ACTION,SP_Action:use or disclose
+norm:6.1:1,SP_OBJECT,SP_InfoType:the information
+norm:6.1:1,SP_CONDITION,sp_condition:6.1:1:1
+norm:6.1:1,SP_EXCEPTION,sp_exemption:6.1:1:1
+norm:6.1:1,SP_EXCEPTION,sp_exemption:6.1:1:2
+provision:6.1,SP_HAS_NORM,norm:6.1:2
+norm:6.1:2,SP_BEARER,SP_Actor:entity
+norm:6.1:2,SP_ACTION,SP_Action:use or disclose
+norm:6.1:2,SP_OBJECT,SP_InfoType:the information
+norm:6.1:2,SP_CONDITION,sp_condition:6.1:2:1
+norm:6.1:2,SP_EXCEPTION,sp_exemption:6.1:2:1
+norm:6.1:2,SP_EXCEPTION,sp_exemption:6.1:2:2
+provision:6.2,SP_HAS_NORM,norm:6.2:1
+norm:6.2:1,SP_BEARER,SP_Actor:app entity
+norm:6.2:1,SP_ACTION,SP_Action:use or disclose
+norm:6.2:1,SP_OBJECT,SP_InfoType:personal information about an individual
+norm:6.2:1,SP_CONDITION,sp_condition:6.2:1:1
+norm:6.2:1,SP_CONDITION,sp_condition:6.2:1:2
+norm:6.2:1,SP_CONDITION,sp_condition:6.2:1:3
+provision:6.2,SP_HAS_NORM,norm:6.2:2
+norm:6.2:2,SP_BEARER,SP_Actor:app entity
+norm:6.2:2,SP_ACTION,SP_Action:use or disclose
+norm:6.2:2,SP_OBJECT,SP_InfoType:personal information about an individual
+norm:6.2:2,SP_CONDITION,sp_condition:6.2:2:1
+norm:6.2:2,SP_CONDITION,sp_condition:6.2:2:2
+norm:6.2:2,SP_CONDITION,sp_condition:6.2:2:3
+provision:6.2,SP_HAS_NORM,norm:6.2:3
+provision:6.2,SP_HAS_NORM,norm:6.2:4
+norm:6.2:4,SP_BEARER,SP_Actor:app entity
+norm:6.2:4,SP_ACTION,SP_Action:use or disclose
+norm:6.2:4,SP_OBJECT,SP_InfoType:personal information about an individual
+norm:6.2:4,SP_CONDITION,sp_condition:6.2:4:1
+provision:6.2,SP_HAS_NORM,norm:6.2:5
+norm:6.2:5,SP_BEARER,SP_Actor:app entity
+norm:6.2:5,SP_ACTION,SP_Action:use or disclose
+norm:6.2:5,SP_OBJECT,SP_InfoType:personal information about an individual
+norm:6.2:5,SP_CONDITION,sp_condition:6.2:5:1
+norm:6.2:5,SP_CONDITION,sp_condition:6.2:5:2
+provision:6.2,SP_HAS_NORM,norm:6.2:6
+norm:6.2:6,SP_BEARER,SP_Actor:app entity
+norm:6.2:6,SP_ACTION,SP_Action:use or disclose
+norm:6.2:6,SP_OBJECT,SP_InfoType:personal information about an individual
+norm:6.2:6,SP_CONDITION,sp_condition:6.2:6:1
+provision:6.3,SP_HAS_NORM,norm:6.3:1
+norm:6.3:1,SP_BEARER,SP_Actor:app entity that is an agency
+norm:6.3:1,SP_ACTION,SP_Action:disclosure
+norm:6.3:1,SP_OBJECT,SP_InfoType:personal information about an individual
+norm:6.3:1,SP_CONDITION,sp_condition:6.3:1:1
+provision:6.3,SP_HAS_NORM,norm:6.3:2
+norm:6.3:2,SP_BEARER,SP_Actor:app entity that is an agency
+norm:6.3:2,SP_ACTION,SP_Action:disclosure
+norm:6.3:2,SP_OBJECT,SP_InfoType:personal information about an individual
+norm:6.3:2,SP_CONDITION,sp_condition:6.3:2:1
+provision:6.3,SP_HAS_NORM,norm:6.3:3
+norm:6.3:3,SP_BEARER,SP_Actor:app entity that is an agency
+norm:6.3:3,SP_ACTION,SP_Action:disclosure
+norm:6.3:3,SP_OBJECT,SP_InfoType:personal information about an individual
+norm:6.3:3,SP_CONDITION,sp_condition:6.3:3:1
+provision:6.3,SP_HAS_NORM,norm:6.3:4
+norm:6.3:4,SP_BEARER,SP_Actor:app entity that is an agency
+norm:6.3:4,SP_ACTION,SP_Action:disclose
+norm:6.3:4,SP_OBJECT,SP_InfoType:personal information about an individual
+norm:6.3:4,SP_CONDITION,sp_condition:6.3:4:1
+provision:6.4,SP_HAS_NORM,norm:6.4:1
+norm:6.4:1,SP_BEARER,SP_Actor:the entity
+norm:6.4:1,SP_ACTION,SP_Action:take such steps as are reasonable in the circumstances to ensure that the information is de-identified
+norm:6.4:1,SP_OBJECT,SP_InfoType:the information
+norm:6.4:1,SP_CONDITION,sp_condition:6.4:1:1
+norm:6.4:1,SP_CONDITION,sp_condition:6.4:1:2
+norm:6.4:1,SP_CONDITION,sp_condition:6.4:1:3
+provision:6.5,SP_HAS_NORM,norm:6.5:1
+norm:6.5:1,SP_BEARER,SP_Actor:app entity
+norm:6.5:1,SP_ACTION,SP_Action:make a written note
+norm:6.5:1,SP_OBJECT,SP_InfoType:the use or disclosure
+norm:6.5:1,SP_CONDITION,sp_condition:6.5:1:1
+provision:6.6,SP_HAS_NORM,norm:6.6:1
+norm:6.6:1,SP_BEARER,SP_Actor:app entity
+norm:6.6:1,SP_ACTION,SP_Action:[this principle] applies
+norm:6.6:1,SP_OBJECT,SP_InfoType:the collection of the information
+norm:6.6:1,SP_CONDITION,sp_condition:6.6:1:1
+norm:6.6:1,SP_CONDITION,sp_condition:6.6:1:2
+provision:6.7,SP_HAS_NORM,norm:6.7:1
+norm:6.7:1,SP_BEARER,SP_Actor:organisation
+norm:6.7:1,SP_ACTION,SP_Action:use or disclosure
+norm:6.7:1,SP_OBJECT,SP_InfoType:personal information
+norm:6.7:1,SP_CONDITION,sp_condition:6.7:1:1
+provision:6.7,SP_HAS_NORM,norm:6.7:2
+norm:6.7:2,SP_BEARER,SP_Actor:organisation
+norm:6.7:2,SP_ACTION,SP_Action:use or disclosure
+norm:6.7:2,SP_OBJECT,SP_InfoType:government related identifiers
+provision:7.1,SP_HAS_NORM,norm:7.1:1
+norm:7.1:1,SP_BEARER,SP_Actor:organisation
+norm:7.1:1,SP_ACTION,SP_Action:use or disclose
+norm:7.1:1,SP_OBJECT,SP_InfoType:personal information about an individual
+norm:7.1:1,SP_CONDITION,sp_condition:7.1:1:1
+provision:7.2,SP_HAS_NORM,norm:7.2:1
+norm:7.2:1,SP_BEARER,SP_Actor:organisation
+norm:7.2:1,SP_ACTION,SP_Action:[no action since it's a disapplication; the original action this disapplies would need to be inferred from subclause 7.1]
+norm:7.2:1,SP_OBJECT,SP_InfoType:[no object since it's a disapplication; the original object this disapplies would need to be inferred from subclause 7.1]
+provision:7.2,SP_HAS_NORM,norm:7.2:2
+norm:7.2:2,SP_BEARER,SP_Actor:subclause 7.1
+norm:7.2:2,SP_ACTION,SP_Action:apply
+provision:7.2,SP_HAS_NORM,norm:7.2:3
+norm:7.2:3,SP_BEARER,SP_Actor:organisation
+norm:7.2:3,SP_ACTION,SP_Action:provide
+norm:7.2:3,SP_OBJECT,SP_InfoType:a simple means by which the individual may easily request not to receive direct marketing communications
+provision:7.3,SP_HAS_NORM,norm:7.3:1
+norm:7.3:1,SP_BEARER,SP_Actor:organisation
+norm:7.3:1,SP_ACTION,SP_Action:use or disclose
+norm:7.3:1,SP_OBJECT,SP_InfoType:personal information
+norm:7.3:1,SP_CONDITION,sp_condition:7.3:1:1
+norm:7.3:1,SP_CONDITION,sp_condition:7.3:1:2
+norm:7.3:1,SP_EXCEPTION,sp_exemption:7.3:1:1
+provision:7.3,SP_HAS_NORM,norm:7.3:2
+norm:7.3:2,SP_BEARER,SP_Actor:organisation
+norm:7.3:2,SP_ACTION,SP_Action:use or disclose
+norm:7.3:2,SP_OBJECT,SP_InfoType:personal information
+norm:7.3:2,SP_CONDITION,sp_condition:7.3:2:1
+norm:7.3:2,SP_EXCEPTION,sp_exemption:7.3:2:1
+provision:7.3,SP_HAS_NORM,norm:7.3:3
+norm:7.3:3,SP_BEARER,SP_Actor:organisation
+norm:7.3:3,SP_ACTION,SP_Action:use or disclose
+norm:7.3:3,SP_OBJECT,SP_InfoType:personal information (other than sensitive information) about an individual
+norm:7.3:3,SP_CONDITION,sp_condition:7.3:3:1
+norm:7.3:3,SP_CONDITION,sp_condition:7.3:3:2
+provision:7.3,SP_HAS_NORM,norm:7.3:4
+norm:7.3:4,SP_BEARER,SP_Actor:organisation
+norm:7.3:4,SP_ACTION,SP_Action:use or disclose
+norm:7.3:4,SP_OBJECT,SP_InfoType:personal information
+norm:7.3:4,SP_CONDITION,sp_condition:7.3:4:1
+norm:7.3:4,SP_EXCEPTION,sp_exemption:7.3:4:1
+provision:7.3,SP_HAS_NORM,norm:7.3:5
+norm:7.3:5,SP_BEARER,SP_Actor:organisation
+norm:7.3:5,SP_ACTION,SP_Action:use or disclose
+norm:7.3:5,SP_OBJECT,SP_InfoType:personal information (other than sensitive information) about an individual
+norm:7.3:5,SP_CONDITION,sp_condition:7.3:5:1
+norm:7.3:5,SP_CONDITION,sp_condition:7.3:5:2
+provision:7.3,SP_HAS_NORM,norm:7.3:6
+norm:7.3:6,SP_BEARER,SP_Actor:organisation
+norm:7.3:6,SP_ACTION,SP_Action:includes a prominent statement that the individual may request not to receive such communications
+norm:7.3:6,SP_OBJECT,SP_InfoType:[implicit object: direct marketing communication]
+norm:7.3:6,SP_CONDITION,sp_condition:7.3:6:1
+norm:7.3:6,SP_EXCEPTION,sp_exemption:7.3:6:1
+norm:7.3:6,SP_EXCEPTION,sp_exemption:7.3:6:2
+provision:7.3,SP_HAS_NORM,norm:7.3:7
+norm:7.3:7,SP_BEARER,SP_Actor:organisation
+norm:7.3:7,SP_ACTION,SP_Action:use or disclose
+norm:7.3:7,SP_OBJECT,SP_InfoType:personal information
+norm:7.3:7,SP_CONDITION,sp_condition:7.3:7:1
+norm:7.3:7,SP_CONDITION,sp_condition:7.3:7:2
+norm:7.3:7,SP_EXCEPTION,sp_exemption:7.3:7:1
+provision:7.3,SP_HAS_NORM,norm:7.3:8
+norm:7.3:8,SP_BEARER,SP_Actor:organisation
+norm:7.3:8,SP_ACTION,SP_Action:use or disclose
+norm:7.3:8,SP_OBJECT,SP_InfoType:personal information
+norm:7.3:8,SP_CONDITION,sp_condition:7.3:8:1
+norm:7.3:8,SP_EXCEPTION,sp_exemption:7.3:8:1
+norm:7.3:8,SP_EXCEPTION,sp_exemption:7.3:8:2
+provision:7.4,SP_HAS_NORM,norm:7.4:1
+provision:7.5,SP_HAS_NORM,norm:7.5:1
+norm:7.5:1,SP_BEARER,SP_Actor:organisation
+norm:7.5:1,SP_ACTION,SP_Action:does not apply
+norm:7.5:1,SP_OBJECT,SP_InfoType:subclause 7.1
+provision:7.5,SP_HAS_NORM,norm:7.5:2
+norm:7.5:2,SP_BEARER,SP_Actor:organisation
+norm:7.5:2,SP_ACTION,SP_Action:does not apply
+norm:7.5:2,SP_OBJECT,SP_InfoType:subclause 7.1
+norm:7.5:2,SP_CONDITION,sp_condition:7.5:2:1
+provision:7.5,SP_HAS_NORM,norm:7.5:3
+provision:7.6,SP_HAS_NORM,norm:7.6:1
+norm:7.6:1,SP_BEARER,SP_Actor:individual
+norm:7.6:1,SP_ACTION,SP_Action:request not to receive
+norm:7.6:1,SP_OBJECT,SP_InfoType:direct marketing communications
+norm:7.6:1,SP_CONDITION,sp_condition:7.6:1:1
+provision:7.6,SP_HAS_NORM,norm:7.6:2
+norm:7.6:2,SP_BEARER,SP_Actor:the individual
+norm:7.6:2,SP_ACTION,SP_Action:request the organisation not to use or disclose
+norm:7.6:2,SP_OBJECT,SP_InfoType:the information
+norm:7.6:2,SP_CONDITION,sp_condition:7.6:2:1
+provision:7.6,SP_HAS_NORM,norm:7.6:3
+norm:7.6:3,SP_BEARER,SP_Actor:individual
+norm:7.6:3,SP_ACTION,SP_Action:request
+norm:7.6:3,SP_OBJECT,SP_InfoType:the first organisation to provide its source of the information
+provision:7.7,SP_HAS_NORM,norm:7.7:1
+norm:7.7:1,SP_BEARER,SP_Actor:first organisation
+norm:7.7:1,SP_ACTION,SP_Action:charge
+norm:7.7:1,SP_OBJECT,SP_InfoType:the individual
+norm:7.7:1,SP_CONDITION,sp_condition:7.7:1:1
+provision:7.7,SP_HAS_NORM,norm:7.7:2
+norm:7.7:2,SP_BEARER,SP_Actor:first organisation
+norm:7.7:2,SP_ACTION,SP_Action:give effect to the request
+norm:7.7:2,SP_OBJECT,SP_InfoType:request
+norm:7.7:2,SP_CONDITION,sp_condition:7.7:2:1
+norm:7.7:2,SP_CONDITION,sp_condition:7.7:2:2
+provision:7.7,SP_HAS_NORM,norm:7.7:3
+norm:7.7:3,SP_BEARER,SP_Actor:organisation
+norm:7.7:3,SP_ACTION,SP_Action:notify
+norm:7.7:3,SP_OBJECT,SP_InfoType:individual of its source
+norm:7.7:3,SP_CONDITION,sp_condition:7.7:3:1
+norm:7.7:3,SP_CONDITION,sp_condition:7.7:3:2
+norm:7.7:3,SP_EXCEPTION,sp_exemption:7.7:3:1
+provision:7.8,SP_HAS_NORM,norm:7.8:1
+provision:7.8,SP_HAS_NORM,norm:7.8:2
+norm:7.8:2,SP_BEARER,SP_Actor:<not explicitly mentioned>
+norm:7.8:2,SP_ACTION,SP_Action:apply
+norm:7.8:2,SP_OBJECT,SP_InfoType:this principle
+norm:7.8:2,SP_CONDITION,sp_condition:7.8:2:1
+norm:7.8:2,SP_CONDITION,sp_condition:7.8:2:2
+norm:7.8:2,SP_CONDITION,sp_condition:7.8:2:3
+provision:8.1,SP_HAS_NORM,norm:8.1:1
+norm:8.1:1,SP_BEARER,SP_Actor:app entity
+norm:8.1:1,SP_ACTION,SP_Action:take such steps as are reasonable in the circumstances to ensure that the overseas recipient does not breach the australian privacy principles
+norm:8.1:1,SP_OBJECT,SP_InfoType:personal information
+norm:8.1:1,SP_CONDITION,sp_condition:8.1:1:1
+norm:8.1:1,SP_EXCEPTION,sp_exemption:8.1:1:1
+provision:8.2,SP_HAS_NORM,norm:8.2:1
+norm:8.2:1,SP_BEARER,SP_Actor:app entity
+norm:8.2:1,SP_ACTION,SP_Action:disclose
+norm:8.2:1,SP_OBJECT,SP_InfoType:personal information about an individual
+norm:8.2:1,SP_CONDITION,sp_condition:8.2:1:1
+norm:8.2:1,SP_CONDITION,sp_condition:8.2:1:2
+provision:8.2,SP_HAS_NORM,norm:8.2:2
+norm:8.2:2,SP_BEARER,SP_Actor:app entity
+norm:8.2:2,SP_ACTION,SP_Action:disclose
+norm:8.2:2,SP_OBJECT,SP_InfoType:personal information about an individual
+norm:8.2:2,SP_CONDITION,sp_condition:8.2:2:1
+provision:8.2,SP_HAS_NORM,norm:8.2:3
+norm:8.2:3,SP_BEARER,SP_Actor:app entity
+norm:8.2:3,SP_ACTION,SP_Action:disclose
+norm:8.2:3,SP_OBJECT,SP_InfoType:personal information about an individual
+norm:8.2:3,SP_CONDITION,sp_condition:8.2:3:1
+provision:8.2,SP_HAS_NORM,norm:8.2:4
+norm:8.2:4,SP_BEARER,SP_Actor:app entity
+norm:8.2:4,SP_ACTION,SP_Action:disclose
+norm:8.2:4,SP_OBJECT,SP_InfoType:personal information about an individual
+norm:8.2:4,SP_CONDITION,sp_condition:8.2:4:1
+norm:8.2:4,SP_EXCEPTION,sp_exemption:8.2:4:1
+provision:8.2,SP_HAS_NORM,norm:8.2:5
+norm:8.2:5,SP_BEARER,SP_Actor:app entity
+norm:8.2:5,SP_ACTION,SP_Action:disclose
+norm:8.2:5,SP_OBJECT,SP_InfoType:personal information about an individual
+norm:8.2:5,SP_CONDITION,sp_condition:8.2:5:1
+norm:8.2:5,SP_EXCEPTION,sp_exemption:8.2:5:1
+provision:8.2,SP_HAS_NORM,norm:8.2:6
+norm:8.2:6,SP_BEARER,SP_Actor:app entity
+norm:8.2:6,SP_ACTION,SP_Action:disclose
+norm:8.2:6,SP_OBJECT,SP_InfoType:personal information about an individual
+norm:8.2:6,SP_CONDITION,sp_condition:8.2:6:1
+norm:8.2:6,SP_CONDITION,sp_condition:8.2:6:2
+provision:8.2,SP_HAS_NORM,norm:8.2:7
+norm:8.2:7,SP_BEARER,SP_Actor:app entity
+norm:8.2:7,SP_ACTION,SP_Action:disclose
+norm:8.2:7,SP_OBJECT,SP_InfoType:personal information about an individual to the overseas recipient
+norm:8.2:7,SP_CONDITION,sp_condition:8.2:7:1
+provision:8.3,SP_HAS_NORM,norm:8.3:1
+norm:8.3:1,SP_BEARER,SP_Actor:app entity
+norm:8.3:1,SP_ACTION,SP_Action:disclose
+norm:8.3:1,SP_OBJECT,SP_InfoType:personal information about an individual
+norm:8.3:1,SP_CONDITION,sp_condition:8.3:1:1
+provision:8.3,SP_HAS_NORM,norm:8.3:2
+norm:8.3:2,SP_BEARER,SP_Actor:app entity
+norm:8.3:2,SP_ACTION,SP_Action:disclose
+norm:8.3:2,SP_OBJECT,SP_InfoType:personal information about an individual
+norm:8.3:2,SP_CONDITION,sp_condition:8.3:2:1
+norm:8.3:2,SP_CONDITION,sp_condition:8.3:2:2
+provision:8.3,SP_HAS_NORM,norm:8.3:3
+norm:8.3:3,SP_BEARER,SP_Actor:app entity
+norm:8.3:3,SP_ACTION,SP_Action:disclose
+norm:8.3:3,SP_OBJECT,SP_InfoType:personal information about an individual
+norm:8.3:3,SP_CONDITION,sp_condition:8.3:3:1
+norm:8.3:3,SP_CONDITION,sp_condition:8.3:3:2
+provision:9.1,SP_HAS_NORM,norm:9.1:1
+norm:9.1:1,SP_BEARER,SP_Actor:organisation
+norm:9.1:1,SP_ACTION,SP_Action:adopt
+norm:9.1:1,SP_OBJECT,SP_InfoType:government related identifier of an individual as its own identifier of the individual
+norm:9.1:1,SP_EXCEPTION,sp_exemption:9.1:1:1
+norm:9.1:1,SP_EXCEPTION,sp_exemption:9.1:1:2
+provision:9.2,SP_HAS_NORM,norm:9.2:1
+norm:9.2:1,SP_BEARER,SP_Actor:organisation
+norm:9.2:1,SP_ACTION,SP_Action:use or disclose
+norm:9.2:1,SP_OBJECT,SP_InfoType:government related identifier of an individual
+provision:9.2,SP_HAS_NORM,norm:9.2:2
+norm:9.2:2,SP_BEARER,SP_Actor:organisation
+norm:9.2:2,SP_ACTION,SP_Action:use or disclose
+norm:9.2:2,SP_OBJECT,SP_InfoType:government related identifier of an individual
+norm:9.2:2,SP_CONDITION,sp_condition:9.2:2:1
+provision:9.2,SP_HAS_NORM,norm:9.2:3
+norm:9.2:3,SP_BEARER,SP_Actor:organisation
+norm:9.2:3,SP_ACTION,SP_Action:use or disclose
+norm:9.2:3,SP_OBJECT,SP_InfoType:government related identifier of an individual
+norm:9.2:3,SP_CONDITION,sp_condition:9.2:3:1
+provision:9.2,SP_HAS_NORM,norm:9.2:4
+norm:9.2:4,SP_BEARER,SP_Actor:organisation
+norm:9.2:4,SP_ACTION,SP_Action:use or disclose
+norm:9.2:4,SP_OBJECT,SP_InfoType:government related identifier of an individual
+norm:9.2:4,SP_CONDITION,sp_condition:9.2:4:1
+provision:9.2,SP_HAS_NORM,norm:9.2:5
+norm:9.2:5,SP_BEARER,SP_Actor:organisation
+norm:9.2:5,SP_ACTION,SP_Action:use or disclose
+norm:9.2:5,SP_OBJECT,SP_InfoType:government related identifier of an individual
+norm:9.2:5,SP_CONDITION,sp_condition:9.2:5:1
+norm:9.2:5,SP_EXCEPTION,sp_exemption:9.2:5:1
+provision:9.2,SP_HAS_NORM,norm:9.2:6
+norm:9.2:6,SP_BEARER,SP_Actor:organisation
+norm:9.2:6,SP_ACTION,SP_Action:use or disclose
+norm:9.2:6,SP_OBJECT,SP_InfoType:government related identifier of an individual
+norm:9.2:6,SP_CONDITION,sp_condition:9.2:6:1
+provision:9.2,SP_HAS_NORM,norm:9.2:7
+norm:9.2:7,SP_BEARER,SP_Actor:organisation
+norm:9.2:7,SP_ACTION,SP_Action:use or disclose
+norm:9.2:7,SP_OBJECT,SP_InfoType:government related identifier of an individual
+norm:9.2:7,SP_CONDITION,sp_condition:9.2:7:1
+norm:9.2:7,SP_CONDITION,sp_condition:9.2:7:2
+provision:9.3,SP_HAS_NORM,norm:9.3:1
+norm:9.3:1,SP_BEARER,SP_Actor:organisation
+norm:9.3:1,SP_ACTION,"SP_Action:adopt, use or disclose"
+norm:9.3:1,SP_OBJECT,SP_InfoType:government related identifier of an individual
+norm:9.3:1,SP_CONDITION,sp_condition:9.3:1:1
+provision:9.3,SP_HAS_NORM,norm:9.3:2
+norm:9.3:2,SP_BEARER,SP_Actor:organisation
+norm:9.3:2,SP_ACTION,"SP_Action:adoption, use or disclosure"
+norm:9.3:2,SP_OBJECT,SP_InfoType:government related identifier of an individual
+norm:9.3:2,SP_CONDITION,sp_condition:9.3:2:1
+norm:9.3:2,SP_CONDITION,sp_condition:9.3:2:2
+provision:9.3,SP_HAS_NORM,norm:9.3:3
+norm:9.3:3,SP_BEARER,SP_Actor:organisation
+norm:9.3:3,SP_ACTION,"SP_Action:adoption, use or disclosure"
+norm:9.3:3,SP_OBJECT,SP_InfoType:government related identifier of an individual
+norm:9.3:3,SP_CONDITION,sp_condition:9.3:3:1
+provision:1.4,SP_REFERS_TO,provision:1.3
+provision:2.2,SP_REFERS_TO,provision:2.1
+provision:3.3,SP_REFERS_TO,provision:3.4
+provision:4.2,SP_REFERS_TO,provision:4.1
+provision:4.4,SP_REFERS_TO,provision:4.3
+provision:5.1,SP_REFERS_TO,provision:5.2
+provision:5.2,SP_REFERS_TO,provision:5.1
+provision:6.1,SP_REFERS_TO,provision:6.2
+provision:6.1,SP_REFERS_TO,provision:6.3
+provision:6.4,SP_REFERS_TO,provision:6.1
+provision:6.4,SP_REFERS_TO,provision:6.2
+provision:6.5,SP_REFERS_TO,provision:6.2
+provision:7.2,SP_REFERS_TO,provision:7.1
+provision:7.3,SP_REFERS_TO,provision:7.1
+provision:7.4,SP_REFERS_TO,provision:7.1
+provision:7.5,SP_REFERS_TO,provision:7.1
+provision:7.7,SP_REFERS_TO,provision:7.6
+provision:7.8,SP_REFERS_EXTERNAL,external:interactive_gambling_act
+provision:7.8,SP_REFERS_EXTERNAL,external:do_not_call_register_act
+provision:7.8,SP_REFERS_EXTERNAL,external:spam_act
+provision:8.2,SP_REFERS_TO,provision:8.1
+provision:8.2,SP_REFERS_TO,provision:8.3
+provision:9.1,SP_REFERS_TO,provision:9.3
+provision:9.2,SP_REFERS_TO,provision:9.3
+provision:11.3,SP_REFERS_TO,provision:11.1
+provision:11.3,SP_REFERS_TO,provision:11.2
+provision:12.2,SP_REFERS_TO,provision:12.1
+provision:12.3,SP_REFERS_TO,provision:12.1
+provision:12.5,SP_REFERS_TO,provision:12.2
+provision:12.5,SP_REFERS_TO,provision:12.3
+provision:12.6,SP_REFERS_TO,provision:12.5
+provision:12.9,SP_REFERS_TO,provision:12.2
+provision:12.9,SP_REFERS_TO,provision:12.3
+provision:12.10,SP_REFERS_TO,provision:12.3
+provision:13.5,SP_REFERS_TO,provision:13.1
+provision:13.5,SP_REFERS_TO,provision:13.4
+provision:12.2,SP_DISAPPLIES,provision:12.1
+provision:12.3,SP_DISAPPLIES,provision:12.1
+provision:2.2,SP_DISAPPLIES,provision:2.1
+provision:4.4,SP_DISAPPLIES,provision:4.3
+provision:7.2,SP_DISAPPLIES,provision:7.1
+provision:7.3,SP_DISAPPLIES,provision:7.1
+provision:7.4,SP_DISAPPLIES,provision:7.1
+provision:7.5,SP_DISAPPLIES,provision:7.1
+provision:8.2,SP_DISAPPLIES,provision:8.1

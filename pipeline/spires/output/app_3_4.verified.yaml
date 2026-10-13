@@ -1,0 +1,19 @@
+provision_id: '3.4'
+norms:
+- deontic_modality: APPLICABILITY
+- deontic_modality: APPLICABILITY
+  bearer: AUTO:APP%20entity
+  action: AUTO:collect
+  object: AUTO:sensitive%20information%20about%20an%20individual
+  conditions:
+  - statement: A permitted general situation exists in relation to the collection of the information by
+      the APP entity.
+- deontic_modality: APPLICABILITY
+  bearer: AUTO:APP%20entity
+- deontic_modality: APPLICABILITY
+  bearer: AUTO:APP%20entity
+  conditions:
+  - statement: APP entity is a non-profit organisation
+  - statement: information relates to the activities of the organisation.
+  - statement: Information relates solely to the members of the organisation or to individuals who have
+      regular contact with the organisation in connection with its activities.

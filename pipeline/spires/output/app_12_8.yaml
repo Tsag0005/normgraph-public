@@ -1,0 +1,61 @@
+---
+input_text: |
+  12.8 If: (a) the APP entity is an organisation; and (b) the entity charges the individual for giving access to the personal information; the charge must not be excessive and must not apply to the making of the request. Refusal to give access
+raw_completion_output: |-
+  provision_id: 12.8  
+  norms: If the APP entity is an organisation and the entity charges the individual for giving access to the personal information, the charge must not be excessive; If the APP entity is an organisation and the entity charges the individual for giving access to the personal information, the charge must not apply to the making of the request.  
+  disapplies:   
+  cross_references:  
+prompt: |+
+  From the text below, extract the following entities in the following format:
+
+  statement: <The condition in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this condition when the text points elsewhere for it, e.g. "4.3". Blank when the condition is stated here.>
+
+
+  Text:
+  the entity charges the individual for giving access to the personal information
+
+  ===
+
+extracted_object:
+  provision_id: '12.8'
+  norms:
+    - deontic_modality: PROHIBITION
+      bearer: AUTO:APP%20entity
+      action: AUTO:charge
+      object: 
+        AUTO:the%20individual%20for%20giving%20access%20to%20the%20personal%20information
+      conditions:
+        - statement: APP entity is an organisation
+        - statement: <entity charges the individual for giving access to the 
+            personal information>
+          source_provision: <Blank>
+    - deontic_modality: PROHIBITION
+      bearer: AUTO:APP%20entity
+      action: AUTO:apply
+      object: AUTO:charge
+      conditions:
+        - statement: The APP entity is an organisation.
+        - statement: <The entity charges the individual for giving access to the
+            personal information.>
+          source_provision: <Blank>
+named_entities:
+  - id: AUTO:APP%20entity
+    label: APP entity
+    original_spans:
+      - 17:26
+  - id: AUTO:charge
+    label: charge
+    original_spans:
+      - 67:72
+      - 141:146
+  - id: 
+      AUTO:the%20individual%20for%20giving%20access%20to%20the%20personal%20information
+    label: the individual for giving access to the personal information
+    original_spans:
+      - 75:134
+  - id: AUTO:apply
+    label: apply
+    original_spans:
+      - 183:187

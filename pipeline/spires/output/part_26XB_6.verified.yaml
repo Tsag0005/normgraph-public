@@ -1,0 +1,16 @@
+provision_id: 26XB(6)
+norms:
+- deontic_modality: NONE
+- deontic_modality: NONE
+  bearer: AUTO:Not%20applicable
+  action: AUTO:Not%20applicable
+  object: AUTO:Not%20applicable
+- deontic_modality: NONE
+  bearer: AUTO:%28none%20specified%29
+  action: AUTO:%28none%20specified%29
+  object: AUTO:%28none%20specified%29
+  scope_qualifier: (none specified)
+  conditions:
+  - statement: none specified
+  exceptions:
+  - statement: (none specified)

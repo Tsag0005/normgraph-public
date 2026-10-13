@@ -1,0 +1,45 @@
+---
+input_text: |
+  10.2 An APP entity must take such steps (if any) as are reasonable in the circumstances to ensure that the personal information that the entity uses or discloses is, having regard to the purpose of the use or disclosure, accurate, up-to-date, complete and relevant.
+raw_completion_output: |-
+  Provision_id: 10.2  
+  Norms: An APP entity must take such steps (if any) as are reasonable in the circumstances to ensure that the personal information that the entity uses or discloses is accurate, up-to-date, complete and relevant, having regard to the purpose of the use or disclosure.  
+  Disapplies:   
+  Cross_references:  
+prompt: |+
+  Split the following piece of text into fields in the following format:
+
+  statement: <The condition in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this condition when the text points elsewhere for it, e.g. "4.3". Blank when the condition is stated here.>
+
+
+  Text:
+  having regard to the purpose of the use or disclosure
+
+  ===
+
+extracted_object:
+  provision_id: '10.2'
+  norms:
+    - deontic_modality: OBLIGATION
+      bearer: AUTO:APP%20entity
+      action: 
+        AUTO:take%20such%20steps%20as%20are%20reasonable%20in%20the%20circumstances%20to%20ensure
+      object: 
+        AUTO:the%20personal%20information%20that%20the%20entity%20uses%20or%20discloses
+      conditions:
+        - statement: <having regard to the purpose of the use or disclosure>
+          source_provision: <Blank>
+named_entities:
+  - id: AUTO:APP%20entity
+    label: APP entity
+    original_spans:
+      - 8:17
+  - id: 
+      AUTO:take%20such%20steps%20as%20are%20reasonable%20in%20the%20circumstances%20to%20ensure
+    label: take such steps as are reasonable in the circumstances to ensure
+  - id: 
+      AUTO:the%20personal%20information%20that%20the%20entity%20uses%20or%20discloses
+    label: the personal information that the entity uses or discloses
+    original_spans:
+      - 103:160

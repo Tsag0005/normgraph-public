@@ -1,0 +1,50 @@
+---
+input_text: |
+  26WK(2) (2) The entity must: (a) both: (i) prepare a statement that complies with subsection (3); and (ii) give a copy of the statement to the Commissioner; and (b) do so as soon as practicable after the entity becomes so aware.
+raw_completion_output: |-
+  provision_id: 26WK(2)
+
+  norms: The entity must prepare a statement that complies with subsection (3) and give a copy of the statement to the Commissioner as soon as practicable after the entity becomes so aware.
+
+  disapplies: 
+
+  cross_references: subsection (3)
+prompt: |+
+  Split the following piece of text into fields in the following format:
+
+  statement: <The condition in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this condition when the text points elsewhere for it, e.g. "4.3". Blank when the condition is stated here.>
+
+
+  Text:
+  the entity becomes so aware
+
+  ===
+
+extracted_object:
+  provision_id: 26WK(2)
+  norms:
+    - deontic_modality: OBLIGATION
+      bearer: AUTO:The%20entity
+      action: 
+        AUTO:prepare%20a%20statement%20and%20give%20a%20copy%20of%20the%20statement%20to%20the%20Commissioner
+      object: AUTO:a%20statement%20that%20complies%20with%20subsection%20%283%29
+      conditions:
+        - statement: <the entity becomes so aware>
+          source_provision: <Blank>
+  cross_references:
+    - subsection (3)
+named_entities:
+  - id: AUTO:The%20entity
+    label: The entity
+    original_spans:
+      - 12:21
+      - 200:209
+  - id: 
+      AUTO:prepare%20a%20statement%20and%20give%20a%20copy%20of%20the%20statement%20to%20the%20Commissioner
+    label: prepare a statement and give a copy of the statement to the 
+      Commissioner
+  - id: AUTO:a%20statement%20that%20complies%20with%20subsection%20%283%29
+    label: a statement that complies with subsection (3)
+    original_spans:
+      - 51:95

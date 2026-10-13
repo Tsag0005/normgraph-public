@@ -1,0 +1,46 @@
+---
+input_text: |
+  26XD(1) (1) The operation of this Division is not limited by a secrecy provision of any other Commonwealth law (whether made before or after the commencement of this Act) except to the extent that the secrecy provision expressly excludes the operation of this section. Note: Section 3 provides for the concurrent operation of State and Territory laws.
+raw_completion_output: |-
+  provision_id: 26XD(1)
+
+  norms: The operation of this Division is not limited by a secrecy provision of any other Commonwealth law except to the extent that the secrecy provision expressly excludes the operation of this section.
+
+  disapplies: 
+
+  cross_references: Section 3
+prompt: |+
+  From the text below, extract the following entities in the following format:
+
+  statement: <The exception in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this exception, written as the text writes it. Blank when the exception is stated here in full.>
+  is_exhaustive: <"true" if the text signals these are the only exceptions, otherwise blank.>
+
+
+  Text:
+  the secrecy provision expressly excludes the operation of this section
+
+  ===
+
+extracted_object:
+  provision_id: 26XD(1)
+  norms:
+    - deontic_modality: DISAPPLICATION
+      bearer: AUTO:Division
+      action: AUTO:is%20not%20limited
+      exceptions:
+        - statement: <The secrecy provision expressly excludes the operation of 
+            this section.>
+          source_provision: <>
+          is_exhaustive: <>
+  cross_references:
+    - Section 3
+named_entities:
+  - id: AUTO:Division
+    label: Division
+    original_spans:
+      - 34:41
+  - id: AUTO:is%20not%20limited
+    label: is not limited
+    original_spans:
+      - 43:56

@@ -1,0 +1,49 @@
+---
+input_text: |
+  26WR(8) (8) If the Commissioner is aware that there are reasonable grounds to believe that the access, disclosure or loss that constituted the eligible data breach of the entity is an eligible data breach of one or more other entities, a direction under subsection (1) may also require the statement referred to in paragraph (1)(a) to set out the identity and contact details of those other entities. Method of providing a statement to an individual
+raw_completion_output: |-
+  provision_id: 26WR(8)
+
+  norms: A direction under subsection (1) may also require the statement referred to in paragraph (1)(a) to set out the identity and contact details of other entities if the Commissioner is aware that there are reasonable grounds to believe that the access, disclosure or loss that constituted the eligible data breach of the entity is an eligible data breach of one or more other entities.
+
+  disapplies: 
+
+  cross_references: 26WR(1)
+prompt: |+
+  From the text below, extract the following entities in the following format:
+
+  statement: <The condition in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this condition when the text points elsewhere for it, e.g. "4.3". Blank when the condition is stated here.>
+
+
+  Text:
+  if the Commissioner is aware that there are reasonable grounds to believe that the access, disclosure or loss that constituted the eligible data breach of the entity is an eligible data breach of one or more other entities
+
+  ===
+
+extracted_object:
+  provision_id: 26WR(8)
+  norms:
+    - deontic_modality: PERMISSION
+      bearer: AUTO:statement
+      action: AUTO:set%20out
+      object: AUTO:identity%20and%20contact%20details%20of%20other%20entities
+      conditions:
+        - statement: <There are reasonable grounds to believe that the access, 
+            disclosure, or loss that constituted the eligible data breach of the
+            entity is an eligible data breach of one or more other entities.>
+          source_provision: <Blank>
+  cross_references:
+    - 26WR(1)
+named_entities:
+  - id: AUTO:statement
+    label: statement
+    original_spans:
+      - 290:298
+      - 423:431
+  - id: AUTO:set%20out
+    label: set out
+    original_spans:
+      - 335:341
+  - id: AUTO:identity%20and%20contact%20details%20of%20other%20entities
+    label: identity and contact details of other entities

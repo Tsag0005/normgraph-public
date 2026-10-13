@@ -1,0 +1,43 @@
+provision_id: '6.2'
+norms:
+- deontic_modality: APPLICABILITY
+  bearer: AUTO:APP%20entity
+  action: AUTO:use%20or%20disclose
+  object: AUTO:personal%20information%20about%20an%20individual
+  conditions:
+  - statement: The APP entity can use or disclose the information for the secondary purpose if the individual
+      would reasonably expect it.
+  - statement: secondary purpose is directly related to the primary purpose
+  - statement: information is sensitive information
+- deontic_modality: APPLICABILITY
+  bearer: AUTO:APP%20entity
+  action: AUTO:use%20or%20disclose
+  object: AUTO:personal%20information%20about%20an%20individual
+  conditions:
+  - statement: The individual would reasonably expect the APP entity to use or disclose the information
+      for the secondary purpose.
+  - statement: the secondary purpose is related to the primary purpose
+  - statement: the information is not sensitive information.
+- deontic_modality: APPLICABILITY
+- deontic_modality: APPLICABILITY
+  bearer: AUTO:APP%20entity
+  action: AUTO:use%20or%20disclose
+  object: AUTO:personal%20information%20about%20an%20individual
+  conditions:
+  - statement: A permitted general situation exists in relation to the use or disclosure of the information.
+- deontic_modality: APPLICABILITY
+  bearer: AUTO:APP%20entity
+  action: AUTO:use%20or%20disclose
+  object: AUTO:personal%20information%20about%20an%20individual
+  conditions:
+  - statement: APP entity is an organisation
+  - statement: A permitted health situation exists in relation to the use or disclosure of the information
+      by the entity.
+- deontic_modality: APPLICABILITY
+  bearer: AUTO:APP%20entity
+  action: AUTO:use%20or%20disclose
+  object: AUTO:personal%20information%20about%20an%20individual
+  conditions:
+  - statement: The APP entity reasonably believes that the use or disclosure of the information is reasonably
+      necessary for one or more enforcement-related activities conducted by, or on behalf of, an enforcement
+      body.

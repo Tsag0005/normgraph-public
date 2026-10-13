@@ -1,0 +1,20 @@
+provision_id: 26WQ(6)
+norms:
+- deontic_modality: PERMISSION
+  bearer: AUTO:entity
+  action: AUTO:be%20expressed%20to%20be%20an%20application%20for%20a%20paragraph%20%281%29%28c%29%20declaration
+  object: AUTO:An%20application%20by%20an%20entity%20under%20paragraph%20%285%29%28b%29
+- deontic_modality: PERMISSION
+  bearer: AUTO:entity
+  action: AUTO:be%20expressed
+  object: AUTO:an%20application%20for%20a%20paragraph%20%281%29%28d%29%20declaration
+  conditions:
+  - statement: an application by an entity
+    source_provision: paragraph (5)(b)
+- deontic_modality: PERMISSION
+  bearer: AUTO:entity
+  action: AUTO:express
+  object: AUTO:application
+  conditions:
+  - statement: application by an entity
+    source_provision: (5)(b)

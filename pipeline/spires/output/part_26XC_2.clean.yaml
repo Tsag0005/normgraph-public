@@ -1,0 +1,12 @@
+provision_id: 26XC(2)
+norms:
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:Subsection%20%281%29
+  action: AUTO:apply
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:Subsection%20%281%29
+  action: AUTO:does%20not%20apply
+disapplies:
+- 26XC(1)
+cross_references:
+- section 17, section 26XB, subsection 13.3(3) of the Criminal Code

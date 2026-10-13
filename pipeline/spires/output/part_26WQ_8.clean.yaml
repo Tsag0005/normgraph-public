@@ -1,0 +1,9 @@
+provision_id: 26WQ(8)
+norms:
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:the%20Commissioner
+  action: AUTO:have%20refused
+  object: AUTO:the%20application
+  conditions:
+  - statement: An application for a paragraph (1)(d) declaration nominates a period to be specified in
+      the declaration.

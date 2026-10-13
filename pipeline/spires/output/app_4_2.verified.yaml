@@ -1,0 +1,9 @@
+provision_id: '4.2'
+norms:
+- deontic_modality: PERMISSION
+  bearer: AUTO:APP%20entity
+  action: AUTO:use%20or%20disclose
+  object: AUTO:personal%20information
+  conditions:
+  - statement: for the purposes of making the determination
+    source_provision: '4.1'

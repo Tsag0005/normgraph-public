@@ -1,0 +1,9 @@
+provision_id: 26WR(3)
+norms:
+- deontic_modality: OBLIGATION
+  bearer: AUTO:the%20Commissioner
+  action: AUTO:invite%20the%20entity%20to%20make%20a%20submission%20to%20the%20Commissioner
+  object: AUTO:the%20direction
+  conditions:
+  - statement: before giving a direction to an entity under subsection (1)
+    source_provision: (1)

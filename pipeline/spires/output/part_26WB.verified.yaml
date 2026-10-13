@@ -1,0 +1,8 @@
+provision_id: 26WB
+norms:
+- deontic_modality: NONE
+  bearer: AUTO:entity
+  action: AUTO:includes
+  object: AUTO:a%20person%20who%20is%20a%20file%20number%20recipient
+  conditions:
+  - statement: For the purposes of this Part

@@ -1,0 +1,10 @@
+provision_id: 26WP(6)
+norms:
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:entity
+  action: AUTO:comply
+  object: AUTO:subparagraph%2026WK%282%29%28a%29%28ii%29
+disapplies:
+- 26WK(2)
+cross_references:
+- 26WK(2), 26WK(2)(a)(ii)

@@ -1,0 +1,14 @@
+provision_id: '6.7'
+norms:
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:organisation
+  action: AUTO:use%20or%20disclosure
+  object: AUTO:personal%20information
+  conditions:
+  - statement: for the purpose of direct marketing
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:organisation
+  action: AUTO:use%20or%20disclosure
+  object: AUTO:government%20related%20identifiers
+disapplies:
+- This principle

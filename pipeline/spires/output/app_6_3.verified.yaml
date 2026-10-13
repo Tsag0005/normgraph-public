@@ -1,0 +1,27 @@
+provision_id: '6.3'
+norms:
+- deontic_modality: APPLICABILITY
+  bearer: AUTO:APP%20entity%20that%20is%20an%20agency
+  action: AUTO:disclosure
+  object: AUTO:personal%20information%20about%20an%20individual
+  conditions:
+  - statement: the agency is not an enforcement body
+- deontic_modality: APPLICABILITY
+  bearer: AUTO:APP%20entity%20that%20is%20an%20agency
+  action: AUTO:disclosure
+  object: AUTO:personal%20information%20about%20an%20individual
+  conditions:
+  - statement: information is biometric information or biometric templates
+- deontic_modality: APPLICABILITY
+  bearer: AUTO:APP%20entity%20that%20is%20an%20agency
+  action: AUTO:disclosure
+  object: AUTO:personal%20information%20about%20an%20individual
+  conditions:
+  - statement: recipient of the information is an enforcement body
+- deontic_modality: APPLICABILITY
+  bearer: AUTO:APP%20entity%20that%20is%20an%20agency
+  action: AUTO:disclose
+  object: AUTO:personal%20information%20about%20an%20individual
+  conditions:
+  - statement: The disclosure is conducted in accordance with the guidelines made by the Commissioner
+      for the purposes of this paragraph.

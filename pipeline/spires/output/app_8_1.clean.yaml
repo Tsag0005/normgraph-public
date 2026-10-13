@@ -1,0 +1,12 @@
+provision_id: '8.1'
+norms:
+- deontic_modality: OBLIGATION
+  bearer: AUTO:APP%20entity
+  action: AUTO:take%20such%20steps%20as%20are%20reasonable%20in%20the%20circumstances%20to%20ensure%20that%20the%20overseas%20recipient%20does%20not%20breach%20the%20Australian%20Privacy%20Principles
+  object: AUTO:personal%20information
+  scope_qualifier: in relation to the information
+  conditions:
+  - statement: An APP entity must not disclose personal information about an individual to a person who
+      is not in Australia or an external Territory and who is not the entity or the individual.
+  exceptions:
+  - statement: other than Australian Privacy Principle 1

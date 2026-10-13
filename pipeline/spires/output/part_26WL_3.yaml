@@ -1,0 +1,43 @@
+---
+input_text: |
+  26WL(3) (3) The entity must comply with subsection (2) as soon as practicable after the completion of the preparation of the statement. Method of providing a statement to an individual
+raw_completion_output: |-
+  provision_id: 26WL(3)
+  norms: The entity must comply with subsection (2) as soon as practicable after the completion of the preparation of the statement.
+  disapplies: 
+  cross_references: 26WL(2)
+prompt: |+
+  Split the following piece of text into fields in the following format:
+
+  statement: <The condition in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this condition when the text points elsewhere for it, e.g. "4.3". Blank when the condition is stated here.>
+
+
+  Text:
+  completion of the preparation of the statement
+
+  ===
+
+extracted_object:
+  provision_id: 26WL(3)
+  norms:
+    - deontic_modality: OBLIGATION
+      bearer: AUTO:The%20entity
+      action: AUTO:comply
+      object: AUTO:subsection%20%282%29
+      conditions:
+        - statement: <completion of the preparation of the statement>
+          source_provision: <Blank when the condition is stated here.>
+named_entities:
+  - id: AUTO:The%20entity
+    label: The entity
+    original_spans:
+      - 12:21
+  - id: AUTO:comply
+    label: comply
+    original_spans:
+      - 28:33
+  - id: AUTO:subsection%20%282%29
+    label: subsection (2)
+    original_spans:
+      - 40:53

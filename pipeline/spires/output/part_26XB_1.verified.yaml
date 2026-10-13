@@ -1,0 +1,49 @@
+provision_id: 26XB(1)
+norms:
+- deontic_modality: PERMISSION
+  bearer: AUTO:entity
+  action: AUTO:collect%2C%20use%20or%20disclose
+  object: AUTO:personal%20information%20about%20an%20individual
+  conditions:
+  - statement: Eligible data breach declaration is in force in relation to an eligible data breach.
+  - statement: entity reasonably believes that the individual may be at risk from the eligible data breach
+- deontic_modality: PERMISSION
+  bearer: AUTO:an%20entity
+  action: AUTO:collect%2C%20use%20or%20disclose
+  object: AUTO:personal%20information%20about%20an%20individual
+  conditions:
+  - statement: An eligible data breach declaration is in force in relation to an eligible data breach.
+  - statement: The collection, use or disclosure is for a permitted purpose specified in the declaration.
+- deontic_modality: PERMISSION
+  bearer: AUTO:entity
+  action: AUTO:collect%2C%20use%20or%20disclose
+  object: AUTO:personal%20information%20about%20an%20individual
+  conditions:
+  - statement: An eligible data breach declaration is in force in relation to an eligible data breach.
+  - statement: The information is information of a kind or kinds specified in the declaration.
+- deontic_modality: PERMISSION
+  bearer: AUTO:entity
+  action: AUTO:collect%2C%20use%20or%20disclose
+  object: AUTO:personal%20information%20about%20an%20individual
+  conditions:
+  - statement: An eligible data breach declaration is in force in relation to an eligible data breach.
+  exceptions:
+  - statement: The information is disclosed by an entity specified in the declaration, or an entity included
+      in a class of entities specified in the declaration.
+- deontic_modality: PERMISSION
+  bearer: AUTO:entity
+  action: AUTO:collect%2C%20use%20or%20disclose
+  object: AUTO:personal%20information%20about%20an%20individual
+  conditions:
+  - statement: an eligible data breach declaration is in force
+  - statement: The information is disclosed to an entity specified in the declaration, or an entity included
+      in a class of entities specified in the declaration.
+- deontic_modality: PERMISSION
+  bearer: AUTO:entity
+  action: AUTO:collect%2C%20use%20or%20disclose
+  object: AUTO:personal%20information%20about%20an%20individual
+  conditions:
+  - statement: An eligible data breach declaration is in force in relation to an eligible data breach.
+  - statement: a matter mentioned in paragraph (b), (c), (d) or (e) is specified in the declaration subject
+      to conditions
+  - statement: those conditions are satisfied

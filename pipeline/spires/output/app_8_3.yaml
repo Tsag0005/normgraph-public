@@ -1,0 +1,60 @@
+---
+input_text: |
+  8.3 This subclause applies in relation to the disclosure of personal information (the relevant personal information) about an individual by an APP entity to an overseas recipient if: (a) the recipient of the relevant personal information is: (i) subject to the laws of a country that is prescribed by the regulations; or (ii) a participant in a binding scheme that is prescribed by the regulations; and (b) if the country or binding scheme is prescribed subject to conditions - those conditions are satisfied. Note: There are prerequisites that must be satisfied before the matters mentioned in this subclause are prescribed: see subsection 100(1A).
+raw_completion_output: |-
+  provision_id: 8.3  
+  norms: This subclause applies in relation to the disclosure of personal information about an individual by an APP entity to an overseas recipient if the recipient is subject to the laws of a country that is prescribed by the regulations; This subclause applies in relation to the disclosure of personal information about an individual by an APP entity to an overseas recipient if the recipient is a participant in a binding scheme that is prescribed by the regulations; This subclause applies in relation to the disclosure of personal information about an individual by an APP entity to an overseas recipient if the country or binding scheme is prescribed subject to conditions and those conditions are satisfied.  
+  disapplies:   
+  cross_references: subsection 100(1A)  
+prompt: |+
+  Split the following piece of text into fields in the following format:
+
+  statement: <The condition in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this condition when the text points elsewhere for it, e.g. "4.3". Blank when the condition is stated here.>
+
+
+  Text:
+  those conditions are satisfied
+
+  ===
+
+extracted_object:
+  provision_id: '8.3'
+  norms:
+    - deontic_modality: NONE
+      bearer: AUTO:APP%20entity
+      action: AUTO:disclose
+      object: AUTO:personal%20information%20about%20an%20individual
+      conditions:
+        - statement: <recipient is subject to the laws of a country that is 
+            prescribed by the regulations>
+          source_provision: <Blank>
+    - deontic_modality: NONE
+      bearer: AUTO:APP%20entity
+      action: AUTO:disclose
+      object: AUTO:personal%20information%20about%20an%20individual
+      conditions:
+        - statement: <the disclosure is to an overseas recipient.>
+          source_provision: <Blank>
+        - statement: <The recipient is a participant in a binding scheme that is
+            prescribed by the regulations.>
+          source_provision: < >
+    - deontic_modality: NONE
+      bearer: AUTO:APP%20entity
+      action: AUTO:disclose
+      object: AUTO:personal%20information%20about%20an%20individual
+      conditions:
+        - statement: <The country or binding scheme is prescribed subject to 
+            conditions.>
+          source_provision: <Blank>
+        - statement: <those conditions are satisfied.>
+          source_provision: <Blank>
+named_entities:
+  - id: AUTO:APP%20entity
+    label: APP entity
+    original_spans:
+      - 143:152
+  - id: AUTO:disclose
+    label: disclose
+  - id: AUTO:personal%20information%20about%20an%20individual
+    label: personal information about an individual

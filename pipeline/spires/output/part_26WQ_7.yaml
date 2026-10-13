@@ -1,0 +1,71 @@
+---
+input_text: |
+  26WQ(7) (7) If an entity applies to the Commissioner under paragraph (5)(b): (a) the Commissioner may refuse the application; and (b) if the Commissioner does so - the Commissioner must give written notice of the refusal to the entity.
+raw_completion_output: |-
+  provision_id: 26WQ(7)  
+  norms: If an entity applies to the Commissioner under paragraph (5)(b), the Commissioner may refuse the application; If an entity applies to the Commissioner under paragraph (5)(b) and the Commissioner refuses the application, the Commissioner must give written notice of the refusal to the entity.  
+  disapplies:   
+  cross_references: (5)(b)
+prompt: |+
+  Split the following piece of text into fields in the following format:
+
+  statement: <The condition in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this condition when the text points elsewhere for it, e.g. "4.3". Blank when the condition is stated here.>
+
+
+  Text:
+  the Commissioner refuses the application
+
+  ===
+
+extracted_object:
+  provision_id: 26WQ(7)
+  norms:
+    - deontic_modality: PERMISSION
+      bearer: AUTO:Commissioner
+      action: AUTO:refuse
+      object: AUTO:the%20application
+      conditions:
+        - statement: <entity applies to the Commissioner under paragraph (5)(b)>
+          source_provision: <5(b)>
+    - deontic_modality: OBLIGATION
+      bearer: AUTO:The%20Commissioner
+      action: AUTO:give%20written%20notice%20of%20the%20refusal
+      object: AUTO:the%20refusal
+      conditions:
+        - statement: <If an entity applies to the Commissioner under paragraph 
+            (5)(b)>
+          source_provision: <5(b)>
+        - statement: <the Commissioner refuses the application>
+          source_provision: <Blank>
+named_entities:
+  - id: AUTO:Commissioner
+    label: Commissioner
+    original_spans:
+      - 40:51
+      - 85:96
+      - 141:152
+      - 168:179
+  - id: AUTO:refuse
+    label: refuse
+    original_spans:
+      - 102:107
+  - id: AUTO:the%20application
+    label: the application
+    original_spans:
+      - 109:123
+  - id: AUTO:The%20Commissioner
+    label: The Commissioner
+    original_spans:
+      - 36:51
+      - 81:96
+      - 137:152
+      - 164:179
+  - id: AUTO:give%20written%20notice%20of%20the%20refusal
+    label: give written notice of the refusal
+    original_spans:
+      - 186:219
+  - id: AUTO:the%20refusal
+    label: the refusal
+    original_spans:
+      - 209:219

@@ -1,0 +1,17 @@
+provision_id: 26WT(5)
+norms:
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:entity
+  action: AUTO:comply
+  object: AUTO:paragraph%2026WR%281%29%28b%29%20or%20subsection%2026WR%282%29
+  conditions:
+  - statement: in relation to a statement
+  exceptions:
+  - statement: Compliance by the entity with paragraph 26WR(1)(b) or subsection 26WR(2) in relation to
+      the statement would, to any extent, be inconsistent with a prescribed secrecy provision.
+disapplies:
+- 26WR(1)(b)
+- 26WR(2)
+cross_references:
+- 26WR(1)(b)
+- 26WR(2)

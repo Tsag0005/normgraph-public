@@ -1,0 +1,15 @@
+provision_id: 26WM
+norms:
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:Sections%2026WK%20and%2026WL
+  action: AUTO:apply
+  exceptions:
+  - statement: If an entity complies with sections 26WK and 26WL in relation to an eligible data breach
+      of the entity and the access, disclosure, or loss that constituted the eligible data breach of the
+      entity is an eligible data breach of one or more other entities.
+disapplies:
+- 26WK
+- 26WL
+cross_references:
+- 26WK
+- 26WL

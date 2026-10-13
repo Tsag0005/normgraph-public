@@ -1,0 +1,11 @@
+# SPIRES extraction. A separate environment because ontogpt pins linkml and pydantic
+# versions that conflict with the pipeline's.
+#
+# After installing, copy sitecustomize.py from the repository root into this venv's
+# site-packages. bootstrap.ps1 does it for you. Without it, every ontogpt call behind a
+# TLS-inspecting proxy fails with CERTIFICATE_VERIFY_FAILED: run.py and llm.py call
+# truststore themselves, but the `ontogpt` console script has no such hook, so the
+# injection has to happen at interpreter startup.
+
+ontogpt==1.1.1
+truststore==0.10.4

@@ -1,0 +1,6 @@
+provision_id: '1.1'
+norms:
+- deontic_modality: NONE
+  bearer: AUTO:APP%20entities
+  action: AUTO:manage
+  object: AUTO:personal%20information

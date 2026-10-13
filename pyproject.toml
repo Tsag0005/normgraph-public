@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kg-testgen"
+version = "0.1.0"
+description = "Generate Gherkin compliance cases from privacy legislation using a local SPIRES graph or Neo4j."
+requires-python = ">=3.10"
+dependencies = [
+    "neo4j>=5.20",
+    "openai>=1.30",
+    "python-dotenv>=1.0",
+    "pyyaml>=6.0",
+    "tiktoken>=0.7",
+    "truststore>=0.9",
+]
+# numpy was here for the EDC entity extractor, which reached the pipeline through
+# kg_testgen.edc_bridge. That bridge is now an evaluation arm, and with it go numpy,
+# transformers and the vendored edc-main tree. See tests/test_pipeline_isolation.py.
+
+[project.scripts]
+kg-testgen = "kg_testgen.cli:main"
+
+[tool.setuptools]
+# The package lives in pipeline/ since the repository was split into what the project
+# proposes and what measures it. Installing from the repository root still works.
+package-dir = {"" = "pipeline"}
+packages = ["kg_testgen"]

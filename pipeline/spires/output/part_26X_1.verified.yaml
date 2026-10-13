@@ -1,0 +1,8 @@
+provision_id: 26X(1)
+norms:
+- deontic_modality: PERMISSION
+  bearer: AUTO:The%20Minister
+  action: AUTO:make%20a%20declaration%20under%2026X%281%29
+- deontic_modality: PERMISSION
+  bearer: AUTO:The%20Minister
+  action: AUTO:make%20a%20declaration

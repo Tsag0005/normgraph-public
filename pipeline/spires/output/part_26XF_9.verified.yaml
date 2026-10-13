@@ -1,0 +1,8 @@
+provision_id: 26XF(9)
+norms:
+- deontic_modality: NONE
+  bearer: AUTO:This%20Division
+  action: AUTO:has%20the%20effect
+  object: AUTO:a%20reference%20to%20a%20collection%2C%20use%20or%20disclosure
+  conditions:
+  - statement: taking place outside Australia

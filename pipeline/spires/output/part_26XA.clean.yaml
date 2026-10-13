@@ -1,0 +1,9 @@
+provision_id: 26XA
+norms:
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:declaration
+  action: AUTO:cease%20to%20be%20in%20force
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:eligible%20data%20breach%20declaration
+  action: AUTO:ceases%20to%20be%20in%20force
+- deontic_modality: NONE

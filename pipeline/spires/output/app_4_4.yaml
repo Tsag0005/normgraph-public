@@ -1,0 +1,52 @@
+---
+input_text: |
+  4.4 If subclause 4.3 does not apply in relation to the personal information, Australian Privacy Principles 5 to 13 apply in relation to the information as if the entity had collected the information under Australian Privacy Principle 3.
+raw_completion_output: |-
+  provision_id: 4.4  
+  norms: Subclause 4.3 does not apply in relation to the information if subclause 4.3 does not apply in relation to the personal information; Australian Privacy Principles 5 to 13 apply in relation to the information as if the entity had collected the information under Australian Privacy Principle 3.  
+  disapplies: 4.3  
+  cross_references: Australian Privacy Principle 3; Australian Privacy Principles 5 to 13  
+prompt: |+
+  From the text below, extract the following entities in the following format:
+
+  statement: <The condition in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this condition when the text points elsewhere for it, e.g. "4.3". Blank when the condition is stated here.>
+
+
+  Text:
+  the entity had collected the information under Australian Privacy Principle 3
+
+  ===
+
+extracted_object:
+  provision_id: '4.4'
+  norms:
+    - deontic_modality: DISAPPLICATION
+    - deontic_modality: NONE
+      bearer: AUTO:Australian%20Privacy%20Principles%205%20to%2013
+      action: AUTO:apply
+      object: AUTO:the%20information
+      conditions:
+        - statement: <The entity had collected the information under Australian 
+            Privacy Principle 3.>
+          source_provision: <Blank>
+  disapplies:
+    - '4.3'
+  cross_references:
+    - Australian Privacy Principle 3
+    - Australian Privacy Principles 5 to 13
+named_entities:
+  - id: AUTO:Australian%20Privacy%20Principles%205%20to%2013
+    label: Australian Privacy Principles 5 to 13
+    original_spans:
+      - 77:113
+  - id: AUTO:apply
+    label: apply
+    original_spans:
+      - 30:34
+      - 115:119
+  - id: AUTO:the%20information
+    label: the information
+    original_spans:
+      - 136:150
+      - 183:197

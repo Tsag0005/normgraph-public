@@ -1,0 +1,56 @@
+---
+input_text: |
+  26WT(5) (5) If compliance by an entity with paragraph 26WR(1)(b) or subsection 26WR(2) in relation to a statement would, to any extent, be inconsistent with a prescribed secrecy provision, paragraph 26WR(1)(b) or subsection 26WR(2), as the case may be, does not apply to the entity in relation to the statement.
+raw_completion_output: |-
+  provision_id: 26WT(5)  
+  norms: Paragraph 26WR(1)(b) or subsection 26WR(2) does not apply to an entity in relation to a statement if compliance by the entity with paragraph 26WR(1)(b) or subsection 26WR(2) in relation to the statement would, to any extent, be inconsistent with a prescribed secrecy provision.  
+  disapplies: 26WR(1)(b); 26WR(2)  
+  cross_references: 26WR(1)(b); 26WR(2)  
+prompt: |+
+  From the text below, extract the following entities in the following format:
+
+  statement: <The exception in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this exception, written as the text writes it. Blank when the exception is stated here in full.>
+  is_exhaustive: <"true" if the text signals these are the only exceptions, otherwise blank.>
+
+
+  Text:
+  if compliance by the entity with paragraph 26WR(1)(b) or subsection 26WR(2) in relation to the statement would, to any extent, be inconsistent with a prescribed secrecy provision
+
+  ===
+
+extracted_object:
+  provision_id: 26WT(5)
+  norms:
+    - deontic_modality: DISAPPLICATION
+      bearer: AUTO:entity
+      action: AUTO:comply
+      object: 
+        AUTO:paragraph%2026WR%281%29%28b%29%20or%20subsection%2026WR%282%29
+      conditions:
+        - statement: in relation to a statement
+      exceptions:
+        - statement: <Compliance by the entity with paragraph 26WR(1)(b) or 
+            subsection 26WR(2) in relation to the statement would, to any 
+            extent, be inconsistent with a prescribed secrecy provision.>
+          source_provision: <>
+          is_exhaustive: <>
+  disapplies:
+    - 26WR(1)(b)
+    - 26WR(2)
+  cross_references:
+    - 26WR(1)(b)
+    - 26WR(2)
+named_entities:
+  - id: AUTO:entity
+    label: entity
+    original_spans:
+      - 32:37
+      - 275:280
+  - id: AUTO:comply
+    label: comply
+  - id: AUTO:paragraph%2026WR%281%29%28b%29%20or%20subsection%2026WR%282%29
+    label: paragraph 26WR(1)(b) or subsection 26WR(2)
+    original_spans:
+      - 44:85
+      - 189:230

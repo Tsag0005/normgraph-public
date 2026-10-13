@@ -1,0 +1,15 @@
+provision_id: '3.3'
+norms:
+- deontic_modality: PROHIBITION
+  bearer: AUTO:APP%20entity
+  action: AUTO:collect
+  object: AUTO:sensitive%20information%20about%20an%20individual
+  exceptions:
+  - statement: unless the individual consents to the collection of the information
+    verified: true
+  - statement: the individual consents to the collection of the information.
+  - statement: if the entity is an organisation, the information is reasonably necessary for one or more
+      of the entity's functions or activities
+  - statement: unless subclause 3.4 applies in relation to the information
+    verified: true
+    source_provision: '3.4'

@@ -1,0 +1,69 @@
+---
+input_text: |
+  26XB(4) (4) An entity does not breach an Australian Privacy Principle, a registered APP code that binds the entity or a rule issued under section 17 (rules relating to tax file number information) in respect of a collection, use or disclosure of personal information authorised by subsection (1).
+raw_completion_output: |-
+  provision_id: 26XB(4)  
+  norms: An entity does not breach an Australian Privacy Principle in respect of a collection, use or disclosure of personal information authorised by subsection (1); An entity does not breach a registered APP code that binds the entity in respect of a collection, use or disclosure of personal information authorised by subsection (1); An entity does not breach a rule issued under section 17 in respect of a collection, use or disclosure of personal information authorised by subsection (1).  
+  disapplies:  
+  cross_references: section 17, subsection (1)
+prompt: |+
+  From the text below, extract the following entities in the following format:
+
+  statement: <The condition in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this condition when the text points elsewhere for it, e.g. "4.3". Blank when the condition is stated here.>
+
+
+  Text:
+  a collection, use or disclosure of personal information authorised by subsection (1)
+
+  ===
+
+extracted_object:
+  provision_id: 26XB(4)
+  norms:
+    - deontic_modality: DISAPPLICATION
+      bearer: AUTO:entity
+      action: AUTO:breach
+      object: AUTO:Australian%20Privacy%20Principle
+      conditions:
+        - statement: <The collection, use, or disclosure of personal information
+            is authorised.>
+          source_provision: <(1)>
+    - deontic_modality: DISAPPLICATION
+      bearer: AUTO:entity
+      action: AUTO:breach
+      object: AUTO:registered%20APP%20code
+      conditions:
+        - statement: <binds the entity in respect of a collection, use or 
+            disclosure of personal information.>
+          source_provision: <Blank>
+    - deontic_modality: DISAPPLICATION
+      bearer: AUTO:entity
+      action: AUTO:breach
+      object: AUTO:a%20rule%20issued%20under%20section%2017
+      conditions:
+        - statement: <a collection, use or disclosure of personal information 
+            authorised by subsection (1)>
+          source_provision: <subsection (1)>
+named_entities:
+  - id: AUTO:entity
+    label: entity
+    original_spans:
+      - 15:20
+      - 108:113
+  - id: AUTO:breach
+    label: breach
+    original_spans:
+      - 31:36
+  - id: AUTO:Australian%20Privacy%20Principle
+    label: Australian Privacy Principle
+    original_spans:
+      - 41:68
+  - id: AUTO:registered%20APP%20code
+    label: registered APP code
+    original_spans:
+      - 73:91
+  - id: AUTO:a%20rule%20issued%20under%20section%2017
+    label: a rule issued under section 17
+    original_spans:
+      - 118:147

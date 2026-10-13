@@ -1,0 +1,14 @@
+provision_id: '3.6'
+norms:
+- deontic_modality: OBLIGATION
+  bearer: AUTO:APP%20entity
+  action: AUTO:collect
+  object: AUTO:personal%20information%20about%20an%20individual
+  conditions:
+  - statement: only from the individual
+  exceptions:
+  - statement: unless the individual consents to the collection of the information from someone other
+      than the individual
+  - statement: the entity is required or authorised by or under an Australian law, or a court/tribunal
+      order, to collect the information from someone other than the individual
+  - statement: unless it is unreasonable or impracticable to do so

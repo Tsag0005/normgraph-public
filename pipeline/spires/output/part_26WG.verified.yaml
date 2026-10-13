@@ -1,0 +1,50 @@
+provision_id: 26WG
+norms:
+- deontic_modality: NONE
+  object: AUTO:the%20kind%20or%20kinds%20of%20information
+  conditions:
+  - statement: An access to, or a disclosure of, information would be likely to result in serious harm
+      to any of the individuals to whom the information relates.
+- deontic_modality: NONE
+  object: AUTO:the%20sensitivity%20of%20the%20information
+  conditions:
+  - statement: An access to, or a disclosure of, information would be likely to result in serious harm
+      to any of the individuals to whom the information relates.
+- deontic_modality: NONE
+  bearer: AUTO:reasonable%20person
+  action: AUTO:conclude
+  object: AUTO:access%20to%2C%20or%20a%20disclosure%20of%2C%20information
+  conditions:
+  - statement: determining whether access or disclosure would likely result in serious harm to any of
+      the individuals to whom the information relates.
+- deontic_modality: NONE
+  object: AUTO:likelihood%20that%20any%20of%20those%20security%20measures%20could%20be%20overcome%20if%20the%20information%20is%20protected%20by%20one%20or%20more%20security%20measures
+  conditions:
+  - statement: An access to, or a disclosure of, information would be likely to result in serious harm
+      to any of the individuals to whom the information relates.
+- deontic_modality: NONE
+  object: AUTO:the%20persons%2C%20or%20the%20kinds%20of%20persons%2C%20who%20have%20obtained%2C%20or%20who%20could%20obtain%2C%20the%20information
+  conditions:
+  - statement: An access to, or a disclosure of, information would be likely to result in serious harm
+      to any of the individuals to whom the information relates.
+- deontic_modality: NONE
+  bearer: AUTO:reasonable%20person
+  action: AUTO:conclude
+  object: AUTO:access%20to%2C%20or%20a%20disclosure%20of%2C%20information
+  conditions:
+  - statement: An access to, or a disclosure of, information would be likely to result in serious harm
+      to any of the individuals to whom the information relates.
+- deontic_modality: NONE
+  bearer: AUTO:reasonable%20person
+  action: AUTO:conclude
+  object: AUTO:access%20to%2C%20or%20a%20disclosure%20of%2C%20information
+  conditions:
+  - statement: Access to, or disclosure of, information would likely result in serious harm to individuals
+      to whom the information relates.
+- deontic_modality: NONE
+  bearer: AUTO:%28Not%20explicitly%20stated%2C%20but%20implied%20to%20be%20the%20evaluating%20entity%20or%20person%29
+  action: AUTO:have%20regard
+  object: AUTO:any%20other%20relevant%20matters
+  conditions:
+  - statement: An access to, or a disclosure of, information would be likely to result in serious harm
+      to any of the individuals to whom the information relates.

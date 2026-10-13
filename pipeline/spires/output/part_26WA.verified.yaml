@@ -1,0 +1,10 @@
+provision_id: 26WA
+norms:
+- deontic_modality: NONE
+- deontic_modality: OBLIGATION
+  bearer: AUTO:entity
+  action: AUTO:give%20a%20notification
+- deontic_modality: PERMISSION
+  bearer: AUTO:The%20Commissioner
+  action: AUTO:obtain
+  object: AUTO:information%20or%20documents

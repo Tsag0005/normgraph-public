@@ -1,0 +1,14 @@
+provision_id: '12.7'
+norms:
+- deontic_modality: PROHIBITION
+  bearer: AUTO:APP%20entity
+  action: AUTO:charge
+  object: AUTO:the%20individual%20for%20the%20making%20of%20the%20request
+  conditions:
+  - statement: APP entity is an agency
+- deontic_modality: PROHIBITION
+  bearer: AUTO:APP%20entity
+  action: AUTO:charge
+  object: AUTO:individual
+  conditions:
+  - statement: APP entity is an agency

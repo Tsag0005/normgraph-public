@@ -1,0 +1,42 @@
+---
+input_text: |
+  3.7 This principle applies to the collection of personal information that is solicited by an APP entity.
+raw_completion_output: |-
+  provision_id: 3.7  
+  norms: This principle applies to the collection of personal information that is solicited by an APP entity.  
+  disapplies:   
+  cross_references:   
+prompt: |+
+  Split the following piece of text into fields in the following format:
+
+  statement: <The condition in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this condition when the text points elsewhere for it, e.g. "4.3". Blank when the condition is stated here.>
+
+
+  Text:
+  personal information is solicited
+
+  ===
+
+extracted_object:
+  provision_id: '3.7'
+  norms:
+    - deontic_modality: NONE
+      bearer: AUTO:APP%20entity
+      action: AUTO:apply
+      object: AUTO:principle
+      conditions:
+        - statement: <collection of personal information>
+          source_provision: <Blank>
+        - statement: personal information is solicited
+named_entities:
+  - id: AUTO:APP%20entity
+    label: APP entity
+    original_spans:
+      - 93:102
+  - id: AUTO:apply
+    label: apply
+  - id: AUTO:principle
+    label: principle
+    original_spans:
+      - 9:17

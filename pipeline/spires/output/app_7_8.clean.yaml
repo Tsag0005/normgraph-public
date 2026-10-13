@@ -1,0 +1,11 @@
+provision_id: '7.8'
+norms:
+- deontic_modality: DISAPPLICATION
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:%3CNot%20explicitly%20mentioned%3E
+  action: AUTO:apply
+  object: AUTO:This%20principle
+  conditions:
+  - statement: the extent that any other Act of the Commonwealth applies
+  - statement: a law in force in an external Territory applies
+  - statement: prescribed by the regulations applies

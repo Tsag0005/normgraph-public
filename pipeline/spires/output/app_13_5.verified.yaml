@@ -1,0 +1,8 @@
+provision_id: '13.5'
+norms:
+- bearer: AUTO:APP%20entity
+  action: AUTO:charge%20the%20individual
+  object: AUTO:the%20making%20of%20the%20request%3B%20correcting%20the%20personal%20information%3B%20associating%20the%20statement%20with%20the%20personal%20information
+  conditions:
+  - statement: a request is made
+    source_provision: subclause 13.1 or 13.4

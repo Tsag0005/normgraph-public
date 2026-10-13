@@ -1,0 +1,21 @@
+provision_id: 26WL(4)
+norms:
+- deontic_modality: PERMISSION
+  bearer: AUTO:the%20entity
+  action: AUTO:use
+  object: AUTO:that%20method%20for%20the%20notification%20to%20the%20individual
+  conditions:
+  - statement: The entity normally communicates with a particular individual using a particular method.
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:%5BLeave%20blank%2C%20as%20the%20text%20does%20not%20specify%20a%20bearer%5D
+  action: AUTO:limit
+  object: AUTO:paragraph%20%282%29%28a%29
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:%5BNot%20explicitly%20stated%5D
+  action: AUTO:limit
+  object: AUTO:paragraph%20%282%29%28b%29
+  scope_qualifier: '[Not explicitly stated]'
+  conditions:
+  - statement: Not explicitly stated
+  exceptions:
+  - statement: Not explicitly stated

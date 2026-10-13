@@ -1,0 +1,14 @@
+.git
+.venv*
+**/__pycache__
+**/*.pyc
+pipeline_ui/node_modules
+pipeline_ui/.npm-cache
+pipeline_ui/dist
+pipeline_ui/data
+pipeline_ui/.runtime
+pipeline_ui/backend/tests
+pipeline/tests
+.env*
+README.md
+REFERENCES.md

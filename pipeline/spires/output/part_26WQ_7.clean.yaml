@@ -1,0 +1,17 @@
+provision_id: 26WQ(7)
+norms:
+- deontic_modality: PERMISSION
+  bearer: AUTO:Commissioner
+  action: AUTO:refuse
+  object: AUTO:the%20application
+  conditions:
+  - statement: entity applies to the Commissioner under paragraph (5)(b)
+    source_provision: 5(b)
+- deontic_modality: OBLIGATION
+  bearer: AUTO:The%20Commissioner
+  action: AUTO:give%20written%20notice%20of%20the%20refusal
+  object: AUTO:the%20refusal
+  conditions:
+  - statement: If an entity applies to the Commissioner under paragraph (5)(b)
+    source_provision: 5(b)
+  - statement: the Commissioner refuses the application

@@ -1,0 +1,46 @@
+---
+input_text: |
+  26XF(3) (3) This Division also has the effect it would have if a reference to a collection, use or disclosure were expressly confined to a collection, use or disclosure that occurs in the course of, or in relation to, the carrying on of the business of banking (within the meaning of paragraph 51(xiii) of the Constitution), other than State banking not extending beyond the limits of the State concerned. Insurance
+raw_completion_output: |-
+  provision_id: 26XF(3)  
+  norms: This Division has the effect it would have if a reference to a collection, use or disclosure were expressly confined to a collection, use or disclosure that occurs in the course of the carrying on of the business of banking; This Division has the effect it would have if a reference to a collection, use or disclosure were expressly confined to a collection, use or disclosure that occurs in relation to the carrying on of the business of banking  
+  disapplies:   
+  cross_references: 51(xiii)
+prompt: |+
+  From the text below, extract the following entities in the following format:
+
+  statement: <The condition in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this condition when the text points elsewhere for it, e.g. "4.3". Blank when the condition is stated here.>
+
+
+  Text:
+  that occurs in relation to the carrying on of the business of banking
+
+  ===
+
+extracted_object:
+  provision_id: 26XF(3)
+  norms:
+    - deontic_modality: NONE
+    - deontic_modality: NONE
+      bearer: AUTO:This%20Division
+      action: AUTO:has%20the%20effect%20it%20would%20have
+      object: 
+        AUTO:if%20a%20reference%20to%20a%20collection%2C%20use%20or%20disclosure
+      conditions:
+        - statement: <occurs in relation to the carrying on of the business of 
+            banking>
+          source_provision: <Blank>
+named_entities:
+  - id: AUTO:This%20Division
+    label: This Division
+    original_spans:
+      - 12:24
+  - id: AUTO:has%20the%20effect%20it%20would%20have
+    label: has the effect it would have
+    original_spans:
+      - 31:58
+  - id: AUTO:if%20a%20reference%20to%20a%20collection%2C%20use%20or%20disclosure
+    label: if a reference to a collection, use or disclosure
+    original_spans:
+      - 60:108

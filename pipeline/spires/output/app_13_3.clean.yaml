@@ -1,0 +1,23 @@
+provision_id: '13.3'
+norms:
+- deontic_modality: OBLIGATION
+  bearer: AUTO:APP%20entity
+  action: AUTO:give
+  object: AUTO:the%20individual%20a%20written%20notice%20that%20sets%20out%20the%20reasons%20for%20the%20refusal
+  conditions:
+  - statement: The APP entity refuses to correct the personal information as requested by the individual.
+  exceptions:
+  - statement: to the extent that it would be unreasonable to do so
+- deontic_modality: OBLIGATION
+  bearer: AUTO:APP%20entity
+  action: AUTO:give
+  object: AUTO:a%20written%20notice%20that%20sets%20out%20the%20mechanisms%20available%20to%20complain%20about%20the%20refusal
+  conditions:
+  - statement: the APP entity refuses to correct the personal information
+  - statement: as requested by the individual
+- deontic_modality: OBLIGATION
+  bearer: AUTO:APP%20entity
+  action: AUTO:give
+  object: AUTO:a%20written%20notice%20that%20sets%20out%20any%20other%20matter%20prescribed%20by%20the%20regulations
+  conditions:
+  - statement: The APP entity refuses to correct the personal information as requested by the individual.

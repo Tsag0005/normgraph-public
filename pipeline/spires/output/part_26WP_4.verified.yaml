@@ -1,0 +1,11 @@
+provision_id: 26WP(4)
+norms:
+- deontic_modality: NONE
+  bearer: AUTO:%5BNo%20specific%20bearer%20mentioned%5D
+  action: AUTO:%5BNo%20specific%20action%20mentioned%5D
+  object: AUTO:%5BNo%20specific%20object%20mentioned%5D
+  scope_qualifier: '[No specific scope qualifier mentioned]'
+  conditions:
+  - statement: No specific conditions mentioned.
+  exceptions:
+  - statement: '[No specific exceptions mentioned]'

@@ -1,0 +1,234 @@
+id: https://w3id.org/ontogpt/legislative_norm
+name: norm
+title: Legislative Norm Extraction
+description: >-
+  Extracts deontic norms from the provisions of a legislative instrument.
+
+  WRITTEN IN LinkML (Moxon et al., "LinkML: an open data modeling framework",
+  GigaScience 15:giaf152, 2026, doi:10.1093/gigascience/giaf152) and read as an
+  extraction target by SPIRES (Caufield et al., Bioinformatics 40(3):btae104, 2024,
+  doi:10.1093/bioinformatics/btae104). Both are load-bearing rather than incidental: the
+  CompoundExpression / NamedEntity distinction LinkML supplies is what decides which
+  slots SPIRES recurses into, and the descriptions below are sent to the model verbatim
+  as the extraction prompt -- they are instructions, not documentation. See REFERENCES.md.
+
+  The target is everything a flat (subject, predicate, object) triple destroys. An
+  extraction that yields "entity - holds - personal information" has thrown away the
+  modality, the condition and the exception, which is the entire testable content of a
+  legislative provision. Each Norm below therefore keeps modality, bearer, action,
+  object, conditions, exceptions and scope as separate fields.
+
+  Norm, Condition and Exemption derive from CompoundExpression rather than NamedEntity:
+  they are structured objects, not grounded terms. The entity-like slots (actor, action,
+  information type) are NamedEntity but carry no `annotators`, so no ontology grounding
+  is attempted -- the bundled annotators are biomedical and irrelevant here.
+
+  NOTE on the class named Exemption: it cannot be called Exception, because LinkML then
+  generates a Pydantic class shadowing the Python builtin and every provision that
+  actually populates the field dies on an isinstance check.
+
+license: https://creativecommons.org/publicdomain/zero/1.0/
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+  norm: https://w3id.org/ontogpt/legislative_norm/
+
+default_prefix: norm
+default_range: string
+
+imports:
+  - linkml:types
+  - core
+
+classes:
+
+  ProvisionExtraction:
+    tree_root: true
+    description: >-
+      All the normative content of a single provision of the instrument.
+    attributes:
+      provision_id:
+        description: >-
+          The provision identifier this text is. It appears at the start of the text --
+          take it from there; do not infer one that is not present.
+      norms:
+        description: >-
+          Every distinct rule stated by this provision, as a semicolon-separated list.
+          A provision with two exception limbs that operate independently states two
+          norms, not one.
+
+          CRITICAL: each entry is read later ON ITS OWN, with the rest of this provision
+          removed, so every entry must be a self-contained sentence. Where the provision's
+          opening words set up framing that governs all the limbs -- "<provision> does not
+          apply if", "the entity must not do X unless", "This provision applies in relation
+          to X if" -- REPEAT that framing inside every entry. An entry reading only "it is
+          impracticable to do X" is useless, because nothing in it reveals that it is an
+          exception disapplying another provision. Write instead "<provision> does not
+          apply if it is impracticable to do X".
+        range: Norm
+        multivalued: true
+      disapplies:
+        description: >-
+          Any provision this one switches OFF, as a semicolon-separated list of provision
+          identifiers, written exactly as the text writes them. A provision beginning
+          "<provision> does not apply if" disapplies that provision. Leave blank if it
+          disapplies nothing.
+        multivalued: true
+      cross_references:
+        description: >-
+          Every other provision this one refers to, as a semicolon-separated list of
+          identifiers, written exactly as the text writes them. Include only provision
+          identifiers, not sources of law such as "Australian law". Leave blank if there
+          are none.
+        multivalued: true
+
+  Norm:
+    is_a: CompoundExpression
+    description: >-
+      One rule: who must or may do what, under which conditions, subject to which
+      exceptions. Use the literal words of the text for each field.
+    attributes:
+      deontic_modality:
+        description: >-
+          The normative force. "must" is an OBLIGATION; "must not" is a PROHIBITION;
+          "may" or "is authorised to" is a PERMISSION. If the provision's own work is to
+          switch another provision OFF -- it says some other provision "does not apply"
+          -- then it is a DISAPPLICATION, whatever verbs appear in its limbs. If it
+          merely states that other provisions apply, or is purely definitional, it is
+          NONE.
+        range: DeonticModality
+      bearer:
+        description: >-
+          The party on whom the norm falls -- the actor the provision names, such as
+          "entity", "organisation" or "agency". Use the words the text uses.
+        range: Actor
+      action:
+        description: >-
+          The regulated act, as a verb phrase, e.g. "use or disclose", "destroy",
+          "de-identify", "deal with individuals who have identified themselves".
+        range: Action
+      object:
+        description: >-
+          What the action is performed on, e.g. "personal information", "sensitive
+          information", "biometric information".
+        range: InformationType
+      conditions:
+        description: >-
+          The circumstances that must hold for this norm to apply at all, as a
+          semicolon-separated list. These are triggers, not exceptions. A norm reading
+          "if an entity holds information collected for a primary purpose, it must not
+          use it for a secondary purpose" has both of those circumstances as conditions.
+        range: Condition
+        multivalued: true
+      exceptions:
+        description: >-
+          The circumstances that switch this norm OFF, as a semicolon-separated list.
+          Anything introduced by "unless", "does not apply if" or "other than" is an
+          exception, not a condition. If the text contains such a clause you MUST return
+          an entry here -- a norm stating "must not X unless Y" always has Y as an
+          exception.
+        range: Exemption
+        multivalued: true
+      scope_qualifier:
+        description: >-
+          Any limit on the norm's reach, e.g. "in relation to that matter", "as soon as
+          practicable", "within a reasonable period". Leave blank if unqualified.
+
+  Condition:
+    is_a: CompoundExpression
+    description: >-
+      A circumstance that must hold for a norm to apply.
+    attributes:
+      statement:
+        description: The condition in a single clause, as stated in the text.
+      source_provision:
+        description: >-
+          The identifier of the provision that supplies this condition when the text
+          points elsewhere for it, e.g. "4.3". Blank when the condition is stated here.
+
+  Exemption:
+    is_a: CompoundExpression
+    description: >-
+      A circumstance that disapplies a norm.
+    attributes:
+      statement:
+        description: The exception in a single clause, as stated in the text.
+      source_provision:
+        description: >-
+          The identifier of the provision that supplies this exception, written as the
+          text writes it. Blank when the exception is stated here in full.
+      is_exhaustive:
+        description: >-
+          "true" if the text signals these are the only exceptions, otherwise blank.
+
+  Actor:
+    is_a: NamedEntity
+    description: A party a norm can bind, such as an entity, an agency or an individual.
+
+  Action:
+    is_a: NamedEntity
+    description: A regulated act, such as collecting, using, disclosing or destroying.
+
+  InformationType:
+    is_a: NamedEntity
+    description: A category of information, such as personal or sensitive information.
+
+enums:
+
+  DeonticModality:
+    description: The normative force of a rule.
+    permissible_values:
+      OBLIGATION:
+        description: A duty to act. Signalled by "must", "is required to", "shall".
+      PROHIBITION:
+        description: A duty to refrain. Signalled by "must not", "is prohibited from".
+      PERMISSION:
+        description: A liberty. Signalled by "may", "is authorised to", "is permitted to".
+      DISAPPLICATION:
+        description: >-
+          The provision's function is to switch another provision off -- it states that
+          some other provision "does not apply" in stated circumstances. The type case
+          reads "<provision> does not apply if <circumstances>": it imposes no duty of its
+          own, it defeats the duty stated elsewhere.
+      APPLICABILITY:
+        description: >-
+          THIS provision is the thing another provision's exception points AT. It commands
+          nothing itself; it states when that exception is satisfied.
+
+          The type case, in full:
+
+            "12.2 This section applies in relation to a disclosure of information if the
+             entity reasonably believes the recipient is an enforcement body."
+
+          and somewhere else, the provision that relies on it:
+
+            "12.1 An entity must not disclose information unless section 12.2 applies."
+
+          12.2 is APPLICABILITY. Read the subject of "applies": it is 12.2 ITSELF, and
+          12.1 leans on it. Do not label it PERMISSION -- a party can satisfy 12.2 and
+          still breach 12.1, because 12.1 may have other conditions.
+
+          Contrast the shape that is NOT this:
+
+            "12.3 Sections 14 to 20 apply in relation to the information as if the entity
+             had collected it under section 9."
+
+          The subject of "apply" there is OTHER provisions, so 12.3 is NONE, not
+          APPLICABILITY. The word "applies" appearing in a provision decides nothing.
+      NONE:
+        description: >-
+          The provision states no duty, liberty or disapplication of its own -- it is
+          definitional, or it only says that OTHER provisions apply.
+
+          The type case, in full:
+
+            "12.3 If the entity does not destroy the information, sections 14 to 20 apply
+             in relation to the information as if the entity had collected it under
+             section 9."
+
+          12.3 is NONE. It switches other rules on and commands nothing itself. Note that
+          it contains a condition ("If the entity does not destroy") and the word "apply",
+          and is STILL NONE -- neither of those makes a provision APPLICABILITY.
+
+          This is the label most easily confused with APPLICABILITY. The test is the
+          subject of "applies": itself (APPLICABILITY) or other provisions (NONE).

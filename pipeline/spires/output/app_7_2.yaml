@@ -1,0 +1,81 @@
+---
+input_text: |
+  7.2 Despite subclause 7.1, an organisation may use or disclose personal information (other than sensitive information) about an individual for the purpose of direct marketing if: (a) the organisation collected the information from the individual; and (b) the individual would reasonably expect the organisation to use or disclose the information for that purpose; and (c) the organisation provides a simple means by which the individual may easily request not to receive direct marketing communications from the organisation; and (d) the individual has not made such a request to the organisation.
+raw_completion_output: |-
+  provision_id: 7.2  
+  norms: Subclause 7.1 does not apply if an organisation collected the information from the individual; Subclause 7.1 does not apply if the individual would reasonably expect the organisation to use or disclose the information for the purpose of direct marketing; Subclause 7.1 does not apply if the organisation provides a simple means by which the individual may easily request not to receive direct marketing communications from the organisation; Subclause 7.1 does not apply if the individual has not made a request to the organisation not to receive direct marketing communications.  
+  disapplies: 7.1  
+  cross_references:  
+prompt: |+
+  From the text below, extract the following entities in the following format:
+
+  deontic_modality: <The normative force. "must" is an OBLIGATION; "must not" is a PROHIBITION; "may" or "is authorised to" is a PERMISSION. If the provision's own work is to switch another provision OFF -- it says some other subclause "does not apply" -- then it is a DISAPPLICATION, whatever verbs appear in its limbs. If it merely states that other provisions apply, or is purely definitional, it is NONE.Must be one of: OBLIGATION, PROHIBITION, PERMISSION, DISAPPLICATION, NONE>
+  bearer: <The party on whom the norm falls, e.g. "APP entity", "organisation", "agency".>
+  action: <The regulated act, as a verb phrase, e.g. "use or disclose", "destroy", "de-identify", "deal with individuals who have identified themselves".>
+  object: <What the action is performed on, e.g. "personal information", "sensitive information", "biometric information".>
+  conditions: <The circumstances that must hold for this norm to apply at all, as a semicolon-separated list. These are triggers, not exceptions. A norm reading "if an entity holds information collected for a primary purpose, it must not use it for a secondary purpose" has both of those circumstances as conditions.>
+  exceptions: <The circumstances that switch this norm OFF, as a semicolon-separated list. Anything introduced by "unless", "does not apply if" or "other than" is an exception, not a condition. If the text contains such a clause you MUST return an entry here -- a norm stating "must not X unless Y" always has Y as an exception.>
+  scope_qualifier: <Any limit on the norm's reach, e.g. "in relation to that matter", "as soon as practicable", "within a reasonable period". Leave blank if unqualified.>
+
+
+  Text:
+  Subclause 7.1 does not apply if the individual has not made a request to the organisation not to receive direct marketing communications.
+
+  ===
+
+extracted_object:
+  provision_id: '7.2'
+  norms:
+    - deontic_modality: DISAPPLICATION
+      bearer: AUTO:organisation
+      action: 
+        AUTO:%5BNo%20action%20since%20it%27s%20a%20disapplication%3B%20the%20original%20action%20this%20disapplies%20would%20need%20to%20be%20inferred%20from%20Subclause%207.1%5D
+      object: 
+        AUTO:%5BNo%20object%20since%20it%27s%20a%20disapplication%3B%20the%20original%20object%20this%20disapplies%20would%20need%20to%20be%20inferred%20from%20Subclause%207.1%5D
+    - deontic_modality: DISAPPLICATION
+      bearer: AUTO:Subclause%207.1
+      action: AUTO:apply
+    - deontic_modality: DISAPPLICATION
+      bearer: AUTO:organisation
+      action: AUTO:provide
+      object: 
+        AUTO:a%20simple%20means%20by%20which%20the%20individual%20may%20easily%20request%20not%20to%20receive%20direct%20marketing%20communications
+    - deontic_modality: DISAPPLICATION
+      bearer: AUTO:Subclause%207.1
+      action: AUTO:apply
+  disapplies:
+    - '7.1'
+named_entities:
+  - id: AUTO:organisation
+    label: organisation
+    original_spans:
+      - 30:41
+      - 187:198
+      - 298:309
+      - 376:387
+      - 512:523
+      - 584:595
+  - id: 
+      AUTO:%5BNo%20action%20since%20it%27s%20a%20disapplication%3B%20the%20original%20action%20this%20disapplies%20would%20need%20to%20be%20inferred%20from%20Subclause%207.1%5D
+    label: "[No action since it's a disapplication; the original action this disapplies
+      would need to be inferred from Subclause 7.1]"
+  - id: 
+      AUTO:%5BNo%20object%20since%20it%27s%20a%20disapplication%3B%20the%20original%20object%20this%20disapplies%20would%20need%20to%20be%20inferred%20from%20Subclause%207.1%5D
+    label: "[No object since it's a disapplication; the original object this disapplies
+      would need to be inferred from Subclause 7.1]"
+  - id: AUTO:Subclause%207.1
+    label: Subclause 7.1
+    original_spans:
+      - 12:24
+  - id: AUTO:apply
+    label: apply
+  - id: AUTO:provide
+    label: provide
+    original_spans:
+      - 389:395
+  - id: 
+      AUTO:a%20simple%20means%20by%20which%20the%20individual%20may%20easily%20request%20not%20to%20receive%20direct%20marketing%20communications
+    label: a simple means by which the individual may easily request not to 
+      receive direct marketing communications
+    original_spans:
+      - 398:501

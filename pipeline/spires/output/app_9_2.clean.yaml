@@ -1,0 +1,52 @@
+provision_id: '9.2'
+norms:
+- deontic_modality: PROHIBITION
+  bearer: AUTO:organisation
+  action: AUTO:use%20or%20disclose
+  object: AUTO:government%20related%20identifier%20of%20an%20individual
+- deontic_modality: PERMISSION
+  bearer: AUTO:organisation
+  action: AUTO:use%20or%20disclose
+  object: AUTO:government%20related%20identifier%20of%20an%20individual
+  conditions:
+  - statement: The use or disclosure of the identifier is reasonably necessary for the organisation to
+      verify the identity of the individual for the purposes of the organisation's activities or functions.
+- deontic_modality: PERMISSION
+  bearer: AUTO:organisation
+  action: AUTO:use%20or%20disclose
+  object: AUTO:government%20related%20identifier%20of%20an%20individual
+  conditions:
+  - statement: The use or disclosure of the identifier is reasonably necessary for the organisation to
+      fulfil its obligations to an agency or a State or Territory authority.
+- deontic_modality: PERMISSION
+  bearer: AUTO:organisation
+  action: AUTO:use%20or%20disclose
+  object: AUTO:government%20related%20identifier%20of%20an%20individual
+  conditions:
+  - statement: use or disclosure of the identifier is required or authorised by or under an Australian
+      law or a court/tribunal order.
+- deontic_modality: PERMISSION
+  bearer: AUTO:organisation
+  action: AUTO:use%20or%20disclose
+  object: AUTO:government%20related%20identifier%20of%20an%20individual
+  conditions:
+  - statement: A permitted general situation exists in relation to the use or disclosure of the identifier.
+  exceptions:
+  - statement: other than the situation referred to in item 4 or 5 of the table in subsection 16A(1)
+    source_provision: 16A(1)
+    is_exhaustive: 'true'
+- deontic_modality: PERMISSION
+  bearer: AUTO:organisation
+  action: AUTO:use%20or%20disclose
+  object: AUTO:government%20related%20identifier%20of%20an%20individual
+  conditions:
+  - statement: The organisation reasonably believes that the use or disclosure of the identifier is reasonably
+      necessary for one or more enforcement related activities conducted by, or on behalf of, an enforcement
+      body.
+- deontic_modality: PERMISSION
+  bearer: AUTO:organisation
+  action: AUTO:use%20or%20disclose
+  object: AUTO:government%20related%20identifier%20of%20an%20individual
+  conditions:
+  - statement: subclause 9.3 applies
+  - statement: in relation to the use or disclosure

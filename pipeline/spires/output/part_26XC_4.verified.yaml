@@ -1,0 +1,9 @@
+provision_id: 26XC(4)
+norms:
+- deontic_modality: NONE
+  bearer: AUTO:court
+  action: AUTO:include
+  object: AUTO:any%20tribunal%2C%20authority%20or%20person%20having%20power%20to%20require%20the%20production%20of%20documents%20or%20the%20answering%20of%20questions
+  conditions:
+  - statement: For the purposes of paragraph (2)(g)
+    source_provision: 2(g)

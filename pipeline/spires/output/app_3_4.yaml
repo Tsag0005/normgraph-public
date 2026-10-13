@@ -1,0 +1,70 @@
+---
+input_text: |
+  3.4 This subclause applies in relation to sensitive information about an individual if: (a) the collection of the information is required or authorised by or under an Australian law or a court/tribunal order; or (b) a permitted general situation exists in relation to the collection of the information by the APP entity; or (c) the APP entity is an organisation and a permitted health situation exists in relation to the collection of the information by the entity; or (d) the APP entity is an enforcement body and the entity reasonably believes that: (i) if the entity is the Immigration Department - the collection of the information is reasonably necessary for, or directly related to, one or more enforcement related activities conducted by, or on behalf of, the entity; or (ii) otherwise - the collection of the information is reasonably necessary for, or directly related to, one or more of the entity's functions or activities; or (e) the APP entity is a non-profit organisation and both of the following apply: (i) the information relates to the activities of the organisation; (ii) the information relates solely to the members of the organisation, or to individuals who have regular contact with the organisation in connection with its activities. Note: For permitted general situation, see section 16A. For permitted health situation, see section 16B. Means of collection
+raw_completion_output: |-
+  provision_id: 3.4  
+  norms: This subclause applies in relation to sensitive information about an individual if the collection of the information is required or authorised by or under an Australian law or a court/tribunal order; This subclause applies in relation to sensitive information about an individual if a permitted general situation exists in relation to the collection of the information by the APP entity; This subclause applies in relation to sensitive information about an individual if the APP entity is an organisation and a permitted health situation exists in relation to the collection of the information by the entity; This subclause applies in relation to sensitive information about an individual if the APP entity is an enforcement body and the entity reasonably believes that if the entity is the Immigration Department, the collection of the information is reasonably necessary for, or directly related to, one or more enforcement related activities conducted by, or on behalf of, the entity; This subclause applies in relation to sensitive information about an individual if the APP entity is an enforcement body and the entity reasonably believes that otherwise, the collection of the information is reasonably necessary for, or directly related to, one or more of the entity's functions or activities; This subclause applies in relation to sensitive information about an individual if the APP entity is a non-profit organisation and both of the following apply: the information relates to the activities of the organisation, and the information relates solely to the members of the organisation, or to individuals who have regular contact with the organisation in connection with its activities.  
+  disapplies:   
+  cross_references: 16A; 16B  
+prompt: |+
+  From the text below, extract the following entities in the following format:
+
+  statement: <The condition in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this condition when the text points elsewhere for it, e.g. "4.3". Blank when the condition is stated here.>
+
+
+  Text:
+  information relates solely to the members of the organisation or to individuals who have regular contact with the organisation in connection with its activities
+
+  ===
+
+extracted_object:
+  provision_id: '3.4'
+  norms:
+    - deontic_modality: NONE
+    - deontic_modality: NONE
+      bearer: AUTO:APP%20entity
+      action: AUTO:collect
+      object: AUTO:sensitive%20information%20about%20an%20individual
+      conditions:
+        - statement: <A permitted general situation exists in relation to the 
+            collection of the information by the APP entity.>
+          source_provision: <Blank>
+    - deontic_modality: NONE
+      bearer: AUTO:APP%20entity
+    - deontic_modality: NONE
+      bearer: AUTO:APP%20entity
+    - deontic_modality: NONE
+      bearer: AUTO:APP%20entity
+    - deontic_modality: NONE
+      bearer: AUTO:APP%20entity
+      conditions:
+        - statement: APP entity is a non-profit organisation
+        - statement: <information relates to the activities of the 
+            organisation.>
+          source_provision: <Blank>
+        - statement: <Information relates solely to the members of the 
+            organisation or to individuals who have regular contact with the 
+            organisation in connection with its activities.>
+          source_provision: <Blank>
+named_entities:
+  - id: AUTO:APP%20entity
+    label: APP entity
+    original_spans:
+      - 309:318
+      - 332:341
+      - 477:486
+      - 946:955
+  - id: AUTO:collect
+    label: collect
+    original_spans:
+      - 96:102
+      - 272:278
+      - 421:427
+      - 606:612
+      - 799:805
+      - 1372:1378
+  - id: AUTO:sensitive%20information%20about%20an%20individual
+    label: sensitive information about an individual
+    original_spans:
+      - 42:82

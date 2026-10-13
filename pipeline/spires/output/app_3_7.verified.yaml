@@ -1,0 +1,9 @@
+provision_id: '3.7'
+norms:
+- deontic_modality: APPLICABILITY
+  bearer: AUTO:APP%20entity
+  action: AUTO:apply
+  object: AUTO:principle
+  conditions:
+  - statement: collection of personal information
+  - statement: personal information is solicited

@@ -1,0 +1,75 @@
+---
+input_text: |
+  3.6 An APP entity must collect personal information about an individual only from the individual unless: (a) if the entity is an agency: (i) the individual consents to the collection of the information from someone other than the individual; or (ii) the entity is required or authorised by or under an Australian law, or a court/tribunal order, to collect the information from someone other than the individual; or (b) it is unreasonable or impracticable to do so. Solicited personal information
+raw_completion_output: |-
+  provision_id: 3.6  
+  norms: An APP entity must collect personal information about an individual only from the individual unless the individual consents to the collection of the information from someone other than the individual; An APP entity must collect personal information about an individual only from the individual unless the entity is required or authorised by or under an Australian law, or a court/tribunal order, to collect the information from someone other than the individual; An APP entity must collect personal information about an individual only from the individual unless it is unreasonable or impracticable to do so.  
+  disapplies:   
+  cross_references:  
+prompt: |+
+  Split the following piece of text into fields in the following format:
+
+  statement: <The exception in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this exception, e.g. "6.2" or "6.2(b)". Blank when the exception is stated here in full.>
+  is_exhaustive: <"true" if the text signals these are the only exceptions, otherwise blank.>
+
+
+  Text:
+  unless it is unreasonable or impracticable to do so
+
+  ===
+
+extracted_object:
+  provision_id: '3.6'
+  norms:
+    - deontic_modality: OBLIGATION
+      bearer: AUTO:APP%20entity
+      action: AUTO:collect
+      object: AUTO:personal%20information%20about%20an%20individual
+      conditions:
+        - statement: <only from the individual>
+          source_provision: <Blank>
+      exceptions:
+        - statement: <unless the individual consents to the collection of the 
+            information from someone other than the individual>
+          source_provision: < >
+          is_exhaustive: < >
+    - deontic_modality: OBLIGATION
+      bearer: AUTO:APP%20entity
+      action: AUTO:collect
+      object: AUTO:personal%20information%20about%20an%20individual
+      conditions:
+        - statement: <only from the individual>
+          source_provision: <Blank>
+      exceptions:
+        - statement: <the entity is required or authorised by or under an 
+            Australian law, or a court/tribunal order, to collect the 
+            information from someone other than the individual>
+          source_provision: <>
+          is_exhaustive: <>
+    - deontic_modality: OBLIGATION
+      bearer: AUTO:APP%20entity
+      action: AUTO:collect
+      object: AUTO:personal%20information%20about%20an%20individual
+      conditions:
+        - statement: <only from the individual>
+          source_provision: <Blank>
+      exceptions:
+        - statement: <unless it is unreasonable or impracticable to do so>
+          source_provision: <>
+          is_exhaustive: <>
+named_entities:
+  - id: AUTO:APP%20entity
+    label: APP entity
+    original_spans:
+      - 7:16
+  - id: AUTO:collect
+    label: collect
+    original_spans:
+      - 23:29
+      - 172:178
+      - 348:354
+  - id: AUTO:personal%20information%20about%20an%20individual
+    label: personal information about an individual
+    original_spans:
+      - 31:70

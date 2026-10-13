@@ -1,0 +1,13 @@
+provision_id: '13.2'
+norms:
+- deontic_modality: OBLIGATION
+  bearer: AUTO:APP%20entity
+  action: AUTO:notify%20the%20other%20APP%20entity%20of%20the%20correction
+  object: AUTO:personal%20information%20about%20an%20individual
+  scope_qualifier: take such steps (if any) as are reasonable in the circumstances
+  conditions:
+  - statement: The APP entity corrects personal information about an individual that the entity previously
+      disclosed to another APP entity.
+  - statement: The individual requests the entity to notify the other APP entity of the correction.
+  exceptions:
+  - statement: unless it is impracticable or unlawful to do so

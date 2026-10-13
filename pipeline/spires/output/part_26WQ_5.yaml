@@ -1,0 +1,54 @@
+---
+input_text: |
+  26WQ(5) (5) The Commissioner may give a notice of a declaration to an entity under subsection (1): (a) on the Commissioner's own initiative; or (b) on application made to the Commissioner by the entity. Applications
+raw_completion_output: |-
+  provision_id: 26WQ(5)  
+  norms: The Commissioner may give a notice of a declaration to an entity under subsection (1) on the Commissioner's own initiative; The Commissioner may give a notice of a declaration to an entity under subsection (1) on application made to the Commissioner by the entity.  
+  disapplies:  
+  cross_references: 26WQ(1)  
+prompt: |+
+  Split the following piece of text into fields in the following format:
+
+  statement: <The condition in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this condition when the text points elsewhere for it, e.g. "4.3". Blank when the condition is stated here.>
+
+
+  Text:
+  on application made to the Commissioner by the entity
+
+  ===
+
+extracted_object:
+  provision_id: 26WQ(5)
+  norms:
+    - deontic_modality: PERMISSION
+      bearer: AUTO:The%20Commissioner
+      action: AUTO:give%20a%20notice%20of%20a%20declaration
+      object: AUTO:to%20an%20entity
+      conditions:
+        - statement: <under subsection (1)>
+          source_provision: <Blank>
+        - statement: <on the Commissioner's own initiative>
+          source_provision: <Blank>
+    - deontic_modality: PERMISSION
+      bearer: AUTO:The%20Commissioner
+      action: AUTO:give%20a%20notice%20of%20a%20declaration
+      object: AUTO:to%20an%20entity
+      conditions:
+        - statement: <on application made to the Commissioner by the entity>
+          source_provision: <>
+named_entities:
+  - id: AUTO:The%20Commissioner
+    label: The Commissioner
+    original_spans:
+      - 12:27
+      - 106:121
+      - 171:186
+  - id: AUTO:give%20a%20notice%20of%20a%20declaration
+    label: give a notice of a declaration
+    original_spans:
+      - 33:62
+  - id: AUTO:to%20an%20entity
+    label: to an entity
+    original_spans:
+      - 64:75

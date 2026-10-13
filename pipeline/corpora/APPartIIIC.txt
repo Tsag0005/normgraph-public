@@ -1,0 +1,923 @@
+Part IIIC—Notification of eligible data breaches
+
+Division 1—Introduction
+
+26WA  Guide to this Part
+
+• This Part sets up a scheme for notification of eligible data breaches.
+
+• An eligible data breach happens if:
+
+ (a) there is unauthorised access to, unauthorised disclosure of, or loss of, personal information held by an entity; and
+
+ (b) the access, disclosure or loss is likely to result in serious harm to any of the individuals to whom the information relates.
+
+• An entity must give a notification if:
+
+ (a) it has reasonable grounds to believe that an eligible data breach has happened; or
+
+ (b) it is directed to do so by the Commissioner.
+
+• The Commissioner may obtain information or documents in relation to actual or suspected eligible data breaches.
+
+• This Part also deals with the collection, use and disclosure of personal information involved in eligible data breaches.
+
+26WB  Entity
+
+  For the purposes of this Part, entity includes a person who is a file number recipient.
+
+26WC  Deemed holding of information
+
+Overseas recipients
+
+ (1) If:
+
+ (a) an APP entity has disclosed personal information about one or more individuals to an overseas recipient; and
+
+ (b) Australian Privacy Principle 8.1 applied to the disclosure of the personal information; and
+
+ (c) the overseas recipient holds the personal information;
+
+this Part has effect as if:
+
+ (d) the personal information were held by the APP entity; and
+
+ (e) the APP entity were required under section 15 not to do an act, or engage in a practice, that breaches Australian Privacy Principle 11.1 in relation to the personal information.
+
+Bodies or persons with no Australian link
+
+ (2) If:
+
+ (a) either:
+
+ (i) a credit provider has disclosed, under paragraph 21G(3)(b) or (c), credit eligibility information about one or more individuals to a related body corporate, or person, that does not have an Australian link; or
+
+ (ii) a credit provider has disclosed, under subsection 21M(1), credit eligibility information about one or more individuals to a body or person that does not have an Australian link; and
+
+ (b) the related body corporate, body or person holds the credit eligibility information;
+
+this Part has effect as if:
+
+ (c) the credit eligibility information were held by the credit provider; and
+
+ (d) the credit provider were required to comply with subsection 21S(1) in relation to the credit eligibility information.
+
+Note: See section 21NA.
+
+26WD  Exception—notification under the My Health Records Act 2012
+
+  If:
+
+ (a) an unauthorised access to information; or
+
+ (b) an unauthorised disclosure of information; or
+
+ (c) a loss of information;
+
+has been, or is required to be, notified under section 75 of the My Health Records Act 2012, this Part does not apply in relation to the access, disclosure or loss.
+
+Division 2—Eligible data breach
+
+26WE  Eligible data breach
+
+Scope
+
+ (1) This section applies if:
+
+ (a) both:
+
+ (i) an APP entity holds personal information relating to one or more individuals; and
+
+ (ii) the APP entity is required under section 15 not to do an act, or engage in a practice, that breaches Australian Privacy Principle 11.1 in relation to the personal information; or
+
+ (b) both:
+
+ (i) a credit reporting body holds credit reporting information relating to one or more individuals; and
+
+ (ii) the credit reporting body is required to comply with section 20Q in relation to the credit reporting information; or
+
+ (c) both:
+
+ (i) a credit provider holds credit eligibility information relating to one or more individuals; and
+
+ (ii) the credit provider is required to comply with subsection 21S(1) in relation to the credit eligibility information; or
+
+ (d) both:
+
+ (i) a file number recipient holds tax file number information relating to one or more individuals; and
+
+ (ii) the file number recipient is required under section 18 not to do an act, or engage in a practice, that breaches a section 17 rule that relates to the tax file number information.
+
+Eligible data breach
+
+ (2) For the purposes of this Act, if:
+
+ (a) both of the following conditions are satisfied:
+
+ (i) there is unauthorised access to, or unauthorised disclosure of, the information;
+
+ (ii) a reasonable person would conclude that the access or disclosure would be likely to result in serious harm to any of the individuals to whom the information relates; or
+
+ (b) the information is lost in circumstances where:
+
+ (i) unauthorised access to, or unauthorised disclosure of, the information is likely to occur; and
+
+ (ii) assuming that unauthorised access to, or unauthorised disclosure of, the information were to occur, a reasonable person would conclude that the access or disclosure would be likely to result in serious harm to any of the individuals to whom the information relates;
+
+then:
+
+ (c) the access or disclosure covered by paragraph (a), or the loss covered by paragraph (b), is an eligible data breach of the APP entity, credit reporting body, credit provider or file number recipient, as the case may be; and
+
+ (d) an individual covered by subparagraph (a)(ii) or (b)(ii) is at risk from the eligible data breach.
+
+ (3) Subsection (2) has effect subject to section 26WF.
+
+26WF  Exception—remedial action
+
+Access to, or disclosure of, information
+
+ (1) If:
+
+ (a) an access to, or disclosure of, information is covered by paragraph 26WE(2)(a); and
+
+ (b) the APP entity, credit reporting body, credit provider or file number recipient, as the case may be, takes action in relation to the access or disclosure; and
+
+ (c) the APP entity, credit reporting body, credit provider or file number recipient, as the case may be, does so before the access or disclosure results in serious harm to any of the individuals to whom the information relates; and
+
+ (d) as a result of the action, a reasonable person would conclude that the access or disclosure would not be likely to result in serious harm to any of those individuals;
+
+the access or disclosure is not, and is taken never to have been:
+
+ (e) an eligible data breach of the APP entity, credit reporting body, credit provider or file number recipient, as the case may be; or
+
+ (f) an eligible data breach of any other entity.
+
+ (2) If:
+
+ (a) an access to, or disclosure of, information is covered by paragraph 26WE(2)(a); and
+
+ (b) the APP entity, credit reporting body, credit provider or file number recipient, as the case may be, takes action in relation to the access or disclosure; and
+
+ (c) the APP entity, credit reporting body, credit provider or file number recipient, as the case may be, does so before the access or disclosure results in serious harm to a particular individual to whom the information relates; and
+
+ (d) as a result of the action, a reasonable person would conclude that the access or disclosure would not be likely to result in serious harm to the individual;
+
+this Part does not require:
+
+ (e) the APP entity, credit reporting body, credit provider or file number recipient, as the case may be; or
+
+ (f) any other entity;
+
+to take steps to notify the individual of the contents of a statement that relates to the access or disclosure.
+
+Loss of information
+
+ (3) If:
+
+ (a) a loss of information is covered by paragraph 26WE(2)(b); and
+
+ (b) the APP entity, credit reporting body, credit provider or file number recipient, as the case may be, takes action in relation to the loss; and
+
+ (c) the APP entity, credit reporting body, credit provider or file number recipient, as the case may be, does so before there is unauthorised access to, or unauthorised disclosure of, the information; and
+
+ (d) as a result of the action, there is no unauthorised access to, or unauthorised disclosure of, the information;
+
+the loss is not, and is taken never to have been:
+
+ (e) an eligible data breach of the APP entity, credit reporting body, credit provider or file number recipient, as the case may be; or
+
+ (f) an eligible data breach of any other entity.
+
+ (4) If:
+
+ (a) a loss of information is covered by paragraph 26WE(2)(b); and
+
+ (b) the APP entity, credit reporting body, credit provider or file number recipient, as the case may be, takes action in relation to the loss; and
+
+ (c) the APP entity, credit reporting body, credit provider or file number recipient, as the case may be, does so:
+
+ (i) after there is unauthorised access to, or unauthorised disclosure of, the information; and
+
+ (ii) before the access or disclosure results in serious harm to any of the individuals to whom the information relates; and
+
+ (d) as a result of the action, a reasonable person would conclude that the access or disclosure would not be likely to result in serious harm to any of those individuals;
+
+the loss is not, and is taken never to have been:
+
+ (e) an eligible data breach of the APP entity, credit reporting body, credit provider or file number recipient, as the case may be; or
+
+ (f) an eligible data breach of any other entity.
+
+ (5) If:
+
+ (a) a loss of information is covered by paragraph 26WE(2)(b); and
+
+ (b) the APP entity, credit reporting body, credit provider or file number recipient, as the case may be, takes action in relation to the loss; and
+
+ (c) the APP entity, credit reporting body, credit provider or file number recipient, as the case may be, does so:
+
+ (i) after there is unauthorised access to, or unauthorised disclosure of, the information; and
+
+ (ii) before the access or disclosure results in serious harm to a particular individual to whom the information relates; and
+
+ (d) as a result of the action, a reasonable person would conclude that the access or disclosure would not be likely to result in serious harm to the individual;
+
+this Part does not require:
+
+ (e) the APP entity, credit reporting body, credit provider or file number recipient, as the case may be; or
+
+ (f) any other entity;
+
+to take steps to notify the individual of the contents of a statement that relates to the loss.
+
+26WG  Whether access or disclosure would be likely, or would not be likely, to result in serious harm—relevant matters
+
+  For the purposes of this Division, in determining whether a reasonable person would conclude that an access to, or a disclosure of, information:
+
+ (a) would be likely; or
+
+ (b) would not be likely;
+
+to result in serious harm to any of the individuals to whom the information relates, have regard to the following:
+
+ (c) the kind or kinds of information;
+
+ (d) the sensitivity of the information;
+
+ (e) whether the information is protected by one or more security measures;
+
+ (f) if the information is protected by one or more security measures—the likelihood that any of those security measures could be overcome;
+
+ (g) the persons, or the kinds of persons, who have obtained, or who could obtain, the information;
+
+ (h) if a security technology or methodology:
+
+ (i) was used in relation to the information; and
+
+ (ii) was designed to make the information unintelligible or meaningless to persons who are not authorised to obtain the information;
+
+  the likelihood that the persons, or the kinds of persons, who:
+
+ (iii) have obtained, or who could obtain, the information; and
+
+ (iv) have, or are likely to have, the intention of causing harm to any of the individuals to whom the information relates;
+
+  have obtained, or could obtain, information or knowledge required to circumvent the security technology or methodology;
+
+ (i) the nature of the harm;
+
+ (j) any other relevant matters.
+
+Note: If the security technology or methodology mentioned in paragraph (h) is encryption, an encryption key is an example of information required to circumvent the security technology or methodology.
+
+Division 3—Notification of eligible data breaches
+
+Subdivision A—Suspected eligible data breaches
+
+26WH  Assessment of suspected eligible data breach
+
+Scope
+
+ (1) This section applies if:
+
+ (a) an entity is aware that there are reasonable grounds to suspect that there may have been an eligible data breach of the entity; and
+
+ (b) the entity is not aware that there are reasonable grounds to believe that the relevant circumstances amount to an eligible data breach of the entity.
+
+Assessment
+
+ (2) The entity must:
+
+ (a) carry out a reasonable and expeditious assessment of whether there are reasonable grounds to believe that the relevant circumstances amount to an eligible data breach of the entity; and
+
+ (b) take all reasonable steps to ensure that the assessment is completed within 30 days after the entity becomes aware as mentioned in paragraph (1)(a).
+
+Note: Section 26WK applies if an entity is aware that there are reasonable grounds to believe that there has been an eligible data breach of the entity.
+
+26WJ  Exception—eligible data breaches of other entities
+
+  If:
+
+ (a) an entity complies with section 26WH in relation to an eligible data breach of the entity; and
+
+ (b) the access, disclosure or loss that constituted the eligible data breach of the entity is an eligible data breach of one or more other entities;
+
+that section does not apply in relation to those eligible data breaches of those other entities.
+
+Subdivision B—General notification obligations
+
+26WK  Statement about eligible data breach
+
+Scope
+
+ (1) This section applies if an entity is aware that there are reasonable grounds to believe that there has been an eligible data breach of the entity.
+
+Statement
+
+ (2) The entity must:
+
+ (a) both:
+
+ (i) prepare a statement that complies with subsection (3); and
+
+ (ii) give a copy of the statement to the Commissioner; and
+
+ (b) do so as soon as practicable after the entity becomes so aware.
+
+ (3) The statement referred to in subparagraph (2)(a)(i) must set out:
+
+ (a) the identity and contact details of the entity; and
+
+ (b) a description of the eligible data breach that the entity has reasonable grounds to believe has happened; and
+
+ (c) the particular kind or kinds of information concerned; and
+
+ (d) recommendations about the steps that individuals should take in response to the eligible data breach that the entity has reasonable grounds to believe has happened.
+
+ (4) If the entity has reasonable grounds to believe that the access, disclosure or loss that constituted the eligible data breach of the entity is an eligible data breach of one or more other entities, the statement referred to in subparagraph (2)(a)(i) may also set out the identity and contact details of those other entities.
+
+26WL  Entity must notify eligible data breach
+
+Scope
+
+ (1) This section applies if:
+
+ (a) an entity is aware that there are reasonable grounds to believe that there has been an eligible data breach of the entity; and
+
+ (b) the entity has prepared a statement that:
+
+ (i) complies with subsection 26WK(3); and
+
+ (ii) relates to the eligible data breach that the entity has reasonable grounds to believe has happened.
+
+Notification
+
+ (2) The entity must:
+
+ (a) if it is practicable for the entity to notify the contents of the statement to each of the individuals to whom the relevant information relates—take such steps as are reasonable in the circumstances to notify the contents of the statement to each of the individuals to whom the relevant information relates; or
+
+ (b) if it is practicable for the entity to notify the contents of the statement to each of the individuals who are at risk from the eligible data breach—take such steps as are reasonable in the circumstances to notify the contents of the statement to each of the individuals who are at risk from the eligible data breach; or
+
+ (c) if neither paragraph (a) nor (b) applies:
+
+ (i) publish a copy of the statement on the entity’s website (if any); and
+
+ (ii) take reasonable steps to publicise the contents of the statement.
+
+Note: See also subsections 26WF(2) and (5), which deal with remedial action.
+
+ (3) The entity must comply with subsection (2) as soon as practicable after the completion of the preparation of the statement.
+
+Method of providing a statement to an individual
+
+ (4) If the entity normally communicates with a particular individual using a particular method, the notification to the individual under paragraph (2)(a) or (b) may use that method. This subsection does not limit paragraph (2)(a) or (b).
+
+26WM  Exception—eligible data breaches of other entities
+
+  If:
+
+ (a) an entity complies with sections 26WK and 26WL in relation to an eligible data breach of the entity; and
+
+ (b) the access, disclosure or loss that constituted the eligible data breach of the entity is an eligible data breach of one or more other entities;
+
+those sections do not apply in relation to those eligible data breaches of those other entities.
+
+26WN  Exception—enforcement related activities
+
+  If:
+
+ (a) an entity is an enforcement body; and
+
+ (b) the chief executive officer of the enforcement body believes on reasonable grounds that there has been an eligible data breach of the entity; and
+
+ (c) the chief executive officer of the enforcement body believes on reasonable grounds that compliance with section 26WL in relation to the eligible data breach would be likely to prejudice one or more enforcement related activities conducted by, or on behalf of, the enforcement body;
+
+paragraph 26WK(3)(d) and section 26WL do not apply in relation to:
+
+ (d) the eligible data breach of the entity; and
+
+ (e) if the access, disclosure or loss that constituted the eligible data breach of the entity is an eligible data breach of one or more other entities—such an eligible data breach of those other entities.
+
+26WP  Exception—inconsistency with secrecy provisions
+
+Secrecy provisions
+
+ (1) For the purposes of this section, secrecy provision means a provision that:
+
+ (a) is a provision of a law of the Commonwealth (other than this Act); and
+
+ (b) prohibits or regulates the use or disclosure of information.
+
+ (2) If compliance by an entity with subparagraph 26WK(2)(a)(ii) in relation to a statement would, to any extent, be inconsistent with a secrecy provision (other than a prescribed secrecy provision), subsection 26WK(2) does not apply to the entity, in relation to the statement, to the extent of the inconsistency.
+
+ (3) If compliance by an entity with section 26WL in relation to a statement would, to any extent, be inconsistent with a secrecy provision (other than a prescribed secrecy provision), section 26WL does not apply to the entity, in relation to the statement, to the extent of the inconsistency.
+
+Prescribed secrecy provisions
+
+ (4) For the purposes of this section, prescribed secrecy provision means a secrecy provision that is specified in the regulations.
+
+ (5) For the purposes of a prescribed secrecy provision:
+
+ (a) subparagraph 26WK(2)(a)(ii); and
+
+ (b) section 26WL;
+
+are taken not to be provisions that require or authorise the use or disclosure of information.
+
+ (6) If compliance by an entity with subparagraph 26WK(2)(a)(ii) in relation to a statement would, to any extent, be inconsistent with a prescribed secrecy provision, subsection 26WK(2) does not apply to the entity in relation to the statement.
+
+ (7) If compliance by an entity with section 26WL in relation to a statement would, to any extent, be inconsistent with a prescribed secrecy provision, section 26WL does not apply to the entity in relation to the statement.
+
+26WQ  Exception—declaration by Commissioner
+
+ (1) If the Commissioner:
+
+ (a) is aware that there are reasonable grounds to believe that there has been an eligible data breach of an entity; or
+
+ (b) is informed by an entity that the entity is aware that there are reasonable grounds to believe that there has been an eligible data breach of the entity;
+
+the Commissioner may, by written notice given to the entity:
+
+ (c) declare that sections 26WK and 26WL do not apply in relation to:
+
+ (i) the eligible data breach of the entity; and
+
+ (ii) if the access, disclosure or loss that constituted the eligible data breach of the entity is an eligible data breach of one or more other entities—such an eligible data breach of those other entities; or
+
+ (d) declare that subsection 26WL(3) has effect in relation to:
+
+ (i) the eligible data breach of the entity; and
+
+ (ii) if the access, disclosure or loss that constituted the eligible data breach of the entity is an eligible data breach of one or more other entities—such an eligible data breach of those other entities;
+
+  as if that subsection required compliance with subsection 26WL(2) before the end of a period specified in the declaration.
+
+ (2) The Commissioner’s power in paragraph (1)(d) may only be used to extend the time for compliance with subsection 26WL(2) to the end of a period that the Commissioner is satisfied is reasonable in the circumstances.
+
+ (3) The Commissioner must not make a declaration under subsection (1) unless the Commissioner is satisfied that it is reasonable in the circumstances to do so, having regard to the following:
+
+ (a) the public interest;
+
+ (b) any relevant advice given to the Commissioner by:
+
+ (i) an enforcement body; or
+
+ (ii) the Australian Signals Directorate;
+
+ (c) such other matters (if any) as the Commissioner considers relevant.
+
+ (4) Paragraph (3)(b) does not limit the advice to which the Commissioner may have regard.
+
+ (5) The Commissioner may give a notice of a declaration to an entity under subsection (1):
+
+ (a) on the Commissioner’s own initiative; or
+
+ (b) on application made to the Commissioner by the entity.
+
+Applications
+
+ (6) An application by an entity under paragraph (5)(b) may be expressed to be:
+
+ (a) an application for a paragraph (1)(c) declaration; or
+
+ (b) an application for a paragraph (1)(d) declaration; or
+
+ (c) an application for:
+
+ (i) a paragraph (1)(c) declaration; or
+
+ (ii) in the event that the Commissioner is not disposed to make such a declaration—a paragraph (1)(d) declaration.
+
+ (7) If an entity applies to the Commissioner under paragraph (5)(b):
+
+ (a) the Commissioner may refuse the application; and
+
+ (b) if the Commissioner does so—the Commissioner must give written notice of the refusal to the entity.
+
+ (8) If:
+
+ (a) an application for a paragraph (1)(d) declaration nominates a period to be specified in the declaration; and
+
+ (b) the Commissioner makes the declaration, but specifies a different period in the declaration;
+
+the Commissioner is taken not to have refused the application.
+
+ (9) If an entity applies to the Commissioner under paragraph (5)(b) for a declaration that, to any extent, relates to an eligible data breach of the entity, sections 26WK and 26WL do not apply in relation to:
+
+ (a) the eligible data breach; or
+
+ (b) if the access, disclosure or loss that constituted the eligible data breach of the entity is an eligible data breach of one or more other entities—such an eligible data breach of those other entities;
+
+until the Commissioner makes a decision in response to the application for the declaration.
+
+ (10) An entity is not entitled to make an application under paragraph (5)(b) in relation to an eligible data breach of the entity if:
+
+ (a) the access, disclosure or loss that constituted the eligible data breach of the entity is an eligible data breach of one or more other entities; and
+
+ (b) one of those other entities has already made an application under paragraph (5)(b) in relation to the eligible data breach of the other entity.
+
+Extension of specified period
+
+ (11) If notice of a paragraph (1)(d) declaration has been given to an entity, the Commissioner may, by written notice given to the entity, extend the period specified in the declaration.
+
+Subdivision C—Commissioner may direct entity to notify eligible data breach
+
+26WR  Commissioner may direct entity to notify eligible data breach
+
+ (1) If the Commissioner is aware that there are reasonable grounds to believe that there has been an eligible data breach of an entity, the Commissioner may, by written notice given to the entity, direct the entity to:
+
+ (a) prepare a statement that complies with subsection (4); and
+
+ (b) give a copy of the statement to the Commissioner.
+
+ (2) The direction must also require the entity to:
+
+ (a) if it is practicable for the entity to notify the contents of the statement to each of the individuals to whom the relevant information relates—take such steps as are reasonable in the circumstances to notify the contents of the statement to each of the individuals to whom the relevant information relates; or
+
+ (b) if it is practicable for the entity to notify the contents of the statement to each of the individuals who are at risk from the eligible data breach—take such steps as are reasonable in the circumstances to notify the contents of the statement to each of the individuals who are at risk from the eligible data breach; or
+
+ (c) if neither paragraph (a) nor (b) applies:
+
+ (i) publish a copy of the statement on the entity’s website (if any); and
+
+ (ii) take reasonable steps to publicise the contents of the statement.
+
+Note: See also subsections 26WF(2) and (5), which deal with remedial action.
+
+ (3) Before giving a direction to an entity under subsection (1), the Commissioner must invite the entity to make a submission to the Commissioner in relation to the direction within the period specified in the invitation.
+
+ (4) The statement referred to in paragraph (1)(a) must set out:
+
+ (a) the identity and contact details of the entity; and
+
+ (b) a description of the eligible data breach that the Commissioner has reasonable grounds to believe has happened; and
+
+ (c) the particular kind or kinds of information concerned; and
+
+ (d) recommendations about the steps that individuals should take in response to the eligible data breach that the Commissioner has reasonable grounds to believe has happened.
+
+ (5) A direction under subsection (1) may also require the statement referred to in paragraph (1)(a) to set out specified information that relates to the eligible data breach that the Commissioner has reasonable grounds to believe has happened.
+
+ (6) In deciding whether to give a direction to an entity under subsection (1), the Commissioner must have regard to the following:
+
+ (a) any relevant advice given to the Commissioner by:
+
+ (i) an enforcement body; or
+
+ (ii) the Australian Signals Directorate;
+
+ (b) any relevant submission that was made by the entity:
+
+ (i) in response to an invitation under subsection (3); and
+
+ (ii) within the period specified in the invitation;
+
+ (c) such other matters (if any) as the Commissioner considers relevant.
+
+ (7) Paragraph (6)(a) does not limit the advice to which the Commissioner may have regard.
+
+ (8) If the Commissioner is aware that there are reasonable grounds to believe that the access, disclosure or loss that constituted the eligible data breach of the entity is an eligible data breach of one or more other entities, a direction under subsection (1) may also require the statement referred to in paragraph (1)(a) to set out the identity and contact details of those other entities.
+
+Method of providing a statement to an individual
+
+ (9) If an entity normally communicates with a particular individual using a particular method, the notification to the individual mentioned in paragraph (2)(a) or (b) may use that method. This subsection does not limit paragraph (2)(a) or (b).
+
+Compliance with direction
+
+ (10) An entity must comply with a direction under subsection (1) as soon as practicable after the direction is given.
+
+26WS  Exception—enforcement related activities
+
+  An entity is not required to comply with a direction under subsection 26WR(1) if:
+
+ (a) the entity is an enforcement body; and
+
+ (b) the chief executive officer of the enforcement body believes on reasonable grounds that compliance with the direction would be likely to prejudice one or more enforcement related activities conducted by, or on behalf of, the enforcement body.
+
+26WT  Exception—inconsistency with secrecy provisions
+
+Secrecy provisions
+
+ (1) For the purposes of this section, secrecy provision means a provision that:
+
+ (a) is a provision of a law of the Commonwealth (other than this Act); and
+
+ (b) prohibits or regulates the use or disclosure of information.
+
+ (2) If compliance by an entity with paragraph 26WR(1)(b) or subsection 26WR(2) in relation to a statement would, to any extent, be inconsistent with a secrecy provision (other than a prescribed secrecy provision), paragraph 26WR(1)(b) or subsection 26WR(2), as the case may be, does not apply to the entity, in relation to the statement, to the extent of the inconsistency.
+
+Prescribed secrecy provisions
+
+ (3) For the purposes of this section, prescribed secrecy provision means a secrecy provision that is specified in the regulations.
+
+ (4) For the purposes of a prescribed secrecy provision:
+
+ (a) paragraph 26WR(1)(b); and
+
+ (b) subsection 26WR(2);
+
+are taken not to be provisions that require or authorise the use or disclosure of information.
+
+ (5) If compliance by an entity with paragraph 26WR(1)(b) or subsection 26WR(2) in relation to a statement would, to any extent, be inconsistent with a prescribed secrecy provision, paragraph 26WR(1)(b) or subsection 26WR(2), as the case may be, does not apply to the entity in relation to the statement.
+
+Division 4—Commissioner’s powers to obtain information or documents relating to eligible data breaches
+
+26WU  Power to obtain information and documents relating to eligible data breaches
+
+ (1) This section applies if the Commissioner has reason to believe that a person or entity has information or documents, or can answer questions, that are relevant to either or both of the following matters (the relevant matters):
+
+ (a) an actual or suspected eligible data breach of an entity;
+
+ (b) an entity’s compliance with the requirements in Division 3 of this Part.
+
+ (2) Without limiting subsection (1), the relevant matters may relate to one or more of the following:
+
+ (a) whether the entity is required to comply with one or more of those requirements;
+
+ (b) the conduct or events that led to, or may have led to, the application of one or more of those requirements to the entity;
+
+ (c) the actions taken by the entity to comply with one or more of those requirements;
+
+ (d) the actual or suspected eligible data breach that has, or may have, happened;
+
+ (e) the particular kind or kinds of information involved in the actual or suspected eligible data breach;
+
+ (f) the steps taken to notify individuals affected by the actual or suspected eligible data breach.
+
+ (3) The Commissioner may give to the person or entity a written notice requiring the person or entity:
+
+ (a) to give information of the kind specified in the notice to the Commissioner that relates to the matter; or
+
+ (b) to produce documents of the kind specified in the notice to the Commissioner that relate to the matter; or
+
+ (c) answer questions of the kind specified in the notice to the Commissioner that relate to the matter.
+
+Note: For a failure to give information etc., see section 66.
+
+ (4) A notice given by the Commissioner under subsection (3) must state:
+
+ (a) the place at, or manner in which, the information or document is to be given or produced or the questions are to be answered; and
+
+ (b) the time at which, or the period within which, the information or document is to be given or produced or the questions are to be answered.
+
+ (5) If documents are produced to the Commissioner in accordance with a requirement under subsection (3), the Commissioner:
+
+ (a) may take possession of, and may make copies of, or take extracts from, the documents; and
+
+ (b) may retain possession of the documents for any period that is necessary for the purposes of assessing an entity’s compliance with this Part; and
+
+ (c) during that period must permit a person who would be entitled to inspect any one or more of the documents if they were not in the Commissioner’s possession to inspect at all reasonable times any of the documents that the person would be so entitled to inspect.
+
+ (6) This section is subject to section 70 but it has effect regardless of any other Commonwealth law.
+
+ (7) A person or entity is not liable to a penalty under the provisions of any other Commonwealth law because the person or entity gives information, produces a document or answers a question when required to do so under this section.
+
+Division 5—Dealing with personal information involved in eligible data breaches
+
+Subdivision A—Eligible data breach declaration
+
+26X  Eligible data breach declaration
+
+Minister may make eligible data breach declaration
+
+ (1) The Minister may, by writing, make a declaration under this subsection if:
+
+ (a) there is an eligible data breach of an entity; and
+
+ (b) the Minister is satisfied that making the declaration is:
+
+ (i) necessary or appropriate to prevent; or
+
+ (ii) necessary or appropriate to reduce;
+
+  a risk of harm arising from a misuse of personal information about one or more individuals following unauthorised access to, or unauthorised disclosure of, that personal information from the eligible data breach of the entity.
+
+Note: A declaration under this subsection is relevant for the operation of section 26XB (authorisation of collection, use and disclosure of personal information) and related provisions.
+
+Matters covered by declaration
+
+ (2) Without limiting subsection (1), the declaration must specify the following matters:
+
+ (a) the kind or kinds of personal information to which the declaration applies;
+
+ (b) the entity or class of entities that may collect, use or disclose the personal information;
+
+ (c) the entity or class of entities that the personal information may be disclosed to;
+
+ (d) one or more permitted purposes of the collection, use or disclosure.
+
+Specified entities
+
+ (3) An entity or class of entities specified for the purposes of paragraph (2)(c):
+
+ (a) may include a State or Territory authority; and
+
+ (b) must not be or include a media organisation, the Australian Broadcasting Corporation or the Special Broadcasting Service Corporation.
+
+Specified permitted purposes
+
+ (4) A permitted purpose specified for the purposes of paragraph (2)(d) in relation to an eligible data breach must be a purpose that is directly related to preventing or reducing a risk of harm mentioned in paragraph (1)(b) to one or more individuals at risk from the eligible data breach.
+
+ (5) Without limiting subsection (4), any of the following things may be specified as a permitted purpose in relation to an eligible data breach, to the extent that it is directly related to preventing or reducing a risk of harm mentioned in paragraph (1)(b):
+
+ (a) preventing a cyber security incident (within the meaning of the Security of Critical Infrastructure Act 2018), fraud, scam activity or identity theft;
+
+ (b) responding to a cyber security incident, fraud, scam activity or identity theft;
+
+ (c) responding to the consequences of a cyber security incident, fraud, scam activity, identity crime and misuse, financial loss, emotional and psychological harm, family violence and physical harm or intimidation;
+
+ (d) addressing malicious cyber activity.
+
+ (6) Without limiting subsection 33(3A) of the Acts Interpretation Act 1901, or any other provision of this Act, an eligible data breach declaration may provide differently for:
+
+ (a) different kinds of personal information; and
+
+ (b) different entities or classes of entities; and
+
+ (c) different permitted purposes.
+
+Conditions
+
+ (7) The declaration may specify a matter mentioned in subsection (2) subject to conditions.
+
+Consultation
+
+ (8) Before the Minister makes a declaration under subsection (1), the Minister may consult with any person or body, including the Commissioner and the Director‑General of the Australian Signals Directorate.
+
+ (9) Despite subsection 29(1) of the Australian Information Commissioner Act 2010 and any provision of this Act, the Commissioner may disclose information to the Minister for the purposes of consultation under subsection (8).
+
+Declaration is a legislative instrument
+
+ (10) A declaration under subsection (1) is a legislative instrument, but section 42 (disallowance) of the Legislation Act 2003 does not apply to the declaration.
+
+26XA  When declarations cease to be in force
+
+  An eligible data breach declaration ceases to be in force at the earliest of the following:
+
+ (a) if a time at which the declaration will cease to be in force is specified in the declaration—at that time;
+
+ (b) the time at which the declaration is repealed;
+
+ (c) the start of the day after the end of the period of 12 months beginning on the day the declaration commences.
+
+Subdivision B—Provisions dealing with the collection, use and disclosure of personal information
+
+26XB  Authorisation of collection, use and disclosure of personal information
+
+ (1) At any time when an eligible data breach declaration is in force in relation to an eligible data breach, an entity may collect, use or disclose personal information about an individual if:
+
+ (a) the entity reasonably believes that the individual may be at risk from the eligible data breach; and
+
+ (b) the collection, use or disclosure is for a permitted purpose specified in the declaration; and
+
+ (c) the information is information of a kind or kinds specified in the declaration; and
+
+ (d) the information is disclosed by an entity specified in the declaration, or an entity included in a class of entities specified in the declaration; and
+
+ (e) the information is disclosed to an entity specified in the declaration, or an entity included in a class of entities specified in the declaration; and
+
+ (f) if a matter mentioned in paragraph (b), (c), (d) or (e) is specified in the declaration subject to conditions—those conditions are satisfied.
+
+ (2) An entity is not liable to any proceedings for contravening a secrecy provision in respect of a use or disclosure of personal information authorised by subsection (1) unless the secrecy provision is a designated secrecy provision (see subsection (6)).
+
+ (3) An entity is not liable to any proceedings for contravening a duty of confidence in respect of a disclosure of personal information authorised by subsection (1).
+
+ (4) An entity does not breach an Australian Privacy Principle, a registered APP code that binds the entity or a rule issued under section 17 (rules relating to tax file number information) in respect of a collection, use or disclosure of personal information authorised by subsection (1).
+
+ (5) A collection, use or disclose of personal information by an officer or employee of an agency in the course of duty as an officer or employee is authorised by subsection (1) only if the officer or employee is authorised by the agency to collect, use or disclose the personal information.
+
+ (6) In this section:
+
+designated secrecy provision means any of the following:
+
+ (a) sections 18, 18A, 18B, 34GF, 35P, 92 and 92A, and subsection 34GE(4), of the Australian Security Intelligence Organisation Act 1979;
+
+ (b) section 15LC of the Crimes Act 1914;
+
+ (c) section 34 of the Inspector‑General of Intelligence and Security Act 1986;
+
+ (d) sections 39, 40C, 40D and 41 of, and clause 9 of Schedule 1 to, the Intelligence Services Act 2001;
+
+ (e) sections 42 and 44 of the Office of National Intelligence Act 2018;
+
+ (f) sections 22, 22A and 22B of the Witness Protection Act 1994;
+
+ (g) a provision of a Commonwealth law prescribed by the regulations for the purposes of this paragraph;
+
+ (h) a provision of a Commonwealth law of a kind prescribed by the regulations for the purposes of this paragraph.
+
+secrecy provision means a provision of a Commonwealth law (including a provision of this Act) that prohibits or regulates the use or disclosure of personal information, whether the provision relates to the use or disclosure of personal information generally or in specified circumstances.
+
+Subdivision C—Other matters
+
+26XC  Disclosure of information—offence
+
+ (1) A person (the first person) commits an offence if:
+
+ (a) personal information that relates to an individual is disclosed to the first person because of the operation of this Division; and
+
+ (b) the first person subsequently discloses the personal information.
+
+Penalty: 60 penalty units or imprisonment for 1 year, or both.
+
+ (2) Subsection (1) does not apply to the following disclosures:
+
+ (a) if the first person is an APP entity—a disclosure permitted under an Australian Privacy Principle, a registered APP code that binds the person or a rule issued under section 17 (rules relating to tax file number information);
+
+ (b) a disclosure for the purposes of carrying out a State’s constitutional functions, powers or duties;
+
+ (c) a disclosure for the purposes of obtaining or providing legal advice in relation to the operation of this Division;
+
+ (d) a disclosure permitted under section 26XB;
+
+ (e) a disclosure made with the consent of the individual to whom the personal information relates;
+
+ (f) a disclosure to the individual to whom the personal information relates;
+
+ (g) a disclosure to a court;
+
+ (h) a disclosure prescribed by the regulations.
+
+Note: A defendant bears an evidential burden in relation to a matter in this subsection (see subsection 13.3(3) of the Criminal Code).
+
+ (3) If a disclosure of personal information is covered by subsection (2), the disclosure is authorised by this section.
+
+ (4) For the purposes of paragraph (2)(g), court includes any tribunal, authority or person having power to require the production of documents or the answering of questions.
+
+26XD  Division not limited by secrecy provisions
+
+ (1) The operation of this Division is not limited by a secrecy provision of any other Commonwealth law (whether made before or after the commencement of this Act) except to the extent that the secrecy provision expressly excludes the operation of this section.
+
+Note: Section 3 provides for the concurrent operation of State and Territory laws.
+
+ (2) Nothing in this Division is to be taken to require an entity to collect, use or disclose personal information.
+
+ (3) In this section:
+
+secrecy provision means a provision of a Commonwealth law (including a provision of this Act) that prohibits or regulates the use or disclosure of personal information, whether the provision relates to the use or disclosure of personal information generally or in specified circumstances.
+
+26XE  Constitutional basis of this Division
+
+  This Division relies on the Commonwealth’s legislative powers under paragraph 51(xxix) (external affairs) of the Constitution as it relates to giving effect to Australia’s obligations under relevant international agreements, in particular Article 17 of the International Covenant on Civil and Political Rights done at New York on 16 December 1966 ([1980] ATS 23).
+
+Note: The Covenant is in Australian Treaty Series 1980 No. 23 ([1980] ATS 23) and could in 2024 be viewed in the Australian Treaties Library on the AustLII website (http://www.austlii.edu.au).
+
+26XF  Additional operation of this Division
+
+ (1) In addition to section 26XE, this Division also has effect as provided by this section.
+
+Corporations
+
+ (2) This Division also has the effect it would have if a reference to a collection, use or disclosure were expressly confined to a collection, use or disclosure by a corporation to which paragraph 51(xx) of the Constitution applies.
+
+Banking
+
+ (3) This Division also has the effect it would have if a reference to a collection, use or disclosure were expressly confined to a collection, use or disclosure that occurs in the course of, or in relation to, the carrying on of the business of banking (within the meaning of paragraph 51(xiii) of the Constitution), other than State banking not extending beyond the limits of the State concerned.
+
+Insurance
+
+ (4) This Division also has the effect it would have if a reference to a collection, use or disclosure were expressly confined to a collection, use or disclosure that occurs in the course of, or in relation to, the carrying on of the business of insurance (within the meaning of paragraph 51(xiv) of the Constitution), other than State insurance not extending beyond the limits of the State concerned.
+
+Trade and commerce
+
+ (5) This Division also has the effect it would have if a reference to a collection, use or disclosure were expressly confined to a collection, use or disclosure that occurs in the course of, or in relation to, trade or commerce:
+
+ (a) between Australia and places outside Australia; or
+
+ (b) among the States; or
+
+ (c) within a Territory, between a State and a Territory or between 2 Territories.
+
+Communications
+
+ (6) This Division also has the effect it would have if a reference to a collection, use or disclosure were expressly confined to a collection, use or disclosure using a postal, telegraphic, telephonic or other like service (within the meaning of paragraph 51(v) of the Constitution).
+
+Territories
+
+ (7) This Division also has the effect it would have if a reference to a collection, use or disclosure were expressly confined to a collection, use or disclosure taking place in a Territory.
+
+Aliens
+
+ (8) This Division also has the effect it would have if a reference to a collection, use or disclosure were expressly confined to:
+
+ (a) a collection, use or disclosure by an alien (within the meaning of paragraph 51(xix) of the Constitution); or
+
+ (b) a collection, use or disclosure of personal information about an alien (within the meaning of paragraph 51(xix) of the Constitution).
+
+External affairs
+
+ (9) This Division also has the effect it would have if a reference to a collection, use or disclosure were expressly confined to a collection, use or disclosure taking place outside Australia.
+
+Executive power
+
+ (10) This Division also has the effect it would have if a reference to a collection, use or disclosure were expressly confined to a collection, use or disclosure by a Commonwealth entity (within the meaning of the Public Governance, Performance and Accountability Act 2013) for the purposes of the Commonwealth entity performing its functions or duties or exercising its powers.
+
+26XG  Interaction with section 12B
+
+  To avoid doubt, section 12B does not apply in relation to this Division.
+
+26XH  Compensation for acquisition of property
+
+ (1) If the operation of this Division would result in an acquisition of property (within the meaning of paragraph 51(xxxi) of the Constitution) from a person otherwise than on just terms (within the meaning of that paragraph), the Commonwealth is liable to pay a reasonable amount of compensation to the person.
+
+ (2) If the Commonwealth and the person do not agree on the amount of the compensation, the person may institute proceedings in the Federal Court of Australia or the Supreme Court of a State or Territory for the recovery from the Commonwealth of such reasonable amount of compensation as the court determines.

@@ -1,0 +1,48 @@
+---
+input_text: |
+  7.8 This principle does not apply to the extent that any of the following apply: (aa) Division 5 of Part 7B of the Interactive Gambling Act 2001; (a) the Do Not Call Register Act 2006; (b) the Spam Act 2003; (c) any other Act of the Commonwealth, or a law in force in an external Territory, prescribed by the regulations.
+raw_completion_output: |-
+  provision_id: 7.8  
+  norms: This principle does not apply to the extent that Division 5 of Part 7B of the Interactive Gambling Act 2001 applies; This principle does not apply to the extent that the Do Not Call Register Act 2006 applies; This principle does not apply to the extent that the Spam Act 2003 applies; This principle does not apply to the extent that any other Act of the Commonwealth, or a law in force in an external Territory, prescribed by the regulations applies.  
+  disapplies:   
+  cross_references: Division 5 of Part 7B of the Interactive Gambling Act 2001; Do Not Call Register Act 2006; Spam Act 2003  
+prompt: |+
+  Split the following piece of text into fields in the following format:
+
+  statement: <The condition in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this condition when the text points elsewhere for it, e.g. "4.3". Blank when the condition is stated here.>
+
+
+  Text:
+  prescribed by the regulations applies
+
+  ===
+
+extracted_object:
+  provision_id: '7.8'
+  norms:
+    - deontic_modality: DISAPPLICATION
+    - deontic_modality: DISAPPLICATION
+    - deontic_modality: DISAPPLICATION
+    - deontic_modality: DISAPPLICATION
+      bearer: AUTO:%3CNot%20explicitly%20mentioned%3E
+      action: AUTO:apply
+      object: AUTO:This%20principle
+      conditions:
+        - statement: the extent that any other Act of the Commonwealth applies
+        - statement: <a law in force in an external Territory applies>
+          source_provision: <Blank>
+        - statement: <prescribed by the regulations applies>
+          source_provision: <Blank>
+named_entities:
+  - id: AUTO:%3CNot%20explicitly%20mentioned%3E
+    label: <Not explicitly mentioned>
+  - id: AUTO:apply
+    label: apply
+    original_spans:
+      - 28:32
+      - 74:78
+  - id: AUTO:This%20principle
+    label: This principle
+    original_spans:
+      - 4:17

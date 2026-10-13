@@ -1,0 +1,46 @@
+---
+input_text: |
+  1.3 An APP entity must have a clearly expressed and up-to-date policy (the APP privacy policy) about the management of personal information by the entity.
+raw_completion_output: |-
+  provision_id: 1.3  
+  norms: An APP entity must have a clearly expressed and up-to-date policy about the management of personal information by the entity.  
+  disapplies:   
+  cross_references:   
+prompt: |+
+  From the text below, extract the following entities in the following format:
+
+  deontic_modality: <The normative force. "must" is an OBLIGATION; "must not" is a PROHIBITION; "may" or "is authorised to" is a PERMISSION. If the provision's own work is to switch another provision OFF -- it says some other subclause "does not apply" -- then it is a DISAPPLICATION, whatever verbs appear in its limbs. If it merely states that other provisions apply, or is purely definitional, it is NONE.Must be one of: OBLIGATION, PROHIBITION, PERMISSION, DISAPPLICATION, NONE>
+  bearer: <The party on whom the norm falls, e.g. "APP entity", "organisation", "agency".>
+  action: <The regulated act, as a verb phrase, e.g. "use or disclose", "destroy", "de-identify", "deal with individuals who have identified themselves".>
+  object: <What the action is performed on, e.g. "personal information", "sensitive information", "biometric information".>
+  conditions: <The circumstances that must hold for this norm to apply at all, as a semicolon-separated list. These are triggers, not exceptions. A norm reading "if an entity holds information collected for a primary purpose, it must not use it for a secondary purpose" has both of those circumstances as conditions.>
+  exceptions: <The circumstances that switch this norm OFF, as a semicolon-separated list. Anything introduced by "unless", "does not apply if" or "other than" is an exception, not a condition. If the text contains such a clause you MUST return an entry here -- a norm stating "must not X unless Y" always has Y as an exception.>
+  scope_qualifier: <Any limit on the norm's reach, e.g. "in relation to that matter", "as soon as practicable", "within a reasonable period". Leave blank if unqualified.>
+
+
+  Text:
+  An APP entity must have a clearly expressed and up-to-date policy about the management of personal information by the entity.
+
+  ===
+
+extracted_object:
+  provision_id: '1.3'
+  norms:
+    - deontic_modality: OBLIGATION
+      bearer: AUTO:APP%20entity
+      action: AUTO:have
+      object: 
+        AUTO:a%20clearly%20expressed%20and%20up-to-date%20policy%20about%20the%20management%20of%20personal%20information%20by%20the%20entity
+named_entities:
+  - id: AUTO:APP%20entity
+    label: APP entity
+    original_spans:
+      - 7:16
+  - id: AUTO:have
+    label: have
+    original_spans:
+      - 23:26
+  - id: 
+      AUTO:a%20clearly%20expressed%20and%20up-to-date%20policy%20about%20the%20management%20of%20personal%20information%20by%20the%20entity
+    label: a clearly expressed and up-to-date policy about the management of 
+      personal information by the entity

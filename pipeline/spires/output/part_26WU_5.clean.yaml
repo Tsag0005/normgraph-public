@@ -1,0 +1,29 @@
+provision_id: 26WU(5)
+norms:
+- deontic_modality: PERMISSION
+  bearer: AUTO:Commissioner
+  action: AUTO:take%20possession%20of%2C%20and%20may%20make%20copies%20of%2C%20or%20take%20extracts%20from
+  object: AUTO:the%20documents
+  conditions:
+  - statement: documents are produced to the Commissioner in accordance with a requirement under subsection
+      (3)
+    source_provision: subsection (3)
+- deontic_modality: PERMISSION
+  bearer: AUTO:Commissioner
+  action: AUTO:retain%20possession
+  object: AUTO:documents
+  conditions:
+  - statement: documents are produced to the Commissioner
+  - statement: Documents are produced in accordance with a requirement under subsection (3).
+    source_provision: (3)
+- deontic_modality: PERMISSION
+  bearer: AUTO:Commissioner
+  action: AUTO:permit
+  object: AUTO:a%20person%20who%20would%20be%20entitled%20to%20inspect%20any%20one%20or%20more%20of%20the%20documents%20if%20they%20were%20not%20in%20the%20Commissioner%27s%20possession%20to%20inspect
+  conditions:
+  - statement: documents are produced to the Commissioner in accordance with a requirement under subsection
+      (3)
+    source_provision: subsection (3)
+  - statement: during the period of possession
+cross_references:
+- 26WU(3)

@@ -1,0 +1,68 @@
+---
+input_text: |
+  26WQ(10) (10) An entity is not entitled to make an application under paragraph (5)(b) in relation to an eligible data breach of the entity if: (a) the access, disclosure or loss that constituted the eligible data breach of the entity is an eligible data breach of one or more other entities; and (b) one of those other entities has already made an application under paragraph (5)(b) in relation to the eligible data breach of the other entity. Extension of specified period
+raw_completion_output: |-
+  provision_id: 26WQ(10)
+
+  norms: An entity is not entitled to make an application under paragraph (5)(b) in relation to an eligible data breach of the entity if the access, disclosure or loss that constituted the eligible data breach of the entity is an eligible data breach of one or more other entities; An entity is not entitled to make an application under paragraph (5)(b) in relation to an eligible data breach of the entity if one of those other entities has already made an application under paragraph (5)(b) in relation to the eligible data breach of the other entity.
+
+  disapplies: 
+
+  cross_references: (5)(b)
+prompt: |+
+  From the text below, extract the following entities in the following format:
+
+  statement: <The exception in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this exception, written as the text writes it. Blank when the exception is stated here in full.>
+  is_exhaustive: <"true" if the text signals these are the only exceptions, otherwise blank.>
+
+
+  Text:
+  if one of those other entities has already made an application under paragraph (5)(b) in relation to the eligible data breach of the other entity
+
+  ===
+
+extracted_object:
+  provision_id: 26WQ(10)
+  norms:
+    - deontic_modality: PROHIBITION
+      bearer: AUTO:entity
+      action: AUTO:make%20an%20application
+      object: AUTO:under%20paragraph%20%285%29%28b%29
+      conditions:
+        - statement: <in relation to an eligible data breach of the entity>
+          source_provision: <Blank>
+      exceptions:
+        - statement: <if the access, disclosure or loss that constituted the 
+            eligible data breach of the entity is an eligible data breach of one
+            or more other entities>
+          source_provision: <>
+          is_exhaustive: <>
+    - deontic_modality: DISAPPLICATION
+      bearer: AUTO:entity
+      action: AUTO:make%20an%20application
+      exceptions:
+        - statement: <if one of those other entities has already made an 
+            application under paragraph (5)(b) in relation to the eligible data 
+            breach of the other entity>
+          source_provision: <paragraph (5)(b)>
+          is_exhaustive: <true>
+  cross_references:
+    - (5)(b)
+named_entities:
+  - id: AUTO:entity
+    label: entity
+    original_spans:
+      - 17:22
+      - 132:137
+      - 227:232
+      - 436:441
+  - id: AUTO:make%20an%20application
+    label: make an application
+    original_spans:
+      - 43:61
+  - id: AUTO:under%20paragraph%20%285%29%28b%29
+    label: under paragraph (5)(b)
+    original_spans:
+      - 63:84
+      - 360:381

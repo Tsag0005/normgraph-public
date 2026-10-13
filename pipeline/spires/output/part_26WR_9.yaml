@@ -1,0 +1,60 @@
+---
+input_text: |
+  26WR(9) (9) If an entity normally communicates with a particular individual using a particular method, the notification to the individual mentioned in paragraph (2)(a) or (b) may use that method. This subsection does not limit paragraph (2)(a) or (b). Compliance with direction
+raw_completion_output: |-
+  provision_id: 26WR(9)  
+  norms: If an entity normally communicates with a particular individual using a particular method, the entity may use that method for the notification to the individual mentioned in paragraph (2)(a) or (b); This subsection does not limit paragraph (2)(a) or (b).  
+  disapplies:   
+  cross_references: 26WR(2)(a); 26WR(2)(b)  
+prompt: |+
+  Split the following piece of text into fields in the following format:
+
+  statement: <The exception in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this exception, written as the text writes it. Blank when the exception is stated here in full.>
+  is_exhaustive: <"true" if the text signals these are the only exceptions, otherwise blank.>
+
+
+  Text:
+  [Not explicitly mentioned]
+
+  ===
+
+extracted_object:
+  provision_id: 26WR(9)
+  norms:
+    - deontic_modality: PERMISSION
+      bearer: AUTO:entity
+      action: AUTO:use
+      object: 
+        AUTO:method%20for%20the%20notification%20to%20the%20individual%20mentioned%20in%20paragraph%20%282%29%28a%29%20or%20%28b%29
+      conditions:
+        - statement: <Entity normally communicates with a particular individual 
+            using a particular method.>
+          source_provision: <Blank>
+    - deontic_modality: NONE
+      bearer: AUTO:%5BNot%20explicitly%20mentioned%5D
+      action: AUTO:%5BNot%20explicitly%20mentioned%5D
+      object: AUTO:%5BNot%20explicitly%20mentioned%5D
+      conditions:
+        - statement: <Not explicitly mentioned>
+          source_provision: <Blank>
+      exceptions:
+        - statement: <[Not explicitly mentioned]>
+          source_provision: <>
+          is_exhaustive: <>
+      scope_qualifier: '[Not explicitly mentioned]'
+named_entities:
+  - id: AUTO:entity
+    label: entity
+    original_spans:
+      - 18:23
+  - id: AUTO:use
+    label: use
+    original_spans:
+      - 179:181
+  - id: 
+      AUTO:method%20for%20the%20notification%20to%20the%20individual%20mentioned%20in%20paragraph%20%282%29%28a%29%20or%20%28b%29
+    label: method for the notification to the individual mentioned in paragraph 
+      (2)(a) or (b)
+  - id: AUTO:%5BNot%20explicitly%20mentioned%5D
+    label: '[Not explicitly mentioned]'

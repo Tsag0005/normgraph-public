@@ -1,0 +1,11 @@
+provision_id: 26WJ
+norms:
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:Section%2026WH
+  action: AUTO:apply
+  exceptions:
+  - statement: If an entity complies with section 26WH in relation to an eligible data breach of the entity.
+disapplies:
+- 26WH
+cross_references:
+- 26WH

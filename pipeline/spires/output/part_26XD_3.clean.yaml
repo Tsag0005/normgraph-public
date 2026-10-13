@@ -1,0 +1,10 @@
+provision_id: 26XD(3)
+norms:
+- deontic_modality: NONE
+  bearer: AUTO:%3CNot%20explicitly%20stated%3E
+  action: AUTO:prohibits%20or%20regulates
+  object: AUTO:use%20or%20disclosure%20of%20personal%20information
+  scope_qualifier: a provision of a Commonwealth law
+  exceptions:
+  - statement: Not explicitly stated
+- deontic_modality: NONE

@@ -1,0 +1,15 @@
+provision_id: '12.5'
+norms:
+- deontic_modality: OBLIGATION
+  bearer: AUTO:The%20entity
+  action: AUTO:take%20such%20steps%20as%20are%20reasonable%20in%20the%20circumstances%20to%20give%20access%20in%20a%20way%20that%20meets%20the%20needs%20of%20the%20entity%20and%20the%20individual
+  object: AUTO:personal%20information
+  conditions:
+  - statement: The APP entity refuses to give access to the personal information because of subclause
+      12.2 or 12.3.
+- deontic_modality: OBLIGATION
+  bearer: AUTO:entity
+  action: AUTO:take%20such%20steps%20as%20are%20reasonable%20in%20the%20circumstances%20to%20give%20access%20in%20a%20way%20that%20meets%20the%20needs%20of%20the%20entity%20and%20the%20individual
+  object: AUTO:access
+  conditions:
+  - statement: The APP entity refuses to give access in the manner requested by the individual.

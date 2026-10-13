@@ -1,0 +1,6 @@
+provision_id: 26WK(1)
+norms:
+- deontic_modality: APPLICABILITY
+  bearer: AUTO:entity
+  action: AUTO:is%20aware
+  object: AUTO:reasonable%20grounds%20to%20believe%20that%20there%20has%20been%20an%20eligible%20data%20breach%20of%20the%20entity

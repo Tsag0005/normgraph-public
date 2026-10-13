@@ -1,0 +1,14 @@
+provision_id: 26WP(5)
+norms:
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:subparagraph%2026WK%282%29%28a%29%28ii%29
+  action: AUTO:requires%20or%20authorises%20the%20use%20or%20disclosure
+  object: AUTO:information
+  conditions:
+  - statement: for the purposes of a prescribed secrecy provision
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:section%2026WL
+  action: AUTO:requires%20or%20authorises%20the%20use%20or%20disclosure
+  object: AUTO:information
+  conditions:
+  - statement: For the purposes of a prescribed secrecy provision

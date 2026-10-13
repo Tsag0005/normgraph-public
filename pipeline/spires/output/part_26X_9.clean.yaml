@@ -1,0 +1,11 @@
+provision_id: 26X(9)
+norms:
+- deontic_modality: PERMISSION
+  bearer: AUTO:the%20Commissioner
+  action: AUTO:disclose
+  object: AUTO:information
+  conditions:
+  - statement: For the purposes of consultation under subsection (8)
+  exceptions:
+  - statement: Despite subsection 29(1) of the Australian Information Commissioner Act 2010 and any provision
+      of this Act

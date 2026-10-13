@@ -1,0 +1,9 @@
+provision_id: 26XG
+norms:
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:Section%2012B
+  action: AUTO:apply
+disapplies:
+- section 12B
+cross_references:
+- section 12B

@@ -1,0 +1,101 @@
+---
+input_text: |
+  26WL(2) (2) The entity must: (a) if it is practicable for the entity to notify the contents of the statement to each of the individuals to whom the relevant information relates - take such steps as are reasonable in the circumstances to notify the contents of the statement to each of the individuals to whom the relevant information relates; or (b) if it is practicable for the entity to notify the contents of the statement to each of the individuals who are at risk from the eligible data breach - take such steps as are reasonable in the circumstances to notify the contents of the statement to each of the individuals who are at risk from the eligible data breach; or (c) if neither paragraph (a) nor (b) applies: (i) publish a copy of the statement on the entity's website (if any); and (ii) take reasonable steps to publicise the contents of the statement. Note: See also subsections 26WF(2) and (5), which deal with remedial action.
+raw_completion_output: |-
+  provision_id: 26WL(2)
+
+  norms: The entity must take such steps as are reasonable in the circumstances to notify the contents of the statement to each of the individuals to whom the relevant information relates if it is practicable for the entity to notify the contents of the statement to each of the individuals to whom the relevant information relates; The entity must take such steps as are reasonable in the circumstances to notify the contents of the statement to each of the individuals who are at risk from the eligible data breach if it is practicable for the entity to notify the contents of the statement to each of the individuals who are at risk from the eligible data breach; The entity must publish a copy of the statement on the entity's website (if any) and take reasonable steps to publicise the contents of the statement if neither paragraph (a) nor (b) applies.
+
+  disapplies: 
+
+  cross_references: 26WF(2); 26WF(5)
+prompt: |+
+  Split the following piece of text into fields in the following format:
+
+  statement: <The condition in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this condition when the text points elsewhere for it, e.g. "4.3". Blank when the condition is stated here.>
+
+
+  Text:
+  neither paragraph (a) nor (b) applies
+
+  ===
+
+extracted_object:
+  provision_id: 26WL(2)
+  norms:
+    - deontic_modality: OBLIGATION
+      bearer: AUTO:The%20entity
+      action: 
+        AUTO:take%20such%20steps%20as%20are%20reasonable%20in%20the%20circumstances%20to%20notify%20the%20contents%20of%20the%20statement
+      object: 
+        AUTO:each%20of%20the%20individuals%20to%20whom%20the%20relevant%20information%20relates
+      conditions:
+        - statement: <It is practicable for the entity to notify the contents of
+            the statement to each of the individuals to whom the relevant 
+            information relates.>
+          source_provision: <Blank>
+    - deontic_modality: OBLIGATION
+      bearer: AUTO:The%20entity
+      action: AUTO:notify%20the%20contents%20of%20the%20statement
+      object: 
+        AUTO:each%20of%20the%20individuals%20who%20are%20at%20risk%20from%20the%20eligible%20data%20breach
+      conditions:
+        - statement: <It is practicable for the entity to notify the contents of
+            the statement to each of the individuals who are at risk from the 
+            eligible data breach.>
+          source_provision: <Blank>
+    - deontic_modality: OBLIGATION
+      bearer: AUTO:The%20entity
+      action: 
+        AUTO:take%20reasonable%20steps%20to%20publicise%20the%20contents%20of%20the%20statement
+      object: AUTO:the%20entity%27s%20website
+      conditions:
+        - statement: <neither paragraph (a) nor (b) applies>
+          source_provision: <Blank>
+  cross_references:
+    - 26WF(2)
+    - 26WF(5)
+named_entities:
+  - id: AUTO:The%20entity
+    label: The entity
+    original_spans:
+      - 12:21
+      - 58:67
+      - 375:384
+      - 758:767
+  - id: 
+      AUTO:take%20such%20steps%20as%20are%20reasonable%20in%20the%20circumstances%20to%20notify%20the%20contents%20of%20the%20statement
+    label: take such steps as are reasonable in the circumstances to notify the 
+      contents of the statement
+    original_spans:
+      - 179:272
+      - 501:594
+  - id: 
+      AUTO:each%20of%20the%20individuals%20to%20whom%20the%20relevant%20information%20relates
+    label: each of the individuals to whom the relevant information relates
+    original_spans:
+      - 112:175
+      - 277:340
+  - id: AUTO:notify%20the%20contents%20of%20the%20statement
+    label: notify the contents of the statement
+    original_spans:
+      - 72:107
+      - 237:272
+      - 389:424
+      - 559:594
+  - id: 
+      AUTO:each%20of%20the%20individuals%20who%20are%20at%20risk%20from%20the%20eligible%20data%20breach
+    label: each of the individuals who are at risk from the eligible data breach
+    original_spans:
+      - 429:497
+      - 599:667
+  - id: 
+      AUTO:take%20reasonable%20steps%20to%20publicise%20the%20contents%20of%20the%20statement
+    label: take reasonable steps to publicise the contents of the statement
+    original_spans:
+      - 798:861
+  - id: AUTO:the%20entity%27s%20website
+    label: the entity's website
+    original_spans:
+      - 758:777

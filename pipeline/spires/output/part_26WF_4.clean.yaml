@@ -1,0 +1,18 @@
+provision_id: 26WF(4)
+norms:
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:26WF%284%29
+  action: AUTO:disapplies
+  object: AUTO:26WE%282%29%28b%29
+  conditions:
+  - statement: The APP entity, credit reporting body, credit provider or file number recipient takes action
+      in relation to the loss after there is unauthorized access to, or unauthorized disclosure of, the
+      information.
+  - statement: before the access or disclosure results in serious harm to any of the individuals to whom
+      the information relates.
+  - statement: a reasonable person would conclude that the access or disclosure would not be likely to
+      result in serious harm to any of those individuals.
+disapplies:
+- 26WE(2)(b)
+cross_references:
+- 26WE(2)(b)

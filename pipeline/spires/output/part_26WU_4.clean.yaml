@@ -1,0 +1,15 @@
+provision_id: 26WU(4)
+norms:
+- deontic_modality: OBLIGATION
+  bearer: AUTO:Commissioner
+  action: AUTO:state
+  object: AUTO:the%20place%20at%2C%20or%20manner%20in%20which%2C%20the%20information%20or%20document%20is%20to%20be%20given%20or%20produced%20or%20the%20questions%20are%20to%20be%20answered
+  conditions:
+  - statement: a notice is given by the Commissioner
+    source_provision: subsection (3)
+- deontic_modality: OBLIGATION
+  bearer: AUTO:The%20Commissioner
+  action: AUTO:state
+  object: AUTO:the%20time%20at%20which%2C%20or%20the%20period%20within%20which%2C%20the%20information%20or%20document%20is%20to%20be%20given%20or%20produced%20or%20the%20questions%20are%20to%20be%20answered
+  conditions:
+  - statement: A notice given by the Commissioner under subsection (3)

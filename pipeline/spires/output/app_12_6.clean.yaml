@@ -1,0 +1,9 @@
+provision_id: '12.6'
+norms:
+- deontic_modality: PERMISSION
+  bearer: AUTO:%5BNot%20explicitly%20mentioned%20in%20the%20text%5D
+  action: AUTO:give
+  object: AUTO:access
+  scope_qualifier: '[Not present in the text]'
+  conditions:
+  - statement: through the use of a mutually agreed intermediary

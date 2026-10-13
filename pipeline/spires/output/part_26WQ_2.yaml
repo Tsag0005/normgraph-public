@@ -1,0 +1,44 @@
+---
+input_text: |
+  26WQ(2) (2) The Commissioner's power in paragraph (1)(d) may only be used to extend the time for compliance with subsection 26WL(2) to the end of a period that the Commissioner is satisfied is reasonable in the circumstances.
+raw_completion_output: |-
+  provision_id: 26WQ(2)  
+  norms: The Commissioner's power in paragraph (1)(d) may only be used to extend the time for compliance with subsection 26WL(2) to the end of a period that the Commissioner is satisfied is reasonable in the circumstances.  
+  disapplies:   
+  cross_references: 26WL(2)
+prompt: |+
+  From the text below, extract the following entities in the following format:
+
+  statement: <The condition in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this condition when the text points elsewhere for it, e.g. "4.3". Blank when the condition is stated here.>
+
+
+  Text:
+  to the end of a period that the Commissioner is satisfied is reasonable in the circumstances
+
+  ===
+
+extracted_object:
+  provision_id: 26WQ(2)
+  norms:
+    - deontic_modality: PERMISSION
+      bearer: AUTO:The%20Commissioner%27s%20power
+      action: AUTO:be%20used%20to%20extend%20the%20time%20for%20compliance
+      object: AUTO:subsection%2026WL%282%29
+      conditions:
+        - statement: <The Commissioner is satisfied that the period is 
+            reasonable in the circumstances.>
+          source_provision: <Blank>
+named_entities:
+  - id: AUTO:The%20Commissioner%27s%20power
+    label: The Commissioner's power
+    original_spans:
+      - 12:35
+  - id: AUTO:be%20used%20to%20extend%20the%20time%20for%20compliance
+    label: be used to extend the time for compliance
+    original_spans:
+      - 66:106
+  - id: AUTO:subsection%2026WL%282%29
+    label: subsection 26WL(2)
+    original_spans:
+      - 113:130

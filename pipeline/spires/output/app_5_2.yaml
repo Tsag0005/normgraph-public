@@ -1,0 +1,156 @@
+---
+input_text: |
+  5.2 The matters for the purposes of subclause 5.1 are as follows: (a) the identity and contact details of the APP entity; (b) if: (i) the APP entity collects the personal information from someone other than the individual; or (ii) the individual may not be aware that the APP entity has collected the personal information; the fact that the entity so collects, or has collected, the information and the circumstances of that collection; (c) if the collection of the personal information is required or authorised by or under an Australian law or a court/tribunal order - the fact that the collection is so required or authorised (including the name of the Australian law, or details of the court/tribunal order, that requires or authorises the collection); (d) the purposes for which the APP entity collects the personal information; (e) the main consequences (if any) for the individual if all or some of the personal information is not collected by the APP entity; (f) any other APP entity, body or person, or the types of any other APP entities, bodies or persons, to which the APP entity usually discloses personal information of the kind collected by the entity; (g) that the APP privacy policy of the APP entity contains information about how the individual may access the personal information about the individual that is held by the entity and seek the correction of such information; (h) that the APP privacy policy of the APP entity contains information about how the individual may complain about a breach of the Australian Privacy Principles, or a registered APP code (if any) that binds the entity, and how the entity will deal with such a complaint; (i) whether the APP entity is likely to disclose the personal information to overseas recipients; (j) if the APP entity is likely to disclose the personal information to overseas recipients - the countries in which such recipients are likely to be located if it is practicable to specify those countries in the notification or to otherwise make the individual aware of them.
+raw_completion_output: |-
+  provision_id: 5.2  
+  norms: The matters for the purposes of subclause 5.1 are the identity and contact details of the APP entity; The matters for the purposes of subclause 5.1 are if the APP entity collects the personal information from someone other than the individual or the individual may not be aware that the APP entity has collected the personal information, the fact that the entity so collects, or has collected, the information and the circumstances of that collection; The matters for the purposes of subclause 5.1 are if the collection of the personal information is required or authorised by or under an Australian law or a court/tribunal order, the fact that the collection is so required or authorised, including the name of the Australian law, or details of the court/tribunal order, that requires or authorises the collection; The matters for the purposes of subclause 5.1 are the purposes for which the APP entity collects the personal information; The matters for the purposes of subclause 5.1 are the main consequences, if any, for the individual if all or some of the personal information is not collected by the APP entity; The matters for the purposes of subclause 5.1 are any other APP entity, body or person, or the types of any other APP entities, bodies or persons, to which the APP entity usually discloses personal information of the kind collected by the entity; The matters for the purposes of subclause 5.1 are that the APP privacy policy of the APP entity contains information about how the individual may access the personal information about the individual that is held by the entity and seek the correction of such information; The matters for the purposes of subclause 5.1 are that the APP privacy policy of the APP entity contains information about how the individual may complain about a breach of the Australian Privacy Principles, or a registered APP code, if any, that binds the entity, and how the entity will deal with such a complaint; The matters for the purposes of subclause 5.1 are whether the APP entity is likely to disclose the personal information to overseas recipients; The matters for the purposes of subclause 5.1 are if the APP entity is likely to disclose the personal information to overseas recipients, the countries in which such recipients are likely to be located if it is practicable to specify those countries in the notification or to otherwise make the individual aware of them.  
+  disapplies:   
+  cross_references: 5.1  
+prompt: |+
+  From the text below, extract the following entities in the following format:
+
+  statement: <The condition in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this condition when the text points elsewhere for it, e.g. "4.3". Blank when the condition is stated here.>
+
+
+  Text:
+  it is practicable to specify those countries in the notification
+
+  ===
+
+extracted_object:
+  provision_id: '5.2'
+  norms:
+    - deontic_modality: NONE
+      bearer: AUTO:APP%20entity
+    - deontic_modality: NONE
+      bearer: AUTO:APP%20entity
+      action: AUTO:collects
+      object: AUTO:personal%20information
+      conditions:
+        - statement: <The APP entity collects the personal information from 
+            someone other than the individual.>
+          source_provision: <Blank>
+        - statement: <The individual may not be aware that the APP entity has 
+            collected the personal information.>
+          source_provision: <Blank>
+    - deontic_modality: NONE
+    - deontic_modality: NONE
+      bearer: AUTO:APP%20entity
+      action: AUTO:collects
+      object: AUTO:the%20personal%20information
+    - deontic_modality: NONE
+    - deontic_modality: NONE
+      bearer: AUTO:APP%20entity
+      action: AUTO:discloses
+      object: 
+        AUTO:personal%20information%20of%20the%20kind%20collected%20by%20the%20entity
+      conditions:
+        - statement: <any other APP entity, body or person, or the types of any 
+            other APP entities, bodies or persons>
+          source_provision: <>
+    - deontic_modality: NONE
+      bearer: AUTO:APP%20entity
+      action: AUTO:contains%20information
+      object: AUTO:APP%20privacy%20policy
+    - deontic_modality: NONE
+      bearer: AUTO:APP%20entity
+      action: AUTO:contains%20information
+      object: 
+        AUTO:how%20the%20individual%20may%20complain%20about%20a%20breach%20of%20the%20Australian%20Privacy%20Principles%2C%20or%20a%20registered%20APP%20code%2C%20if%20any%2C%20that%20binds%20the%20entity%2C%20and%20how%20the%20entity%20will%20deal%20with%20such%20a%20complaint
+      conditions:
+        - statement: <for the purposes of subclause 5.1>
+          source_provision: <5.1>
+    - deontic_modality: NONE
+      bearer: AUTO:APP%20entity
+      action: AUTO:disclose
+      object: AUTO:personal%20information
+      conditions:
+        - statement: <The APP entity is likely to disclose the personal 
+            information to overseas recipients.>
+          source_provision: <Blank>
+    - deontic_modality: NONE
+      bearer: AUTO:APP%20entity
+      action: AUTO:disclose
+      object: AUTO:personal%20information
+      conditions:
+        - statement: <APP entity is likely to disclose the personal information 
+            to overseas recipients.>
+          source_provision: <Blank>
+        - statement: <It is practicable to specify those countries in the 
+            notification.>
+          source_provision: <Blank>
+named_entities:
+  - id: AUTO:APP%20entity
+    label: APP entity
+    original_spans:
+      - 110:119
+      - 138:147
+      - 272:281
+      - 788:797
+      - 955:964
+      - 981:990
+      - 1081:1090
+      - 1207:1216
+      - 1432:1441
+      - 1680:1689
+      - 1773:1782
+  - id: AUTO:collects
+    label: collects
+    original_spans:
+      - 149:156
+      - 351:358
+      - 799:806
+  - id: AUTO:personal%20information
+    label: personal information
+    original_spans:
+      - 162:181
+      - 301:320
+      - 466:485
+      - 812:831
+      - 910:929
+      - 1110:1129
+      - 1279:1298
+      - 1717:1736
+      - 1810:1829
+  - id: AUTO:the%20personal%20information
+    label: the personal information
+    original_spans:
+      - 158:181
+      - 297:320
+      - 462:485
+      - 808:831
+      - 906:929
+      - 1275:1298
+      - 1713:1736
+      - 1806:1829
+  - id: AUTO:discloses
+    label: discloses
+    original_spans:
+      - 1100:1108
+  - id: 
+      AUTO:personal%20information%20of%20the%20kind%20collected%20by%20the%20entity
+    label: personal information of the kind collected by the entity
+    original_spans:
+      - 1110:1165
+  - id: AUTO:contains%20information
+    label: contains information
+    original_spans:
+      - 1218:1237
+      - 1443:1462
+  - id: AUTO:APP%20privacy%20policy
+    label: APP privacy policy
+    original_spans:
+      - 1181:1198
+      - 1406:1423
+  - id: 
+      AUTO:how%20the%20individual%20may%20complain%20about%20a%20breach%20of%20the%20Australian%20Privacy%20Principles%2C%20or%20a%20registered%20APP%20code%2C%20if%20any%2C%20that%20binds%20the%20entity%2C%20and%20how%20the%20entity%20will%20deal%20with%20such%20a%20complaint
+    label: how the individual may complain about a breach of the Australian 
+      Privacy Principles, or a registered APP code, if any, that binds the 
+      entity, and how the entity will deal with such a complaint
+  - id: AUTO:disclose
+    label: disclose
+    original_spans:
+      - 1100:1107
+      - 1704:1711
+      - 1797:1804

@@ -1,0 +1,15 @@
+provision_id: '7.2'
+norms:
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:organisation
+  action: AUTO:%5BNo%20action%20since%20it%27s%20a%20disapplication%3B%20the%20original%20action%20this%20disapplies%20would%20need%20to%20be%20inferred%20from%20Subclause%207.1%5D
+  object: AUTO:%5BNo%20object%20since%20it%27s%20a%20disapplication%3B%20the%20original%20object%20this%20disapplies%20would%20need%20to%20be%20inferred%20from%20Subclause%207.1%5D
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:Subclause%207.1
+  action: AUTO:apply
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:organisation
+  action: AUTO:provide
+  object: AUTO:a%20simple%20means%20by%20which%20the%20individual%20may%20easily%20request%20not%20to%20receive%20direct%20marketing%20communications
+disapplies:
+- '7.1'

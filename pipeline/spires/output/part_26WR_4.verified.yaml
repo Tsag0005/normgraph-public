@@ -1,0 +1,22 @@
+provision_id: 26WR(4)
+norms:
+- deontic_modality: OBLIGATION
+  bearer: AUTO:The%20statement%20referred%20to%20in%20paragraph%20%281%29%28a%29
+  action: AUTO:set%20out
+  object: AUTO:the%20identity%20and%20contact%20details%20of%20the%20entity
+- deontic_modality: OBLIGATION
+  bearer: AUTO:The%20statement%20referred%20to%20in%20paragraph%20%281%29%28a%29
+  action: AUTO:set%20out%20a%20description%20of
+  object: AUTO:the%20eligible%20data%20breach
+  conditions:
+  - statement: The Commissioner has reasonable grounds to believe has happened.
+- deontic_modality: OBLIGATION
+  bearer: AUTO:The%20statement%20referred%20to%20in%20paragraph%20%281%29%28a%29
+  action: AUTO:set%20out
+  object: AUTO:the%20particular%20kind%20or%20kinds%20of%20information%20concerned
+- deontic_modality: OBLIGATION
+  bearer: AUTO:The%20statement%20referred%20to%20in%20paragraph%20%281%29%28a%29
+  action: AUTO:set%20out%20recommendations
+  object: AUTO:the%20steps%20that%20individuals%20should%20take
+  conditions:
+  - statement: The eligible data breach that the Commissioner has reasonable grounds to believe has happened.

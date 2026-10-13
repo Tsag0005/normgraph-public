@@ -1,0 +1,8 @@
+provision_id: '2.1'
+norms:
+- deontic_modality: OBLIGATION
+  bearer: AUTO:Individuals
+  action: AUTO:have%20the%20option%20of%20not%20identifying%20themselves
+- deontic_modality: OBLIGATION
+  bearer: AUTO:Individuals
+  action: AUTO:have%20the%20option%20of%20using%20a%20pseudonym

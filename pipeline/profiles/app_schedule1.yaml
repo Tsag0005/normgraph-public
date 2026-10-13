@@ -1,0 +1,70 @@
+# HAND-WRITTEN, and deliberately so. This is the known-answer control.
+#
+# It transcribes the regexes in prep_app.py into the induced-profile format. Its purpose
+# is not to be used -- prep_app.py already works -- but to answer two questions before a
+# single API call is made:
+#
+#   1. Can the profile format express a structure we already know how to parse?
+#   2. Does validate() accept the right answer?
+#
+# The reference figure is 62 provisions, which is what enrich_graph.raw_clause_text()
+# produces and what the :SP_Provision nodes in Aura are keyed on. A profile format that
+# cannot reproduce that number is the wrong format, and a validator that rejects this
+# file is too strict to be useful.
+#
+# Patterns match NORMALISED lines (induce_structure.normalise): em dashes have become
+# " - " and runs of whitespace have been collapsed to one space. Writing "6.1  An APP
+# entity" with two spaces would therefore never match.
+
+name: app_schedule1
+description: Schedule 1 of the Privacy Act 1988 (Cth) - the Australian Privacy Principles
+
+levels:
+  # "Part 1 - Consideration of personal information privacy". The overview paragraphs
+  # that begin "Part 1 sets out principles..." have no " - " and correctly do not match.
+  - name: part
+    role: heading
+    pattern: '^Part \d+ - .+$'
+
+  # "1 Australian Privacy Principle 1 - open and transparent management"
+  - name: principle
+    role: heading
+    pattern: '^\d+ Australian Privacy Principle \d+ - .+$'
+
+  # The same title without the leading number, as it appears in the opening list.
+  - name: principle_item
+    role: heading
+    pattern: '^Australian Privacy Principle \d+ - .+$'
+
+  # "6.1 If an APP entity holds personal information..." -- the provision.
+  - name: clause
+    role: provision
+    pattern: '^(\d+\.\d+) (.+)$'
+
+  # "(a) ...", "(ii) ..." -- one class, as in prep_app's RE_SUBCLAUSE. Splitting letters
+  # from roman numerals would create two levels matching the same lines, and the first
+  # match wins, so the second would be dead.
+  - name: paragraph
+    role: body
+    pattern: '^\(([a-z]{1,4})\) (.*)$'
+
+  - name: note
+    role: body
+    pattern: '^Note( \d+)?: (.*)$'
+
+# A clause identifier is already fully qualified, so nothing is composed.
+id_template: '{clause}'
+
+# Finds an identifier inside running text -- "see subclause 6.2", "paragraph 6.2(e)".
+# Different job from the level patterns above, which classify whole lines. Reproduces
+# what corpus.yaml's provision.pattern held before it was generated from here.
+identifier_pattern: '\b(?:subclause\s+)?(\d{1,2}\.\d{1,2})\b'
+
+citation_nouns:
+  - subclause
+  - clause
+  - paragraph
+  - section
+
+note_pattern: '^Note( \d+)?:'
+min_provision_words: 8

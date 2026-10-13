@@ -1,0 +1,9 @@
+provision_id: 26XD(1)
+norms:
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:Division
+  action: AUTO:is%20not%20limited
+  exceptions:
+  - statement: The secrecy provision expressly excludes the operation of this section.
+cross_references:
+- Section 3

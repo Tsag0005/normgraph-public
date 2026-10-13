@@ -1,0 +1,166 @@
+---
+input_text: |
+  7.3 Despite subclause 7.1, an organisation may use or disclose personal information (other than sensitive information) about an individual for the purpose of direct marketing if: (a) the organisation collected the information from: (i) the individual and the individual would not reasonably expect the organisation to use or disclose the information for that purpose; or (ii) someone other than the individual; and (b) either: (i) the individual has consented to the use or disclosure of the information for that purpose; or (ii) it is impracticable to obtain that consent; and (c) the organisation provides a simple means by which the individual may easily request not to receive direct marketing communications from the organisation; and (d) in each direct marketing communication with the individual: (i) the organisation includes a prominent statement that the individual may make such a request; or (ii) the organisation otherwise draws the individual's attention to the fact that the individual may make such a request; and (e) the individual has not made such a request to the organisation. Exception - sensitive information
+raw_completion_output: |-
+  provision_id: 7.3  
+  norms: Subclause 7.1 does not apply, and an organisation may use or disclose personal information (other than sensitive information) about an individual for the purpose of direct marketing if the organisation collected the information from the individual and the individual would not reasonably expect the organisation to use or disclose the information for that purpose; Subclause 7.1 does not apply, and an organisation may use or disclose personal information (other than sensitive information) about an individual for the purpose of direct marketing if the organisation collected the information from someone other than the individual; Subclause 7.1 does not apply, and an organisation may use or disclose personal information (other than sensitive information) about an individual for the purpose of direct marketing if the individual has consented to the use or disclosure of the information for that purpose; Subclause 7.1 does not apply, and an organisation may use or disclose personal information (other than sensitive information) about an individual for the purpose of direct marketing if it is impracticable to obtain the individual's consent; Subclause 7.1 does not apply, and an organisation may use or disclose personal information (other than sensitive information) about an individual for the purpose of direct marketing if the organisation provides a simple means by which the individual may easily request not to receive direct marketing communications from the organisation; Subclause 7.1 does not apply, and an organisation may use or disclose personal information (other than sensitive information) about an individual for the purpose of direct marketing, and in each direct marketing communication with the individual, the organisation includes a prominent statement that the individual may request not to receive such communications; Subclause 7.1 does not apply, and an organisation may use or disclose personal information (other than sensitive information) about an individual for the purpose of direct marketing and in each direct marketing communication with the individual, the organisation otherwise draws the individual's attention to the fact that the individual may make such a request; Subclause 7.1 does not apply, and an organisation may use or disclose personal information (other than sensitive information) about an individual for the purpose of direct marketing if the individual has not made such a request to the organisation.  
+  disapplies: 7.1  
+  cross_references:  
+prompt: |+
+  From the text below, extract the following entities in the following format:
+
+  statement: <The exception in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this exception, e.g. "6.2" or "6.2(b)". Blank when the exception is stated here in full.>
+  is_exhaustive: <"true" if the text signals these are the only exceptions, otherwise blank.>
+
+
+  Text:
+  if the individual has not made such a request to the organisation
+
+  ===
+
+extracted_object:
+  provision_id: '7.3'
+  norms:
+    - deontic_modality: DISAPPLICATION
+      bearer: AUTO:organisation
+      action: AUTO:use%20or%20disclose
+      object: AUTO:personal%20information
+      conditions:
+        - statement: organisation collected the information from the individual
+        - statement: <The individual would not reasonably expect the 
+            organisation to use or disclose the information for that purpose.>
+          source_provision: <Blank>
+      exceptions:
+        - statement: <sensitive information>
+          source_provision: <>
+          is_exhaustive: <>
+      scope_qualifier: for the purpose of direct marketing
+    - deontic_modality: PERMISSION
+      bearer: AUTO:organisation
+      action: AUTO:use%20or%20disclose
+      object: AUTO:personal%20information
+      conditions:
+        - statement: <organisation collected the information from someone other 
+            than the individual.>
+          source_provision: <Blank>
+      exceptions:
+        - statement: <other than sensitive information>
+          source_provision: <>
+          is_exhaustive: <>
+      scope_qualifier: for the purpose of direct marketing
+    - deontic_modality: PERMISSION
+      bearer: AUTO:organisation
+      action: AUTO:use%20or%20disclose
+      object: 
+        AUTO:personal%20information%20%28other%20than%20sensitive%20information%29%20about%20an%20individual
+      conditions:
+        - statement: <for the purpose of direct marketing.>
+          source_provision: <Blank>
+        - statement: <The individual has consented to the use or disclosure of 
+            the information for that purpose.>
+          source_provision: <Blank>
+    - deontic_modality: PERMISSION
+      bearer: AUTO:organisation
+      action: AUTO:use%20or%20disclose
+      object: AUTO:personal%20information
+      conditions:
+        - statement: <it is impracticable to obtain the individual's consent.>
+          source_provision: <Blank>
+      exceptions:
+        - statement: <other than sensitive information>
+          source_provision: <>
+          is_exhaustive: <>
+      scope_qualifier: for the purpose of direct marketing
+    - deontic_modality: PERMISSION
+      bearer: AUTO:organisation
+      action: AUTO:use%20or%20disclose
+      object: 
+        AUTO:personal%20information%20%28other%20than%20sensitive%20information%29%20about%20an%20individual
+      conditions:
+        - statement: <for the purpose of direct marketing.>
+          source_provision: <Blank>
+        - statement: <The organisation provides a simple means by which the 
+            individual may easily request not to receive direct marketing 
+            communications from the organisation.>
+          source_provision: <Blank>
+    - deontic_modality: OBLIGATION
+      bearer: AUTO:organisation
+      action: 
+        AUTO:includes%20a%20prominent%20statement%20that%20the%20individual%20may%20request%20not%20to%20receive%20such%20communications
+      object: 
+        AUTO:%5BImplicit%20object%3A%20direct%20marketing%20communication%5D
+      conditions:
+        - statement: <in each direct marketing communication with the 
+            individual>
+          source_provision: <Blank>
+      exceptions:
+        - statement: <other than sensitive information>
+          source_provision: <>
+          is_exhaustive: <>
+      scope_qualifier: '[Not applicable, as this part is disapplication]'
+    - deontic_modality: DISAPPLICATION
+      bearer: AUTO:organisation
+      action: AUTO:use%20or%20disclose
+      object: AUTO:personal%20information
+      conditions:
+        - statement: <for the purpose of direct marketing.>
+          source_provision: <Blank>
+        - statement: <The organisation otherwise draws the individual's 
+            attention to the fact that the individual may make such a request in
+            each direct marketing communication with the individual.>
+          source_provision: <Blank>
+      exceptions:
+        - statement: <other than sensitive information>
+          source_provision: <>
+          is_exhaustive: <>
+    - deontic_modality: DISAPPLICATION
+      bearer: AUTO:organisation
+      action: AUTO:use%20or%20disclose
+      object: AUTO:personal%20information
+      conditions:
+        - statement: <for the purpose of direct marketing.>
+          source_provision: <Blank>
+      exceptions:
+        - statement: <other than sensitive information>
+          source_provision: <>
+          is_exhaustive: <>
+        - statement: <if the individual has not made such a request to the 
+            organisation>
+          source_provision: <>
+          is_exhaustive: <>
+  disapplies:
+    - '7.1'
+named_entities:
+  - id: AUTO:organisation
+    label: organisation
+    original_spans:
+      - 30:41
+      - 187:198
+      - 302:313
+      - 586:597
+      - 722:733
+      - 812:823
+      - 913:924
+      - 1084:1095
+  - id: AUTO:use%20or%20disclose
+    label: use or disclose
+    original_spans:
+      - 47:61
+      - 318:332
+  - id: AUTO:personal%20information
+    label: personal information
+    original_spans:
+      - 63:82
+  - id: 
+      AUTO:personal%20information%20%28other%20than%20sensitive%20information%29%20about%20an%20individual
+    label: personal information (other than sensitive information) about an 
+      individual
+    original_spans:
+      - 63:137
+  - id: 
+      AUTO:includes%20a%20prominent%20statement%20that%20the%20individual%20may%20request%20not%20to%20receive%20such%20communications
+    label: includes a prominent statement that the individual may request not to
+      receive such communications
+  - id: AUTO:%5BImplicit%20object%3A%20direct%20marketing%20communication%5D
+    label: '[Implicit object: direct marketing communication]'

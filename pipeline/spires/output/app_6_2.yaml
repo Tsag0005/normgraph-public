@@ -1,0 +1,91 @@
+---
+input_text: |
+  6.2 This subclause applies in relation to the use or disclosure of personal information about an individual if: (a) the individual would reasonably expect the APP entity to use or disclose the information for the secondary purpose and the secondary purpose is: (i) if the information is sensitive information - directly related to the primary purpose; or (ii) if the information is not sensitive information - related to the primary purpose; or (b) the use or disclosure of the information is required or authorised by or under an Australian law or a court/tribunal order; or (c) a permitted general situation exists in relation to the use or disclosure of the information by the APP entity; or (d) the APP entity is an organisation and a permitted health situation exists in relation to the use or disclosure of the information by the entity; or (e) the APP entity reasonably believes that the use or disclosure of the information is reasonably necessary for one or more enforcement related activities conducted by, or on behalf of, an enforcement body. Note: For permitted general situation, see section 16A. For permitted health situation, see section 16B.
+raw_completion_output: |-
+  provision_id: 6.2  
+  norms: This subclause applies in relation to the use or disclosure of personal information about an individual if the individual would reasonably expect the APP entity to use or disclose the information for the secondary purpose and the secondary purpose is directly related to the primary purpose if the information is sensitive information; This subclause applies in relation to the use or disclosure of personal information about an individual if the individual would reasonably expect the APP entity to use or disclose the information for the secondary purpose and the secondary purpose is related to the primary purpose if the information is not sensitive information; This subclause applies in relation to the use or disclosure of personal information about an individual if the use or disclosure of the information is required or authorised by or under an Australian law or a court/tribunal order; This subclause applies in relation to the use or disclosure of personal information about an individual if a permitted general situation exists in relation to the use or disclosure of the information by the APP entity; This subclause applies in relation to the use or disclosure of personal information about an individual if the APP entity is an organisation and a permitted health situation exists in relation to the use or disclosure of the information by the entity; This subclause applies in relation to the use or disclosure of personal information about an individual if the APP entity reasonably believes that the use or disclosure of the information is reasonably necessary for one or more enforcement-related activities conducted by, or on behalf of, an enforcement body.  
+  disapplies:   
+  cross_references: section 16A; section 16B; Australian Privacy Principle 3  
+prompt: |+
+  From the text below, extract the following entities in the following format:
+
+  statement: <The condition in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this condition when the text points elsewhere for it, e.g. "4.3". Blank when the condition is stated here.>
+
+
+  Text:
+  the APP entity reasonably believes that the use or disclosure of the information is reasonably necessary for one or more enforcement-related activities conducted by, or on behalf of, an enforcement body
+
+  ===
+
+extracted_object:
+  provision_id: '6.2'
+  norms:
+    - deontic_modality: NONE
+      bearer: AUTO:APP%20entity
+      action: AUTO:use%20or%20disclose
+      object: AUTO:personal%20information%20about%20an%20individual
+      conditions:
+        - statement: <The APP entity can use or disclose the information for the
+            secondary purpose if the individual would reasonably expect it.>
+          source_provision: <Blank>
+        - statement: <secondary purpose is directly related to the primary 
+            purpose>
+          source_provision: <Blank>
+        - statement: information is sensitive information
+    - deontic_modality: NONE
+      bearer: AUTO:APP%20entity
+      action: AUTO:use%20or%20disclose
+      object: AUTO:personal%20information%20about%20an%20individual
+      conditions:
+        - statement: <The individual would reasonably expect the APP entity to 
+            use or disclose the information for the secondary purpose.>
+          source_provision: <Blank>
+        - statement: <the secondary purpose is related to the primary purpose>
+          source_provision: <Blank>
+        - statement: <the information is not sensitive information.>
+          source_provision: <Blank>
+    - deontic_modality: NONE
+    - deontic_modality: NONE
+      bearer: AUTO:APP%20entity
+      action: AUTO:use%20or%20disclose
+      object: AUTO:personal%20information%20about%20an%20individual
+      conditions:
+        - statement: <A permitted general situation exists in relation to the 
+            use or disclosure of the information.>
+          source_provision: <Blank>
+    - deontic_modality: NONE
+      bearer: AUTO:APP%20entity
+      action: AUTO:use%20or%20disclose
+      object: AUTO:personal%20information%20about%20an%20individual
+      conditions:
+        - statement: APP entity is an organisation
+        - statement: <A permitted health situation exists in relation to the use
+            or disclosure of the information by the entity.>
+          source_provision: <Blank>
+    - deontic_modality: NONE
+      bearer: AUTO:APP%20entity
+      action: AUTO:use%20or%20disclose
+      object: AUTO:personal%20information%20about%20an%20individual
+      conditions:
+        - statement: <The APP entity reasonably believes that the use or 
+            disclosure of the information is reasonably necessary for one or 
+            more enforcement-related activities conducted by, or on behalf of, 
+            an enforcement body.>
+          source_provision: <Blank>
+named_entities:
+  - id: AUTO:APP%20entity
+    label: APP entity
+    original_spans:
+      - 159:168
+      - 680:689
+      - 703:712
+      - 855:864
+  - id: AUTO:use%20or%20disclose
+    label: use or disclose
+    original_spans:
+      - 173:187
+  - id: AUTO:personal%20information%20about%20an%20individual
+    label: personal information about an individual
+    original_spans:
+      - 67:106

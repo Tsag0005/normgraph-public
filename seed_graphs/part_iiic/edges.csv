@@ -1,0 +1,1088 @@
+from_key,rel,to_key
+provision:26WA,PI_HAS_NORM,norm:26WA:1
+provision:26WA,PI_HAS_NORM,norm:26WA:2
+norm:26WA:2,PI_BEARER,PI_Actor:entity
+norm:26WA:2,PI_ACTION,PI_Action:give a notification
+provision:26WA,PI_HAS_NORM,norm:26WA:3
+norm:26WA:3,PI_BEARER,PI_Actor:the commissioner
+norm:26WA:3,PI_ACTION,PI_Action:obtain
+norm:26WA:3,PI_OBJECT,PI_InfoType:information or documents
+provision:26WB,PI_HAS_NORM,norm:26WB:1
+norm:26WB:1,PI_BEARER,PI_Actor:entity
+norm:26WB:1,PI_ACTION,PI_Action:includes
+norm:26WB:1,PI_OBJECT,PI_InfoType:a person who is a file number recipient
+norm:26WB:1,PI_CONDITION,pi_condition:26WB:1:1
+provision:26WC(1),PI_HAS_NORM,norm:26WC(1):1
+norm:26WC(1):1,PI_BEARER,PI_Actor:app entity
+norm:26WC(1):1,PI_ACTION,PI_Action:were held
+norm:26WC(1):1,PI_OBJECT,PI_InfoType:personal information
+provision:26WC(1),PI_HAS_NORM,norm:26WC(1):2
+norm:26WC(1):2,PI_BEARER,PI_Actor:app entity
+norm:26WC(1):2,PI_ACTION,"PI_Action:not do an act, or engage in a practice"
+norm:26WC(1):2,PI_OBJECT,PI_InfoType:that breaches australian privacy principle 11.1 in relation to the personal information
+provision:26WC(2),PI_HAS_NORM,norm:26WC(2):1
+norm:26WC(2):1,PI_BEARER,PI_Actor:credit provider
+norm:26WC(2):1,PI_ACTION,PI_Action:comply
+norm:26WC(2):1,PI_OBJECT,PI_InfoType:subsection 21s(1) in relation to the credit eligibility information
+norm:26WC(2):1,PI_CONDITION,pi_condition:26WC(2):1:1
+norm:26WC(2):1,PI_CONDITION,pi_condition:26WC(2):1:2
+provision:26WC(2),PI_HAS_NORM,norm:26WC(2):2
+norm:26WC(2):2,PI_BEARER,PI_Actor:this part
+norm:26WC(2):2,PI_ACTION,PI_Action:has effect as if the credit eligibility information were held by the credit provider and the credit provider were required to comply with subsection 21s(1)
+norm:26WC(2):2,PI_OBJECT,PI_InfoType:credit eligibility information
+norm:26WC(2):2,PI_CONDITION,pi_condition:26WC(2):2:1
+norm:26WC(2):2,PI_CONDITION,pi_condition:26WC(2):2:2
+provision:26WD,PI_HAS_NORM,norm:26WD:1
+norm:26WD:1,PI_BEARER,PI_Actor:this part
+norm:26WD:1,PI_ACTION,PI_Action:apply
+provision:26WE(1),PI_HAS_NORM,norm:26WE(1):1
+norm:26WE(1):1,PI_BEARER,PI_Actor:app entity
+norm:26WE(1):1,PI_ACTION,PI_Action:hold
+norm:26WE(1):1,PI_OBJECT,PI_InfoType:personal information relating to one or more individuals
+norm:26WE(1):1,PI_CONDITION,pi_condition:26WE(1):1:1
+norm:26WE(1):1,PI_CONDITION,pi_condition:26WE(1):1:2
+provision:26WE(1),PI_HAS_NORM,norm:26WE(1):2
+norm:26WE(1):2,PI_BEARER,PI_Actor:credit reporting body
+norm:26WE(1):2,PI_ACTION,PI_Action:holds
+norm:26WE(1):2,PI_OBJECT,PI_InfoType:credit reporting information relating to one or more individuals
+norm:26WE(1):2,PI_CONDITION,pi_condition:26WE(1):2:1
+norm:26WE(1):2,PI_CONDITION,pi_condition:26WE(1):2:2
+provision:26WE(1),PI_HAS_NORM,norm:26WE(1):3
+norm:26WE(1):3,PI_BEARER,PI_Actor:credit provider
+norm:26WE(1):3,PI_ACTION,PI_Action:applies
+norm:26WE(1):3,PI_OBJECT,PI_InfoType:credit eligibility information
+norm:26WE(1):3,PI_CONDITION,pi_condition:26WE(1):3:1
+norm:26WE(1):3,PI_CONDITION,pi_condition:26WE(1):3:2
+provision:26WE(1),PI_HAS_NORM,norm:26WE(1):4
+norm:26WE(1):4,PI_BEARER,PI_Actor:file number recipient
+norm:26WE(1):4,PI_ACTION,PI_Action:holds
+norm:26WE(1):4,PI_OBJECT,PI_InfoType:tax file number information relating to one or more individuals
+norm:26WE(1):4,PI_CONDITION,pi_condition:26WE(1):4:1
+norm:26WE(1):4,PI_CONDITION,pi_condition:26WE(1):4:2
+provision:26WE(2),PI_HAS_NORM,norm:26WE(2):1
+norm:26WE(2):1,PI_BEARER,"PI_Actor:app entity, credit reporting body, credit provider, file number recipient"
+norm:26WE(2):1,PI_ACTION,"PI_Action:[none specified, purely definitional]"
+norm:26WE(2):1,PI_OBJECT,"PI_InfoType:[none specified, purely definitional]"
+norm:26WE(2):1,PI_CONDITION,pi_condition:26WE(2):1:1
+norm:26WE(2):1,PI_CONDITION,pi_condition:26WE(2):1:2
+provision:26WE(2),PI_HAS_NORM,norm:26WE(2):2
+provision:26WE(2),PI_HAS_NORM,norm:26WE(2):3
+norm:26WE(2):3,PI_BEARER,PI_Actor:individual
+norm:26WE(2):3,PI_ACTION,PI_Action:is at risk
+norm:26WE(2):3,PI_OBJECT,PI_InfoType:from the eligible data breach
+norm:26WE(2):3,PI_CONDITION,pi_condition:26WE(2):3:1
+norm:26WE(2):3,PI_CONDITION,pi_condition:26WE(2):3:2
+provision:26WE(3),PI_HAS_NORM,norm:26WE(3):1
+norm:26WE(3):1,PI_BEARER,PI_Actor:subsection (2)
+norm:26WE(3):1,PI_ACTION,PI_Action:has effect
+provision:26WF(1),PI_HAS_NORM,norm:26WF(1):1
+norm:26WF(1):1,PI_BEARER,"PI_Actor:app entity, credit reporting body, credit provider or file number recipient"
+norm:26WF(1):1,PI_ACTION,PI_Action:be
+norm:26WF(1):1,PI_OBJECT,"PI_InfoType:an eligible data breach of the app entity, credit reporting body, credit provider or file number recipient"
+norm:26WF(1):1,PI_CONDITION,pi_condition:26WF(1):1:1
+norm:26WF(1):1,PI_CONDITION,pi_condition:26WF(1):1:2
+norm:26WF(1):1,PI_CONDITION,pi_condition:26WF(1):1:3
+provision:26WF(1),PI_HAS_NORM,norm:26WF(1):2
+norm:26WF(1):2,PI_BEARER,PI_Actor:access or disclosure
+norm:26WF(1):2,PI_ACTION,"PI_Action:is not, and is taken never to have been, an eligible data breach"
+norm:26WF(1):2,PI_OBJECT,PI_InfoType:any other entity
+norm:26WF(1):2,PI_CONDITION,pi_condition:26WF(1):2:1
+norm:26WF(1):2,PI_CONDITION,pi_condition:26WF(1):2:2
+norm:26WF(1):2,PI_CONDITION,pi_condition:26WF(1):2:3
+provision:26WF(2),PI_HAS_NORM,norm:26WF(2):1
+norm:26WF(2):1,PI_BEARER,"PI_Actor:app entity, credit reporting body, credit provider, or file number recipient"
+norm:26WF(2):1,PI_ACTION,PI_Action:take steps to notify
+norm:26WF(2):1,PI_OBJECT,PI_InfoType:the individual of the contents of a statement that relates to the access or disclosure
+norm:26WF(2):1,PI_CONDITION,pi_condition:26WF(2):1:1
+norm:26WF(2):1,PI_CONDITION,pi_condition:26WF(2):1:2
+norm:26WF(2):1,PI_CONDITION,pi_condition:26WF(2):1:3
+norm:26WF(2):1,PI_CONDITION,pi_condition:26WF(2):1:4
+provision:26WF(2),PI_HAS_NORM,norm:26WF(2):2
+norm:26WF(2):2,PI_BEARER,PI_Actor:any other entity
+norm:26WF(2):2,PI_ACTION,PI_Action:take steps to notify
+norm:26WF(2):2,PI_OBJECT,PI_InfoType:the individual of the contents of a statement that relates to the access or disclosure
+norm:26WF(2):2,PI_CONDITION,pi_condition:26WF(2):2:1
+norm:26WF(2):2,PI_CONDITION,pi_condition:26WF(2):2:2
+norm:26WF(2):2,PI_CONDITION,pi_condition:26WF(2):2:3
+norm:26WF(2):2,PI_CONDITION,pi_condition:26WF(2):2:4
+provision:26WF(3),PI_HAS_NORM,norm:26WF(3):1
+norm:26WF(3):1,PI_BEARER,PI_Actor:provision 26we(2)(b)
+norm:26WF(3):1,PI_ACTION,PI_Action:does not apply
+provision:26WF(4),PI_HAS_NORM,norm:26WF(4):1
+norm:26WF(4):1,PI_BEARER,PI_Actor:26wf(4)
+norm:26WF(4):1,PI_ACTION,PI_Action:disapplies
+norm:26WF(4):1,PI_OBJECT,PI_InfoType:26we(2)(b)
+norm:26WF(4):1,PI_CONDITION,pi_condition:26WF(4):1:1
+norm:26WF(4):1,PI_CONDITION,pi_condition:26WF(4):1:2
+norm:26WF(4):1,PI_CONDITION,pi_condition:26WF(4):1:3
+provision:26WF(5),PI_HAS_NORM,norm:26WF(5):1
+norm:26WF(5):1,PI_BEARER,"PI_Actor:app entity, credit reporting body, credit provider or file number recipient"
+norm:26WF(5):1,PI_ACTION,PI_Action:take steps to notify
+norm:26WF(5):1,PI_OBJECT,PI_InfoType:individual of the contents of a statement that relates to the loss
+norm:26WF(5):1,PI_CONDITION,pi_condition:26WF(5):1:1
+norm:26WF(5):1,PI_CONDITION,pi_condition:26WF(5):1:2
+norm:26WF(5):1,PI_CONDITION,pi_condition:26WF(5):1:3
+provision:26WF(5),PI_HAS_NORM,norm:26WF(5):2
+norm:26WF(5):2,PI_BEARER,PI_Actor:any other entity
+norm:26WF(5):2,PI_ACTION,PI_Action:take steps to notify the individual of the contents of a statement
+norm:26WF(5):2,PI_OBJECT,PI_InfoType:a statement that relates to the loss
+norm:26WF(5):2,PI_CONDITION,pi_condition:26WF(5):2:1
+norm:26WF(5):2,PI_CONDITION,pi_condition:26WF(5):2:2
+norm:26WF(5):2,PI_CONDITION,pi_condition:26WF(5):2:3
+provision:26WG,PI_HAS_NORM,norm:26WG:1
+norm:26WG:1,PI_OBJECT,PI_InfoType:the kind or kinds of information
+norm:26WG:1,PI_CONDITION,pi_condition:26WG:1:1
+provision:26WG,PI_HAS_NORM,norm:26WG:2
+norm:26WG:2,PI_OBJECT,PI_InfoType:the sensitivity of the information
+norm:26WG:2,PI_CONDITION,pi_condition:26WG:2:1
+provision:26WG,PI_HAS_NORM,norm:26WG:3
+norm:26WG:3,PI_BEARER,PI_Actor:reasonable person
+norm:26WG:3,PI_ACTION,PI_Action:conclude
+norm:26WG:3,PI_OBJECT,"PI_InfoType:access to, or a disclosure of, information"
+norm:26WG:3,PI_CONDITION,pi_condition:26WG:3:1
+provision:26WG,PI_HAS_NORM,norm:26WG:4
+norm:26WG:4,PI_OBJECT,PI_InfoType:likelihood that any of those security measures could be overcome if the information is protected by one or more security measures
+norm:26WG:4,PI_CONDITION,pi_condition:26WG:4:1
+provision:26WG,PI_HAS_NORM,norm:26WG:5
+norm:26WG:5,PI_OBJECT,"PI_InfoType:the persons, or the kinds of persons, who have obtained, or who could obtain, the information"
+norm:26WG:5,PI_CONDITION,pi_condition:26WG:5:1
+provision:26WG,PI_HAS_NORM,norm:26WG:6
+norm:26WG:6,PI_BEARER,PI_Actor:reasonable person
+norm:26WG:6,PI_ACTION,PI_Action:conclude
+norm:26WG:6,PI_OBJECT,"PI_InfoType:access to, or a disclosure of, information"
+norm:26WG:6,PI_CONDITION,pi_condition:26WG:6:1
+provision:26WG,PI_HAS_NORM,norm:26WG:7
+norm:26WG:7,PI_BEARER,PI_Actor:reasonable person
+norm:26WG:7,PI_ACTION,PI_Action:conclude
+norm:26WG:7,PI_OBJECT,"PI_InfoType:access to, or a disclosure of, information"
+norm:26WG:7,PI_CONDITION,pi_condition:26WG:7:1
+provision:26WG,PI_HAS_NORM,norm:26WG:8
+norm:26WG:8,PI_BEARER,"PI_Actor:(not explicitly stated, but implied to be the evaluating entity or person)"
+norm:26WG:8,PI_ACTION,PI_Action:have regard
+norm:26WG:8,PI_OBJECT,PI_InfoType:any other relevant matters
+norm:26WG:8,PI_CONDITION,pi_condition:26WG:8:1
+provision:26WH(1),PI_HAS_NORM,norm:26WH(1):1
+norm:26WH(1):1,PI_BEARER,PI_Actor:entity
+provision:26WH(2),PI_HAS_NORM,norm:26WH(2):1
+norm:26WH(2):1,PI_BEARER,PI_Actor:the entity
+norm:26WH(2):1,PI_ACTION,PI_Action:carry out a reasonable and expeditious assessment
+norm:26WH(2):1,PI_OBJECT,PI_InfoType:whether there are reasonable grounds to believe that the relevant circumstances amount to an eligible data breach of the entity
+provision:26WH(2),PI_HAS_NORM,norm:26WH(2):2
+norm:26WH(2):2,PI_BEARER,PI_Actor:the entity
+norm:26WH(2):2,PI_ACTION,PI_Action:take all reasonable steps to ensure that the assessment is completed
+provision:26WJ,PI_HAS_NORM,norm:26WJ:1
+norm:26WJ:1,PI_BEARER,PI_Actor:section 26wh
+norm:26WJ:1,PI_ACTION,PI_Action:apply
+norm:26WJ:1,PI_EXCEPTION,pi_exemption:26WJ:1:1
+provision:26WK(1),PI_HAS_NORM,norm:26WK(1):1
+norm:26WK(1):1,PI_BEARER,PI_Actor:entity
+norm:26WK(1):1,PI_ACTION,PI_Action:is aware
+norm:26WK(1):1,PI_OBJECT,PI_InfoType:reasonable grounds to believe that there has been an eligible data breach of the entity
+provision:26WK(2),PI_HAS_NORM,norm:26WK(2):1
+norm:26WK(2):1,PI_BEARER,PI_Actor:the entity
+norm:26WK(2):1,PI_ACTION,PI_Action:prepare a statement and give a copy of the statement to the commissioner
+norm:26WK(2):1,PI_OBJECT,PI_InfoType:a statement that complies with subsection (3)
+norm:26WK(2):1,PI_CONDITION,pi_condition:26WK(2):1:1
+provision:26WK(3),PI_HAS_NORM,norm:26WK(3):1
+norm:26WK(3):1,PI_BEARER,PI_Actor:the statement referred to in subparagraph (2)(a)(i)
+norm:26WK(3):1,PI_ACTION,PI_Action:set out
+norm:26WK(3):1,PI_OBJECT,PI_InfoType:the identity and contact details of the entity
+provision:26WK(3),PI_HAS_NORM,norm:26WK(3):2
+norm:26WK(3):2,PI_BEARER,PI_Actor:the statement referred to in subparagraph (2)(a)(i)
+norm:26WK(3):2,PI_ACTION,PI_Action:set out a description of
+norm:26WK(3):2,PI_OBJECT,PI_InfoType:the eligible data breach that the entity has reasonable grounds to believe has happened
+provision:26WK(3),PI_HAS_NORM,norm:26WK(3):3
+norm:26WK(3):3,PI_BEARER,PI_Actor:the statement referred to in subparagraph (2)(a)(i)
+norm:26WK(3):3,PI_ACTION,PI_Action:set out
+norm:26WK(3):3,PI_OBJECT,PI_InfoType:the particular kind or kinds of information concerned
+provision:26WK(3),PI_HAS_NORM,norm:26WK(3):4
+norm:26WK(3):4,PI_BEARER,PI_Actor:the statement referred to in subparagraph (2)(a)(i)
+norm:26WK(3):4,PI_ACTION,PI_Action:set out recommendations
+norm:26WK(3):4,PI_OBJECT,PI_InfoType:steps that individuals should take
+norm:26WK(3):4,PI_CONDITION,pi_condition:26WK(3):4:1
+provision:26WK(4),PI_HAS_NORM,norm:26WK(4):1
+norm:26WK(4):1,PI_BEARER,PI_Actor:the entity
+norm:26WK(4):1,PI_ACTION,PI_Action:set out
+norm:26WK(4):1,PI_OBJECT,PI_InfoType:the identity and contact details of other entities
+norm:26WK(4):1,PI_CONDITION,pi_condition:26WK(4):1:1
+provision:26WL(1),PI_HAS_NORM,norm:26WL(1):1
+norm:26WL(1):1,PI_BEARER,PI_Actor:entity
+norm:26WL(1):1,PI_ACTION,PI_Action:applies
+provision:26WL(1),PI_HAS_NORM,norm:26WL(1):2
+norm:26WL(1):2,PI_BEARER,PI_Actor:the entity
+norm:26WL(1):2,PI_ACTION,PI_Action:applies
+norm:26WL(1):2,PI_OBJECT,PI_InfoType:this section
+norm:26WL(1):2,PI_CONDITION,pi_condition:26WL(1):2:1
+provision:26WL(1),PI_HAS_NORM,norm:26WL(1):3
+norm:26WL(1):3,PI_BEARER,PI_Actor:the entity
+norm:26WL(1):3,PI_ACTION,PI_Action:relates
+norm:26WL(1):3,PI_OBJECT,PI_InfoType:the eligible data breach
+norm:26WL(1):3,PI_CONDITION,pi_condition:26WL(1):3:1
+norm:26WL(1):3,PI_CONDITION,pi_condition:26WL(1):3:2
+provision:26WL(2),PI_HAS_NORM,norm:26WL(2):1
+norm:26WL(2):1,PI_BEARER,PI_Actor:the entity
+norm:26WL(2):1,PI_ACTION,PI_Action:take such steps as are reasonable in the circumstances to notify the contents of the statement
+norm:26WL(2):1,PI_OBJECT,PI_InfoType:each of the individuals to whom the relevant information relates
+norm:26WL(2):1,PI_CONDITION,pi_condition:26WL(2):1:1
+provision:26WL(2),PI_HAS_NORM,norm:26WL(2):2
+norm:26WL(2):2,PI_BEARER,PI_Actor:the entity
+norm:26WL(2):2,PI_ACTION,PI_Action:notify the contents of the statement
+norm:26WL(2):2,PI_OBJECT,PI_InfoType:each of the individuals who are at risk from the eligible data breach
+norm:26WL(2):2,PI_CONDITION,pi_condition:26WL(2):2:1
+provision:26WL(2),PI_HAS_NORM,norm:26WL(2):3
+norm:26WL(2):3,PI_BEARER,PI_Actor:the entity
+norm:26WL(2):3,PI_ACTION,PI_Action:take reasonable steps to publicise the contents of the statement
+norm:26WL(2):3,PI_OBJECT,PI_InfoType:the entity's website
+norm:26WL(2):3,PI_CONDITION,pi_condition:26WL(2):3:1
+provision:26WL(3),PI_HAS_NORM,norm:26WL(3):1
+norm:26WL(3):1,PI_BEARER,PI_Actor:the entity
+norm:26WL(3):1,PI_ACTION,PI_Action:comply
+norm:26WL(3):1,PI_OBJECT,PI_InfoType:subsection (2)
+norm:26WL(3):1,PI_CONDITION,pi_condition:26WL(3):1:1
+provision:26WL(4),PI_HAS_NORM,norm:26WL(4):1
+norm:26WL(4):1,PI_BEARER,PI_Actor:the entity
+norm:26WL(4):1,PI_ACTION,PI_Action:use
+norm:26WL(4):1,PI_OBJECT,PI_InfoType:that method for the notification to the individual
+norm:26WL(4):1,PI_CONDITION,pi_condition:26WL(4):1:1
+provision:26WL(4),PI_HAS_NORM,norm:26WL(4):2
+norm:26WL(4):2,PI_BEARER,"PI_Actor:[leave blank, as the text does not specify a bearer]"
+norm:26WL(4):2,PI_ACTION,PI_Action:limit
+norm:26WL(4):2,PI_OBJECT,PI_InfoType:paragraph (2)(a)
+provision:26WL(4),PI_HAS_NORM,norm:26WL(4):3
+norm:26WL(4):3,PI_BEARER,PI_Actor:[not explicitly stated]
+norm:26WL(4):3,PI_ACTION,PI_Action:limit
+norm:26WL(4):3,PI_OBJECT,PI_InfoType:paragraph (2)(b)
+norm:26WL(4):3,PI_CONDITION,pi_condition:26WL(4):3:1
+norm:26WL(4):3,PI_EXCEPTION,pi_exemption:26WL(4):3:1
+provision:26WM,PI_HAS_NORM,norm:26WM:1
+norm:26WM:1,PI_BEARER,PI_Actor:sections 26wk and 26wl
+norm:26WM:1,PI_ACTION,PI_Action:apply
+norm:26WM:1,PI_EXCEPTION,pi_exemption:26WM:1:1
+provision:26WN,PI_HAS_NORM,norm:26WN:1
+norm:26WN:1,PI_BEARER,PI_Actor:paragraph 26wk(3)(d) and section 26wl
+norm:26WN:1,PI_ACTION,PI_Action:do not apply
+provision:26WP(1),PI_HAS_NORM,norm:26WP(1):1
+norm:26WP(1):1,PI_BEARER,PI_Actor:[none specified]
+norm:26WP(1):1,PI_ACTION,PI_Action:[none specified]
+norm:26WP(1):1,PI_OBJECT,PI_InfoType:[none specified]
+norm:26WP(1):1,PI_CONDITION,pi_condition:26WP(1):1:1
+norm:26WP(1):1,PI_EXCEPTION,pi_exemption:26WP(1):1:1
+provision:26WP(2),PI_HAS_NORM,norm:26WP(2):1
+norm:26WP(2):1,PI_BEARER,PI_Actor:the entity
+norm:26WP(2):1,PI_ACTION,PI_Action:comply
+norm:26WP(2):1,PI_OBJECT,PI_InfoType:subparagraph 26wk(2)(a)(ii) in relation to a statement
+provision:26WP(3),PI_HAS_NORM,norm:26WP(3):1
+norm:26WP(3):1,PI_BEARER,PI_Actor:entity
+norm:26WP(3):1,PI_ACTION,PI_Action:comply
+norm:26WP(3):1,PI_OBJECT,PI_InfoType:statement
+norm:26WP(3):1,PI_CONDITION,pi_condition:26WP(3):1:1
+norm:26WP(3):1,PI_EXCEPTION,pi_exemption:26WP(3):1:1
+provision:26WP(4),PI_HAS_NORM,norm:26WP(4):1
+norm:26WP(4):1,PI_BEARER,PI_Actor:[no specific bearer mentioned]
+norm:26WP(4):1,PI_ACTION,PI_Action:[no specific action mentioned]
+norm:26WP(4):1,PI_OBJECT,PI_InfoType:[no specific object mentioned]
+norm:26WP(4):1,PI_CONDITION,pi_condition:26WP(4):1:1
+norm:26WP(4):1,PI_EXCEPTION,pi_exemption:26WP(4):1:1
+provision:26WP(5),PI_HAS_NORM,norm:26WP(5):1
+norm:26WP(5):1,PI_BEARER,PI_Actor:subparagraph 26wk(2)(a)(ii)
+norm:26WP(5):1,PI_ACTION,PI_Action:requires or authorises the use or disclosure
+norm:26WP(5):1,PI_OBJECT,PI_InfoType:information
+norm:26WP(5):1,PI_CONDITION,pi_condition:26WP(5):1:1
+provision:26WP(5),PI_HAS_NORM,norm:26WP(5):2
+norm:26WP(5):2,PI_BEARER,PI_Actor:section 26wl
+norm:26WP(5):2,PI_ACTION,PI_Action:requires or authorises the use or disclosure
+norm:26WP(5):2,PI_OBJECT,PI_InfoType:information
+norm:26WP(5):2,PI_CONDITION,pi_condition:26WP(5):2:1
+provision:26WP(6),PI_HAS_NORM,norm:26WP(6):1
+norm:26WP(6):1,PI_BEARER,PI_Actor:entity
+norm:26WP(6):1,PI_ACTION,PI_Action:comply
+norm:26WP(6):1,PI_OBJECT,PI_InfoType:subparagraph 26wk(2)(a)(ii)
+provision:26WP(7),PI_HAS_NORM,norm:26WP(7):1
+norm:26WP(7):1,PI_BEARER,PI_Actor:the entity
+norm:26WP(7):1,PI_ACTION,PI_Action:comply
+norm:26WP(7):1,PI_OBJECT,PI_InfoType:section 26wl
+norm:26WP(7):1,PI_EXCEPTION,pi_exemption:26WP(7):1:1
+provision:26WQ(1),PI_HAS_NORM,norm:26WQ(1):1
+norm:26WQ(1):1,PI_BEARER,PI_Actor:the commissioner
+norm:26WQ(1):1,PI_ACTION,PI_Action:declare by written notice
+norm:26WQ(1):1,PI_OBJECT,PI_InfoType:sections 26wk and 26wl
+norm:26WQ(1):1,PI_CONDITION,pi_condition:26WQ(1):1:1
+norm:26WQ(1):1,PI_CONDITION,pi_condition:26WQ(1):1:2
+provision:26WQ(1),PI_HAS_NORM,norm:26WQ(1):2
+norm:26WQ(1):2,PI_BEARER,PI_Actor:sections 26wk and 26wl
+norm:26WQ(1):2,PI_ACTION,PI_Action:do not apply
+norm:26WQ(1):2,PI_OBJECT,PI_InfoType:eligible data breach of other entities
+norm:26WQ(1):2,PI_CONDITION,pi_condition:26WQ(1):2:1
+norm:26WQ(1):2,PI_CONDITION,pi_condition:26WQ(1):2:2
+provision:26WQ(1),PI_HAS_NORM,norm:26WQ(1):3
+norm:26WQ(1):3,PI_BEARER,PI_Actor:sections 26wk and 26wl
+norm:26WQ(1):3,PI_ACTION,PI_Action:do not apply
+provision:26WQ(1),PI_HAS_NORM,norm:26WQ(1):4
+norm:26WQ(1):4,PI_BEARER,PI_Actor:sections 26wk and 26wl
+norm:26WQ(1):4,PI_ACTION,PI_Action:do not apply
+norm:26WQ(1):4,PI_OBJECT,PI_InfoType:such an eligible data breach of other entities
+norm:26WQ(1):4,PI_CONDITION,pi_condition:26WQ(1):4:1
+norm:26WQ(1):4,PI_CONDITION,pi_condition:26WQ(1):4:2
+provision:26WQ(1),PI_HAS_NORM,norm:26WQ(1):5
+norm:26WQ(1):5,PI_BEARER,PI_Actor:commissioner
+norm:26WQ(1):5,PI_ACTION,PI_Action:declare by written notice
+norm:26WQ(1):5,PI_OBJECT,PI_InfoType:subsection 26wl(3) has effect in relation to the eligible data breach of the entity
+norm:26WQ(1):5,PI_CONDITION,pi_condition:26WQ(1):5:1
+provision:26WQ(1),PI_HAS_NORM,norm:26WQ(1):6
+norm:26WQ(1):6,PI_BEARER,PI_Actor:commissioner
+norm:26WQ(1):6,PI_ACTION,PI_Action:declare by written notice
+norm:26WQ(1):6,PI_OBJECT,PI_InfoType:subsection 26wl(3) has effect
+norm:26WQ(1):6,PI_CONDITION,pi_condition:26WQ(1):6:1
+norm:26WQ(1):6,PI_CONDITION,pi_condition:26WQ(1):6:2
+provision:26WQ(1),PI_HAS_NORM,norm:26WQ(1):7
+norm:26WQ(1):7,PI_BEARER,PI_Actor:commissioner
+norm:26WQ(1):7,PI_ACTION,PI_Action:declare by written notice
+norm:26WQ(1):7,PI_OBJECT,PI_InfoType:subsection 26wl(3)
+norm:26WQ(1):7,PI_CONDITION,pi_condition:26WQ(1):7:1
+norm:26WQ(1):7,PI_CONDITION,pi_condition:26WQ(1):7:2
+provision:26WQ(1),PI_HAS_NORM,norm:26WQ(1):8
+norm:26WQ(1):8,PI_BEARER,PI_Actor:commissioner
+norm:26WQ(1):8,PI_ACTION,PI_Action:declare by written notice
+norm:26WQ(1):8,PI_OBJECT,PI_InfoType:subsection 26wl(3) has effect in relation to such an eligible data breach of other entities
+norm:26WQ(1):8,PI_CONDITION,pi_condition:26WQ(1):8:1
+norm:26WQ(1):8,PI_CONDITION,pi_condition:26WQ(1):8:2
+norm:26WQ(1):8,PI_CONDITION,pi_condition:26WQ(1):8:3
+provision:26WQ(10),PI_HAS_NORM,norm:26WQ(10):1
+norm:26WQ(10):1,PI_BEARER,PI_Actor:entity
+norm:26WQ(10):1,PI_ACTION,PI_Action:make an application
+norm:26WQ(10):1,PI_OBJECT,PI_InfoType:under paragraph (5)(b)
+norm:26WQ(10):1,PI_CONDITION,pi_condition:26WQ(10):1:1
+norm:26WQ(10):1,PI_EXCEPTION,pi_exemption:26WQ(10):1:1
+provision:26WQ(10),PI_HAS_NORM,norm:26WQ(10):2
+norm:26WQ(10):2,PI_BEARER,PI_Actor:entity
+norm:26WQ(10):2,PI_ACTION,PI_Action:make an application
+norm:26WQ(10):2,PI_EXCEPTION,pi_exemption:26WQ(10):2:1
+provision:26WQ(11),PI_HAS_NORM,norm:26WQ(11):1
+norm:26WQ(11):1,PI_BEARER,PI_Actor:the commissioner
+norm:26WQ(11):1,PI_ACTION,PI_Action:extend the period specified
+norm:26WQ(11):1,PI_OBJECT,PI_InfoType:in the declaration
+norm:26WQ(11):1,PI_CONDITION,pi_condition:26WQ(11):1:1
+provision:26WQ(2),PI_HAS_NORM,norm:26WQ(2):1
+norm:26WQ(2):1,PI_BEARER,PI_Actor:the commissioner's power
+norm:26WQ(2):1,PI_ACTION,PI_Action:be used to extend the time for compliance
+norm:26WQ(2):1,PI_OBJECT,PI_InfoType:subsection 26wl(2)
+norm:26WQ(2):1,PI_CONDITION,pi_condition:26WQ(2):1:1
+provision:26WQ(3),PI_HAS_NORM,norm:26WQ(3):1
+norm:26WQ(3):1,PI_BEARER,PI_Actor:the commissioner
+norm:26WQ(3):1,PI_ACTION,PI_Action:make a declaration
+norm:26WQ(3):1,PI_OBJECT,PI_InfoType:under subsection (1)
+norm:26WQ(3):1,PI_EXCEPTION,pi_exemption:26WQ(3):1:1
+norm:26WQ(3):1,PI_EXCEPTION,pi_exemption:26WQ(3):1:2
+provision:26WQ(3),PI_HAS_NORM,norm:26WQ(3):2
+norm:26WQ(3):2,PI_BEARER,PI_Actor:the commissioner
+norm:26WQ(3):2,PI_ACTION,PI_Action:make a declaration under subsection (1)
+norm:26WQ(3):2,PI_EXCEPTION,pi_exemption:26WQ(3):2:1
+provision:26WQ(4),PI_HAS_NORM,norm:26WQ(4):1
+norm:26WQ(4):1,PI_BEARER,PI_Actor:commissioner
+norm:26WQ(4):1,PI_ACTION,PI_Action:have regard
+norm:26WQ(4):1,PI_OBJECT,PI_InfoType:advice
+provision:26WQ(5),PI_HAS_NORM,norm:26WQ(5):1
+norm:26WQ(5):1,PI_BEARER,PI_Actor:the commissioner
+norm:26WQ(5):1,PI_ACTION,PI_Action:give a notice of a declaration
+norm:26WQ(5):1,PI_OBJECT,PI_InfoType:to an entity
+norm:26WQ(5):1,PI_CONDITION,pi_condition:26WQ(5):1:1
+norm:26WQ(5):1,PI_CONDITION,pi_condition:26WQ(5):1:2
+provision:26WQ(5),PI_HAS_NORM,norm:26WQ(5):2
+norm:26WQ(5):2,PI_BEARER,PI_Actor:the commissioner
+norm:26WQ(5):2,PI_ACTION,PI_Action:give a notice of a declaration
+norm:26WQ(5):2,PI_OBJECT,PI_InfoType:to an entity
+norm:26WQ(5):2,PI_CONDITION,pi_condition:26WQ(5):2:1
+provision:26WQ(6),PI_HAS_NORM,norm:26WQ(6):1
+norm:26WQ(6):1,PI_BEARER,PI_Actor:entity
+norm:26WQ(6):1,PI_ACTION,PI_Action:be expressed to be an application for a paragraph (1)(c) declaration
+norm:26WQ(6):1,PI_OBJECT,PI_InfoType:an application by an entity under paragraph (5)(b)
+provision:26WQ(6),PI_HAS_NORM,norm:26WQ(6):2
+norm:26WQ(6):2,PI_BEARER,PI_Actor:entity
+norm:26WQ(6):2,PI_ACTION,PI_Action:be expressed
+norm:26WQ(6):2,PI_OBJECT,PI_InfoType:an application for a paragraph (1)(d) declaration
+norm:26WQ(6):2,PI_CONDITION,pi_condition:26WQ(6):2:1
+provision:26WQ(6),PI_HAS_NORM,norm:26WQ(6):3
+norm:26WQ(6):3,PI_BEARER,PI_Actor:entity
+norm:26WQ(6):3,PI_ACTION,PI_Action:express
+norm:26WQ(6):3,PI_OBJECT,PI_InfoType:application
+norm:26WQ(6):3,PI_CONDITION,pi_condition:26WQ(6):3:1
+provision:26WQ(7),PI_HAS_NORM,norm:26WQ(7):1
+norm:26WQ(7):1,PI_BEARER,PI_Actor:commissioner
+norm:26WQ(7):1,PI_ACTION,PI_Action:refuse
+norm:26WQ(7):1,PI_OBJECT,PI_InfoType:the application
+norm:26WQ(7):1,PI_CONDITION,pi_condition:26WQ(7):1:1
+provision:26WQ(7),PI_HAS_NORM,norm:26WQ(7):2
+norm:26WQ(7):2,PI_BEARER,PI_Actor:the commissioner
+norm:26WQ(7):2,PI_ACTION,PI_Action:give written notice of the refusal
+norm:26WQ(7):2,PI_OBJECT,PI_InfoType:the refusal
+norm:26WQ(7):2,PI_CONDITION,pi_condition:26WQ(7):2:1
+norm:26WQ(7):2,PI_CONDITION,pi_condition:26WQ(7):2:2
+provision:26WQ(8),PI_HAS_NORM,norm:26WQ(8):1
+norm:26WQ(8):1,PI_BEARER,PI_Actor:the commissioner
+norm:26WQ(8):1,PI_ACTION,PI_Action:have refused
+norm:26WQ(8):1,PI_OBJECT,PI_InfoType:the application
+norm:26WQ(8):1,PI_CONDITION,pi_condition:26WQ(8):1:1
+provision:26WQ(9),PI_HAS_NORM,norm:26WQ(9):1
+norm:26WQ(9):1,PI_BEARER,PI_Actor:sections 26wk and 26wl
+norm:26WQ(9):1,PI_ACTION,PI_Action:do not apply
+norm:26WQ(9):1,PI_OBJECT,PI_InfoType:n/a
+norm:26WQ(9):1,PI_CONDITION,pi_condition:26WQ(9):1:1
+provision:26WQ(9),PI_HAS_NORM,norm:26WQ(9):2
+norm:26WQ(9):2,PI_BEARER,PI_Actor:sections 26wk and 26wl
+norm:26WQ(9):2,PI_ACTION,PI_Action:do not apply
+norm:26WQ(9):2,PI_OBJECT,PI_InfoType:eligible data breach of other entities
+norm:26WQ(9):2,PI_CONDITION,pi_condition:26WQ(9):2:1
+provision:26WR(1),PI_HAS_NORM,norm:26WR(1):1
+norm:26WR(1):1,PI_BEARER,PI_Actor:commissioner
+norm:26WR(1):1,PI_ACTION,PI_Action:direct the entity to prepare a statement that complies with subsection (4)
+provision:26WR(1),PI_HAS_NORM,norm:26WR(1):2
+norm:26WR(1):2,PI_BEARER,PI_Actor:entity
+norm:26WR(1):2,PI_ACTION,PI_Action:give a copy of the statement
+provision:26WR(10),PI_HAS_NORM,norm:26WR(10):1
+norm:26WR(10):1,PI_BEARER,PI_Actor:entity
+norm:26WR(10):1,PI_ACTION,PI_Action:comply
+norm:26WR(10):1,PI_OBJECT,PI_InfoType:direction under subsection (1)
+norm:26WR(10):1,PI_CONDITION,pi_condition:26WR(10):1:1
+provision:26WR(2),PI_HAS_NORM,norm:26WR(2):1
+norm:26WR(2):1,PI_BEARER,PI_Actor:the entity
+norm:26WR(2):1,PI_ACTION,PI_Action:take reasonable steps to notify the contents of the statement
+norm:26WR(2):1,PI_OBJECT,PI_InfoType:each individual to whom the relevant information relates
+norm:26WR(2):1,PI_CONDITION,pi_condition:26WR(2):1:1
+provision:26WR(2),PI_HAS_NORM,norm:26WR(2):2
+norm:26WR(2):2,PI_BEARER,PI_Actor:entity
+norm:26WR(2):2,PI_ACTION,PI_Action:take reasonable steps to notify the contents of the statement
+norm:26WR(2):2,PI_OBJECT,PI_InfoType:each individual who is at risk from the eligible data breach
+norm:26WR(2):2,PI_CONDITION,pi_condition:26WR(2):2:1
+norm:26WR(2):2,PI_CONDITION,pi_condition:26WR(2):2:2
+provision:26WR(2),PI_HAS_NORM,norm:26WR(2):3
+norm:26WR(2):3,PI_BEARER,PI_Actor:entity
+norm:26WR(2):3,PI_ACTION,PI_Action:publish a copy of the statement; take reasonable steps to publicise the contents of the statement
+norm:26WR(2):3,PI_OBJECT,PI_InfoType:\[none\]
+norm:26WR(2):3,PI_CONDITION,pi_condition:26WR(2):3:1
+norm:26WR(2):3,PI_CONDITION,pi_condition:26WR(2):3:2
+norm:26WR(2):3,PI_EXCEPTION,pi_exemption:26WR(2):3:1
+provision:26WR(3),PI_HAS_NORM,norm:26WR(3):1
+norm:26WR(3):1,PI_BEARER,PI_Actor:the commissioner
+norm:26WR(3):1,PI_ACTION,PI_Action:invite the entity to make a submission to the commissioner
+norm:26WR(3):1,PI_OBJECT,PI_InfoType:the direction
+norm:26WR(3):1,PI_CONDITION,pi_condition:26WR(3):1:1
+provision:26WR(4),PI_HAS_NORM,norm:26WR(4):1
+norm:26WR(4):1,PI_BEARER,PI_Actor:the statement referred to in paragraph (1)(a)
+norm:26WR(4):1,PI_ACTION,PI_Action:set out
+norm:26WR(4):1,PI_OBJECT,PI_InfoType:the identity and contact details of the entity
+provision:26WR(4),PI_HAS_NORM,norm:26WR(4):2
+norm:26WR(4):2,PI_BEARER,PI_Actor:the statement referred to in paragraph (1)(a)
+norm:26WR(4):2,PI_ACTION,PI_Action:set out a description of
+norm:26WR(4):2,PI_OBJECT,PI_InfoType:the eligible data breach
+norm:26WR(4):2,PI_CONDITION,pi_condition:26WR(4):2:1
+provision:26WR(4),PI_HAS_NORM,norm:26WR(4):3
+norm:26WR(4):3,PI_BEARER,PI_Actor:the statement referred to in paragraph (1)(a)
+norm:26WR(4):3,PI_ACTION,PI_Action:set out
+norm:26WR(4):3,PI_OBJECT,PI_InfoType:the particular kind or kinds of information concerned
+provision:26WR(4),PI_HAS_NORM,norm:26WR(4):4
+norm:26WR(4):4,PI_BEARER,PI_Actor:the statement referred to in paragraph (1)(a)
+norm:26WR(4):4,PI_ACTION,PI_Action:set out recommendations
+norm:26WR(4):4,PI_OBJECT,PI_InfoType:the steps that individuals should take
+norm:26WR(4):4,PI_CONDITION,pi_condition:26WR(4):4:1
+provision:26WR(5),PI_HAS_NORM,norm:26WR(5):1
+norm:26WR(5):1,PI_BEARER,PI_Actor:a direction under subsection (1)
+norm:26WR(5):1,PI_ACTION,PI_Action:require
+norm:26WR(5):1,PI_OBJECT,PI_InfoType:the statement referred to in paragraph (1)(a) to set out specified information that relates to the eligible data breach
+norm:26WR(5):1,PI_CONDITION,pi_condition:26WR(5):1:1
+provision:26WR(6),PI_HAS_NORM,norm:26WR(6):1
+norm:26WR(6):1,PI_BEARER,PI_Actor:the commissioner
+norm:26WR(6):1,PI_ACTION,PI_Action:have regard
+norm:26WR(6):1,PI_OBJECT,PI_InfoType:any relevant advice given to the commissioner by an enforcement body
+norm:26WR(6):1,PI_CONDITION,pi_condition:26WR(6):1:1
+provision:26WR(6),PI_HAS_NORM,norm:26WR(6):2
+norm:26WR(6):2,PI_BEARER,PI_Actor:the commissioner
+norm:26WR(6):2,PI_ACTION,PI_Action:have regard to
+norm:26WR(6):2,PI_OBJECT,PI_InfoType:any relevant advice given to the commissioner by the australian signals directorate
+norm:26WR(6):2,PI_CONDITION,pi_condition:26WR(6):2:1
+provision:26WR(6),PI_HAS_NORM,norm:26WR(6):3
+norm:26WR(6):3,PI_BEARER,PI_Actor:the commissioner
+norm:26WR(6):3,PI_ACTION,PI_Action:have regard to
+norm:26WR(6):3,PI_OBJECT,PI_InfoType:any relevant submission that was made by the entity
+norm:26WR(6):3,PI_CONDITION,pi_condition:26WR(6):3:1
+norm:26WR(6):3,PI_CONDITION,pi_condition:26WR(6):3:2
+norm:26WR(6):3,PI_CONDITION,pi_condition:26WR(6):3:3
+provision:26WR(6),PI_HAS_NORM,norm:26WR(6):4
+norm:26WR(6):4,PI_BEARER,PI_Actor:the commissioner
+norm:26WR(6):4,PI_ACTION,PI_Action:have regard to such other matters as the commissioner considers relevant
+provision:26WR(7),PI_HAS_NORM,norm:26WR(7):1
+norm:26WR(7):1,PI_BEARER,PI_Actor:paragraph (6)(a)
+norm:26WR(7):1,PI_ACTION,PI_Action:limit
+norm:26WR(7):1,PI_OBJECT,PI_InfoType:the advice
+provision:26WR(8),PI_HAS_NORM,norm:26WR(8):1
+norm:26WR(8):1,PI_BEARER,PI_Actor:statement
+norm:26WR(8):1,PI_ACTION,PI_Action:set out
+norm:26WR(8):1,PI_OBJECT,PI_InfoType:identity and contact details of other entities
+norm:26WR(8):1,PI_CONDITION,pi_condition:26WR(8):1:1
+provision:26WR(9),PI_HAS_NORM,norm:26WR(9):1
+norm:26WR(9):1,PI_BEARER,PI_Actor:entity
+norm:26WR(9):1,PI_ACTION,PI_Action:use
+norm:26WR(9):1,PI_OBJECT,PI_InfoType:method for the notification to the individual mentioned in paragraph (2)(a) or (b)
+norm:26WR(9):1,PI_CONDITION,pi_condition:26WR(9):1:1
+provision:26WR(9),PI_HAS_NORM,norm:26WR(9):2
+norm:26WR(9):2,PI_BEARER,PI_Actor:[not explicitly mentioned]
+norm:26WR(9):2,PI_ACTION,PI_Action:[not explicitly mentioned]
+norm:26WR(9):2,PI_OBJECT,PI_InfoType:[not explicitly mentioned]
+norm:26WR(9):2,PI_CONDITION,pi_condition:26WR(9):2:1
+norm:26WR(9):2,PI_EXCEPTION,pi_exemption:26WR(9):2:1
+provision:26WS,PI_HAS_NORM,norm:26WS:1
+norm:26WS:1,PI_BEARER,PI_Actor:subsection 26wr(1)
+norm:26WS:1,PI_ACTION,PI_Action:apply
+provision:26WT(1),PI_HAS_NORM,norm:26WT(1):1
+provision:26WT(2),PI_HAS_NORM,norm:26WT(2):1
+norm:26WT(2):1,PI_BEARER,PI_Actor:an entity
+norm:26WT(2):1,PI_ACTION,PI_Action:comply
+norm:26WT(2):1,PI_OBJECT,PI_InfoType:a statement
+norm:26WT(2):1,PI_CONDITION,pi_condition:26WT(2):1:1
+norm:26WT(2):1,PI_EXCEPTION,pi_exemption:26WT(2):1:1
+provision:26WT(2),PI_HAS_NORM,norm:26WT(2):2
+norm:26WT(2):2,PI_BEARER,PI_Actor:entity
+norm:26WT(2):2,PI_ACTION,PI_Action:[this field is not applicable for disapplication]
+norm:26WT(2):2,PI_OBJECT,PI_InfoType:[this field is not applicable for disapplication]
+norm:26WT(2):2,PI_CONDITION,pi_condition:26WT(2):2:1
+norm:26WT(2):2,PI_CONDITION,pi_condition:26WT(2):2:2
+norm:26WT(2):2,PI_EXCEPTION,pi_exemption:26WT(2):2:1
+provision:26WT(3),PI_HAS_NORM,norm:26WT(3):1
+provision:26WT(4),PI_HAS_NORM,norm:26WT(4):1
+norm:26WT(4):1,PI_BEARER,PI_Actor:paragraph 26wr(1)(b)
+norm:26WT(4):1,PI_ACTION,PI_Action:requires or authorises the use or disclosure
+norm:26WT(4):1,PI_OBJECT,PI_InfoType:information
+norm:26WT(4):1,PI_CONDITION,pi_condition:26WT(4):1:1
+provision:26WT(4),PI_HAS_NORM,norm:26WT(4):2
+norm:26WT(4):2,PI_BEARER,PI_Actor:subsection 26wr(2)
+norm:26WT(4):2,PI_ACTION,PI_Action:requires or authorises
+norm:26WT(4):2,PI_OBJECT,PI_InfoType:the use or disclosure of information
+norm:26WT(4):2,PI_CONDITION,pi_condition:26WT(4):2:1
+provision:26WT(5),PI_HAS_NORM,norm:26WT(5):1
+norm:26WT(5):1,PI_BEARER,PI_Actor:entity
+norm:26WT(5):1,PI_ACTION,PI_Action:comply
+norm:26WT(5):1,PI_OBJECT,PI_InfoType:paragraph 26wr(1)(b) or subsection 26wr(2)
+norm:26WT(5):1,PI_CONDITION,pi_condition:26WT(5):1:1
+norm:26WT(5):1,PI_EXCEPTION,pi_exemption:26WT(5):1:1
+provision:26WU(1)(1),PI_HAS_NORM,norm:26WU(1)(1):1
+norm:26WU(1)(1):1,PI_BEARER,PI_Actor:commissioner
+norm:26WU(1)(1):1,PI_ACTION,PI_Action:has reason to believe
+norm:26WU(1)(1):1,PI_OBJECT,PI_InfoType:information or documents
+norm:26WU(1)(1):1,PI_CONDITION,pi_condition:26WU(1)(1):1:1
+provision:26WU(1)(1),PI_HAS_NORM,norm:26WU(1)(1):2
+norm:26WU(1)(1):2,PI_BEARER,PI_Actor:commissioner
+norm:26WU(1)(1):2,PI_ACTION,PI_Action:answer questions
+provision:26WU(1)(1),PI_HAS_NORM,norm:26WU(1)(1):3
+norm:26WU(1)(1):3,PI_BEARER,PI_Actor:commissioner
+norm:26WU(1)(1):3,PI_ACTION,PI_Action:has reason to believe
+norm:26WU(1)(1):3,PI_OBJECT,PI_InfoType:a person or entity has information or documents
+norm:26WU(1)(1):3,PI_CONDITION,pi_condition:26WU(1)(1):3:1
+provision:26WU(1)(1),PI_HAS_NORM,norm:26WU(1)(1):4
+norm:26WU(1)(1):4,PI_BEARER,PI_Actor:commissioner
+norm:26WU(1)(1):4,PI_ACTION,PI_Action:answer questions
+norm:26WU(1)(1):4,PI_OBJECT,PI_InfoType:questions that are relevant to an entity's compliance with the requirements in division 3 of this part
+norm:26WU(1)(1):4,PI_CONDITION,pi_condition:26WU(1)(1):4:1
+provision:26WU(2),PI_HAS_NORM,norm:26WU(2):1
+norm:26WU(2):1,PI_BEARER,PI_Actor:the relevant matters
+norm:26WU(2):1,PI_ACTION,PI_Action:relate to
+norm:26WU(2):1,PI_OBJECT,PI_InfoType:whether the entity is required to comply with one or more of those requirements
+provision:26WU(2),PI_HAS_NORM,norm:26WU(2):2
+norm:26WU(2):2,PI_BEARER,PI_Actor:matters
+norm:26WU(2):2,PI_ACTION,PI_Action:relate to
+norm:26WU(2):2,PI_OBJECT,PI_InfoType:the conduct or events
+norm:26WU(2):2,PI_CONDITION,pi_condition:26WU(2):2:1
+norm:26WU(2):2,PI_CONDITION,pi_condition:26WU(2):2:2
+provision:26WU(2),PI_HAS_NORM,norm:26WU(2):3
+norm:26WU(2):3,PI_BEARER,PI_Actor:the entity
+norm:26WU(2):3,PI_ACTION,PI_Action:relate to the actions taken
+norm:26WU(2):3,PI_OBJECT,PI_InfoType:the relevant matters
+norm:26WU(2):3,PI_CONDITION,pi_condition:26WU(2):3:1
+provision:26WU(2),PI_HAS_NORM,norm:26WU(2):4
+norm:26WU(2):4,PI_BEARER,PI_Actor:the relevant matters
+norm:26WU(2):4,PI_ACTION,PI_Action:relate to
+norm:26WU(2):4,PI_OBJECT,PI_InfoType:the actual or suspected eligible data breach
+norm:26WU(2):4,PI_CONDITION,pi_condition:26WU(2):4:1
+provision:26WU(2),PI_HAS_NORM,norm:26WU(2):5
+norm:26WU(2):5,PI_BEARER,PI_Actor:the relevant matters
+norm:26WU(2):5,PI_ACTION,PI_Action:relate to
+norm:26WU(2):5,PI_OBJECT,PI_InfoType:the particular kind or kinds of information involved in the actual or suspected eligible data breach
+provision:26WU(2),PI_HAS_NORM,norm:26WU(2):6
+norm:26WU(2):6,PI_BEARER,PI_Actor:the relevant matters
+norm:26WU(2):6,PI_ACTION,PI_Action:relate to the steps taken to notify
+norm:26WU(2):6,PI_OBJECT,PI_InfoType:individuals affected by the actual or suspected eligible data breach
+provision:26WU(3),PI_HAS_NORM,norm:26WU(3):1
+norm:26WU(3):1,PI_BEARER,PI_Actor:the commissioner
+norm:26WU(3):1,PI_ACTION,PI_Action:give to the person or entity a written notice
+norm:26WU(3):1,PI_OBJECT,PI_InfoType:information of the kind specified in the notice
+norm:26WU(3):1,PI_CONDITION,pi_condition:26WU(3):1:1
+provision:26WU(3),PI_HAS_NORM,norm:26WU(3):2
+norm:26WU(3):2,PI_BEARER,PI_Actor:commissioner
+norm:26WU(3):2,PI_ACTION,PI_Action:give
+norm:26WU(3):2,PI_OBJECT,PI_InfoType:written notice requiring the person or entity to produce documents of the kind specified in the notice
+norm:26WU(3):2,PI_CONDITION,pi_condition:26WU(3):2:1
+provision:26WU(3),PI_HAS_NORM,norm:26WU(3):3
+norm:26WU(3):3,PI_BEARER,PI_Actor:commissioner
+norm:26WU(3):3,PI_ACTION,PI_Action:give a written notice requiring the person or entity to answer questions
+norm:26WU(3):3,PI_OBJECT,PI_InfoType:questions of the kind specified in the notice
+norm:26WU(3):3,PI_CONDITION,pi_condition:26WU(3):3:1
+provision:26WU(4),PI_HAS_NORM,norm:26WU(4):1
+norm:26WU(4):1,PI_BEARER,PI_Actor:commissioner
+norm:26WU(4):1,PI_ACTION,PI_Action:state
+norm:26WU(4):1,PI_OBJECT,"PI_InfoType:the place at, or manner in which, the information or document is to be given or produced or the questions are to be answered"
+norm:26WU(4):1,PI_CONDITION,pi_condition:26WU(4):1:1
+provision:26WU(4),PI_HAS_NORM,norm:26WU(4):2
+norm:26WU(4):2,PI_BEARER,PI_Actor:the commissioner
+norm:26WU(4):2,PI_ACTION,PI_Action:state
+norm:26WU(4):2,PI_OBJECT,"PI_InfoType:the time at which, or the period within which, the information or document is to be given or produced or the questions are to be answered"
+norm:26WU(4):2,PI_CONDITION,pi_condition:26WU(4):2:1
+provision:26WU(5),PI_HAS_NORM,norm:26WU(5):1
+norm:26WU(5):1,PI_BEARER,PI_Actor:commissioner
+norm:26WU(5):1,PI_ACTION,"PI_Action:take possession of, and may make copies of, or take extracts from"
+norm:26WU(5):1,PI_OBJECT,PI_InfoType:the documents
+norm:26WU(5):1,PI_CONDITION,pi_condition:26WU(5):1:1
+provision:26WU(5),PI_HAS_NORM,norm:26WU(5):2
+norm:26WU(5):2,PI_BEARER,PI_Actor:commissioner
+norm:26WU(5):2,PI_ACTION,PI_Action:retain possession
+norm:26WU(5):2,PI_OBJECT,PI_InfoType:documents
+norm:26WU(5):2,PI_CONDITION,pi_condition:26WU(5):2:1
+norm:26WU(5):2,PI_CONDITION,pi_condition:26WU(5):2:2
+provision:26WU(5),PI_HAS_NORM,norm:26WU(5):3
+norm:26WU(5):3,PI_BEARER,PI_Actor:commissioner
+norm:26WU(5):3,PI_ACTION,PI_Action:permit
+norm:26WU(5):3,PI_OBJECT,PI_InfoType:a person who would be entitled to inspect any one or more of the documents if they were not in the commissioner's possession to inspect
+norm:26WU(5):3,PI_CONDITION,pi_condition:26WU(5):3:1
+norm:26WU(5):3,PI_CONDITION,pi_condition:26WU(5):3:2
+provision:26WU(6),PI_HAS_NORM,norm:26WU(6):1
+norm:26WU(6):1,PI_BEARER,PI_Actor:[none specified in the text]
+norm:26WU(6):1,PI_ACTION,PI_Action:[none specified in the text]
+norm:26WU(6):1,PI_OBJECT,PI_InfoType:[none specified in the text]
+norm:26WU(6):1,PI_CONDITION,pi_condition:26WU(6):1:1
+norm:26WU(6):1,PI_EXCEPTION,pi_exemption:26WU(6):1:1
+provision:26WU(6),PI_HAS_NORM,norm:26WU(6):2
+norm:26WU(6):2,PI_BEARER,PI_Actor:<not explicitly mentioned>
+norm:26WU(6):2,PI_ACTION,PI_Action:<the purpose of this section being effective>
+norm:26WU(6):2,PI_OBJECT,PI_InfoType:<not explicitly mentioned>
+norm:26WU(6):2,PI_CONDITION,pi_condition:26WU(6):2:1
+provision:26WU(7),PI_HAS_NORM,norm:26WU(7):1
+norm:26WU(7):1,PI_BEARER,PI_Actor:person or entity
+norm:26WU(7):1,PI_ACTION,PI_Action:be liable to a penalty
+norm:26WU(7):1,PI_OBJECT,PI_InfoType:provisions of any other commonwealth law
+norm:26WU(7):1,PI_CONDITION,pi_condition:26WU(7):1:1
+norm:26WU(7):1,PI_CONDITION,pi_condition:26WU(7):1:2
+provision:26WU(7),PI_HAS_NORM,norm:26WU(7):2
+norm:26WU(7):2,PI_BEARER,PI_Actor:person or entity
+norm:26WU(7):2,PI_ACTION,PI_Action:produce
+norm:26WU(7):2,PI_OBJECT,PI_InfoType:a document
+norm:26WU(7):2,PI_CONDITION,pi_condition:26WU(7):2:1
+provision:26WU(7),PI_HAS_NORM,norm:26WU(7):3
+norm:26WU(7):3,PI_BEARER,PI_Actor:person or entity
+norm:26WU(7):3,PI_ACTION,PI_Action:be liable to a penalty
+provision:26X(1),PI_HAS_NORM,norm:26X(1):1
+norm:26X(1):1,PI_BEARER,PI_Actor:the minister
+norm:26X(1):1,PI_ACTION,PI_Action:make a declaration under 26x(1)
+provision:26X(1),PI_HAS_NORM,norm:26X(1):2
+norm:26X(1):2,PI_BEARER,PI_Actor:the minister
+norm:26X(1):2,PI_ACTION,PI_Action:make a declaration
+provision:26X(10),PI_HAS_NORM,norm:26X(10):1
+provision:26X(10),PI_HAS_NORM,norm:26X(10):2
+norm:26X(10):2,PI_BEARER,PI_Actor:section 42 of the legislation act 2003
+norm:26X(10):2,PI_ACTION,PI_Action:apply
+norm:26X(10):2,PI_OBJECT,PI_InfoType:the declaration
+provision:26X(2),PI_HAS_NORM,norm:26X(2):1
+norm:26X(2):1,PI_BEARER,PI_Actor:the declaration
+norm:26X(2):1,PI_ACTION,PI_Action:specify
+norm:26X(2):1,PI_OBJECT,PI_InfoType:the kind or kinds of personal information
+norm:26X(2):1,PI_CONDITION,pi_condition:26X(2):1:1
+provision:26X(2),PI_HAS_NORM,norm:26X(2):2
+norm:26X(2):2,PI_BEARER,PI_Actor:the declaration
+norm:26X(2):2,PI_ACTION,PI_Action:specify
+norm:26X(2):2,PI_OBJECT,"PI_InfoType:the entity or class of entities that may collect, use or disclose the personal information"
+provision:26X(2),PI_HAS_NORM,norm:26X(2):3
+norm:26X(2):3,PI_BEARER,PI_Actor:the declaration
+norm:26X(2):3,PI_ACTION,PI_Action:specify
+norm:26X(2):3,PI_OBJECT,PI_InfoType:the entity or class of entities that the personal information may be disclosed to
+provision:26X(2),PI_HAS_NORM,norm:26X(2):4
+norm:26X(2):4,PI_BEARER,PI_Actor:the declaration
+norm:26X(2):4,PI_ACTION,PI_Action:specify
+norm:26X(2):4,PI_OBJECT,"PI_InfoType:one or more permitted purposes of the collection, use or disclosure"
+provision:26X(3),PI_HAS_NORM,norm:26X(3):1
+norm:26X(3):1,PI_BEARER,PI_Actor:an entity or class of entities specified for the purposes of paragraph (2)(c)
+norm:26X(3):1,PI_ACTION,PI_Action:include
+norm:26X(3):1,PI_OBJECT,PI_InfoType:a state or territory authority
+provision:26X(3),PI_HAS_NORM,norm:26X(3):2
+norm:26X(3):2,PI_BEARER,PI_Actor:an entity or class of entities specified for the purposes of paragraph (2)(c)
+norm:26X(3):2,PI_ACTION,PI_Action:be or include
+norm:26X(3):2,PI_OBJECT,"PI_InfoType:a media organisation, the australian broadcasting corporation or the special broadcasting service corporation"
+provision:26X(4),PI_HAS_NORM,norm:26X(4):1
+norm:26X(4):1,PI_BEARER,PI_Actor:a permitted purpose
+norm:26X(4):1,PI_ACTION,PI_Action:be
+norm:26X(4):1,PI_OBJECT,PI_InfoType:a purpose that is directly related to preventing or reducing a risk of harm mentioned in paragraph (1)(b) to one or more individuals at risk from the eligible data breach
+norm:26X(4):1,PI_CONDITION,pi_condition:26X(4):1:1
+provision:26X(5),PI_HAS_NORM,norm:26X(5):1
+norm:26X(5):1,PI_BEARER,PI_Actor:any of the following things
+norm:26X(5):1,PI_ACTION,PI_Action:be specified as a permitted purpose
+norm:26X(5):1,PI_OBJECT,PI_InfoType:an eligible data breach
+norm:26X(5):1,PI_CONDITION,pi_condition:26X(5):1:1
+provision:26X(5),PI_HAS_NORM,norm:26X(5):2
+norm:26X(5):2,PI_BEARER,PI_Actor:any of the following things
+norm:26X(5):2,PI_ACTION,PI_Action:be specified as a permitted purpose
+norm:26X(5):2,PI_OBJECT,PI_InfoType:relation to an eligible data breach
+norm:26X(5):2,PI_CONDITION,pi_condition:26X(5):2:1
+provision:26X(6),PI_HAS_NORM,norm:26X(6):1
+norm:26X(6):1,PI_BEARER,PI_Actor:an eligible data breach declaration
+norm:26X(6):1,PI_ACTION,PI_Action:provide differently
+norm:26X(6):1,PI_OBJECT,PI_InfoType:different kinds of personal information
+provision:26X(6),PI_HAS_NORM,norm:26X(6):2
+norm:26X(6):2,PI_BEARER,PI_Actor:an eligible data breach declaration
+norm:26X(6):2,PI_ACTION,PI_Action:provide differently
+norm:26X(6):2,PI_OBJECT,PI_InfoType:for different entities or classes of entities
+provision:26X(6),PI_HAS_NORM,norm:26X(6):3
+norm:26X(6):3,PI_BEARER,PI_Actor:an eligible data breach declaration
+norm:26X(6):3,PI_ACTION,PI_Action:provide differently
+norm:26X(6):3,PI_OBJECT,PI_InfoType:different permitted purposes
+provision:26X(7),PI_HAS_NORM,norm:26X(7):1
+norm:26X(7):1,PI_BEARER,PI_Actor:the declaration
+norm:26X(7):1,PI_ACTION,PI_Action:specify
+norm:26X(7):1,PI_OBJECT,PI_InfoType:a matter mentioned in subsection (2)
+norm:26X(7):1,PI_CONDITION,pi_condition:26X(7):1:1
+provision:26X(8),PI_HAS_NORM,norm:26X(8):1
+norm:26X(8):1,PI_BEARER,PI_Actor:the minister
+norm:26X(8):1,PI_ACTION,PI_Action:consult with
+norm:26X(8):1,PI_OBJECT,"PI_InfoType:any person or body, including the commissioner and the director-general of the australian signals directorate"
+norm:26X(8):1,PI_CONDITION,pi_condition:26X(8):1:1
+provision:26X(9),PI_HAS_NORM,norm:26X(9):1
+norm:26X(9):1,PI_BEARER,PI_Actor:the commissioner
+norm:26X(9):1,PI_ACTION,PI_Action:disclose
+norm:26X(9):1,PI_OBJECT,PI_InfoType:information
+norm:26X(9):1,PI_CONDITION,pi_condition:26X(9):1:1
+norm:26X(9):1,PI_EXCEPTION,pi_exemption:26X(9):1:1
+provision:26XA,PI_HAS_NORM,norm:26XA:1
+norm:26XA:1,PI_BEARER,PI_Actor:declaration
+norm:26XA:1,PI_ACTION,PI_Action:cease to be in force
+provision:26XA,PI_HAS_NORM,norm:26XA:2
+norm:26XA:2,PI_BEARER,PI_Actor:eligible data breach declaration
+norm:26XA:2,PI_ACTION,PI_Action:ceases to be in force
+provision:26XA,PI_HAS_NORM,norm:26XA:3
+provision:26XB(1),PI_HAS_NORM,norm:26XB(1):1
+norm:26XB(1):1,PI_BEARER,PI_Actor:entity
+norm:26XB(1):1,PI_ACTION,"PI_Action:collect, use or disclose"
+norm:26XB(1):1,PI_OBJECT,PI_InfoType:personal information about an individual
+norm:26XB(1):1,PI_CONDITION,pi_condition:26XB(1):1:1
+norm:26XB(1):1,PI_CONDITION,pi_condition:26XB(1):1:2
+provision:26XB(1),PI_HAS_NORM,norm:26XB(1):2
+norm:26XB(1):2,PI_BEARER,PI_Actor:an entity
+norm:26XB(1):2,PI_ACTION,"PI_Action:collect, use or disclose"
+norm:26XB(1):2,PI_OBJECT,PI_InfoType:personal information about an individual
+norm:26XB(1):2,PI_CONDITION,pi_condition:26XB(1):2:1
+norm:26XB(1):2,PI_CONDITION,pi_condition:26XB(1):2:2
+provision:26XB(1),PI_HAS_NORM,norm:26XB(1):3
+norm:26XB(1):3,PI_BEARER,PI_Actor:entity
+norm:26XB(1):3,PI_ACTION,"PI_Action:collect, use or disclose"
+norm:26XB(1):3,PI_OBJECT,PI_InfoType:personal information about an individual
+norm:26XB(1):3,PI_CONDITION,pi_condition:26XB(1):3:1
+norm:26XB(1):3,PI_CONDITION,pi_condition:26XB(1):3:2
+provision:26XB(1),PI_HAS_NORM,norm:26XB(1):4
+norm:26XB(1):4,PI_BEARER,PI_Actor:entity
+norm:26XB(1):4,PI_ACTION,"PI_Action:collect, use or disclose"
+norm:26XB(1):4,PI_OBJECT,PI_InfoType:personal information about an individual
+norm:26XB(1):4,PI_CONDITION,pi_condition:26XB(1):4:1
+norm:26XB(1):4,PI_EXCEPTION,pi_exemption:26XB(1):4:1
+provision:26XB(1),PI_HAS_NORM,norm:26XB(1):5
+norm:26XB(1):5,PI_BEARER,PI_Actor:entity
+norm:26XB(1):5,PI_ACTION,"PI_Action:collect, use or disclose"
+norm:26XB(1):5,PI_OBJECT,PI_InfoType:personal information about an individual
+norm:26XB(1):5,PI_CONDITION,pi_condition:26XB(1):5:1
+norm:26XB(1):5,PI_CONDITION,pi_condition:26XB(1):5:2
+provision:26XB(1),PI_HAS_NORM,norm:26XB(1):6
+norm:26XB(1):6,PI_BEARER,PI_Actor:entity
+norm:26XB(1):6,PI_ACTION,"PI_Action:collect, use or disclose"
+norm:26XB(1):6,PI_OBJECT,PI_InfoType:personal information about an individual
+norm:26XB(1):6,PI_CONDITION,pi_condition:26XB(1):6:1
+norm:26XB(1):6,PI_CONDITION,pi_condition:26XB(1):6:2
+norm:26XB(1):6,PI_CONDITION,pi_condition:26XB(1):6:3
+provision:26XB(2),PI_HAS_NORM,norm:26XB(2):1
+norm:26XB(2):1,PI_BEARER,PI_Actor:entity
+norm:26XB(2):1,PI_ACTION,PI_Action:contravening
+norm:26XB(2):1,PI_OBJECT,PI_InfoType:a secrecy provision in respect of a use or disclosure of personal information
+norm:26XB(2):1,PI_CONDITION,pi_condition:26XB(2):1:1
+norm:26XB(2):1,PI_EXCEPTION,pi_exemption:26XB(2):1:1
+provision:26XB(3),PI_HAS_NORM,norm:26XB(3):1
+norm:26XB(3):1,PI_BEARER,PI_Actor:entity
+norm:26XB(3):1,PI_ACTION,PI_Action:be liable to any proceedings
+norm:26XB(3):1,PI_OBJECT,PI_InfoType:duty of confidence in respect of a disclosure of personal information
+norm:26XB(3):1,PI_CONDITION,pi_condition:26XB(3):1:1
+provision:26XB(4),PI_HAS_NORM,norm:26XB(4):1
+norm:26XB(4):1,PI_BEARER,PI_Actor:entity
+norm:26XB(4):1,PI_ACTION,PI_Action:breach
+norm:26XB(4):1,PI_OBJECT,PI_InfoType:australian privacy principle
+norm:26XB(4):1,PI_CONDITION,pi_condition:26XB(4):1:1
+provision:26XB(4),PI_HAS_NORM,norm:26XB(4):2
+norm:26XB(4):2,PI_BEARER,PI_Actor:entity
+norm:26XB(4):2,PI_ACTION,PI_Action:breach
+norm:26XB(4):2,PI_OBJECT,PI_InfoType:registered app code
+norm:26XB(4):2,PI_CONDITION,pi_condition:26XB(4):2:1
+provision:26XB(4),PI_HAS_NORM,norm:26XB(4):3
+norm:26XB(4):3,PI_BEARER,PI_Actor:entity
+norm:26XB(4):3,PI_ACTION,PI_Action:breach
+norm:26XB(4):3,PI_OBJECT,PI_InfoType:a rule issued under section 17
+norm:26XB(4):3,PI_CONDITION,pi_condition:26XB(4):3:1
+provision:26XB(5),PI_HAS_NORM,norm:26XB(5):1
+norm:26XB(5):1,PI_BEARER,PI_Actor:officer or employee of an agency
+norm:26XB(5):1,PI_ACTION,"PI_Action:collect, use, or disclose"
+norm:26XB(5):1,PI_OBJECT,PI_InfoType:personal information
+norm:26XB(5):1,PI_CONDITION,pi_condition:26XB(5):1:1
+norm:26XB(5):1,PI_CONDITION,pi_condition:26XB(5):1:2
+provision:26XB(6),PI_HAS_NORM,norm:26XB(6):1
+provision:26XB(6),PI_HAS_NORM,norm:26XB(6):2
+norm:26XB(6):2,PI_BEARER,PI_Actor:not applicable
+norm:26XB(6):2,PI_ACTION,PI_Action:not applicable
+norm:26XB(6):2,PI_OBJECT,PI_InfoType:not applicable
+provision:26XB(6),PI_HAS_NORM,norm:26XB(6):3
+norm:26XB(6):3,PI_BEARER,PI_Actor:(none specified)
+norm:26XB(6):3,PI_ACTION,PI_Action:(none specified)
+norm:26XB(6):3,PI_OBJECT,PI_InfoType:(none specified)
+norm:26XB(6):3,PI_CONDITION,pi_condition:26XB(6):3:1
+norm:26XB(6):3,PI_EXCEPTION,pi_exemption:26XB(6):3:1
+provision:26XC(1)(1),PI_HAS_NORM,norm:26XC(1)(1):1
+norm:26XC(1)(1):1,PI_BEARER,PI_Actor:person
+norm:26XC(1)(1):1,PI_ACTION,PI_Action:not disclose
+norm:26XC(1)(1):1,PI_OBJECT,PI_InfoType:personal information
+norm:26XC(1)(1):1,PI_CONDITION,pi_condition:26XC(1)(1):1:1
+provision:26XC(2),PI_HAS_NORM,norm:26XC(2):1
+norm:26XC(2):1,PI_BEARER,PI_Actor:subsection (1)
+norm:26XC(2):1,PI_ACTION,PI_Action:apply
+provision:26XC(2),PI_HAS_NORM,norm:26XC(2):2
+norm:26XC(2):2,PI_BEARER,PI_Actor:subsection (1)
+norm:26XC(2):2,PI_ACTION,PI_Action:does not apply
+provision:26XC(3),PI_HAS_NORM,norm:26XC(3):1
+norm:26XC(3):1,PI_BEARER,"PI_Actor:[implied bearer, not explicitly stated in the text]"
+norm:26XC(3):1,PI_ACTION,PI_Action:disclose
+norm:26XC(3):1,PI_OBJECT,PI_InfoType:personal information
+norm:26XC(3):1,PI_CONDITION,pi_condition:26XC(3):1:1
+provision:26XC(4),PI_HAS_NORM,norm:26XC(4):1
+norm:26XC(4):1,PI_BEARER,PI_Actor:court
+norm:26XC(4):1,PI_ACTION,PI_Action:include
+norm:26XC(4):1,PI_OBJECT,"PI_InfoType:any tribunal, authority or person having power to require the production of documents or the answering of questions"
+norm:26XC(4):1,PI_CONDITION,pi_condition:26XC(4):1:1
+provision:26XD(1),PI_HAS_NORM,norm:26XD(1):1
+norm:26XD(1):1,PI_BEARER,PI_Actor:division
+norm:26XD(1):1,PI_ACTION,PI_Action:is not limited
+norm:26XD(1):1,PI_EXCEPTION,pi_exemption:26XD(1):1:1
+provision:26XD(2),PI_HAS_NORM,norm:26XD(2):1
+norm:26XD(2):1,PI_BEARER,PI_Actor:entity
+norm:26XD(2):1,PI_ACTION,"PI_Action:collect, use or disclose"
+norm:26XD(2):1,PI_OBJECT,PI_InfoType:personal information
+provision:26XD(3),PI_HAS_NORM,norm:26XD(3):1
+norm:26XD(3):1,PI_BEARER,PI_Actor:<not explicitly stated>
+norm:26XD(3):1,PI_ACTION,PI_Action:prohibits or regulates
+norm:26XD(3):1,PI_OBJECT,PI_InfoType:use or disclosure of personal information
+norm:26XD(3):1,PI_EXCEPTION,pi_exemption:26XD(3):1:1
+provision:26XD(3),PI_HAS_NORM,norm:26XD(3):2
+provision:26XE,PI_HAS_NORM,norm:26XE:1
+provision:26XF(1),PI_HAS_NORM,norm:26XF(1):1
+norm:26XF(1):1,PI_BEARER,PI_Actor:this division
+norm:26XF(1):1,PI_ACTION,PI_Action:has effect
+provision:26XF(10),PI_HAS_NORM,norm:26XF(10):1
+norm:26XF(10):1,PI_BEARER,PI_Actor:commonwealth entity
+norm:26XF(10):1,PI_ACTION,PI_Action:perform its functions or duties or exercise its powers
+norm:26XF(10):1,PI_OBJECT,"PI_InfoType:collection, use, or disclosure"
+norm:26XF(10):1,PI_CONDITION,pi_condition:26XF(10):1:1
+provision:26XF(2),PI_HAS_NORM,norm:26XF(2):1
+provision:26XF(3),PI_HAS_NORM,norm:26XF(3):1
+provision:26XF(3),PI_HAS_NORM,norm:26XF(3):2
+norm:26XF(3):2,PI_BEARER,PI_Actor:this division
+norm:26XF(3):2,PI_ACTION,PI_Action:has the effect it would have
+norm:26XF(3):2,PI_OBJECT,"PI_InfoType:if a reference to a collection, use or disclosure"
+norm:26XF(3):2,PI_CONDITION,pi_condition:26XF(3):2:1
+provision:26XF(4),PI_HAS_NORM,norm:26XF(4):1
+provision:26XF(5),PI_HAS_NORM,norm:26XF(5):1
+provision:26XF(5),PI_HAS_NORM,norm:26XF(5):2
+norm:26XF(5):2,PI_BEARER,PI_Actor:none specified
+norm:26XF(5):2,PI_ACTION,PI_Action:none specified
+norm:26XF(5):2,PI_OBJECT,PI_InfoType:none specified
+norm:26XF(5):2,PI_CONDITION,pi_condition:26XF(5):2:1
+provision:26XF(6),PI_HAS_NORM,norm:26XF(6):1
+provision:26XF(7),PI_HAS_NORM,norm:26XF(7):1
+provision:26XF(8),PI_HAS_NORM,norm:26XF(8):1
+provision:26XF(9),PI_HAS_NORM,norm:26XF(9):1
+norm:26XF(9):1,PI_BEARER,PI_Actor:this division
+norm:26XF(9):1,PI_ACTION,PI_Action:has the effect
+norm:26XF(9):1,PI_OBJECT,"PI_InfoType:a reference to a collection, use or disclosure"
+norm:26XF(9):1,PI_CONDITION,pi_condition:26XF(9):1:1
+provision:26XG,PI_HAS_NORM,norm:26XG:1
+norm:26XG:1,PI_BEARER,PI_Actor:section 12b
+norm:26XG:1,PI_ACTION,PI_Action:apply
+provision:26XH(1),PI_HAS_NORM,norm:26XH(1):1
+norm:26XH(1):1,PI_BEARER,PI_Actor:commonwealth
+norm:26XH(1):1,PI_ACTION,PI_Action:pay
+norm:26XH(1):1,PI_OBJECT,PI_InfoType:a reasonable amount of compensation
+norm:26XH(1):1,PI_CONDITION,pi_condition:26XH(1):1:1
+provision:26XH(2),PI_HAS_NORM,norm:26XH(2):1
+norm:26XH(2):1,PI_BEARER,PI_Actor:the person
+norm:26XH(2):1,PI_ACTION,PI_Action:institute proceedings
+norm:26XH(2):1,PI_OBJECT,PI_InfoType:the recovery from the commonwealth of such reasonable amount of compensation as the court determines
+norm:26XH(2):1,PI_CONDITION,pi_condition:26XH(2):1:1
+provision:26WC(1),PI_REFERS_EXTERNAL,external:australian_privacy_principle
+provision:26WC(1),PI_REFERS_EXTERNAL,external:australian_privacy_principle
+provision:26WC(2),PI_REFERS_EXTERNAL,external:21g_3
+provision:26WC(2),PI_REFERS_EXTERNAL,external:21m_1
+provision:26WC(2),PI_REFERS_EXTERNAL,external:21s_1
+provision:26WC(2),PI_REFERS_EXTERNAL,external:21na
+provision:26WD,PI_REFERS_EXTERNAL,external:my_health_records_act
+provision:26WE(1),PI_REFERS_EXTERNAL,external:20q
+provision:26WE(1),PI_REFERS_EXTERNAL,external:21s_1
+provision:26WE(1),PI_REFERS_EXTERNAL,external:australian_privacy_principle
+provision:26WE(3),PI_REFERS_TO,provision:26WF(1)
+provision:26WE(3),PI_REFERS_TO,provision:26WF(2)
+provision:26WE(3),PI_REFERS_TO,provision:26WF(3)
+provision:26WE(3),PI_REFERS_TO,provision:26WF(4)
+provision:26WE(3),PI_REFERS_TO,provision:26WF(5)
+provision:26WE(3),PI_REFERS_TO,provision:26WE(2)
+provision:26WF(1),PI_REFERS_TO,provision:26WE(2)
+provision:26WF(2),PI_REFERS_TO,provision:26WE(2)
+provision:26WF(3),PI_REFERS_TO,provision:26WE(2)
+provision:26WF(4),PI_REFERS_TO,provision:26WE(2)
+provision:26WF(5),PI_REFERS_TO,provision:26WE(2)
+provision:26WH(2),PI_REFERS_TO,provision:26WK(1)
+provision:26WH(2),PI_REFERS_TO,provision:26WK(2)
+provision:26WH(2),PI_REFERS_TO,provision:26WK(3)
+provision:26WH(2),PI_REFERS_TO,provision:26WK(4)
+provision:26WH(2),PI_REFERS_TO,provision:26WH(1)
+provision:26WJ,PI_REFERS_TO,provision:26WH(1)
+provision:26WJ,PI_REFERS_TO,provision:26WH(2)
+provision:26WK(2),PI_REFERS_TO,provision:26WK(3)
+provision:26WK(3),PI_REFERS_TO,provision:26WK(2)
+provision:26WK(4),PI_REFERS_TO,provision:26WK(2)
+provision:26WL(1),PI_REFERS_TO,provision:26WK(3)
+provision:26WL(2),PI_REFERS_TO,provision:26WF(2)
+provision:26WL(3),PI_REFERS_TO,provision:26WL(2)
+provision:26WL(4),PI_REFERS_TO,provision:26WL(2)
+provision:26WM,PI_REFERS_TO,provision:26WK(1)
+provision:26WM,PI_REFERS_TO,provision:26WK(2)
+provision:26WM,PI_REFERS_TO,provision:26WK(3)
+provision:26WM,PI_REFERS_TO,provision:26WK(4)
+provision:26WM,PI_REFERS_TO,provision:26WL(1)
+provision:26WM,PI_REFERS_TO,provision:26WL(2)
+provision:26WM,PI_REFERS_TO,provision:26WL(3)
+provision:26WM,PI_REFERS_TO,provision:26WL(4)
+provision:26WN,PI_REFERS_TO,provision:26WL(1)
+provision:26WN,PI_REFERS_TO,provision:26WL(2)
+provision:26WN,PI_REFERS_TO,provision:26WL(3)
+provision:26WN,PI_REFERS_TO,provision:26WL(4)
+provision:26WN,PI_REFERS_TO,provision:26WK(3)
+provision:26WP(2),PI_REFERS_TO,provision:26WK(2)
+provision:26WP(3),PI_REFERS_TO,provision:26WL(1)
+provision:26WP(3),PI_REFERS_TO,provision:26WL(2)
+provision:26WP(3),PI_REFERS_TO,provision:26WL(3)
+provision:26WP(3),PI_REFERS_TO,provision:26WL(4)
+provision:26WP(5),PI_REFERS_TO,provision:26WK(2)
+provision:26WP(5),PI_REFERS_TO,provision:26WL(1)
+provision:26WP(5),PI_REFERS_TO,provision:26WL(2)
+provision:26WP(5),PI_REFERS_TO,provision:26WL(3)
+provision:26WP(5),PI_REFERS_TO,provision:26WL(4)
+provision:26WP(6),PI_REFERS_TO,provision:26WK(2)
+provision:26WP(7),PI_REFERS_TO,provision:26WL(1)
+provision:26WP(7),PI_REFERS_TO,provision:26WL(2)
+provision:26WP(7),PI_REFERS_TO,provision:26WL(3)
+provision:26WP(7),PI_REFERS_TO,provision:26WL(4)
+provision:26WQ(1),PI_REFERS_TO,provision:26WK(1)
+provision:26WQ(1),PI_REFERS_TO,provision:26WK(2)
+provision:26WQ(1),PI_REFERS_TO,provision:26WK(3)
+provision:26WQ(1),PI_REFERS_TO,provision:26WK(4)
+provision:26WQ(1),PI_REFERS_TO,provision:26WL(1)
+provision:26WQ(1),PI_REFERS_TO,provision:26WL(2)
+provision:26WQ(1),PI_REFERS_TO,provision:26WL(3)
+provision:26WQ(1),PI_REFERS_TO,provision:26WL(4)
+provision:26WQ(1),PI_REFERS_TO,provision:26WL(3)
+provision:26WQ(1),PI_REFERS_TO,provision:26WL(2)
+provision:26WQ(2),PI_REFERS_TO,provision:26WL(2)
+provision:26WQ(2),PI_REFERS_TO,provision:26WQ(1)
+provision:26WQ(3),PI_REFERS_TO,provision:26WQ(1)
+provision:26WQ(4),PI_REFERS_TO,provision:26WQ(3)
+provision:26WQ(5),PI_REFERS_TO,provision:26WQ(1)
+provision:26WQ(6),PI_REFERS_TO,provision:26WQ(5)
+provision:26WQ(6),PI_REFERS_TO,provision:26WQ(1)
+provision:26WQ(7),PI_REFERS_TO,provision:26WQ(5)
+provision:26WQ(8),PI_REFERS_TO,provision:26WQ(1)
+provision:26WQ(9),PI_REFERS_TO,provision:26WK(1)
+provision:26WQ(9),PI_REFERS_TO,provision:26WK(2)
+provision:26WQ(9),PI_REFERS_TO,provision:26WK(3)
+provision:26WQ(9),PI_REFERS_TO,provision:26WK(4)
+provision:26WQ(9),PI_REFERS_TO,provision:26WL(1)
+provision:26WQ(9),PI_REFERS_TO,provision:26WL(2)
+provision:26WQ(9),PI_REFERS_TO,provision:26WL(3)
+provision:26WQ(9),PI_REFERS_TO,provision:26WL(4)
+provision:26WQ(9),PI_REFERS_TO,provision:26WQ(5)
+provision:26WQ(10),PI_REFERS_TO,provision:26WQ(5)
+provision:26WQ(11),PI_REFERS_TO,provision:26WQ(1)
+provision:26WR(1),PI_REFERS_TO,provision:26WR(4)
+provision:26WR(2),PI_REFERS_TO,provision:26WF(2)
+provision:26WR(3),PI_REFERS_TO,provision:26WR(1)
+provision:26WR(4),PI_REFERS_TO,provision:26WR(1)
+provision:26WR(5),PI_REFERS_TO,provision:26WR(1)
+provision:26WR(6),PI_REFERS_TO,provision:26WR(1)
+provision:26WR(6),PI_REFERS_TO,provision:26WR(3)
+provision:26WR(7),PI_REFERS_TO,provision:26WR(6)
+provision:26WR(8),PI_REFERS_TO,provision:26WR(1)
+provision:26WR(9),PI_REFERS_TO,provision:26WR(2)
+provision:26WR(10),PI_REFERS_TO,provision:26WR(1)
+provision:26WS,PI_REFERS_TO,provision:26WR(1)
+provision:26WT(2),PI_REFERS_TO,provision:26WR(1)
+provision:26WT(2),PI_REFERS_TO,provision:26WR(2)
+provision:26WT(4),PI_REFERS_TO,provision:26WR(1)
+provision:26WT(4),PI_REFERS_TO,provision:26WR(2)
+provision:26WT(5),PI_REFERS_TO,provision:26WR(1)
+provision:26WT(5),PI_REFERS_TO,provision:26WR(2)
+provision:26WU(2),PI_REFERS_EXTERNAL,external:1
+provision:26WU(4),PI_REFERS_TO,provision:26WU(3)
+provision:26WU(5),PI_REFERS_TO,provision:26WU(3)
+provision:26X(1),PI_REFERS_TO,provision:26XB(1)
+provision:26X(1),PI_REFERS_TO,provision:26XB(2)
+provision:26X(1),PI_REFERS_TO,provision:26XB(3)
+provision:26X(1),PI_REFERS_TO,provision:26XB(4)
+provision:26X(1),PI_REFERS_TO,provision:26XB(5)
+provision:26X(1),PI_REFERS_TO,provision:26XB(6)
+provision:26X(2),PI_REFERS_TO,provision:26X(1)
+provision:26X(3),PI_REFERS_TO,provision:26X(2)
+provision:26X(4),PI_REFERS_TO,provision:26X(2)
+provision:26X(4),PI_REFERS_TO,provision:26X(1)
+provision:26X(5),PI_REFERS_TO,provision:26X(4)
+provision:26X(5),PI_REFERS_TO,provision:26X(1)
+provision:26X(5),PI_REFERS_EXTERNAL,external:critical_infrastructure_act
+provision:26X(6),PI_REFERS_EXTERNAL,external:acts_interpretation_act
+provision:26X(7),PI_REFERS_TO,provision:26X(2)
+provision:26X(8),PI_REFERS_TO,provision:26X(1)
+provision:26X(9),PI_REFERS_TO,provision:26X(8)
+provision:26X(9),PI_REFERS_EXTERNAL,external:australian_information_commissioner_act
+provision:26X(10),PI_REFERS_TO,provision:26X(1)
+provision:26X(10),PI_REFERS_EXTERNAL,external:legislation_act
+provision:26XB(2),PI_REFERS_TO,provision:26XB(1)
+provision:26XB(2),PI_REFERS_TO,provision:26XB(6)
+provision:26XB(3),PI_REFERS_TO,provision:26XB(1)
+provision:26XB(4),PI_REFERS_TO,provision:26XB(1)
+provision:26XB(5),PI_REFERS_TO,provision:26XB(1)
+provision:26XB(6),PI_REFERS_EXTERNAL,external:34ge_4
+provision:26XB(6),PI_REFERS_EXTERNAL,external:crimes_act_1914
+provision:26XB(6),PI_REFERS_EXTERNAL,external:australian_security_intelligence_organisation_act
+provision:26XB(6),PI_REFERS_EXTERNAL,external:crimes_act
+provision:26XB(6),PI_REFERS_EXTERNAL,external:security_act
+provision:26XB(6),PI_REFERS_EXTERNAL,external:intelligence_services_act
+provision:26XB(6),PI_REFERS_EXTERNAL,external:national_intelligence_act
+provision:26XB(6),PI_REFERS_EXTERNAL,external:witness_protection_act
+provision:26XC(2),PI_REFERS_TO,provision:26XB(1)
+provision:26XC(2),PI_REFERS_TO,provision:26XB(2)
+provision:26XC(2),PI_REFERS_TO,provision:26XB(3)
+provision:26XC(2),PI_REFERS_TO,provision:26XB(4)
+provision:26XC(2),PI_REFERS_TO,provision:26XB(5)
+provision:26XC(2),PI_REFERS_TO,provision:26XB(6)
+provision:26XC(2),PI_REFERS_EXTERNAL,external:1
+provision:26XC(3),PI_REFERS_TO,provision:26XC(2)
+provision:26XC(4),PI_REFERS_TO,provision:26XC(2)
+provision:26XE,PI_REFERS_EXTERNAL,external:australian_treaty_serie
+provision:26XF(1),PI_REFERS_TO,provision:26XE
+provision:26XF(10),PI_REFERS_EXTERNAL,external:accountability_act
+provision:26XG,PI_REFERS_EXTERNAL,external:12b
+provision:26WP(2),PI_DISAPPLIES,provision:26WK(2)
+provision:26WP(6),PI_DISAPPLIES,provision:26WK(2)
+provision:26WS,PI_DISAPPLIES,provision:26WR(1)
+provision:26WT(2),PI_DISAPPLIES,provision:26WR(2)
+provision:26WT(5),PI_DISAPPLIES,provision:26WR(2)

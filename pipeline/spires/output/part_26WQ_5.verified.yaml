@@ -1,0 +1,15 @@
+provision_id: 26WQ(5)
+norms:
+- deontic_modality: PERMISSION
+  bearer: AUTO:The%20Commissioner
+  action: AUTO:give%20a%20notice%20of%20a%20declaration
+  object: AUTO:to%20an%20entity
+  conditions:
+  - statement: under subsection (1)
+  - statement: on the Commissioner's own initiative
+- deontic_modality: PERMISSION
+  bearer: AUTO:The%20Commissioner
+  action: AUTO:give%20a%20notice%20of%20a%20declaration
+  object: AUTO:to%20an%20entity
+  conditions:
+  - statement: on application made to the Commissioner by the entity

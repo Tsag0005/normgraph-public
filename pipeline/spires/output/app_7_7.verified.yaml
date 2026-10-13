@@ -1,0 +1,30 @@
+provision_id: '7.7'
+norms:
+- deontic_modality: PROHIBITION
+  bearer: AUTO:first%20organisation
+  action: AUTO:charge
+  object: AUTO:the%20individual
+  conditions:
+  - statement: \<individual makes a request\>
+    source_provision: \<7.6\>
+- deontic_modality: OBLIGATION
+  bearer: AUTO:first%20organisation
+  action: AUTO:give%20effect%20to%20the%20request
+  object: AUTO:request
+  conditions:
+  - statement: \<individual makes a request\>
+    source_provision: \<7.6\>
+  - statement: request is of a kind referred to in paragraph 7.6(c) or (d)
+    source_provision: '7.6'
+- deontic_modality: OBLIGATION
+  bearer: AUTO:organisation
+  action: AUTO:notify
+  object: AUTO:individual%20of%20its%20source
+  scope_qualifier: within a reasonable period after the request is made
+  conditions:
+  - statement: an individual makes a request
+    source_provision: '7.6'
+  - statement: The request is of a kind referred to in paragraph 7.6(e).
+    source_provision: 7.6(e)
+  exceptions:
+  - statement: unless it is impracticable or unreasonable to do so

@@ -1,0 +1,76 @@
+provision_id: '7.3'
+norms:
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:organisation
+  action: AUTO:use%20or%20disclose
+  object: AUTO:personal%20information
+  scope_qualifier: for the purpose of direct marketing
+  conditions:
+  - statement: organisation collected the information from the individual
+  - statement: The individual would not reasonably expect the organisation to use or disclose the information
+      for that purpose.
+  exceptions:
+  - statement: sensitive information
+- deontic_modality: PERMISSION
+  bearer: AUTO:organisation
+  action: AUTO:use%20or%20disclose
+  object: AUTO:personal%20information
+  scope_qualifier: for the purpose of direct marketing
+  conditions:
+  - statement: organisation collected the information from someone other than the individual.
+  exceptions:
+  - statement: other than sensitive information
+- deontic_modality: PERMISSION
+  bearer: AUTO:organisation
+  action: AUTO:use%20or%20disclose
+  object: AUTO:personal%20information%20%28other%20than%20sensitive%20information%29%20about%20an%20individual
+  conditions:
+  - statement: for the purpose of direct marketing.
+  - statement: The individual has consented to the use or disclosure of the information for that purpose.
+- deontic_modality: PERMISSION
+  bearer: AUTO:organisation
+  action: AUTO:use%20or%20disclose
+  object: AUTO:personal%20information
+  scope_qualifier: for the purpose of direct marketing
+  conditions:
+  - statement: it is impracticable to obtain the individual's consent.
+  exceptions:
+  - statement: other than sensitive information
+- deontic_modality: PERMISSION
+  bearer: AUTO:organisation
+  action: AUTO:use%20or%20disclose
+  object: AUTO:personal%20information%20%28other%20than%20sensitive%20information%29%20about%20an%20individual
+  conditions:
+  - statement: for the purpose of direct marketing.
+  - statement: The organisation provides a simple means by which the individual may easily request not
+      to receive direct marketing communications from the organisation.
+- deontic_modality: OBLIGATION
+  bearer: AUTO:organisation
+  action: AUTO:includes%20a%20prominent%20statement%20that%20the%20individual%20may%20request%20not%20to%20receive%20such%20communications
+  object: AUTO:%5BImplicit%20object%3A%20direct%20marketing%20communication%5D
+  scope_qualifier: '[Not applicable, as this part is disapplication]'
+  conditions:
+  - statement: in each direct marketing communication with the individual
+  exceptions:
+  - statement: other than sensitive information
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:organisation
+  action: AUTO:use%20or%20disclose
+  object: AUTO:personal%20information
+  conditions:
+  - statement: for the purpose of direct marketing.
+  - statement: The organisation otherwise draws the individual's attention to the fact that the individual
+      may make such a request in each direct marketing communication with the individual.
+  exceptions:
+  - statement: other than sensitive information
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:organisation
+  action: AUTO:use%20or%20disclose
+  object: AUTO:personal%20information
+  conditions:
+  - statement: for the purpose of direct marketing.
+  exceptions:
+  - statement: other than sensitive information
+  - statement: if the individual has not made such a request to the organisation
+disapplies:
+- '7.1'

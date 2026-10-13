@@ -1,0 +1,43 @@
+---
+input_text: |
+  13.5 If a request is made under subclause 13.1 or 13.4, the APP entity: (a) must respond to the request: (i) if the entity is an agency - within 30 days after the request is made; or (ii) if the entity is an organisation - within a reasonable period after the request is made; and (b) must not charge the individual for the making of the request, for correcting the personal information or for associating the statement with the personal information (as the case may be).
+raw_completion_output: |-
+  provision_id: 13.5  
+  norms: If a request is made under subclause 13.1 or 13.4, the APP entity must respond to the request within 30 days after the request is made if the entity is an agency. If a request is made under subclause 13.1 or 13.4, the APP entity must respond to the request within a reasonable period after the request is made if the entity is an organisation. If a request is made under subclause 13.1 or 13.4, the APP entity must not charge the individual for the making of the request, for correcting the personal information or for associating the statement with the personal information.  
+  disapplies:   
+  cross_references: 13.1; 13.4  
+prompt: |+
+  Split the following piece of text into fields in the following format:
+
+  statement: <The condition in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this condition when the text points elsewhere for it, e.g. "4.3". Blank when the condition is stated here.>
+
+
+  Text:
+  a request is made under subclause 13.1 or 13.4
+
+  ===
+
+extracted_object:
+  provision_id: '13.5'
+  norms:
+    - bearer: AUTO:APP%20entity
+      action: AUTO:charge%20the%20individual
+      object: 
+        AUTO:the%20making%20of%20the%20request%3B%20correcting%20the%20personal%20information%3B%20associating%20the%20statement%20with%20the%20personal%20information
+      conditions:
+        - statement: <a request is made>
+          source_provision: <subclause 13.1 or 13.4>
+named_entities:
+  - id: AUTO:APP%20entity
+    label: APP entity
+    original_spans:
+      - 60:69
+  - id: AUTO:charge%20the%20individual
+    label: charge the individual
+    original_spans:
+      - 294:314
+  - id: 
+      AUTO:the%20making%20of%20the%20request%3B%20correcting%20the%20personal%20information%3B%20associating%20the%20statement%20with%20the%20personal%20information
+    label: the making of the request; correcting the personal information; 
+      associating the statement with the personal information

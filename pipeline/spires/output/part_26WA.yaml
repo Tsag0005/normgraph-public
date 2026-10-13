@@ -1,0 +1,64 @@
+---
+input_text: |
+  26WA Guide to this Part • This Part sets up a scheme for notification of eligible data breaches. • An eligible data breach happens if: (a) there is unauthorised access to, unauthorised disclosure of, or loss of, personal information held by an entity; and (b) the access, disclosure or loss is likely to result in serious harm to any of the individuals to whom the information relates. • An entity must give a notification if: (a) it has reasonable grounds to believe that an eligible data breach has happened; or (b) it is directed to do so by the Commissioner. • The Commissioner may obtain information or documents in relation to actual or suspected eligible data breaches. • This Part also deals with the collection, use and disclosure of personal information involved in eligible data breaches.
+raw_completion_output: |-
+  provision_id: 26WA  
+  norms: This Part sets up a scheme for notification of eligible data breaches; An eligible data breach happens if there is unauthorised access to, unauthorised disclosure of, or loss of, personal information held by an entity, and the access, disclosure or loss is likely to result in serious harm to any of the individuals to whom the information relates; An entity must give a notification if it has reasonable grounds to believe that an eligible data breach has happened; An entity must give a notification if it is directed to do so by the Commissioner; The Commissioner may obtain information or documents in relation to actual or suspected eligible data breaches; This Part also deals with the collection, use and disclosure of personal information involved in eligible data breaches.  
+  disapplies:   
+  cross_references:  
+prompt: |+
+  From the text below, extract the following entities in the following format:
+
+  deontic_modality: <The normative force. "must" is an OBLIGATION; "must not" is a PROHIBITION; "may" or "is authorised to" is a PERMISSION. If the provision's own work is to switch another provision OFF -- it says some other provision "does not apply" -- then it is a DISAPPLICATION, whatever verbs appear in its limbs. If it merely states that other provisions apply, or is purely definitional, it is NONE.Must be one of: OBLIGATION, PROHIBITION, PERMISSION, DISAPPLICATION, APPLICABILITY, NONE>
+  bearer: <The party on whom the norm falls -- the actor the provision names, such as "entity", "organisation" or "agency". Use the words the text uses.>
+  action: <The regulated act, as a verb phrase, e.g. "use or disclose", "destroy", "de-identify", "deal with individuals who have identified themselves".>
+  object: <What the action is performed on, e.g. "personal information", "sensitive information", "biometric information".>
+  conditions: <The circumstances that must hold for this norm to apply at all, as a semicolon-separated list. These are triggers, not exceptions. A norm reading "if an entity holds information collected for a primary purpose, it must not use it for a secondary purpose" has both of those circumstances as conditions.>
+  exceptions: <The circumstances that switch this norm OFF, as a semicolon-separated list. Anything introduced by "unless", "does not apply if" or "other than" is an exception, not a condition. If the text contains such a clause you MUST return an entry here -- a norm stating "must not X unless Y" always has Y as an exception.>
+  scope_qualifier: <Any limit on the norm's reach, e.g. "in relation to that matter", "as soon as practicable", "within a reasonable period". Leave blank if unqualified.>
+
+
+  Text:
+  This Part also deals with the collection, use and disclosure of personal information involved in eligible data breaches.
+
+  ===
+
+extracted_object:
+  provision_id: 26WA
+  norms:
+    - deontic_modality: NONE
+    - deontic_modality: NONE
+    - deontic_modality: OBLIGATION
+      bearer: AUTO:entity
+      action: AUTO:give%20a%20notification
+    - deontic_modality: OBLIGATION
+      bearer: AUTO:entity
+      action: AUTO:give%20a%20notification
+    - deontic_modality: PERMISSION
+      bearer: AUTO:The%20Commissioner
+      action: AUTO:obtain
+      object: AUTO:information%20or%20documents
+    - deontic_modality: NONE
+named_entities:
+  - id: AUTO:entity
+    label: entity
+    original_spans:
+      - 244:249
+      - 391:396
+  - id: AUTO:give%20a%20notification
+    label: give a notification
+    original_spans:
+      - 403:421
+  - id: AUTO:The%20Commissioner
+    label: The Commissioner
+    original_spans:
+      - 545:560
+      - 565:580
+  - id: AUTO:obtain
+    label: obtain
+    original_spans:
+      - 586:591
+  - id: AUTO:information%20or%20documents
+    label: information or documents
+    original_spans:
+      - 593:616

@@ -1,0 +1,18 @@
+provision_id: '4.3'
+norms:
+- deontic_modality: OBLIGATION
+  bearer: AUTO:entity
+  action: AUTO:destroy
+  object: AUTO:the%20information
+  conditions:
+  - statement: The APP entity determines that the entity could not have collected the personal information.
+  - statement: The information is not contained in a Commonwealth record.
+  - statement: it is lawful and reasonable to do so
+- deontic_modality: OBLIGATION
+  bearer: AUTO:The%20entity
+  action: AUTO:ensure%20that%20the%20information%20is%20de-identified
+  object: AUTO:the%20information
+  conditions:
+  - statement: it is lawful and reasonable to do so
+  - statement: The APP entity determines that the entity could not have collected the personal information.
+  - statement: The information is not contained in a Commonwealth record.

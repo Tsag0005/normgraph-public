@@ -1,0 +1,46 @@
+---
+input_text: |
+  26XC(4) (4) For the purposes of paragraph (2)(g), court includes any tribunal, authority or person having power to require the production of documents or the answering of questions.
+raw_completion_output: |-
+  provision_id: 26XC(4)  
+  norms: For the purposes of paragraph (2)(g), court includes any tribunal, authority or person having power to require the production of documents or the answering of questions.  
+  disapplies:   
+  cross_references: 26XC(2)(g)
+prompt: |+
+  Split the following piece of text into fields in the following format:
+
+  statement: <The condition in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this condition when the text points elsewhere for it, e.g. "4.3". Blank when the condition is stated here.>
+
+
+  Text:
+  For the purposes of paragraph (2)(g)
+
+  ===
+
+extracted_object:
+  provision_id: 26XC(4)
+  norms:
+    - deontic_modality: NONE
+      bearer: AUTO:court
+      action: AUTO:include
+      object: 
+        AUTO:any%20tribunal%2C%20authority%20or%20person%20having%20power%20to%20require%20the%20production%20of%20documents%20or%20the%20answering%20of%20questions
+      conditions:
+        - statement: <For the purposes of paragraph (2)(g)>
+          source_provision: <2(g)>
+named_entities:
+  - id: AUTO:court
+    label: court
+    original_spans:
+      - 50:54
+  - id: AUTO:include
+    label: include
+    original_spans:
+      - 56:62
+  - id: 
+      AUTO:any%20tribunal%2C%20authority%20or%20person%20having%20power%20to%20require%20the%20production%20of%20documents%20or%20the%20answering%20of%20questions
+    label: any tribunal, authority or person having power to require the 
+      production of documents or the answering of questions
+    original_spans:
+      - 65:179

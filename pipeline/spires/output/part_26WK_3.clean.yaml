@@ -1,0 +1,20 @@
+provision_id: 26WK(3)
+norms:
+- deontic_modality: OBLIGATION
+  bearer: AUTO:The%20statement%20referred%20to%20in%20subparagraph%20%282%29%28a%29%28i%29
+  action: AUTO:set%20out
+  object: AUTO:the%20identity%20and%20contact%20details%20of%20the%20entity
+- deontic_modality: OBLIGATION
+  bearer: AUTO:the%20statement%20referred%20to%20in%20subparagraph%20%282%29%28a%29%28i%29
+  action: AUTO:set%20out%20a%20description%20of
+  object: AUTO:the%20eligible%20data%20breach%20that%20the%20entity%20has%20reasonable%20grounds%20to%20believe%20has%20happened
+- deontic_modality: OBLIGATION
+  bearer: AUTO:The%20statement%20referred%20to%20in%20subparagraph%20%282%29%28a%29%28i%29
+  action: AUTO:set%20out
+  object: AUTO:the%20particular%20kind%20or%20kinds%20of%20information%20concerned
+- deontic_modality: OBLIGATION
+  bearer: AUTO:The%20statement%20referred%20to%20in%20subparagraph%20%282%29%28a%29%28i%29
+  action: AUTO:set%20out%20recommendations
+  object: AUTO:steps%20that%20individuals%20should%20take
+  conditions:
+  - statement: eligible data breach that the entity has reasonable grounds to believe has happened

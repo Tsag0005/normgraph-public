@@ -1,0 +1,48 @@
+---
+input_text: |
+  26X(8) (8) Before the Minister makes a declaration under subsection (1), the Minister may consult with any person or body, including the Commissioner and the Director-General of the Australian Signals Directorate.
+raw_completion_output: |-
+  provision_id: 26X(8)  
+  norms: Before the Minister makes a declaration under subsection (1), the Minister may consult with any person or body, including the Commissioner and the Director-General of the Australian Signals Directorate.  
+  disapplies:  
+  cross_references: 26X(1)
+prompt: |+
+  Split the following piece of text into fields in the following format:
+
+  statement: <The condition in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this condition when the text points elsewhere for it, e.g. "4.3". Blank when the condition is stated here.>
+
+
+  Text:
+  Before the Minister makes a declaration under subsection (1)
+
+  ===
+
+extracted_object:
+  provision_id: 26X(8)
+  norms:
+    - deontic_modality: PERMISSION
+      bearer: AUTO:the%20Minister
+      action: AUTO:consult%20with
+      object: 
+        AUTO:any%20person%20or%20body%2C%20including%20the%20Commissioner%20and%20the%20Director-General%20of%20the%20Australian%20Signals%20Directorate
+      conditions:
+        - statement: Before the Minister makes a declaration under subsection 
+            (1)
+          source_provision: '1'
+named_entities:
+  - id: AUTO:the%20Minister
+    label: the Minister
+    original_spans:
+      - 18:29
+      - 73:84
+  - id: AUTO:consult%20with
+    label: consult with
+    original_spans:
+      - 90:101
+  - id: 
+      AUTO:any%20person%20or%20body%2C%20including%20the%20Commissioner%20and%20the%20Director-General%20of%20the%20Australian%20Signals%20Directorate
+    label: any person or body, including the Commissioner and the 
+      Director-General of the Australian Signals Directorate
+    original_spans:
+      - 103:211

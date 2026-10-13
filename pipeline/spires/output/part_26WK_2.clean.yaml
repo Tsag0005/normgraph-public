@@ -1,0 +1,10 @@
+provision_id: 26WK(2)
+norms:
+- deontic_modality: OBLIGATION
+  bearer: AUTO:The%20entity
+  action: AUTO:prepare%20a%20statement%20and%20give%20a%20copy%20of%20the%20statement%20to%20the%20Commissioner
+  object: AUTO:a%20statement%20that%20complies%20with%20subsection%20%283%29
+  conditions:
+  - statement: the entity becomes so aware
+cross_references:
+- subsection (3)

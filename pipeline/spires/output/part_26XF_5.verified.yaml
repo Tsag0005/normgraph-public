@@ -1,0 +1,10 @@
+provision_id: 26XF(5)
+norms:
+- deontic_modality: NONE
+- deontic_modality: APPLICABILITY
+  bearer: AUTO:None%20specified
+  action: AUTO:None%20specified
+  object: AUTO:None%20specified
+  conditions:
+  - statement: A collection, use, or disclosure that occurs in the course of, or in relation to, trade
+      or commerce within a Territory, between a State and a Territory or between 2 Territories

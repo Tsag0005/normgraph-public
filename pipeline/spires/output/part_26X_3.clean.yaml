@@ -1,0 +1,10 @@
+provision_id: 26X(3)
+norms:
+- deontic_modality: PERMISSION
+  bearer: AUTO:An%20entity%20or%20class%20of%20entities%20specified%20for%20the%20purposes%20of%20paragraph%20%282%29%28c%29
+  action: AUTO:include
+  object: AUTO:a%20State%20or%20Territory%20authority
+- deontic_modality: PROHIBITION
+  bearer: AUTO:An%20entity%20or%20class%20of%20entities%20specified%20for%20the%20purposes%20of%20paragraph%20%282%29%28c%29
+  action: AUTO:be%20or%20include
+  object: AUTO:a%20media%20organisation%2C%20the%20Australian%20Broadcasting%20Corporation%20or%20the%20Special%20Broadcasting%20Service%20Corporation

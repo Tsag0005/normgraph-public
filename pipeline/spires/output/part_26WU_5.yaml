@@ -1,0 +1,97 @@
+---
+input_text: |
+  26WU(5) (5) If documents are produced to the Commissioner in accordance with a requirement under subsection (3), the Commissioner: (a) may take possession of, and may make copies of, or take extracts from, the documents; and (b) may retain possession of the documents for any period that is necessary for the purposes of assessing an entity's compliance with this Part; and (c) during that period must permit a person who would be entitled to inspect any one or more of the documents if they were not in the Commissioner's possession to inspect at all reasonable times any of the documents that the person would be so entitled to inspect.
+raw_completion_output: |-
+  provision_id: 26WU(5)
+
+  norms: If documents are produced to the Commissioner in accordance with a requirement under subsection (3), the Commissioner may take possession of, and may make copies of, or take extracts from, the documents; If documents are produced to the Commissioner in accordance with a requirement under subsection (3), the Commissioner may retain possession of the documents for any period that is necessary for the purposes of assessing an entity's compliance with this Part; If documents are produced to the Commissioner in accordance with a requirement under subsection (3), during the period of possession, the Commissioner must permit a person who would be entitled to inspect any one or more of the documents if they were not in the Commissioner's possession to inspect at all reasonable times any of the documents that the person would be so entitled to inspect.
+
+  disapplies: 
+
+  cross_references: 26WU(3)
+prompt: |+
+  Split the following piece of text into fields in the following format:
+
+  statement: <The condition in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this condition when the text points elsewhere for it, e.g. "4.3". Blank when the condition is stated here.>
+
+
+  Text:
+  during the period of possession
+
+  ===
+
+extracted_object:
+  provision_id: 26WU(5)
+  norms:
+    - deontic_modality: PERMISSION
+      bearer: AUTO:Commissioner
+      action: 
+        AUTO:take%20possession%20of%2C%20and%20may%20make%20copies%20of%2C%20or%20take%20extracts%20from
+      object: AUTO:the%20documents
+      conditions:
+        - statement: <documents are produced to the Commissioner in accordance 
+            with a requirement under subsection (3)>
+          source_provision: <subsection (3)>
+    - deontic_modality: PERMISSION
+      bearer: AUTO:Commissioner
+      action: AUTO:retain%20possession
+      object: AUTO:documents
+      conditions:
+        - statement: documents are produced to the Commissioner
+        - statement: <Documents are produced in accordance with a requirement 
+            under subsection (3).>
+          source_provision: <(3)>
+    - deontic_modality: PERMISSION
+      bearer: AUTO:Commissioner
+      action: AUTO:permit
+      object: 
+        AUTO:a%20person%20who%20would%20be%20entitled%20to%20inspect%20any%20one%20or%20more%20of%20the%20documents%20if%20they%20were%20not%20in%20the%20Commissioner%27s%20possession%20to%20inspect
+      conditions:
+        - statement: <documents are produced to the Commissioner in accordance 
+            with a requirement under subsection (3)>
+          source_provision: <subsection (3)>
+        - statement: during the period of possession
+  cross_references:
+    - 26WU(3)
+named_entities:
+  - id: AUTO:Commissioner
+    label: Commissioner
+    original_spans:
+      - 45:56
+      - 117:128
+      - 508:519
+  - id: 
+      AUTO:take%20possession%20of%2C%20and%20may%20make%20copies%20of%2C%20or%20take%20extracts%20from
+    label: take possession of, and may make copies of, or take extracts from
+    original_spans:
+      - 139:203
+  - id: AUTO:the%20documents
+    label: the documents
+    original_spans:
+      - 206:218
+      - 254:266
+      - 470:482
+      - 576:588
+  - id: AUTO:retain%20possession
+    label: retain possession
+    original_spans:
+      - 233:249
+  - id: AUTO:documents
+    label: documents
+    original_spans:
+      - 15:23
+      - 210:218
+      - 258:266
+      - 474:482
+      - 580:588
+  - id: AUTO:permit
+    label: permit
+    original_spans:
+      - 402:407
+  - id: 
+      AUTO:a%20person%20who%20would%20be%20entitled%20to%20inspect%20any%20one%20or%20more%20of%20the%20documents%20if%20they%20were%20not%20in%20the%20Commissioner%27s%20possession%20to%20inspect
+    label: a person who would be entitled to inspect any one or more of the 
+      documents if they were not in the Commissioner's possession to inspect
+    original_spans:
+      - 409:543

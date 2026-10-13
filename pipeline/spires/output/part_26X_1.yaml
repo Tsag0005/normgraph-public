@@ -1,0 +1,46 @@
+---
+input_text: |
+  26X(1) (1) The Minister may, by writing, make a declaration under this subsection if: (a) there is an eligible data breach of an entity; and (b) the Minister is satisfied that making the declaration is: (i) necessary or appropriate to prevent; or (ii) necessary or appropriate to reduce; a risk of harm arising from a misuse of personal information about one or more individuals following unauthorised access to, or unauthorised disclosure of, that personal information from the eligible data breach of the entity. Note: A declaration under this subsection is relevant for the operation of section 26XB (authorisation of collection, use and disclosure of personal information) and related provisions. Matters covered by declaration
+raw_completion_output: |-
+  provision_id: 26X(1)  
+  norms: The Minister may, by writing, make a declaration under 26X(1) if there is an eligible data breach of an entity and the Minister is satisfied that making the declaration is necessary or appropriate to prevent a risk of harm arising from a misuse of personal information about one or more individuals following unauthorised access to, or unauthorised disclosure of, that personal information from the eligible data breach of the entity; The Minister may, by writing, make a declaration under 26X(1) if there is an eligible data breach of an entity and the Minister is satisfied that making the declaration is necessary or appropriate to reduce a risk of harm arising from a misuse of personal information about one or more individuals following unauthorised access to, or unauthorised disclosure of, that personal information from the eligible data breach of the entity.  
+  disapplies:   
+  cross_references: 26XB  
+prompt: |+
+  From the text below, extract the following entities in the following format:
+
+  deontic_modality: <The normative force. "must" is an OBLIGATION; "must not" is a PROHIBITION; "may" or "is authorised to" is a PERMISSION. If the provision's own work is to switch another provision OFF -- it says some other provision "does not apply" -- then it is a DISAPPLICATION, whatever verbs appear in its limbs. If it merely states that other provisions apply, or is purely definitional, it is NONE.Must be one of: OBLIGATION, PROHIBITION, PERMISSION, DISAPPLICATION, APPLICABILITY, NONE>
+  bearer: <The party on whom the norm falls -- the actor the provision names, such as "entity", "organisation" or "agency". Use the words the text uses.>
+  action: <The regulated act, as a verb phrase, e.g. "use or disclose", "destroy", "de-identify", "deal with individuals who have identified themselves".>
+  object: <What the action is performed on, e.g. "personal information", "sensitive information", "biometric information".>
+  conditions: <The circumstances that must hold for this norm to apply at all, as a semicolon-separated list. These are triggers, not exceptions. A norm reading "if an entity holds information collected for a primary purpose, it must not use it for a secondary purpose" has both of those circumstances as conditions.>
+  exceptions: <The circumstances that switch this norm OFF, as a semicolon-separated list. Anything introduced by "unless", "does not apply if" or "other than" is an exception, not a condition. If the text contains such a clause you MUST return an entry here -- a norm stating "must not X unless Y" always has Y as an exception.>
+  scope_qualifier: <Any limit on the norm's reach, e.g. "in relation to that matter", "as soon as practicable", "within a reasonable period". Leave blank if unqualified.>
+
+
+  Text:
+  The Minister may, by writing, make a declaration under 26X(1) if there is an eligible data breach of an entity and the Minister is satisfied that making the declaration is necessary or appropriate to reduce a risk of harm arising from a misuse of personal information about one or more individuals following unauthorised access to, or unauthorised disclosure of, that personal information from the eligible data breach of the entity.
+
+  ===
+
+extracted_object:
+  provision_id: 26X(1)
+  norms:
+    - deontic_modality: PERMISSION
+      bearer: AUTO:The%20Minister
+      action: AUTO:make%20a%20declaration%20under%2026X%281%29
+    - deontic_modality: PERMISSION
+      bearer: AUTO:The%20Minister
+      action: AUTO:make%20a%20declaration
+named_entities:
+  - id: AUTO:The%20Minister
+    label: The Minister
+    original_spans:
+      - 11:22
+      - 145:156
+  - id: AUTO:make%20a%20declaration%20under%2026X%281%29
+    label: make a declaration under 26X(1)
+  - id: AUTO:make%20a%20declaration
+    label: make a declaration
+    original_spans:
+      - 41:58

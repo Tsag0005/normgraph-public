@@ -1,0 +1,9 @@
+provision_id: '13.4'
+norms:
+- deontic_modality: OBLIGATION
+  bearer: AUTO:APP%20entity
+  action: AUTO:associate%20the%20statement%20in%20such%20a%20way%20that%20will%20make%20the%20statement%20apparent%20to%20users%20of%20the%20information
+  object: AUTO:the%20statement
+  conditions:
+  - statement: The APP entity refuses to correct the personal information as requested by the individual.
+  - statement: The information is inaccurate, out-of-date, incomplete, irrelevant or misleading.

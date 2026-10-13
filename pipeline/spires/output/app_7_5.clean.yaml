@@ -1,0 +1,18 @@
+provision_id: '7.5'
+norms:
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:organisation
+  action: AUTO:does%20not%20apply
+  object: AUTO:Subclause%207.1
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:organisation
+  action: AUTO:does%20not%20apply
+  object: AUTO:Subclause%207.1
+  conditions:
+  - statement: The organisation collected the information for the purpose of meeting (directly or indirectly)
+      an obligation under the contract.
+- deontic_modality: DISAPPLICATION
+disapplies:
+- '7.1'
+cross_references:
+- '7.1'

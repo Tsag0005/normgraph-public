@@ -1,0 +1,14 @@
+provision_id: '11.1'
+norms:
+- deontic_modality: OBLIGATION
+  bearer: AUTO:APP%20entity
+  action: AUTO:take%20such%20steps%20as%20are%20reasonable%20in%20the%20circumstances%20to%20protect
+  object: AUTO:the%20information
+  conditions:
+  - statement: an APP entity holds personal information
+- deontic_modality: OBLIGATION
+  bearer: AUTO:APP%20entity
+  action: AUTO:take%20such%20steps%20as%20are%20reasonable%20in%20the%20circumstances%20to%20protect
+  object: AUTO:personal%20information
+  conditions:
+  - statement: APP entity holds personal information

@@ -1,0 +1,18 @@
+provision_id: 26X(5)
+norms:
+- deontic_modality: PERMISSION
+  bearer: AUTO:Any%20of%20the%20following%20things
+  action: AUTO:be%20specified%20as%20a%20permitted%20purpose
+  object: AUTO:an%20eligible%20data%20breach
+  conditions:
+  - statement: It is directly related to preventing or reducing a risk of harm mentioned in paragraph
+      (1)(b).
+    source_provision: (1)(b)
+- deontic_modality: PERMISSION
+  bearer: AUTO:Any%20of%20the%20following%20things
+  action: AUTO:be%20specified%20as%20a%20permitted%20purpose
+  object: AUTO:relation%20to%20an%20eligible%20data%20breach
+  conditions:
+  - statement: It is directly related to preventing or reducing a risk of harm mentioned in paragraph
+      (1)(b).
+    source_provision: (1)(b)

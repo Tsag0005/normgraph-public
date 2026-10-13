@@ -1,0 +1,124 @@
+---
+input_text: |
+  1.4 Without limiting subclause 1.3, the APP privacy policy of the APP entity must contain the following information: (a) the kinds of personal information that the entity collects and holds; (b) how the entity collects and holds personal information; (c) the purposes for which the entity collects, holds, uses and discloses personal information; (d) how an individual may access personal information about the individual that is held by the entity and seek the correction of such information; (e) how an individual may complain about a breach of the Australian Privacy Principles, or a registered APP code (if any) that binds the entity, and how the entity will deal with such a complaint; (f) whether the entity is likely to disclose personal information to overseas recipients; (g) if the entity is likely to disclose personal information to overseas recipients - the countries in which such recipients are likely to be located if it is practicable to specify those countries in the policy. Availability of APP privacy policy etc.
+raw_completion_output: |-
+  provision_id: 1.4  
+  norms: Without limiting subclause 1.3, the APP privacy policy of the APP entity must contain the kinds of personal information that the entity collects and holds; Without limiting subclause 1.3, the APP privacy policy of the APP entity must contain how the entity collects and holds personal information; Without limiting subclause 1.3, the APP privacy policy of the APP entity must contain the purposes for which the entity collects, holds, uses and discloses personal information; Without limiting subclause 1.3, the APP privacy policy of the APP entity must contain how an individual may access personal information about the individual that is held by the entity and seek the correction of such information; Without limiting subclause 1.3, the APP privacy policy of the APP entity must contain how an individual may complain about a breach of the Australian Privacy Principles, or a registered APP code (if any) that binds the entity, and how the entity will deal with such a complaint; Without limiting subclause 1.3, the APP privacy policy of the APP entity must contain whether the entity is likely to disclose personal information to overseas recipients; Without limiting subclause 1.3, the APP privacy policy of the APP entity must contain the countries in which overseas recipients are likely to be located if it is practicable to specify those countries in the policy.  
+  disapplies:   
+  cross_references: 1.3; Australian Privacy Principles; APP code  
+prompt: |+
+  From the text below, extract the following entities in the following format:
+
+  statement: <The condition in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this condition when the text points elsewhere for it, e.g. "4.3". Blank when the condition is stated here.>
+
+
+  Text:
+  if it is practicable to specify those countries in the policy
+
+  ===
+
+extracted_object:
+  provision_id: '1.4'
+  norms:
+    - deontic_modality: OBLIGATION
+      bearer: AUTO:APP%20entity
+      action: AUTO:contain
+      object: 
+        AUTO:the%20kinds%20of%20personal%20information%20that%20the%20entity%20collects%20and%20holds
+      conditions:
+        - statement: <Without limiting subclause 1.3>
+          source_provision: <1.3>
+    - deontic_modality: OBLIGATION
+      bearer: AUTO:APP%20entity
+      action: AUTO:contain
+      object: 
+        AUTO:how%20the%20entity%20collects%20and%20holds%20personal%20information
+      conditions:
+        - statement: None
+      exceptions:
+        - statement: None
+      scope_qualifier: Without limiting subclause 1.3
+    - deontic_modality: OBLIGATION
+      bearer: AUTO:APP%20entity
+      action: AUTO:contain
+      object: 
+        AUTO:the%20purposes%20for%20which%20the%20entity%20collects%2C%20holds%2C%20uses%20and%20discloses%20personal%20information
+    - deontic_modality: OBLIGATION
+      bearer: AUTO:APP%20entity
+      action: AUTO:contain
+      object: 
+        AUTO:how%20an%20individual%20may%20access%20personal%20information%20about%20the%20individual%20that%20is%20held%20by%20the%20entity%20and%20seek%20the%20correction%20of%20such%20information
+      conditions:
+        - statement: <Without limiting subclause 1.3>
+          source_provision: <1.3>
+    - deontic_modality: OBLIGATION
+      bearer: AUTO:APP%20entity
+      action: AUTO:contain
+      object: 
+        AUTO:how%20an%20individual%20may%20complain%20about%20a%20breach%20of%20the%20Australian%20Privacy%20Principles%2C%20or%20a%20registered%20APP%20code%20%28if%20any%29%20that%20binds%20the%20entity%2C%20and%20how%20the%20entity%20will%20deal%20with%20such%20a%20complaint
+      conditions:
+        - statement: <Without limiting subclause 1.3>
+          source_provision: <1.3>
+    - deontic_modality: OBLIGATION
+      bearer: AUTO:APP%20entity
+      action: AUTO:contain
+      object: 
+        AUTO:whether%20the%20entity%20is%20likely%20to%20disclose%20personal%20information%20to%20overseas%20recipients
+    - deontic_modality: OBLIGATION
+      bearer: AUTO:APP%20entity
+      action: AUTO:contain
+      object: 
+        AUTO:the%20countries%20in%20which%20overseas%20recipients%20are%20likely%20to%20be%20located
+      conditions:
+        - statement: <if it is practicable to specify those countries in the 
+            policy.>
+          source_provision: <Blank>
+named_entities:
+  - id: AUTO:APP%20entity
+    label: APP entity
+    original_spans:
+      - 66:75
+  - id: AUTO:contain
+    label: contain
+    original_spans:
+      - 82:88
+  - id: 
+      AUTO:the%20kinds%20of%20personal%20information%20that%20the%20entity%20collects%20and%20holds
+    label: the kinds of personal information that the entity collects and holds
+    original_spans:
+      - 121:188
+  - id: 
+      AUTO:how%20the%20entity%20collects%20and%20holds%20personal%20information
+    label: how the entity collects and holds personal information
+    original_spans:
+      - 195:248
+  - id: 
+      AUTO:the%20purposes%20for%20which%20the%20entity%20collects%2C%20holds%2C%20uses%20and%20discloses%20personal%20information
+    label: the purposes for which the entity collects, holds, uses and discloses
+      personal information
+    original_spans:
+      - 255:344
+  - id: 
+      AUTO:how%20an%20individual%20may%20access%20personal%20information%20about%20the%20individual%20that%20is%20held%20by%20the%20entity%20and%20seek%20the%20correction%20of%20such%20information
+    label: how an individual may access personal information about the 
+      individual that is held by the entity and seek the correction of such 
+      information
+    original_spans:
+      - 351:491
+  - id: 
+      AUTO:how%20an%20individual%20may%20complain%20about%20a%20breach%20of%20the%20Australian%20Privacy%20Principles%2C%20or%20a%20registered%20APP%20code%20%28if%20any%29%20that%20binds%20the%20entity%2C%20and%20how%20the%20entity%20will%20deal%20with%20such%20a%20complaint
+    label: how an individual may complain about a breach of the Australian 
+      Privacy Principles, or a registered APP code (if any) that binds the 
+      entity, and how the entity will deal with such a complaint
+    original_spans:
+      - 498:688
+  - id: 
+      AUTO:whether%20the%20entity%20is%20likely%20to%20disclose%20personal%20information%20to%20overseas%20recipients
+    label: whether the entity is likely to disclose personal information to 
+      overseas recipients
+    original_spans:
+      - 695:778
+  - id: 
+      AUTO:the%20countries%20in%20which%20overseas%20recipients%20are%20likely%20to%20be%20located
+    label: the countries in which overseas recipients are likely to be located

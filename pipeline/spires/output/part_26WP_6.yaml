@@ -1,0 +1,43 @@
+---
+input_text: |
+  26WP(6) (6) If compliance by an entity with subparagraph 26WK(2)(a)(ii) in relation to a statement would, to any extent, be inconsistent with a prescribed secrecy provision, subsection 26WK(2) does not apply to the entity in relation to the statement.
+raw_completion_output: |-
+  provision_id: 26WP(6)  
+  norms: Subsection 26WK(2) does not apply to an entity in relation to a statement if compliance by the entity with subparagraph 26WK(2)(a)(ii) in relation to the statement would, to any extent, be inconsistent with a prescribed secrecy provision.  
+  disapplies: 26WK(2)  
+  cross_references: 26WK(2), 26WK(2)(a)(ii)
+prompt: |+
+  Split the following piece of text into fields in the following format:
+
+  statement: <The condition in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this condition when the text points elsewhere for it, e.g. "4.3". Blank when the condition is stated here.>
+
+
+  Text:
+  in relation to a statement
+
+  ===
+
+extracted_object:
+  provision_id: 26WP(6)
+  norms:
+    - deontic_modality: DISAPPLICATION
+      bearer: AUTO:entity
+      action: AUTO:comply
+      object: AUTO:subparagraph%2026WK%282%29%28a%29%28ii%29
+  disapplies:
+    - 26WK(2)
+  cross_references:
+    - 26WK(2), 26WK(2)(a)(ii)
+named_entities:
+  - id: AUTO:entity
+    label: entity
+    original_spans:
+      - 32:37
+      - 215:220
+  - id: AUTO:comply
+    label: comply
+  - id: AUTO:subparagraph%2026WK%282%29%28a%29%28ii%29
+    label: subparagraph 26WK(2)(a)(ii)
+    original_spans:
+      - 44:70

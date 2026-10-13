@@ -1,0 +1,88 @@
+---
+input_text: |
+  26WR(6) (6) In deciding whether to give a direction to an entity under subsection (1), the Commissioner must have regard to the following: (a) any relevant advice given to the Commissioner by: (i) an enforcement body; or (ii) the Australian Signals Directorate; (b) any relevant submission that was made by the entity: (i) in response to an invitation under subsection (3); and (ii) within the period specified in the invitation; (c) such other matters (if any) as the Commissioner considers relevant.
+raw_completion_output: |-
+  provision_id: 26WR(6)  
+  norms: When deciding whether to give a direction to an entity under subsection (1), the Commissioner must have regard to any relevant advice given to the Commissioner by an enforcement body; When deciding whether to give a direction to an entity under subsection (1), the Commissioner must have regard to any relevant advice given to the Commissioner by the Australian Signals Directorate; When deciding whether to give a direction to an entity under subsection (1), the Commissioner must have regard to any relevant submission that was made by the entity in response to an invitation under subsection (3) and within the period specified in the invitation; When deciding whether to give a direction to an entity under subsection (1), the Commissioner must have regard to such other matters (if any) as the Commissioner considers relevant.  
+  disapplies:  
+  cross_references: 26WR(1); 26WR(3)  
+prompt: |+
+  Split the following piece of text into fields in the following format:
+
+  statement: <The exception in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this exception, written as the text writes it. Blank when the exception is stated here in full.>
+  is_exhaustive: <"true" if the text signals these are the only exceptions, otherwise blank.>
+
+
+  Text:
+  (if any)
+
+  ===
+
+extracted_object:
+  provision_id: 26WR(6)
+  norms:
+    - deontic_modality: OBLIGATION
+      bearer: AUTO:the%20Commissioner
+      action: AUTO:have%20regard
+      object: 
+        AUTO:any%20relevant%20advice%20given%20to%20the%20Commissioner%20by%20an%20enforcement%20body
+      conditions:
+        - statement: <deciding whether to give a direction to an entity under 
+            subsection (1)>
+          source_provision: <1>
+    - deontic_modality: OBLIGATION
+      bearer: AUTO:the%20Commissioner
+      action: AUTO:have%20regard%20to
+      object: 
+        AUTO:any%20relevant%20advice%20given%20to%20the%20Commissioner%20by%20the%20Australian%20Signals%20Directorate
+      conditions:
+        - statement: <deciding whether to give a direction to an entity under 
+            subsection (1)>
+          source_provision: <1>
+    - deontic_modality: OBLIGATION
+      bearer: AUTO:the%20Commissioner
+      action: AUTO:have%20regard%20to
+      object: 
+        AUTO:any%20relevant%20submission%20that%20was%20made%20by%20the%20entity
+      conditions:
+        - statement: <when deciding whether to give a direction to an entity 
+            under subsection (1)>
+          source_provision: <(1)>
+        - statement: <in response to an invitation under subsection (3)>
+          source_provision: <3>
+        - statement: within the period specified in the invitation
+    - deontic_modality: OBLIGATION
+      bearer: AUTO:the%20Commissioner
+      action: 
+        AUTO:have%20regard%20to%20such%20other%20matters%20as%20the%20Commissioner%20considers%20relevant
+named_entities:
+  - id: AUTO:the%20Commissioner
+    label: the Commissioner
+    original_spans:
+      - 87:102
+      - 172:187
+      - 465:480
+  - id: AUTO:have%20regard
+    label: have regard
+    original_spans:
+      - 109:119
+  - id: 
+      AUTO:any%20relevant%20advice%20given%20to%20the%20Commissioner%20by%20an%20enforcement%20body
+    label: any relevant advice given to the Commissioner by an enforcement body
+  - id: AUTO:have%20regard%20to
+    label: have regard to
+    original_spans:
+      - 109:122
+  - id: 
+      AUTO:any%20relevant%20advice%20given%20to%20the%20Commissioner%20by%20the%20Australian%20Signals%20Directorate
+    label: any relevant advice given to the Commissioner by the Australian 
+      Signals Directorate
+  - id: AUTO:any%20relevant%20submission%20that%20was%20made%20by%20the%20entity
+    label: any relevant submission that was made by the entity
+    original_spans:
+      - 266:316
+  - id: 
+      AUTO:have%20regard%20to%20such%20other%20matters%20as%20the%20Commissioner%20considers%20relevant
+    label: have regard to such other matters as the Commissioner considers 
+      relevant

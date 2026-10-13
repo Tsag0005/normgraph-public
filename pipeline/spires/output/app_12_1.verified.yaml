@@ -1,0 +1,9 @@
+provision_id: '12.1'
+norms:
+- deontic_modality: OBLIGATION
+  bearer: AUTO:APP%20entity
+  action: AUTO:give%20access
+  object: AUTO:the%20information
+  conditions:
+  - statement: APP entity holds personal information about an individual
+  - statement: on request by the individual

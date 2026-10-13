@@ -1,0 +1,44 @@
+---
+input_text: |
+  26XH(1) (1) If the operation of this Division would result in an acquisition of property (within the meaning of paragraph 51(xxxi) of the Constitution) from a person otherwise than on just terms (within the meaning of that paragraph), the Commonwealth is liable to pay a reasonable amount of compensation to the person.
+raw_completion_output: |-
+  provision_id: 26XH(1)  
+  norms: If the operation of this Division would result in an acquisition of property from a person otherwise than on just terms, the Commonwealth is liable to pay a reasonable amount of compensation to the person.  
+  disapplies:   
+  cross_references: 51(xxxi)
+prompt: |+
+  From the text below, extract the following entities in the following format:
+
+  statement: <The condition in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this condition when the text points elsewhere for it, e.g. "4.3". Blank when the condition is stated here.>
+
+
+  Text:
+  the operation of this Division would result in an acquisition of property from a person otherwise than on just terms
+
+  ===
+
+extracted_object:
+  provision_id: 26XH(1)
+  norms:
+    - deontic_modality: OBLIGATION
+      bearer: AUTO:Commonwealth
+      action: AUTO:pay
+      object: AUTO:a%20reasonable%20amount%20of%20compensation
+      conditions:
+        - statement: <The operation of this Division would result in an 
+            acquisition of property from a person otherwise than on just terms.>
+          source_provision: <Blank>
+named_entities:
+  - id: AUTO:Commonwealth
+    label: Commonwealth
+    original_spans:
+      - 239:250
+  - id: AUTO:pay
+    label: pay
+    original_spans:
+      - 265:267
+  - id: AUTO:a%20reasonable%20amount%20of%20compensation
+    label: a reasonable amount of compensation
+    original_spans:
+      - 269:303

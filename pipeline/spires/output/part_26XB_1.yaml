@@ -1,0 +1,119 @@
+---
+input_text: |
+  26XB(1) (1) At any time when an eligible data breach declaration is in force in relation to an eligible data breach, an entity may collect, use or disclose personal information about an individual if: (a) the entity reasonably believes that the individual may be at risk from the eligible data breach; and (b) the collection, use or disclosure is for a permitted purpose specified in the declaration; and (c) the information is information of a kind or kinds specified in the declaration; and (d) the information is disclosed by an entity specified in the declaration, or an entity included in a class of entities specified in the declaration; and (e) the information is disclosed to an entity specified in the declaration, or an entity included in a class of entities specified in the declaration; and (f) if a matter mentioned in paragraph (b), (c), (d) or (e) is specified in the declaration subject to conditions - those conditions are satisfied.
+raw_completion_output: |-
+  provision_id: 26XB(1)
+  norms: At any time when an eligible data breach declaration is in force in relation to an eligible data breach, an entity may collect, use or disclose personal information about an individual if the entity reasonably believes that the individual may be at risk from the eligible data breach; At any time when an eligible data breach declaration is in force in relation to an eligible data breach, an entity may collect, use or disclose personal information about an individual if the collection, use or disclosure is for a permitted purpose specified in the declaration; At any time when an eligible data breach declaration is in force in relation to an eligible data breach, an entity may collect, use or disclose personal information about an individual if the information is information of a kind or kinds specified in the declaration; At any time when an eligible data breach declaration is in force in relation to an eligible data breach, an entity may collect, use or disclose personal information about an individual if the information is disclosed by an entity specified in the declaration, or an entity included in a class of entities specified in the declaration; At any time when an eligible data breach declaration is in force in relation to an eligible data breach, an entity may collect, use or disclose personal information about an individual if the information is disclosed to an entity specified in the declaration, or an entity included in a class of entities specified in the declaration; At any time when an eligible data breach declaration is in force in relation to an eligible data breach, an entity may collect, use or disclose personal information about an individual if, if a matter mentioned in paragraph (b), (c), (d) or (e) is specified in the declaration subject to conditions, those conditions are satisfied.
+  disapplies: 
+  cross_references: 
+prompt: |+
+  Split the following piece of text into fields in the following format:
+
+  statement: <The condition in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this condition when the text points elsewhere for it, e.g. "4.3". Blank when the condition is stated here.>
+
+
+  Text:
+  those conditions are satisfied
+
+  ===
+
+extracted_object:
+  provision_id: 26XB(1)
+  norms:
+    - deontic_modality: PERMISSION
+      bearer: AUTO:entity
+      action: AUTO:collect%2C%20use%20or%20disclose
+      object: AUTO:personal%20information%20about%20an%20individual
+      conditions:
+        - statement: <Eligible data breach declaration is in force in relation 
+            to an eligible data breach.>
+          source_provision: <Blank>
+        - statement: <entity reasonably believes that the individual may be at 
+            risk from the eligible data breach>
+          source_provision: <Blank>
+    - deontic_modality: PERMISSION
+      bearer: AUTO:an%20entity
+      action: AUTO:collect%2C%20use%20or%20disclose
+      object: AUTO:personal%20information%20about%20an%20individual
+      conditions:
+        - statement: <An eligible data breach declaration is in force in 
+            relation to an eligible data breach.>
+          source_provision: <Blank>
+        - statement: <The collection, use or disclosure is for a permitted 
+            purpose specified in the declaration.>
+          source_provision: <Blank>
+    - deontic_modality: PERMISSION
+      bearer: AUTO:entity
+      action: AUTO:collect%2C%20use%20or%20disclose
+      object: AUTO:personal%20information%20about%20an%20individual
+      conditions:
+        - statement: <An eligible data breach declaration is in force in 
+            relation to an eligible data breach.>
+          source_provision: <Blank>
+        - statement: <The information is information of a kind or kinds 
+            specified in the declaration.>
+          source_provision: <Blank>
+    - deontic_modality: PERMISSION
+      bearer: AUTO:entity
+      action: AUTO:collect%2C%20use%20or%20disclose
+      object: AUTO:personal%20information%20about%20an%20individual
+      conditions:
+        - statement: <An eligible data breach declaration is in force in 
+            relation to an eligible data breach.>
+          source_provision: <Blank>
+      exceptions:
+        - statement: <The information is disclosed by an entity specified in the
+            declaration, or an entity included in a class of entities specified 
+            in the declaration.>
+          source_provision: <Blank>
+          is_exhaustive: <Blank>
+    - deontic_modality: PERMISSION
+      bearer: AUTO:entity
+      action: AUTO:collect%2C%20use%20or%20disclose
+      object: AUTO:personal%20information%20about%20an%20individual
+      conditions:
+        - statement: an eligible data breach declaration is in force
+        - statement: <The information is disclosed to an entity specified in the
+            declaration, or an entity included in a class of entities specified 
+            in the declaration.>
+          source_provision: <Blank>
+    - deontic_modality: PERMISSION
+      bearer: AUTO:entity
+      action: AUTO:collect%2C%20use%20or%20disclose
+      object: AUTO:personal%20information%20about%20an%20individual
+      conditions:
+        - statement: <An eligible data breach declaration is in force in 
+            relation to an eligible data breach.>
+          source_provision: <Blank>
+        - statement: <a matter mentioned in paragraph (b), (c), (d) or (e) is 
+            specified in the declaration subject to conditions>
+          source_provision: <Blank>
+        - statement: <those conditions are satisfied>
+          source_provision: <Blank>
+named_entities:
+  - id: AUTO:entity
+    label: entity
+    original_spans:
+      - 120:125
+      - 209:214
+      - 532:537
+      - 575:580
+      - 687:692
+      - 730:735
+  - id: AUTO:collect%2C%20use%20or%20disclose
+    label: collect, use or disclose
+    original_spans:
+      - 131:154
+  - id: AUTO:personal%20information%20about%20an%20individual
+    label: personal information about an individual
+    original_spans:
+      - 156:195
+  - id: AUTO:an%20entity
+    label: an entity
+    original_spans:
+      - 117:125
+      - 529:537
+      - 572:580
+      - 684:692
+      - 727:735

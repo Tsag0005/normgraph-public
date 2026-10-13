@@ -1,0 +1,21 @@
+provision_id: '9.3'
+norms:
+- deontic_modality: APPLICABILITY
+  bearer: AUTO:organisation
+  action: AUTO:adopt%2C%20use%20or%20disclose
+  object: AUTO:government%20related%20identifier%20of%20an%20individual
+  conditions:
+  - statement: identifier is prescribed by the regulations.
+- deontic_modality: APPLICABILITY
+  bearer: AUTO:organisation
+  action: AUTO:adoption%2C%20use%20or%20disclosure
+  object: AUTO:government%20related%20identifier%20of%20an%20individual
+  conditions:
+  - statement: organisation is prescribed by the regulations.
+  - statement: Organisation is included in a class of organisations prescribed by the regulations.
+- deontic_modality: APPLICABILITY
+  bearer: AUTO:organisation
+  action: AUTO:adoption%2C%20use%20or%20disclosure
+  object: AUTO:government%20related%20identifier%20of%20an%20individual
+  conditions:
+  - statement: The adoption, use, or disclosure occurs in the circumstances prescribed by the regulations.

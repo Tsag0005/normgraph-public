@@ -1,0 +1,8 @@
+provision_id: 26XH(2)
+norms:
+- deontic_modality: PERMISSION
+  bearer: AUTO:the%20person
+  action: AUTO:institute%20proceedings
+  object: AUTO:the%20recovery%20from%20the%20Commonwealth%20of%20such%20reasonable%20amount%20of%20compensation%20as%20the%20court%20determines
+  conditions:
+  - statement: If the Commonwealth and the person do not agree on the amount of the compensation

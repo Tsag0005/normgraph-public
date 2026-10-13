@@ -1,0 +1,11 @@
+provision_id: '2.2'
+norms:
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:APP%20entity
+  action: AUTO:deal%20with
+  object: AUTO:individuals%20who%20have%20identified%20themselves
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:Subclause%202.1
+  action: AUTO:apply
+disapplies:
+- '2.1'

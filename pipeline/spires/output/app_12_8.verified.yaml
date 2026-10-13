@@ -1,0 +1,16 @@
+provision_id: '12.8'
+norms:
+- deontic_modality: PROHIBITION
+  bearer: AUTO:APP%20entity
+  action: AUTO:charge
+  object: AUTO:the%20individual%20for%20giving%20access%20to%20the%20personal%20information
+  conditions:
+  - statement: APP entity is an organisation
+  - statement: entity charges the individual for giving access to the personal information
+- deontic_modality: PROHIBITION
+  bearer: AUTO:APP%20entity
+  action: AUTO:apply
+  object: AUTO:charge
+  conditions:
+  - statement: The APP entity is an organisation.
+  - statement: The entity charges the individual for giving access to the personal information.

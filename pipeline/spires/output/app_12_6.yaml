@@ -1,0 +1,49 @@
+---
+input_text: |
+  12.6 Without limiting subclause 12.5, access may be given through the use of a mutually agreed intermediary. Access charges
+raw_completion_output: |-
+  provision_id: 12.6  
+  norms: Access may be given through the use of a mutually agreed intermediary.  
+  disapplies:   
+  cross_references: 12.5  
+prompt: |+
+  Split the following piece of text into fields in the following format:
+
+  statement: <The exception in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this exception, e.g. "6.2" or "6.2(b)". Blank when the exception is stated here in full.>
+  is_exhaustive: <"true" if the text signals these are the only exceptions, otherwise blank.>
+
+
+  Text:
+  [Not present in the text]
+
+  ===
+
+extracted_object:
+  provision_id: '12.6'
+  norms:
+    - deontic_modality: PERMISSION
+      bearer: AUTO:%5BNot%20explicitly%20mentioned%20in%20the%20text%5D
+      action: AUTO:give
+      object: AUTO:access
+      conditions:
+        - statement: <through the use of a mutually agreed intermediary>
+          source_provision: <Blank>
+      exceptions:
+        - statement: <The exception in a single clause, as stated in the text.>
+          source_provision: <Blank when the exception is stated here in full.>
+          is_exhaustive: <Blank, since text indicating exhaustiveness is not 
+            present.>
+      scope_qualifier: '[Not present in the text]'
+named_entities:
+  - id: AUTO:%5BNot%20explicitly%20mentioned%20in%20the%20text%5D
+    label: '[Not explicitly mentioned in the text]'
+  - id: AUTO:give
+    label: give
+    original_spans:
+      - 52:55
+  - id: AUTO:access
+    label: access
+    original_spans:
+      - 38:43
+      - 109:114

@@ -1,0 +1,49 @@
+---
+input_text: |
+  26X(9) (9) Despite subsection 29(1) of the Australian Information Commissioner Act 2010 and any provision of this Act, the Commissioner may disclose information to the Minister for the purposes of consultation under subsection (8). Declaration is a legislative instrument
+raw_completion_output: |-
+  provision_id: 26X(9)
+  norms: Despite subsection 29(1) of the Australian Information Commissioner Act 2010 and any provision of this Act, the Commissioner may disclose information to the Minister for the purposes of consultation under subsection (8).
+  disapplies: 
+  cross_references: 29(1); (8)
+prompt: |+
+  From the text below, extract the following entities in the following format:
+
+  statement: <The exception in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this exception, written as the text writes it. Blank when the exception is stated here in full.>
+  is_exhaustive: <"true" if the text signals these are the only exceptions, otherwise blank.>
+
+
+  Text:
+  Despite subsection 29(1) of the Australian Information Commissioner Act 2010 and any provision of this Act
+
+  ===
+
+extracted_object:
+  provision_id: 26X(9)
+  norms:
+    - deontic_modality: PERMISSION
+      bearer: AUTO:the%20Commissioner
+      action: AUTO:disclose
+      object: AUTO:information
+      conditions:
+        - statement: For the purposes of consultation under subsection (8)
+      exceptions:
+        - statement: <Despite subsection 29(1) of the Australian Information 
+            Commissioner Act 2010 and any provision of this Act>
+          source_provision: <>
+          is_exhaustive: <>
+named_entities:
+  - id: AUTO:the%20Commissioner
+    label: the Commissioner
+    original_spans:
+      - 119:134
+  - id: AUTO:disclose
+    label: disclose
+    original_spans:
+      - 140:147
+  - id: AUTO:information
+    label: information
+    original_spans:
+      - 54:64
+      - 149:159

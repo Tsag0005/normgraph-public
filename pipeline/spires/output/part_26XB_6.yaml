@@ -1,0 +1,59 @@
+---
+input_text: |
+  26XB(6) (6) In this section: designated secrecy provision means any of the following: (a) sections 18, 18A, 18B, 34GF, 35P, 92 and 92A, and subsection 34GE(4), of the Australian Security Intelligence Organisation Act 1979; (b) section 15LC of the Crimes Act 1914; (c) section 34 of the Inspector-General of Intelligence and Security Act 1986; (d) sections 39, 40C, 40D and 41 of, and clause 9 of Schedule 1 to, the Intelligence Services Act 2001; (e) sections 42 and 44 of the Office of National Intelligence Act 2018; (f) sections 22, 22A and 22B of the Witness Protection Act 1994; (g) a provision of a Commonwealth law prescribed by the regulations for the purposes of this paragraph; (h) a provision of a Commonwealth law of a kind prescribed by the regulations for the purposes of this paragraph. secrecy provision means a provision of a Commonwealth law (including a provision of this Act) that prohibits or regulates the use or disclosure of personal information, whether the provision relates to the use or disclosure of personal information generally or in specified circumstances.
+raw_completion_output: |-
+  provision_id: 26XB(6)  
+  norms: The term "designated secrecy provision" means any of the following: sections 18, 18A, 18B, 34GF, 35P, 92 and 92A, and subsection 34GE(4), of the Australian Security Intelligence Organisation Act 1979; The term "designated secrecy provision" means any of the following: section 15LC of the Crimes Act 1914; The term "designated secrecy provision" means any of the following: section 34 of the Inspector-General of Intelligence and Security Act 1986; The term "designated secrecy provision" means any of the following: sections 39, 40C, 40D and 41 of, and clause 9 of Schedule 1 to, the Intelligence Services Act 2001; The term "designated secrecy provision" means any of the following: sections 42 and 44 of the Office of National Intelligence Act 2018; The term "designated secrecy provision" means any of the following: sections 22, 22A and 22B of the Witness Protection Act 1994; The term "designated secrecy provision" means a provision of a Commonwealth law prescribed by the regulations for the purposes of this paragraph; The term "designated secrecy provision" means a provision of a Commonwealth law of a kind prescribed by the regulations for the purposes of this paragraph; The term "secrecy provision" means a provision of a Commonwealth law (including a provision of this Act) that prohibits or regulates the use or disclosure of personal information, whether the provision relates to the use or disclosure of personal information generally or in specified circumstances.  
+  disapplies:  
+  cross_references: sections 18, 18A, 18B, 34GF, 35P, 92, 92A, subsection 34GE(4), section 15LC, section 34, sections 39, 40C, 40D and 41, clause 9 of Schedule 1, sections 42 and 44, sections 22, 22A and 22B
+prompt: |+
+  From the text below, extract the following entities in the following format:
+
+  deontic_modality: <The normative force. "must" is an OBLIGATION; "must not" is a PROHIBITION; "may" or "is authorised to" is a PERMISSION. If the provision's own work is to switch another provision OFF -- it says some other provision "does not apply" -- then it is a DISAPPLICATION, whatever verbs appear in its limbs. If it merely states that other provisions apply, or is purely definitional, it is NONE.Must be one of: OBLIGATION, PROHIBITION, PERMISSION, DISAPPLICATION, APPLICABILITY, NONE>
+  bearer: <The party on whom the norm falls -- the actor the provision names, such as "entity", "organisation" or "agency". Use the words the text uses.>
+  action: <The regulated act, as a verb phrase, e.g. "use or disclose", "destroy", "de-identify", "deal with individuals who have identified themselves".>
+  object: <What the action is performed on, e.g. "personal information", "sensitive information", "biometric information".>
+  conditions: <The circumstances that must hold for this norm to apply at all, as a semicolon-separated list. These are triggers, not exceptions. A norm reading "if an entity holds information collected for a primary purpose, it must not use it for a secondary purpose" has both of those circumstances as conditions.>
+  exceptions: <The circumstances that switch this norm OFF, as a semicolon-separated list. Anything introduced by "unless", "does not apply if" or "other than" is an exception, not a condition. If the text contains such a clause you MUST return an entry here -- a norm stating "must not X unless Y" always has Y as an exception.>
+  scope_qualifier: <Any limit on the norm's reach, e.g. "in relation to that matter", "as soon as practicable", "within a reasonable period". Leave blank if unqualified.>
+
+
+  Text:
+  The term secrecy provision means a provision of a Commonwealth law (including a provision of this Act) that prohibits or regulates the use or disclosure of personal information, whether the provision relates to the use or disclosure of personal information generally or in specified circumstances.
+
+  ===
+
+extracted_object:
+  provision_id: 26XB(6)
+  norms:
+    - deontic_modality: NONE
+    - deontic_modality: NONE
+    - deontic_modality: NONE
+    - deontic_modality: NONE
+    - deontic_modality: NONE
+      bearer: AUTO:Not%20applicable
+      action: AUTO:Not%20applicable
+      object: AUTO:Not%20applicable
+      conditions:
+        - statement: Not applicable
+      exceptions:
+        - statement: Not applicable
+      scope_qualifier: Not applicable
+    - deontic_modality: NONE
+    - deontic_modality: NONE
+      bearer: AUTO:%28none%20specified%29
+      action: AUTO:%28none%20specified%29
+      object: AUTO:%28none%20specified%29
+      conditions:
+        - statement: <none specified>
+          source_provision: <Blank when the condition is stated here.>
+      exceptions:
+        - statement: (none specified)
+      scope_qualifier: (none specified)
+    - deontic_modality: NONE
+    - deontic_modality: NONE
+named_entities:
+  - id: AUTO:Not%20applicable
+    label: Not applicable
+  - id: AUTO:%28none%20specified%29
+    label: (none specified)

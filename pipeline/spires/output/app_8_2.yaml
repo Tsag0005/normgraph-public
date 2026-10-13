@@ -1,0 +1,122 @@
+---
+input_text: |
+  8.2 Subclause 8.1 does not apply to the disclosure of personal information about an individual by an APP entity to the overseas recipient if: (a) the entity reasonably believes that: (i) the recipient of the information is subject to a law, or binding scheme, that has the effect of protecting the information in a way that, overall, is at least substantially similar to the way in which the Australian Privacy Principles protect the information; and (ii) there are mechanisms that the individual can access to take action to enforce that protection of the law or binding scheme; or (aa) subclause 8.3 applies in relation to the disclosure of the information; or (b) both of the following apply: (i) the entity expressly informs the individual that if he or she consents to the disclosure of the information, subclause 8.1 will not apply to the disclosure; (ii) after being so informed, the individual consents to the disclosure; or (c) the disclosure of the information is required or authorised by or under an Australian law or a court/tribunal order; or (d) a permitted general situation (other than the situation referred to in item 4 or 5 of the table in subsection 16A(1)) exists in relation to the disclosure of the information by the APP entity; or (e) the entity is an agency and the disclosure of the information is required or authorised by or under an international agreement relating to information sharing to which Australia is a party; or (f) the entity is an agency and both of the following apply: (i) the entity reasonably believes that the disclosure of the information is reasonably necessary for one or more enforcement related activities conducted by, or on behalf of, an enforcement body; (ii) the recipient is a body that performs functions, or exercises powers, that are similar to those performed or exercised by an enforcement body. Note: For permitted general situation, see section 16A.
+raw_completion_output: |-
+  provision_id: 8.2  
+  norms: Subclause 8.1 does not apply to the disclosure of personal information about an individual by an APP entity to the overseas recipient if the entity reasonably believes that the recipient of the information is subject to a law, or binding scheme, that has the effect of protecting the information in a way that, overall, is at least substantially similar to the way in which the Australian Privacy Principles protect the information and there are mechanisms that the individual can access to take action to enforce that protection of the law or binding scheme; Subclause 8.1 does not apply to the disclosure of personal information about an individual by an APP entity to the overseas recipient if subclause 8.3 applies in relation to the disclosure of the information; Subclause 8.1 does not apply to the disclosure of personal information about an individual by an APP entity to the overseas recipient if both of the following apply: the entity expressly informs the individual that if he or she consents to the disclosure of the information, subclause 8.1 will not apply to the disclosure and after being so informed, the individual consents to the disclosure; Subclause 8.1 does not apply to the disclosure of personal information about an individual by an APP entity to the overseas recipient if the disclosure of the information is required or authorised by or under an Australian law or a court/tribunal order; Subclause 8.1 does not apply to the disclosure of personal information about an individual by an APP entity to the overseas recipient if a permitted general situation (other than the situation referred to in item 4 or 5 of the table in subsection 16A(1)) exists in relation to the disclosure of the information by the APP entity; Subclause 8.1 does not apply to the disclosure of personal information about an individual by an APP entity to the overseas recipient if the entity is an agency and the disclosure of the information is required or authorised by or under an international agreement relating to information sharing to which Australia is a party; Subclause 8.1 does not apply to the disclosure of personal information about an individual by an APP entity to the overseas recipient if the entity is an agency and both of the following apply: the entity reasonably believes that the disclosure of the information is reasonably necessary for one or more enforcement related activities conducted by, or on behalf of, an enforcement body and the recipient is a body that performs functions, or exercises powers, that are similar to those performed or exercised by an enforcement body.  
+  disapplies: 8.1  
+  cross_references: 8.1; 8.3; section 16A; subsection 16A(1)  
+prompt: |+
+  From the text below, extract the following entities in the following format:
+
+  statement: <The condition in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this condition when the text points elsewhere for it, e.g. "4.3". Blank when the condition is stated here.>
+
+
+  Text:
+  the entity is an agency and both of the following apply: the entity reasonably believes that the disclosure of the information is reasonably necessary for one or more enforcement related activities conducted by, or on behalf of, an enforcement body and the recipient is a body that performs functions, or exercises powers, that are similar to those performed or exercised by an enforcement body
+
+  ===
+
+extracted_object:
+  provision_id: '8.2'
+  norms:
+    - deontic_modality: DISAPPLICATION
+      bearer: AUTO:APP%20entity
+      action: AUTO:disclose
+      object: AUTO:personal%20information%20about%20an%20individual
+      conditions:
+        - statement: <The entity reasonably believes that the recipient of the 
+            information is subject to a law, or binding scheme, that has the 
+            effect of protecting the information in a way that, overall, is at 
+            least substantially similar to the way in which the Australian 
+            Privacy Principles protect the information.>
+          source_provision: <Blank>
+        - statement: <The individual can access mechanisms to take action to 
+            enforce the protection of the law or binding scheme.>
+          source_provision: <Blank>
+    - deontic_modality: DISAPPLICATION
+      bearer: AUTO:APP%20entity
+      action: AUTO:disclose
+      object: AUTO:personal%20information%20about%20an%20individual
+      conditions:
+        - statement: <Subclause 8.3 applies in relation to the disclosure of the
+            information.>
+          source_provision: <>
+    - deontic_modality: DISAPPLICATION
+      bearer: AUTO:APP%20entity
+      action: AUTO:disclose
+      object: AUTO:personal%20information%20about%20an%20individual
+      conditions:
+        - statement: both of the following apply
+    - deontic_modality: DISAPPLICATION
+      bearer: AUTO:APP%20entity
+      action: AUTO:disclose
+      object: AUTO:personal%20information%20about%20an%20individual
+      conditions:
+        - statement: Disclosure of personal information about an individual by 
+            an APP entity to the overseas recipient.
+      exceptions:
+        - statement: <Disclosure of the information is required or authorised by
+            or under an Australian law or a court/tribunal order.>
+          source_provision: <>
+          is_exhaustive: <>
+    - deontic_modality: DISAPPLICATION
+      bearer: AUTO:APP%20entity
+      action: AUTO:disclose
+      object: AUTO:personal%20information%20about%20an%20individual
+      conditions:
+        - statement: <A permitted general situation exists in relation to the 
+            disclosure of the information by the APP entity.>
+          source_provision: <Blank>
+      exceptions:
+        - statement: <the situation referred to in item 4 or 5 of the table in 
+            subsection 16A(1)>
+          source_provision: <16A(1)>
+          is_exhaustive: < >
+      scope_qualifier: to the overseas recipient
+    - deontic_modality: DISAPPLICATION
+      bearer: AUTO:APP%20entity
+      action: AUTO:disclose
+      object: AUTO:personal%20information%20about%20an%20individual
+      conditions:
+        - statement: entity is an agency
+        - statement: <Disclosure of the information is required or authorised by
+            or under an international agreement relating to information sharing 
+            to which Australia is a party.>
+          source_provision: <Blank>
+    - deontic_modality: DISAPPLICATION
+      bearer: AUTO:APP%20entity
+      action: AUTO:disclose
+      object: 
+        AUTO:personal%20information%20about%20an%20individual%20to%20the%20overseas%20recipient
+      conditions:
+        - statement: '<The entity is an agency and both of the following apply: the
+            entity reasonably believes that the disclosure of the information is reasonably
+            necessary for one or more enforcement related activities conducted by,
+            or on behalf of, an enforcement body and the recipient is a body that
+            performs functions, or exercises powers, that are similar to those performed
+            or exercised by an enforcement body.>'
+          source_provision: <Blank>
+  disapplies:
+    - '8.1'
+  cross_references:
+    - '8.1'
+    - '8.3'
+    - section 16A
+    - subsection 16A(1)
+named_entities:
+  - id: AUTO:APP%20entity
+    label: APP entity
+    original_spans:
+      - 101:110
+      - 1242:1251
+  - id: AUTO:disclose
+    label: disclose
+  - id: AUTO:personal%20information%20about%20an%20individual
+    label: personal information about an individual
+    original_spans:
+      - 54:93
+  - id: 
+      AUTO:personal%20information%20about%20an%20individual%20to%20the%20overseas%20recipient
+    label: personal information about an individual to the overseas recipient

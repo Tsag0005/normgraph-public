@@ -1,0 +1,9 @@
+provision_id: 26XC(3)
+norms:
+- deontic_modality: PERMISSION
+  bearer: AUTO:%5BImplied%20bearer%2C%20not%20explicitly%20stated%20in%20the%20text%5D
+  action: AUTO:disclose
+  object: AUTO:personal%20information
+  conditions:
+  - statement: the disclosure is covered by subsection (2)
+    source_provision: '2'

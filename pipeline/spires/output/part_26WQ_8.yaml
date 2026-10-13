@@ -1,0 +1,44 @@
+---
+input_text: |
+  26WQ(8) (8) If: (a) an application for a paragraph (1)(d) declaration nominates a period to be specified in the declaration; and (b) the Commissioner makes the declaration, but specifies a different period in the declaration; the Commissioner is taken not to have refused the application.
+raw_completion_output: |-
+  provision_id: 26WQ(8)  
+  norms: If an application for a paragraph (1)(d) declaration nominates a period to be specified in the declaration, the Commissioner is taken not to have refused the application if the Commissioner makes the declaration but specifies a different period in the declaration.  
+  disapplies:   
+  cross_references: paragraph (1)(d)  
+prompt: |+
+  From the text below, extract the following entities in the following format:
+
+  statement: <The condition in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this condition when the text points elsewhere for it, e.g. "4.3". Blank when the condition is stated here.>
+
+
+  Text:
+  An application for a paragraph (1)(d) declaration nominates a period to be specified in the declaration
+
+  ===
+
+extracted_object:
+  provision_id: 26WQ(8)
+  norms:
+    - deontic_modality: DISAPPLICATION
+      bearer: AUTO:the%20Commissioner
+      action: AUTO:have%20refused
+      object: AUTO:the%20application
+      conditions:
+        - statement: An application for a paragraph (1)(d) declaration nominates
+            a period to be specified in the declaration.
+named_entities:
+  - id: AUTO:the%20Commissioner
+    label: the Commissioner
+    original_spans:
+      - 133:148
+      - 226:241
+  - id: AUTO:have%20refused
+    label: have refused
+    original_spans:
+      - 259:270
+  - id: AUTO:the%20application
+    label: the application
+    original_spans:
+      - 272:286

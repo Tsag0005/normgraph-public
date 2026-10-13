@@ -1,0 +1,63 @@
+---
+input_text: |
+  26WU(4) (4) A notice given by the Commissioner under subsection (3) must state: (a) the place at, or manner in which, the information or document is to be given or produced or the questions are to be answered; and (b) the time at which, or the period within which, the information or document is to be given or produced or the questions are to be answered.
+raw_completion_output: |-
+  provision_id: 26WU(4)  
+  norms: A notice given by the Commissioner under subsection (3) must state the place at, or manner in which, the information or document is to be given or produced or the questions are to be answered; A notice given by the Commissioner under subsection (3) must state the time at which, or the period within which, the information or document is to be given or produced or the questions are to be answered.  
+  disapplies:   
+  cross_references: 26WU(3)  
+prompt: |+
+  Split the following piece of text into fields in the following format:
+
+  statement: <The condition in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this condition when the text points elsewhere for it, e.g. "4.3". Blank when the condition is stated here.>
+
+
+  Text:
+  A notice given by the Commissioner under subsection (3)
+
+  ===
+
+extracted_object:
+  provision_id: 26WU(4)
+  norms:
+    - deontic_modality: OBLIGATION
+      bearer: AUTO:Commissioner
+      action: AUTO:state
+      object: 
+        AUTO:the%20place%20at%2C%20or%20manner%20in%20which%2C%20the%20information%20or%20document%20is%20to%20be%20given%20or%20produced%20or%20the%20questions%20are%20to%20be%20answered
+      conditions:
+        - statement: <a notice is given by the Commissioner>
+          source_provision: <subsection (3)>
+    - deontic_modality: OBLIGATION
+      bearer: AUTO:The%20Commissioner
+      action: AUTO:state
+      object: 
+        AUTO:the%20time%20at%20which%2C%20or%20the%20period%20within%20which%2C%20the%20information%20or%20document%20is%20to%20be%20given%20or%20produced%20or%20the%20questions%20are%20to%20be%20answered
+      conditions:
+        - statement: A notice given by the Commissioner under subsection (3)
+named_entities:
+  - id: AUTO:Commissioner
+    label: Commissioner
+    original_spans:
+      - 34:45
+  - id: AUTO:state
+    label: state
+    original_spans:
+      - 73:77
+  - id: 
+      AUTO:the%20place%20at%2C%20or%20manner%20in%20which%2C%20the%20information%20or%20document%20is%20to%20be%20given%20or%20produced%20or%20the%20questions%20are%20to%20be%20answered
+    label: the place at, or manner in which, the information or document is to 
+      be given or produced or the questions are to be answered
+    original_spans:
+      - 84:207
+  - id: AUTO:The%20Commissioner
+    label: The Commissioner
+    original_spans:
+      - 30:45
+  - id: 
+      AUTO:the%20time%20at%20which%2C%20or%20the%20period%20within%20which%2C%20the%20information%20or%20document%20is%20to%20be%20given%20or%20produced%20or%20the%20questions%20are%20to%20be%20answered
+    label: the time at which, or the period within which, the information or 
+      document is to be given or produced or the questions are to be answered
+    original_spans:
+      - 218:354

@@ -1,0 +1,9 @@
+provision_id: 26XC(1)(1)
+norms:
+- deontic_modality: OBLIGATION
+  bearer: AUTO:person
+  action: AUTO:not%20disclose
+  object: AUTO:personal%20information
+  conditions:
+  - statement: personal information that relates to an individual is disclosed to them because of the
+      operation of this Division.

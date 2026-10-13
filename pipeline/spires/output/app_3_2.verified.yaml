@@ -1,0 +1,10 @@
+provision_id: '3.2'
+norms:
+- deontic_modality: PROHIBITION
+  bearer: AUTO:entity
+  action: AUTO:collect
+  object: AUTO:personal%20information
+  exceptions:
+  - statement: unless the information is reasonably necessary for one or more of the entity's functions
+      or activities
+    verified: true

@@ -1,0 +1,77 @@
+---
+input_text: |
+  26WU(1) (1) This section applies if the Commissioner has reason to believe that a person or entity has information or documents, or can answer questions, that are relevant to either or both of the following matters (the relevant matters): (a) an actual or suspected eligible data breach of an entity; (b) an entity's compliance with the requirements in Division 3 of this Part.
+raw_completion_output: |-
+  provision_id: 26WU(1)(1)  
+  norms: This section applies if the Commissioner has reason to believe that a person or entity has information or documents that are relevant to an actual or suspected eligible data breach of an entity; This section applies if the Commissioner has reason to believe that a person or entity can answer questions that are relevant to an actual or suspected eligible data breach of an entity; This section applies if the Commissioner has reason to believe that a person or entity has information or documents that are relevant to an entity's compliance with the requirements in Division 3 of this Part; This section applies if the Commissioner has reason to believe that a person or entity can answer questions that are relevant to an entity's compliance with the requirements in Division 3 of this Part.
+  disapplies:  
+  cross_references: Division 3
+prompt: |+
+  From the text below, extract the following entities in the following format:
+
+  statement: <The condition in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this condition when the text points elsewhere for it, e.g. "4.3". Blank when the condition is stated here.>
+
+
+  Text:
+  Commissioner has reason to believe that a person or entity can answer questions
+
+  ===
+
+extracted_object:
+  provision_id: 26WU(1)(1)
+  norms:
+    - deontic_modality: APPLICABILITY
+      bearer: AUTO:Commissioner
+      action: AUTO:has%20reason%20to%20believe
+      object: AUTO:information%20or%20documents
+      conditions:
+        - statement: <person or entity has information or documents that are 
+            relevant to an actual or suspected eligible data breach of an 
+            entity.>
+          source_provision: <Blank>
+    - deontic_modality: APPLICABILITY
+      bearer: AUTO:Commissioner
+      action: AUTO:answer%20questions
+    - deontic_modality: APPLICABILITY
+      bearer: AUTO:Commissioner
+      action: AUTO:has%20reason%20to%20believe
+      object: AUTO:a%20person%20or%20entity%20has%20information%20or%20documents
+      conditions:
+        - statement: <information or documents are relevant to an entity's 
+            compliance with the requirements in Division 3 of this Part.>
+          source_provision: <Blank>
+    - deontic_modality: APPLICABILITY
+      bearer: AUTO:Commissioner
+      action: AUTO:answer%20questions
+      object: 
+        AUTO:questions%20that%20are%20relevant%20to%20an%20entity%27s%20compliance%20with%20the%20requirements%20in%20Division%203%20of%20this%20Part
+      conditions:
+        - statement: <Commissioner has reason to believe that a person or entity
+            can answer questions.>
+          source_provision: <Blank>
+named_entities:
+  - id: AUTO:Commissioner
+    label: Commissioner
+    original_spans:
+      - 40:51
+  - id: AUTO:has%20reason%20to%20believe
+    label: has reason to believe
+    original_spans:
+      - 53:73
+  - id: AUTO:information%20or%20documents
+    label: information or documents
+    original_spans:
+      - 103:126
+  - id: AUTO:answer%20questions
+    label: answer questions
+    original_spans:
+      - 136:151
+  - id: AUTO:a%20person%20or%20entity%20has%20information%20or%20documents
+    label: a person or entity has information or documents
+    original_spans:
+      - 80:126
+  - id: 
+      AUTO:questions%20that%20are%20relevant%20to%20an%20entity%27s%20compliance%20with%20the%20requirements%20in%20Division%203%20of%20this%20Part
+    label: questions that are relevant to an entity's compliance with the 
+      requirements in Division 3 of this Part

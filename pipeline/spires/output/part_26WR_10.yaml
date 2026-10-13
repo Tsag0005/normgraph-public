@@ -1,0 +1,42 @@
+---
+input_text: |
+  26WR(10) (10) An entity must comply with a direction under subsection (1) as soon as practicable after the direction is given.
+raw_completion_output: |-
+  provision_id: 26WR(10)
+  norms: An entity must comply with a direction under subsection (1) as soon as practicable after the direction is given.
+  disapplies: 
+  cross_references: 26WR(1)
+prompt: |+
+  Split the following piece of text into fields in the following format:
+
+  statement: <The condition in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this condition when the text points elsewhere for it, e.g. "4.3". Blank when the condition is stated here.>
+
+
+  Text:
+  direction is given
+
+  ===
+
+extracted_object:
+  provision_id: 26WR(10)
+  norms:
+    - deontic_modality: OBLIGATION
+      bearer: AUTO:entity
+      action: AUTO:comply
+      object: AUTO:direction%20under%20subsection%20%281%29
+      conditions:
+        - statement: direction is given
+named_entities:
+  - id: AUTO:entity
+    label: entity
+    original_spans:
+      - 17:22
+  - id: AUTO:comply
+    label: comply
+    original_spans:
+      - 29:34
+  - id: AUTO:direction%20under%20subsection%20%281%29
+    label: direction under subsection (1)
+    original_spans:
+      - 43:72

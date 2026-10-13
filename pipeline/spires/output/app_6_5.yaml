@@ -1,0 +1,44 @@
+---
+input_text: |
+  6.5 If an APP entity uses or discloses personal information in accordance with paragraph 6.2(e), the entity must make a written note of the use or disclosure. Related bodies corporate
+raw_completion_output: |-
+  provision_id: 6.5  
+  norms: If an APP entity uses or discloses personal information in accordance with paragraph 6.2(e), the entity must make a written note of the use or disclosure.  
+  disapplies:   
+  cross_references: 6.2(e)
+prompt: |+
+  From the text below, extract the following entities in the following format:
+
+  statement: <The condition in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this condition when the text points elsewhere for it, e.g. "4.3". Blank when the condition is stated here.>
+
+
+  Text:
+  If an APP entity uses or discloses personal information in accordance with paragraph 6.2(e)
+
+  ===
+
+extracted_object:
+  provision_id: '6.5'
+  norms:
+    - deontic_modality: OBLIGATION
+      bearer: AUTO:APP%20entity
+      action: AUTO:make%20a%20written%20note
+      object: AUTO:the%20use%20or%20disclosure
+      conditions:
+        - statement: <If an APP entity uses or discloses personal information in
+            accordance with paragraph 6.2(e)>
+          source_provision: <6.2(e)>
+named_entities:
+  - id: AUTO:APP%20entity
+    label: APP entity
+    original_spans:
+      - 10:19
+  - id: AUTO:make%20a%20written%20note
+    label: make a written note
+    original_spans:
+      - 113:131
+  - id: AUTO:the%20use%20or%20disclosure
+    label: the use or disclosure
+    original_spans:
+      - 136:156

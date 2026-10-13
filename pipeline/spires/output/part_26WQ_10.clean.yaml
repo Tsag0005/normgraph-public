@@ -1,0 +1,21 @@
+provision_id: 26WQ(10)
+norms:
+- deontic_modality: PROHIBITION
+  bearer: AUTO:entity
+  action: AUTO:make%20an%20application
+  object: AUTO:under%20paragraph%20%285%29%28b%29
+  conditions:
+  - statement: in relation to an eligible data breach of the entity
+  exceptions:
+  - statement: if the access, disclosure or loss that constituted the eligible data breach of the entity
+      is an eligible data breach of one or more other entities
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:entity
+  action: AUTO:make%20an%20application
+  exceptions:
+  - statement: if one of those other entities has already made an application under paragraph (5)(b) in
+      relation to the eligible data breach of the other entity
+    source_provision: paragraph (5)(b)
+    is_exhaustive: 'true'
+cross_references:
+- (5)(b)

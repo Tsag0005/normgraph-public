@@ -1,0 +1,80 @@
+# HAND-WRITTEN. The second half of the known-answer control.
+#
+# app_schedule1.yaml proves the format can express a structure we already parse. This one
+# proves it can express a structure we cannot: Part IIIC has three things Schedule 1 has
+# no equivalent of, and if the format cannot carry them then inducing a profile is not
+# worth doing.
+#
+#   1. Sections that contain subsections, so the identifier is composed from two levels
+#      ("26WE" + "(1)") rather than being a single token like "6.1".
+#   2. Sections that ARE a provision, with no subsections beneath them at all -- 26WB,
+#      26WD and 26WJ are a heading and one sentence. That is the `container` role.
+#   3. Bare prose sub-headings inside a section ("Scope", "Assessment", "Overseas
+#      recipients") that belong to no provision and must not be read as one. These are
+#      why `min_provision_words` exists.
+#
+# Kept alongside the induced profile so the two can be diffed: what the model produced
+# against what a reader of the Part would have written.
+#
+# Patterns match NORMALISED lines. Note that normalisation collapses whitespace, so the
+# two spaces the drafter puts after a section number ("26WA  Guide to this Part") are
+# gone by the time a pattern sees the line and cannot be relied on.
+
+name: part_iiic
+description: Part IIIC of the Privacy Act 1988 (Cth) - notification of eligible data breaches
+
+levels:
+  # "Part IIIC - Notification of eligible data breaches". Roman, not decimal.
+  - name: part
+    role: heading
+    pattern: '^Part [IVXLC]+[A-Z]? - .+$'
+
+  # "Division 1 - Introduction" and "Subdivision A - Suspected eligible data breaches".
+  - name: division
+    role: heading
+    pattern: '^(?:Sub)?[Dd]ivision \S+ - .+$'
+
+  # "26WE Eligible data breach". Sections run 26WA-26WU then 26XA-26XH; I and O are
+  # skipped by drafting convention, so the sequence has deliberate gaps and a validator
+  # must not treat those as missing provisions.
+  - name: section
+    role: container
+    pattern: '^(\d{2}[A-Z]{1,3}) [A-Z].+$'
+
+  # "(1) This section applies if:" -- the provision. Includes inserted subsections
+  # numbered "(3A)".
+  - name: subsection
+    role: provision
+    pattern: '^\((\d+[A-Z]?)\) (.*)$'
+
+  # "(a) ..." and "(ii) ...". One class: ordered after `subsection`, so "(1)" is claimed
+  # by the level above and never reaches this one.
+  - name: paragraph
+    role: body
+    pattern: '^\(([a-z]{1,4})\) (.*)$'
+
+  - name: note
+    role: body
+    pattern: '^Note( \d+)?: (.*)$'
+
+# Composed, unlike Schedule 1. When a section has no subsections the template cannot be
+# filled and segmentation falls back to the section identifier alone, which is exactly
+# what 26WB, 26WD and 26WJ need.
+id_template: '{section}({subsection})'
+
+# "subsection 26WR(2)", "section 26WL", "paragraph 26WE(2)(b)". The subsection group is
+# optional because sections with no subsections -- 26WB, 26WD, 26WJ -- are cited bare.
+# Only the section-and-subsection part is captured: a citation down to paragraph level
+# still resolves to the provision the graph is keyed on.
+identifier_pattern: '\b(\d{2}[A-Z]{1,3}(?:\(\d+[A-Z]?\))?)'
+
+citation_nouns:
+  - section
+  - subsection
+  - paragraph
+  - subparagraph
+  - division
+  - part
+
+note_pattern: '^Note( \d+)?:'
+min_provision_words: 8

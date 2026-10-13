@@ -1,0 +1,5 @@
+provision_id: '7.4'
+norms:
+- deontic_modality: DISAPPLICATION
+disapplies:
+- '7.1'

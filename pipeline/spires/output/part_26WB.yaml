@@ -1,0 +1,44 @@
+---
+input_text: |
+  26WB Entity For the purposes of this Part, entity includes a person who is a file number recipient.
+raw_completion_output: |-
+  provision_id: 26WB  
+  norms: For the purposes of this Part, entity includes a person who is a file number recipient.  
+  disapplies:   
+  cross_references:   
+prompt: |+
+  Split the following piece of text into fields in the following format:
+
+  statement: <The condition in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this condition when the text points elsewhere for it, e.g. "4.3". Blank when the condition is stated here.>
+
+
+  Text:
+  For the purposes of this Part
+
+  ===
+
+extracted_object:
+  provision_id: 26WB
+  norms:
+    - deontic_modality: NONE
+      bearer: AUTO:entity
+      action: AUTO:includes
+      object: AUTO:a%20person%20who%20is%20a%20file%20number%20recipient
+      conditions:
+        - statement: <For the purposes of this Part>
+          source_provision: <Blank>
+named_entities:
+  - id: AUTO:entity
+    label: entity
+    original_spans:
+      - 5:10
+      - 43:48
+  - id: AUTO:includes
+    label: includes
+    original_spans:
+      - 50:57
+  - id: AUTO:a%20person%20who%20is%20a%20file%20number%20recipient
+    label: a person who is a file number recipient
+    original_spans:
+      - 59:97

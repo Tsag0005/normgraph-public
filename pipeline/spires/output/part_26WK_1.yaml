@@ -1,0 +1,49 @@
+---
+input_text: |
+  26WK(1) (1) This section applies if an entity is aware that there are reasonable grounds to believe that there has been an eligible data breach of the entity. Statement
+raw_completion_output: |-
+  provision_id: 26WK(1)  
+  norms: This section applies if an entity is aware that there are reasonable grounds to believe that there has been an eligible data breach of the entity.  
+  disapplies:   
+  cross_references:
+prompt: |+
+  From the text below, extract the following entities in the following format:
+
+  deontic_modality: <The normative force. "must" is an OBLIGATION; "must not" is a PROHIBITION; "may" or "is authorised to" is a PERMISSION. If the provision's own work is to switch another provision OFF -- it says some other provision "does not apply" -- then it is a DISAPPLICATION, whatever verbs appear in its limbs. If it merely states that other provisions apply, or is purely definitional, it is NONE.Must be one of: OBLIGATION, PROHIBITION, PERMISSION, DISAPPLICATION, APPLICABILITY, NONE>
+  bearer: <The party on whom the norm falls -- the actor the provision names, such as "entity", "organisation" or "agency". Use the words the text uses.>
+  action: <The regulated act, as a verb phrase, e.g. "use or disclose", "destroy", "de-identify", "deal with individuals who have identified themselves".>
+  object: <What the action is performed on, e.g. "personal information", "sensitive information", "biometric information".>
+  conditions: <The circumstances that must hold for this norm to apply at all, as a semicolon-separated list. These are triggers, not exceptions. A norm reading "if an entity holds information collected for a primary purpose, it must not use it for a secondary purpose" has both of those circumstances as conditions.>
+  exceptions: <The circumstances that switch this norm OFF, as a semicolon-separated list. Anything introduced by "unless", "does not apply if" or "other than" is an exception, not a condition. If the text contains such a clause you MUST return an entry here -- a norm stating "must not X unless Y" always has Y as an exception.>
+  scope_qualifier: <Any limit on the norm's reach, e.g. "in relation to that matter", "as soon as practicable", "within a reasonable period". Leave blank if unqualified.>
+
+
+  Text:
+  This section applies if an entity is aware that there are reasonable grounds to believe that there has been an eligible data breach of the entity.
+
+  ===
+
+extracted_object:
+  provision_id: 26WK(1)
+  norms:
+    - deontic_modality: APPLICABILITY
+      bearer: AUTO:entity
+      action: AUTO:is%20aware
+      object: 
+        AUTO:reasonable%20grounds%20to%20believe%20that%20there%20has%20been%20an%20eligible%20data%20breach%20of%20the%20entity
+named_entities:
+  - id: AUTO:entity
+    label: entity
+    original_spans:
+      - 39:44
+      - 151:156
+  - id: AUTO:is%20aware
+    label: is aware
+    original_spans:
+      - 46:53
+  - id: 
+      AUTO:reasonable%20grounds%20to%20believe%20that%20there%20has%20been%20an%20eligible%20data%20breach%20of%20the%20entity
+    label: reasonable grounds to believe that there has been an eligible data 
+      breach of the entity
+    original_spans:
+      - 70:156

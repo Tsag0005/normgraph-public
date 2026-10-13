@@ -1,0 +1,71 @@
+---
+input_text: |
+  4.3 If: (a) the APP entity determines that the entity could not have collected the personal information; and (b) the information is not contained in a Commonwealth record; the entity must, as soon as practicable but only if it is lawful and reasonable to do so, destroy the information or ensure that the information is de-identified.
+raw_completion_output: |-
+  provision_id: 4.3  
+  norms: The entity must destroy the information as soon as practicable but only if it is lawful and reasonable to do so, if the APP entity determines that the entity could not have collected the personal information and the information is not contained in a Commonwealth record; The entity must ensure that the information is de-identified as soon as practicable but only if it is lawful and reasonable to do so, if the APP entity determines that the entity could not have collected the personal information and the information is not contained in a Commonwealth record.  
+  disapplies:   
+  cross_references: APP
+prompt: |+
+  Split the following piece of text into fields in the following format:
+
+  statement: <The condition in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this condition when the text points elsewhere for it, e.g. "4.3". Blank when the condition is stated here.>
+
+
+  Text:
+  the information is not contained in a Commonwealth record
+
+  ===
+
+extracted_object:
+  provision_id: '4.3'
+  norms:
+    - deontic_modality: OBLIGATION
+      bearer: AUTO:entity
+      action: AUTO:destroy
+      object: AUTO:the%20information
+      conditions:
+        - statement: <The APP entity determines that the entity could not have 
+            collected the personal information.>
+          source_provision: < >
+        - statement: The information is not contained in a Commonwealth record.
+        - statement: <it is lawful and reasonable to do so>
+          source_provision: <Blank>
+    - deontic_modality: OBLIGATION
+      bearer: AUTO:The%20entity
+      action: AUTO:ensure%20that%20the%20information%20is%20de-identified
+      object: AUTO:the%20information
+      conditions:
+        - statement: <it is lawful and reasonable to do so>
+          source_provision: <Blank>
+        - statement: <The APP entity determines that the entity could not have 
+            collected the personal information.>
+          source_provision: < >
+        - statement: The information is not contained in a Commonwealth record.
+named_entities:
+  - id: AUTO:entity
+    label: entity
+    original_spans:
+      - 20:25
+      - 47:52
+      - 176:181
+  - id: AUTO:destroy
+    label: destroy
+    original_spans:
+      - 262:268
+  - id: AUTO:the%20information
+    label: the information
+    original_spans:
+      - 113:127
+      - 270:284
+      - 301:315
+  - id: AUTO:The%20entity
+    label: The entity
+    original_spans:
+      - 43:52
+      - 172:181
+  - id: AUTO:ensure%20that%20the%20information%20is%20de-identified
+    label: ensure that the information is de-identified
+    original_spans:
+      - 289:332

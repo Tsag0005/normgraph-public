@@ -1,0 +1,49 @@
+---
+input_text: |
+  3.1 If an APP entity is an agency, the entity must not collect personal information (other than sensitive information) unless the information is reasonably necessary for, or directly related to, one or more of the entity's functions or activities.
+raw_completion_output: |-
+  provision_id: 3.1  
+  norms: An APP entity that is an agency must not collect personal information (other than sensitive information) unless the information is reasonably necessary for one or more of the entity's functions or activities; An APP entity that is an agency must not collect personal information (other than sensitive information) unless the information is directly related to one or more of the entity's functions or activities.  
+  disapplies:   
+  cross_references:   
+prompt: |+
+  From the text below, extract the following entities in the following format:
+
+  deontic_modality: <The normative force. "must" is an OBLIGATION; "must not" is a PROHIBITION; "may" or "is authorised to" is a PERMISSION. If the provision's own work is to switch another provision OFF -- it says some other subclause "does not apply" -- then it is a DISAPPLICATION, whatever verbs appear in its limbs. If it merely states that other provisions apply, or is purely definitional, it is NONE.Must be one of: OBLIGATION, PROHIBITION, PERMISSION, DISAPPLICATION, NONE>
+  bearer: <The party on whom the norm falls, e.g. "APP entity", "organisation", "agency".>
+  action: <The regulated act, as a verb phrase, e.g. "use or disclose", "destroy", "de-identify", "deal with individuals who have identified themselves".>
+  object: <What the action is performed on, e.g. "personal information", "sensitive information", "biometric information".>
+  conditions: <The circumstances that must hold for this norm to apply at all, as a semicolon-separated list. These are triggers, not exceptions. A norm reading "if an entity holds information collected for a primary purpose, it must not use it for a secondary purpose" has both of those circumstances as conditions.>
+  exceptions: <The circumstances that switch this norm OFF, as a semicolon-separated list. Anything introduced by "unless", "does not apply if" or "other than" is an exception, not a condition. If the text contains such a clause you MUST return an entry here -- a norm stating "must not X unless Y" always has Y as an exception.>
+  scope_qualifier: <Any limit on the norm's reach, e.g. "in relation to that matter", "as soon as practicable", "within a reasonable period". Leave blank if unqualified.>
+
+
+  Text:
+  An APP entity that is an agency must not collect personal information (other than sensitive information) unless the information is directly related to one or more of the entity's functions or activities.
+
+  ===
+
+extracted_object:
+  provision_id: '3.1'
+  norms:
+    - deontic_modality: PROHIBITION
+      bearer: AUTO:APP%20entity%20that%20is%20an%20agency
+      action: AUTO:collect
+      object: AUTO:personal%20information
+      scope_qualifier: (other than sensitive information)
+    - deontic_modality: PROHIBITION
+      bearer: AUTO:APP%20entity%20that%20is%20an%20agency
+      action: AUTO:collect
+      object: AUTO:personal%20information
+      scope_qualifier: (other than sensitive information)
+named_entities:
+  - id: AUTO:APP%20entity%20that%20is%20an%20agency
+    label: APP entity that is an agency
+  - id: AUTO:collect
+    label: collect
+    original_spans:
+      - 55:61
+  - id: AUTO:personal%20information
+    label: personal information
+    original_spans:
+      - 63:82

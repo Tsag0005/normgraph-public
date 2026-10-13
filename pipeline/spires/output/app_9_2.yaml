@@ -1,0 +1,104 @@
+---
+input_text: |
+  9.2 An organisation must not use or disclose a government related identifier of an individual unless: (a) the use or disclosure of the identifier is reasonably necessary for the organisation to verify the identity of the individual for the purposes of the organisation's activities or functions; or (b) the use or disclosure of the identifier is reasonably necessary for the organisation to fulfil its obligations to an agency or a State or Territory authority; or (c) the use or disclosure of the identifier is required or authorised by or under an Australian law or a court/tribunal order; or (d) a permitted general situation (other than the situation referred to in item 4 or 5 of the table in subsection 16A(1)) exists in relation to the use or disclosure of the identifier; or (e) the organisation reasonably believes that the use or disclosure of the identifier is reasonably necessary for one or more enforcement related activities conducted by, or on behalf of, an enforcement body; or (f) subclause 9.3 applies in relation to the use or disclosure. Note 1: An act or practice of an agency may be treated as an act or practice of an organisation, see section 7A. Note 2: For permitted general situation, see section 16A. Regulations about adoption, use or disclosure
+raw_completion_output: |-
+  provision_id: 9.2  
+  norms: An organisation must not use or disclose a government related identifier of an individual; An organisation may use or disclose a government related identifier of an individual if the use or disclosure of the identifier is reasonably necessary for the organisation to verify the identity of the individual for the purposes of the organisation's activities or functions; An organisation may use or disclose a government related identifier of an individual if the use or disclosure of the identifier is reasonably necessary for the organisation to fulfil its obligations to an agency or a State or Territory authority; An organisation may use or disclose a government related identifier of an individual if the use or disclosure of the identifier is required or authorised by or under an Australian law or a court/tribunal order; An organisation may use or disclose a government related identifier of an individual if a permitted general situation (other than the situation referred to in item 4 or 5 of the table in subsection 16A(1)) exists in relation to the use or disclosure of the identifier; An organisation may use or disclose a government related identifier of an individual if the organisation reasonably believes that the use or disclosure of the identifier is reasonably necessary for one or more enforcement related activities conducted by, or on behalf of, an enforcement body; An organisation may use or disclose a government related identifier of an individual if subclause 9.3 applies in relation to the use or disclosure.  
+  disapplies:   
+  cross_references: 16A(1); 9.3
+prompt: |+
+  Split the following piece of text into fields in the following format:
+
+  statement: <The condition in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this condition when the text points elsewhere for it, e.g. "4.3". Blank when the condition is stated here.>
+
+
+  Text:
+  in relation to the use or disclosure
+
+  ===
+
+extracted_object:
+  provision_id: '9.2'
+  norms:
+    - deontic_modality: PROHIBITION
+      bearer: AUTO:organisation
+      action: AUTO:use%20or%20disclose
+      object: AUTO:government%20related%20identifier%20of%20an%20individual
+    - deontic_modality: PERMISSION
+      bearer: AUTO:organisation
+      action: AUTO:use%20or%20disclose
+      object: AUTO:government%20related%20identifier%20of%20an%20individual
+      conditions:
+        - statement: <The use or disclosure of the identifier is reasonably 
+            necessary for the organisation to verify the identity of the 
+            individual for the purposes of the organisation's activities or 
+            functions.>
+          source_provision: <Blank>
+    - deontic_modality: PERMISSION
+      bearer: AUTO:organisation
+      action: AUTO:use%20or%20disclose
+      object: AUTO:government%20related%20identifier%20of%20an%20individual
+      conditions:
+        - statement: <The use or disclosure of the identifier is reasonably 
+            necessary for the organisation to fulfil its obligations to an 
+            agency or a State or Territory authority.>
+          source_provision: <Blank>
+    - deontic_modality: PERMISSION
+      bearer: AUTO:organisation
+      action: AUTO:use%20or%20disclose
+      object: AUTO:government%20related%20identifier%20of%20an%20individual
+      conditions:
+        - statement: <use or disclosure of the identifier is required or 
+            authorised by or under an Australian law or a court/tribunal order.>
+          source_provision: <Blank>
+    - deontic_modality: PERMISSION
+      bearer: AUTO:organisation
+      action: AUTO:use%20or%20disclose
+      object: AUTO:government%20related%20identifier%20of%20an%20individual
+      conditions:
+        - statement: <A permitted general situation exists in relation to the 
+            use or disclosure of the identifier.>
+          source_provision: <Blank>
+      exceptions:
+        - statement: <other than the situation referred to in item 4 or 5 of the
+            table in subsection 16A(1)>
+          source_provision: <16A(1)>
+          is_exhaustive: <true>
+    - deontic_modality: PERMISSION
+      bearer: AUTO:organisation
+      action: AUTO:use%20or%20disclose
+      object: AUTO:government%20related%20identifier%20of%20an%20individual
+      conditions:
+        - statement: <The organisation reasonably believes that the use or 
+            disclosure of the identifier is reasonably necessary for one or more
+            enforcement related activities conducted by, or on behalf of, an 
+            enforcement body.>
+          source_provision: <Blank>
+    - deontic_modality: PERMISSION
+      bearer: AUTO:organisation
+      action: AUTO:use%20or%20disclose
+      object: AUTO:government%20related%20identifier%20of%20an%20individual
+      conditions:
+        - statement: <subclause 9.3 applies>
+          source_provision: <>
+        - statement: <in relation to the use or disclosure>
+          source_provision: <Blank>
+named_entities:
+  - id: AUTO:organisation
+    label: organisation
+    original_spans:
+      - 7:18
+      - 178:189
+      - 256:267
+      - 375:386
+      - 791:802
+      - 1142:1153
+  - id: AUTO:use%20or%20disclose
+    label: use or disclose
+    original_spans:
+      - 29:43
+  - id: AUTO:government%20related%20identifier%20of%20an%20individual
+    label: government related identifier of an individual
+    original_spans:
+      - 47:92

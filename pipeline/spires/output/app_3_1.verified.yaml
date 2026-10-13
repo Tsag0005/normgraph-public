@@ -1,0 +1,14 @@
+provision_id: '3.1'
+norms:
+- deontic_modality: PROHIBITION
+  bearer: AUTO:APP%20entity%20that%20is%20an%20agency
+  action: AUTO:collect
+  object: AUTO:personal%20information
+  scope_qualifier: (other than sensitive information)
+  exceptions:
+  - statement: unless the information is reasonably necessary for one or more of the entity's functions
+      or activities
+    verified: true
+  - statement: unless the information is directly related to one or more of the entity's functions or
+      activities
+    verified: true

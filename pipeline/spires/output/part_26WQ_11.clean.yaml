@@ -1,0 +1,9 @@
+provision_id: 26WQ(11)
+norms:
+- deontic_modality: PERMISSION
+  bearer: AUTO:the%20Commissioner
+  action: AUTO:extend%20the%20period%20specified
+  object: AUTO:in%20the%20declaration
+  conditions:
+  - statement: Notice of a paragraph (1)(d) declaration has been given to an entity.
+    source_provision: 1(d)

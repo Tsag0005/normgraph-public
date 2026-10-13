@@ -1,0 +1,8 @@
+provision_id: '7.1'
+norms:
+- deontic_modality: PROHIBITION
+  bearer: AUTO:organisation
+  action: AUTO:use%20or%20disclose
+  object: AUTO:personal%20information%20about%20an%20individual
+  conditions:
+  - statement: for the purpose of direct marketing

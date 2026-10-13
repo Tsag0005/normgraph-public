@@ -1,0 +1,32 @@
+provision_id: 26WF(2)
+norms:
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:APP%20entity%2C%20credit%20reporting%20body%2C%20credit%20provider%2C%20or%20file%20number%20recipient
+  action: AUTO:take%20steps%20to%20notify
+  object: AUTO:the%20individual%20of%20the%20contents%20of%20a%20statement%20that%20relates%20to%20the%20access%20or%20disclosure
+  conditions:
+  - statement: An access to, or disclosure of, information is covered by paragraph 26WE(2)(a).
+    source_provision: 26WE(2)(a)
+  - statement: The APP entity, credit reporting body, credit provider, or file number recipient takes
+      action in relation to the access or disclosure.
+  - statement: The APP entity, credit reporting body, credit provider, or file number recipient does so
+      before the access or disclosure results in serious harm to a particular individual to whom the information
+      relates.
+  - statement: As a result of the action, a reasonable person would conclude that the access or disclosure
+      would not be likely to result in serious harm to the individual.
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:any%20other%20entity
+  action: AUTO:take%20steps%20to%20notify
+  object: AUTO:the%20individual%20of%20the%20contents%20of%20a%20statement%20that%20relates%20to%20the%20access%20or%20disclosure
+  conditions:
+  - statement: An access to, or disclosure of, information is covered by paragraph 26WE(2)(a).
+    source_provision: 26WE(2)(a)
+  - statement: The APP entity, credit reporting body, credit provider or file number recipient, as the
+      case may be, takes action in relation to the access or disclosure.
+  - statement: The APP entity, credit reporting body, credit provider or file number recipient does so
+      before the access or disclosure results in serious harm to a particular individual to whom the information
+      relates.
+  - statement: a reasonable person would conclude that the access or disclosure would not be likely to
+      result in serious harm to the individual.
+cross_references:
+- 26WE(2)(a)

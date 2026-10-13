@@ -1,0 +1,6 @@
+provision_id: '3.2'
+norms:
+- deontic_modality: PROHIBITION
+  bearer: AUTO:entity
+  action: AUTO:collect
+  object: AUTO:personal%20information

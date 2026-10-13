@@ -1,0 +1,21 @@
+# The pipeline: statute in, knowledge graph out, Gherkin out.
+#
+# This is what `pip install -e .` needs and nothing more. It deliberately excludes the
+# EDC stack -- transformers, torch, sentence-transformers -- which only the `kg` control
+# arm uses; see requirements/evaluation.txt. Installing a test-case generator should not
+# install a sentence-transformer.
+#
+# Pinned to the versions this was built and measured against. Loosen deliberately, not by
+# omission: an unpinned neo4j or openai major version has broken this project before.
+
+neo4j==6.2.0
+openai==3.5.0
+python-dotenv==1.2.3
+pyyaml==6.0.3
+tiktoken==0.14.0
+
+# Routes TLS verification through the OS certificate store. Required behind a
+# TLS-inspecting proxy, where certifi does not trust the presented certificate and every
+# HTTPS call fails with CERTIFICATE_VERIFY_FAILED while curl works fine. Harmless
+# otherwise, so it is not optional.
+truststore==0.10.4

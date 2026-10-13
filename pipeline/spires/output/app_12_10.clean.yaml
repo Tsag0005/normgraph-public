@@ -1,0 +1,9 @@
+provision_id: '12.10'
+norms:
+- deontic_modality: PERMISSION
+  bearer: AUTO:APP%20entity
+  action: AUTO:refuse%20to%20give%20access
+  object: AUTO:personal%20information
+  conditions:
+  - statement: The APP entity refuses to give access to the personal information.
+    source_provision: 12.3(j)

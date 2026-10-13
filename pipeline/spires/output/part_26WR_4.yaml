@@ -1,0 +1,82 @@
+---
+input_text: |
+  26WR(4) (4) The statement referred to in paragraph (1)(a) must set out: (a) the identity and contact details of the entity; and (b) a description of the eligible data breach that the Commissioner has reasonable grounds to believe has happened; and (c) the particular kind or kinds of information concerned; and (d) recommendations about the steps that individuals should take in response to the eligible data breach that the Commissioner has reasonable grounds to believe has happened.
+raw_completion_output: |-
+  provision_id: 26WR(4)
+  norms: The statement referred to in paragraph (1)(a) must set out the identity and contact details of the entity; The statement referred to in paragraph (1)(a) must set out a description of the eligible data breach that the Commissioner has reasonable grounds to believe has happened; The statement referred to in paragraph (1)(a) must set out the particular kind or kinds of information concerned; The statement referred to in paragraph (1)(a) must set out recommendations about the steps that individuals should take in response to the eligible data breach that the Commissioner has reasonable grounds to believe has happened.
+  disapplies: 
+  cross_references: 26WR(1)(a)
+prompt: |+
+  From the text below, extract the following entities in the following format:
+
+  statement: <The condition in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this condition when the text points elsewhere for it, e.g. "4.3". Blank when the condition is stated here.>
+
+
+  Text:
+  the eligible data breach that the Commissioner has reasonable grounds to believe has happened
+
+  ===
+
+extracted_object:
+  provision_id: 26WR(4)
+  norms:
+    - deontic_modality: OBLIGATION
+      bearer: 
+        AUTO:The%20statement%20referred%20to%20in%20paragraph%20%281%29%28a%29
+      action: AUTO:set%20out
+      object: AUTO:the%20identity%20and%20contact%20details%20of%20the%20entity
+    - deontic_modality: OBLIGATION
+      bearer: 
+        AUTO:The%20statement%20referred%20to%20in%20paragraph%20%281%29%28a%29
+      action: AUTO:set%20out%20a%20description%20of
+      object: AUTO:the%20eligible%20data%20breach
+      conditions:
+        - statement: <The Commissioner has reasonable grounds to believe has 
+            happened.>
+          source_provision: <Blank>
+    - deontic_modality: OBLIGATION
+      bearer: 
+        AUTO:The%20statement%20referred%20to%20in%20paragraph%20%281%29%28a%29
+      action: AUTO:set%20out
+      object: 
+        AUTO:the%20particular%20kind%20or%20kinds%20of%20information%20concerned
+    - deontic_modality: OBLIGATION
+      bearer: 
+        AUTO:The%20statement%20referred%20to%20in%20paragraph%20%281%29%28a%29
+      action: AUTO:set%20out%20recommendations
+      object: AUTO:the%20steps%20that%20individuals%20should%20take
+      conditions:
+        - statement: <The eligible data breach that the Commissioner has 
+            reasonable grounds to believe has happened.>
+          source_provision: <Blank>
+named_entities:
+  - id: AUTO:The%20statement%20referred%20to%20in%20paragraph%20%281%29%28a%29
+    label: The statement referred to in paragraph (1)(a)
+    original_spans:
+      - 12:56
+  - id: AUTO:set%20out
+    label: set out
+    original_spans:
+      - 63:69
+  - id: AUTO:the%20identity%20and%20contact%20details%20of%20the%20entity
+    label: the identity and contact details of the entity
+    original_spans:
+      - 76:121
+  - id: AUTO:set%20out%20a%20description%20of
+    label: set out a description of
+  - id: AUTO:the%20eligible%20data%20breach
+    label: the eligible data breach
+    original_spans:
+      - 149:172
+      - 391:414
+  - id: AUTO:the%20particular%20kind%20or%20kinds%20of%20information%20concerned
+    label: the particular kind or kinds of information concerned
+    original_spans:
+      - 252:304
+  - id: AUTO:set%20out%20recommendations
+    label: set out recommendations
+  - id: AUTO:the%20steps%20that%20individuals%20should%20take
+    label: the steps that individuals should take
+    original_spans:
+      - 337:374

@@ -1,0 +1,43 @@
+---
+input_text: |
+  12.1 If an APP entity holds personal information about an individual, the entity must, on request by the individual, give the individual access to the information. Exception to access - agency
+raw_completion_output: |-
+  provision_id: 12.1  
+  norms: If an APP entity holds personal information about an individual, the entity must, on request by the individual, give the individual access to the information.  
+  disapplies:   
+  cross_references:   
+prompt: |+
+  Split the following piece of text into fields in the following format:
+
+  statement: <The condition in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this condition when the text points elsewhere for it, e.g. "4.3". Blank when the condition is stated here.>
+
+
+  Text:
+  on request by the individual
+
+  ===
+
+extracted_object:
+  provision_id: '12.1'
+  norms:
+    - deontic_modality: OBLIGATION
+      bearer: AUTO:APP%20entity
+      action: AUTO:give%20access
+      object: AUTO:the%20information
+      conditions:
+        - statement: <APP entity holds personal information about an individual>
+          source_provision: <Blank>
+        - statement: <on request by the individual>
+          source_provision: <Blank>
+named_entities:
+  - id: AUTO:APP%20entity
+    label: APP entity
+    original_spans:
+      - 11:20
+  - id: AUTO:give%20access
+    label: give access
+  - id: AUTO:the%20information
+    label: the information
+    original_spans:
+      - 147:161

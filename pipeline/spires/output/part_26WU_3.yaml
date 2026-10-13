@@ -1,0 +1,87 @@
+---
+input_text: |
+  26WU(3) (3) The Commissioner may give to the person or entity a written notice requiring the person or entity: (a) to give information of the kind specified in the notice to the Commissioner that relates to the matter; or (b) to produce documents of the kind specified in the notice to the Commissioner that relate to the matter; or (c) answer questions of the kind specified in the notice to the Commissioner that relate to the matter. Note: For a failure to give information etc., see section 66.
+raw_completion_output: |-
+  provision_id: 26WU(3)
+  norms: The Commissioner may give to the person or entity a written notice requiring the person or entity to give information of the kind specified in the notice to the Commissioner that relates to the matter; The Commissioner may give to the person or entity a written notice requiring the person or entity to produce documents of the kind specified in the notice to the Commissioner that relate to the matter; The Commissioner may give to the person or entity a written notice requiring the person or entity to answer questions of the kind specified in the notice to the Commissioner that relate to the matter.
+  disapplies: 
+  cross_references: section 66
+prompt: |+
+  Split the following piece of text into fields in the following format:
+
+  statement: <The condition in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this condition when the text points elsewhere for it, e.g. "4.3". Blank when the condition is stated here.>
+
+
+  Text:
+  that relate to the matter
+
+  ===
+
+extracted_object:
+  provision_id: 26WU(3)
+  norms:
+    - deontic_modality: PERMISSION
+      bearer: AUTO:The%20Commissioner
+      action: AUTO:give%20to%20the%20person%20or%20entity%20a%20written%20notice
+      object: AUTO:information%20of%20the%20kind%20specified%20in%20the%20notice
+      conditions:
+        - statement: <that relates to the matter>
+          source_provision: <Blank>
+    - deontic_modality: PERMISSION
+      bearer: AUTO:Commissioner
+      action: AUTO:give
+      object: 
+        AUTO:written%20notice%20requiring%20the%20person%20or%20entity%20to%20produce%20documents%20of%20the%20kind%20specified%20in%20the%20notice
+      conditions:
+        - statement: <that relate to the matter>
+          source_provision: <Blank>
+    - deontic_modality: PERMISSION
+      bearer: AUTO:Commissioner
+      action: 
+        AUTO:give%20a%20written%20notice%20requiring%20the%20person%20or%20entity%20to%20answer%20questions
+      object: AUTO:questions%20of%20the%20kind%20specified%20in%20the%20notice
+      conditions:
+        - statement: <that relate to the matter>
+          source_provision: <Blank>
+named_entities:
+  - id: AUTO:The%20Commissioner
+    label: The Commissioner
+    original_spans:
+      - 12:27
+      - 174:189
+      - 286:301
+      - 393:408
+  - id: AUTO:give%20to%20the%20person%20or%20entity%20a%20written%20notice
+    label: give to the person or entity a written notice
+    original_spans:
+      - 33:77
+  - id: AUTO:information%20of%20the%20kind%20specified%20in%20the%20notice
+    label: information of the kind specified in the notice
+    original_spans:
+      - 123:169
+  - id: AUTO:Commissioner
+    label: Commissioner
+    original_spans:
+      - 16:27
+      - 178:189
+      - 290:301
+      - 397:408
+  - id: AUTO:give
+    label: give
+    original_spans:
+      - 33:36
+      - 118:121
+      - 460:463
+  - id: 
+      AUTO:written%20notice%20requiring%20the%20person%20or%20entity%20to%20produce%20documents%20of%20the%20kind%20specified%20in%20the%20notice
+    label: written notice requiring the person or entity to produce documents of
+      the kind specified in the notice
+  - id: 
+      AUTO:give%20a%20written%20notice%20requiring%20the%20person%20or%20entity%20to%20answer%20questions
+    label: give a written notice requiring the person or entity to answer 
+      questions
+  - id: AUTO:questions%20of%20the%20kind%20specified%20in%20the%20notice
+    label: questions of the kind specified in the notice
+    original_spans:
+      - 344:388

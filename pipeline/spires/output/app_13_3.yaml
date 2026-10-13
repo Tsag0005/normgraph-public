@@ -1,0 +1,76 @@
+---
+input_text: |
+  13.3 If the APP entity refuses to correct the personal information as requested by the individual, the entity must give the individual a written notice that sets out: (a) the reasons for the refusal except to the extent that it would be unreasonable to do so; and (b) the mechanisms available to complain about the refusal; and (c) any other matter prescribed by the regulations. Request to associate a statement
+raw_completion_output: |-
+  provision_id: 13.3  
+  norms: The APP entity must give the individual a written notice that sets out the reasons for the refusal except to the extent that it would be unreasonable to do so if the APP entity refuses to correct the personal information as requested by the individual; The APP entity must give the individual a written notice that sets out the mechanisms available to complain about the refusal if the APP entity refuses to correct the personal information as requested by the individual; The APP entity must give the individual a written notice that sets out any other matter prescribed by the regulations if the APP entity refuses to correct the personal information as requested by the individual.  
+  disapplies:   
+  cross_references:  
+prompt: |+
+  From the text below, extract the following entities in the following format:
+
+  statement: <The condition in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this condition when the text points elsewhere for it, e.g. "4.3". Blank when the condition is stated here.>
+
+
+  Text:
+  if the APP entity refuses to correct the personal information as requested by the individual
+
+  ===
+
+extracted_object:
+  provision_id: '13.3'
+  norms:
+    - deontic_modality: OBLIGATION
+      bearer: AUTO:APP%20entity
+      action: AUTO:give
+      object: 
+        AUTO:the%20individual%20a%20written%20notice%20that%20sets%20out%20the%20reasons%20for%20the%20refusal
+      conditions:
+        - statement: <The APP entity refuses to correct the personal information
+            as requested by the individual.>
+          source_provision: <Blank>
+      exceptions:
+        - statement: <to the extent that it would be unreasonable to do so>
+          source_provision: <>
+          is_exhaustive: <>
+    - deontic_modality: OBLIGATION
+      bearer: AUTO:APP%20entity
+      action: AUTO:give
+      object: 
+        AUTO:a%20written%20notice%20that%20sets%20out%20the%20mechanisms%20available%20to%20complain%20about%20the%20refusal
+      conditions:
+        - statement: <the APP entity refuses to correct the personal 
+            information>
+          source_provision: <Blank>
+        - statement: as requested by the individual
+    - deontic_modality: OBLIGATION
+      bearer: AUTO:APP%20entity
+      action: AUTO:give
+      object: 
+        AUTO:a%20written%20notice%20that%20sets%20out%20any%20other%20matter%20prescribed%20by%20the%20regulations
+      conditions:
+        - statement: <The APP entity refuses to correct the personal information
+            as requested by the individual.>
+          source_provision: <Blank>
+named_entities:
+  - id: AUTO:APP%20entity
+    label: APP entity
+    original_spans:
+      - 12:21
+  - id: AUTO:give
+    label: give
+    original_spans:
+      - 115:118
+  - id: 
+      AUTO:the%20individual%20a%20written%20notice%20that%20sets%20out%20the%20reasons%20for%20the%20refusal
+    label: the individual a written notice that sets out the reasons for the 
+      refusal
+  - id: 
+      AUTO:a%20written%20notice%20that%20sets%20out%20the%20mechanisms%20available%20to%20complain%20about%20the%20refusal
+    label: a written notice that sets out the mechanisms available to complain 
+      about the refusal
+  - id: 
+      AUTO:a%20written%20notice%20that%20sets%20out%20any%20other%20matter%20prescribed%20by%20the%20regulations
+    label: a written notice that sets out any other matter prescribed by the 
+      regulations

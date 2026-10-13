@@ -1,0 +1,44 @@
+---
+input_text: |
+  26WQ(11) (11) If notice of a paragraph (1)(d) declaration has been given to an entity, the Commissioner may, by written notice given to the entity, extend the period specified in the declaration.
+raw_completion_output: |-
+  provision_id: 26WQ(11)  
+  norms: If notice of a paragraph (1)(d) declaration has been given to an entity, the Commissioner may extend the period specified in the declaration by written notice given to the entity.  
+  disapplies:   
+  cross_references: 26WQ(1)(d)  
+prompt: |+
+  From the text below, extract the following entities in the following format:
+
+  statement: <The condition in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this condition when the text points elsewhere for it, e.g. "4.3". Blank when the condition is stated here.>
+
+
+  Text:
+  notice of a paragraph (1)(d) declaration has been given to an entity
+
+  ===
+
+extracted_object:
+  provision_id: 26WQ(11)
+  norms:
+    - deontic_modality: PERMISSION
+      bearer: AUTO:the%20Commissioner
+      action: AUTO:extend%20the%20period%20specified
+      object: AUTO:in%20the%20declaration
+      conditions:
+        - statement: <Notice of a paragraph (1)(d) declaration has been given to
+            an entity.>
+          source_provision: <1(d)>
+named_entities:
+  - id: AUTO:the%20Commissioner
+    label: the Commissioner
+    original_spans:
+      - 87:102
+  - id: AUTO:extend%20the%20period%20specified
+    label: extend the period specified
+    original_spans:
+      - 148:174
+  - id: AUTO:in%20the%20declaration
+    label: in the declaration
+    original_spans:
+      - 176:193

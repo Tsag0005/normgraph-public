@@ -1,0 +1,5 @@
+provision_id: 26WD
+norms:
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:This%20Part
+  action: AUTO:apply

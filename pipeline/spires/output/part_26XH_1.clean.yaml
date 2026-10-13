@@ -1,0 +1,9 @@
+provision_id: 26XH(1)
+norms:
+- deontic_modality: OBLIGATION
+  bearer: AUTO:Commonwealth
+  action: AUTO:pay
+  object: AUTO:a%20reasonable%20amount%20of%20compensation
+  conditions:
+  - statement: The operation of this Division would result in an acquisition of property from a person
+      otherwise than on just terms.

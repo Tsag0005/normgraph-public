@@ -1,0 +1,6 @@
+provision_id: '3.5'
+norms:
+- deontic_modality: OBLIGATION
+  bearer: AUTO:APP%20entity
+  action: AUTO:collect
+  object: AUTO:personal%20information

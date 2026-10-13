@@ -1,0 +1,6 @@
+provision_id: '9.1'
+norms:
+- deontic_modality: PROHIBITION
+  bearer: AUTO:organisation
+  action: AUTO:adopt
+  object: AUTO:government%20related%20identifier%20of%20an%20individual%20as%20its%20own%20identifier%20of%20the%20individual

@@ -1,0 +1,52 @@
+---
+input_text: |
+  12.7 If the APP entity is an agency, the entity must not charge the individual for the making of the request or for giving access to the personal information.
+raw_completion_output: |-
+  provision_id: 12.7  
+  norms: If the APP entity is an agency, the entity must not charge the individual for the making of the request; If the APP entity is an agency, the entity must not charge the individual for giving access to the personal information.  
+  disapplies:   
+  cross_references:
+prompt: |+
+  Split the following piece of text into fields in the following format:
+
+  statement: <The condition in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this condition when the text points elsewhere for it, e.g. "4.3". Blank when the condition is stated here.>
+
+
+  Text:
+  APP entity is an agency
+
+  ===
+
+extracted_object:
+  provision_id: '12.7'
+  norms:
+    - deontic_modality: PROHIBITION
+      bearer: AUTO:APP%20entity
+      action: AUTO:charge
+      object: AUTO:the%20individual%20for%20the%20making%20of%20the%20request
+      conditions:
+        - statement: APP entity is an agency
+    - deontic_modality: PROHIBITION
+      bearer: AUTO:APP%20entity
+      action: AUTO:charge
+      object: AUTO:individual
+      conditions:
+        - statement: APP entity is an agency
+named_entities:
+  - id: AUTO:APP%20entity
+    label: APP entity
+    original_spans:
+      - 12:21
+  - id: AUTO:charge
+    label: charge
+    original_spans:
+      - 57:62
+  - id: AUTO:the%20individual%20for%20the%20making%20of%20the%20request
+    label: the individual for the making of the request
+    original_spans:
+      - 64:107
+  - id: AUTO:individual
+    label: individual
+    original_spans:
+      - 68:77

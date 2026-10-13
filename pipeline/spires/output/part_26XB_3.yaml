@@ -1,0 +1,44 @@
+---
+input_text: |
+  26XB(3) (3) An entity is not liable to any proceedings for contravening a duty of confidence in respect of a disclosure of personal information authorised by subsection (1).
+raw_completion_output: |-
+  provision_id: 26XB(3)  
+  norms: An entity is not liable to any proceedings for contravening a duty of confidence in respect of a disclosure of personal information authorised by subsection (1).  
+  disapplies:   
+  cross_references: 26XB(1)  
+prompt: |+
+  From the text below, extract the following entities in the following format:
+
+  statement: <The condition in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this condition when the text points elsewhere for it, e.g. "4.3". Blank when the condition is stated here.>
+
+
+  Text:
+  disclosure of personal information is authorised by subsection (1)
+
+  ===
+
+extracted_object:
+  provision_id: 26XB(3)
+  norms:
+    - deontic_modality: DISAPPLICATION
+      bearer: AUTO:entity
+      action: AUTO:be%20liable%20to%20any%20proceedings
+      object: 
+        AUTO:duty%20of%20confidence%20in%20respect%20of%20a%20disclosure%20of%20personal%20information
+      conditions:
+        - statement: <Disclosure of personal information is authorised by 
+            subsection (1).>
+          source_provision: <Blank>
+named_entities:
+  - id: AUTO:entity
+    label: entity
+    original_spans:
+      - 15:20
+  - id: AUTO:be%20liable%20to%20any%20proceedings
+    label: be liable to any proceedings
+  - id: 
+      AUTO:duty%20of%20confidence%20in%20respect%20of%20a%20disclosure%20of%20personal%20information
+    label: duty of confidence in respect of a disclosure of personal information
+    original_spans:
+      - 74:142

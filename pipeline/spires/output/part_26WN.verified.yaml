@@ -1,0 +1,11 @@
+provision_id: 26WN
+norms:
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:Paragraph%2026WK%283%29%28d%29%20and%20section%2026WL
+  action: AUTO:do%20not%20apply
+disapplies:
+- 26WK(3)(d)
+- 26WL
+cross_references:
+- 26WL
+- 26WK(3)(d)

@@ -1,0 +1,6 @@
+provision_id: 26XD(2)
+norms:
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:entity
+  action: AUTO:collect%2C%20use%20or%20disclose
+  object: AUTO:personal%20information

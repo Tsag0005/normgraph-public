@@ -1,0 +1,69 @@
+---
+input_text: |
+  12.2 If: (a) the APP entity is an agency; and (b) the entity is required or authorised to refuse to give the individual access to the personal information by or under: (i) the Freedom of Information Act; or (ii) any other Act of the Commonwealth, or a law in force in an external Territory, that provides for access by persons to documents; then, despite subclause 12.1, the entity is not required to give access to the extent that the entity is required or authorised to refuse to give access. Exception to access - organisation
+raw_completion_output: |-
+  provision_id: 12.2  
+  norms: Subclause 12.1 does not apply if the APP entity is an agency and it is required or authorised to refuse to give the individual access to the personal information by or under the Freedom of Information Act; Subclause 12.1 does not apply if the APP entity is an agency and it is required or authorised to refuse to give the individual access to the personal information by or under any other Act of the Commonwealth, or a law in force in an external Territory, that provides for access by persons to documents.  
+  disapplies: 12.1  
+  cross_references: 12.1; Freedom of Information Act  
+prompt: |+
+  Split the following piece of text into fields in the following format:
+
+  statement: <The condition in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this condition when the text points elsewhere for it, e.g. "4.3". Blank when the condition is stated here.>
+
+
+  Text:
+  law provides for access by persons to documents
+
+  ===
+
+extracted_object:
+  provision_id: '12.2'
+  norms:
+    - deontic_modality: DISAPPLICATION
+      bearer: AUTO:APP%20entity
+      action: AUTO:give%20access
+      object: AUTO:personal%20information
+      conditions:
+        - statement: APP entity is an agency
+      exceptions:
+        - statement: <APP entity is required or authorised to refuse by or under
+            the Freedom of Information Act.>
+          source_provision: <Blank>
+          is_exhaustive: <Blank>
+    - deontic_modality: DISAPPLICATION
+      bearer: AUTO:APP%20entity
+      action: AUTO:give%20access%20to
+      object: AUTO:personal%20information
+      conditions:
+        - statement: APP entity is an agency
+        - statement: <APP entity is required or authorised by or under any other
+            Act of the Commonwealth, or a law in force in an external Territory,
+            to refuse access.>
+          source_provision: <Blank>
+        - statement: <law provides for access by persons to documents>
+          source_provision: <Blank>
+  disapplies:
+    - '12.1'
+  cross_references:
+    - '12.1'
+    - Freedom of Information Act
+named_entities:
+  - id: AUTO:APP%20entity
+    label: APP entity
+    original_spans:
+      - 17:26
+  - id: AUTO:give%20access
+    label: give access
+    original_spans:
+      - 401:411
+      - 482:492
+  - id: AUTO:personal%20information
+    label: personal information
+    original_spans:
+      - 134:153
+  - id: AUTO:give%20access%20to
+    label: give access to
+    original_spans:
+      - 401:414

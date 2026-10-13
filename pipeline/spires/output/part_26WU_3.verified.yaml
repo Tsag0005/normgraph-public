@@ -1,0 +1,20 @@
+provision_id: 26WU(3)
+norms:
+- deontic_modality: PERMISSION
+  bearer: AUTO:The%20Commissioner
+  action: AUTO:give%20to%20the%20person%20or%20entity%20a%20written%20notice
+  object: AUTO:information%20of%20the%20kind%20specified%20in%20the%20notice
+  conditions:
+  - statement: that relates to the matter
+- deontic_modality: PERMISSION
+  bearer: AUTO:Commissioner
+  action: AUTO:give
+  object: AUTO:written%20notice%20requiring%20the%20person%20or%20entity%20to%20produce%20documents%20of%20the%20kind%20specified%20in%20the%20notice
+  conditions:
+  - statement: that relate to the matter
+- deontic_modality: PERMISSION
+  bearer: AUTO:Commissioner
+  action: AUTO:give%20a%20written%20notice%20requiring%20the%20person%20or%20entity%20to%20answer%20questions
+  object: AUTO:questions%20of%20the%20kind%20specified%20in%20the%20notice
+  conditions:
+  - statement: that relate to the matter

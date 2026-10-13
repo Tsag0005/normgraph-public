@@ -1,0 +1,69 @@
+---
+input_text: |
+  12.4 The APP entity must: (a) respond to the request for access to the personal information: (i) if the entity is an agency - within 30 days after the request is made; or (ii) if the entity is an organisation - within a reasonable period after the request is made; and (b) give access to the information in the manner requested by the individual, if it is reasonable and practicable to do so. Other means of access
+raw_completion_output: |-
+  provision_id: 12.4  
+  norms: The APP entity must respond to the request for access to the personal information if the entity is an agency within 30 days after the request is made; The APP entity must respond to the request for access to the personal information if the entity is an organisation within a reasonable period after the request is made; The APP entity must give access to the information in the manner requested by the individual if it is reasonable and practicable to do so.  
+  disapplies:   
+  cross_references:
+prompt: |+
+  Split the following piece of text into fields in the following format:
+
+  statement: <The condition in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this condition when the text points elsewhere for it, e.g. "4.3". Blank when the condition is stated here.>
+
+
+  Text:
+  it is reasonable and practicable to do so
+
+  ===
+
+extracted_object:
+  provision_id: '12.4'
+  norms:
+    - deontic_modality: OBLIGATION
+      bearer: AUTO:APP%20entity
+      action: AUTO:respond%20to%20the%20request%20for%20access
+      object: AUTO:personal%20information
+      conditions:
+        - statement: The entity is an agency.
+        - statement: <the request for access to the personal information>
+          source_provision: <Blank>
+    - deontic_modality: OBLIGATION
+      bearer: AUTO:APP%20entity
+      action: AUTO:respond%20to%20the%20request%20for%20access
+      object: AUTO:personal%20information
+      conditions:
+        - statement: The entity is an organisation.
+        - statement: <the request is made>
+          source_provision: <Blank>
+    - deontic_modality: OBLIGATION
+      bearer: AUTO:APP%20entity
+      action: AUTO:give%20access
+      object: AUTO:the%20information
+      conditions:
+        - statement: <the individual requests access in a certain manner>
+          source_provision: <Blank>
+        - statement: <it is reasonable and practicable to do so>
+          source_provision: <Blank>
+named_entities:
+  - id: AUTO:APP%20entity
+    label: APP entity
+    original_spans:
+      - 9:18
+  - id: AUTO:respond%20to%20the%20request%20for%20access
+    label: respond to the request for access
+    original_spans:
+      - 30:62
+  - id: AUTO:personal%20information
+    label: personal information
+    original_spans:
+      - 71:90
+  - id: AUTO:give%20access
+    label: give access
+    original_spans:
+      - 273:283
+  - id: AUTO:the%20information
+    label: the information
+    original_spans:
+      - 288:302

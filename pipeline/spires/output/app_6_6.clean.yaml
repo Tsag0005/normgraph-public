@@ -1,0 +1,9 @@
+provision_id: '6.6'
+norms:
+- deontic_modality: NONE
+  bearer: AUTO:APP%20entity
+  action: AUTO:%5BThis%20principle%5D%20applies
+  object: AUTO:the%20collection%20of%20the%20information
+  conditions:
+  - statement: an APP entity is a body corporate
+  - statement: The entity collects personal information from a related body corporate.

@@ -1,0 +1,10 @@
+provision_id: 26WK(4)
+norms:
+- deontic_modality: PERMISSION
+  bearer: AUTO:the%20entity
+  action: AUTO:set%20out
+  object: AUTO:the%20identity%20and%20contact%20details%20of%20other%20entities
+  conditions:
+  - statement: The entity has reasonable grounds to believe that the access, disclosure, or loss that
+      constituted the eligible data breach of the entity is an eligible data breach of one or more other
+      entities.

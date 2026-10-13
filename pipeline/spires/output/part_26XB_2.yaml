@@ -1,0 +1,53 @@
+---
+input_text: |
+  26XB(2) (2) An entity is not liable to any proceedings for contravening a secrecy provision in respect of a use or disclosure of personal information authorised by subsection (1) unless the secrecy provision is a designated secrecy provision (see subsection (6)).
+raw_completion_output: |-
+  provision_id: 26XB(2)  
+  norms: An entity is not liable to any proceedings for contravening a secrecy provision in respect of a use or disclosure of personal information authorised by subsection (1) unless the secrecy provision is a designated secrecy provision.  
+  disapplies:   
+  cross_references: 26XB(1); 26XB(6)  
+prompt: |+
+  From the text below, extract the following entities in the following format:
+
+  statement: <The exception in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this exception, written as the text writes it. Blank when the exception is stated here in full.>
+  is_exhaustive: <"true" if the text signals these are the only exceptions, otherwise blank.>
+
+
+  Text:
+  unless the secrecy provision is a designated secrecy provision
+
+  ===
+
+extracted_object:
+  provision_id: 26XB(2)
+  norms:
+    - deontic_modality: DISAPPLICATION
+      bearer: AUTO:entity
+      action: AUTO:contravening
+      object: 
+        AUTO:a%20secrecy%20provision%20in%20respect%20of%20a%20use%20or%20disclosure%20of%20personal%20information
+      conditions:
+        - statement: <use or disclosure of personal information authorised by 
+            subsection (1)>
+          source_provision: <(1)>
+      exceptions:
+        - statement: <unless the secrecy provision is a designated secrecy 
+            provision>
+          source_provision: <>
+          is_exhaustive: <>
+named_entities:
+  - id: AUTO:entity
+    label: entity
+    original_spans:
+      - 15:20
+  - id: AUTO:contravening
+    label: contravening
+    original_spans:
+      - 59:70
+  - id: 
+      AUTO:a%20secrecy%20provision%20in%20respect%20of%20a%20use%20or%20disclosure%20of%20personal%20information
+    label: a secrecy provision in respect of a use or disclosure of personal 
+      information
+    original_spans:
+      - 72:148

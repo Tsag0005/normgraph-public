@@ -1,0 +1,5 @@
+provision_id: 26WE(3)
+norms:
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:Subsection%20%282%29
+  action: AUTO:has%20effect

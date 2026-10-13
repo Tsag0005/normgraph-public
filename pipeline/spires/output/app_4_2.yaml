@@ -1,0 +1,43 @@
+---
+input_text: |
+  4.2 The APP entity may use or disclose the personal information for the purposes of making the determination under subclause 4.1.
+raw_completion_output: |-
+  provision_id: 4.2  
+  norms: The APP entity may use or disclose the personal information for the purposes of making the determination under subclause 4.1.  
+  disapplies:   
+  cross_references: 4.1  
+prompt: |+
+  From the text below, extract the following entities in the following format:
+
+  statement: <The condition in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this condition when the text points elsewhere for it, e.g. "4.3". Blank when the condition is stated here.>
+
+
+  Text:
+  for the purposes of making the determination under subclause 4.1
+
+  ===
+
+extracted_object:
+  provision_id: '4.2'
+  norms:
+    - deontic_modality: PERMISSION
+      bearer: AUTO:APP%20entity
+      action: AUTO:use%20or%20disclose
+      object: AUTO:personal%20information
+      conditions:
+        - statement: <for the purposes of making the determination>
+          source_provision: <4.1>
+named_entities:
+  - id: AUTO:APP%20entity
+    label: APP entity
+    original_spans:
+      - 8:17
+  - id: AUTO:use%20or%20disclose
+    label: use or disclose
+    original_spans:
+      - 23:37
+  - id: AUTO:personal%20information
+    label: personal information
+    original_spans:
+      - 43:62

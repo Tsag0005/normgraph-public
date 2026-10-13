@@ -1,0 +1,8 @@
+provision_id: 26WR(1)
+norms:
+- deontic_modality: PERMISSION
+  bearer: AUTO:Commissioner
+  action: AUTO:direct%20the%20entity%20to%20prepare%20a%20statement%20that%20complies%20with%20subsection%20%284%29
+- deontic_modality: PERMISSION
+  bearer: AUTO:entity
+  action: AUTO:give%20a%20copy%20of%20the%20statement

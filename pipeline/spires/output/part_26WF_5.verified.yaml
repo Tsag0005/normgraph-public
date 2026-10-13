@@ -1,0 +1,27 @@
+provision_id: 26WF(5)
+norms:
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:APP%20entity%2C%20credit%20reporting%20body%2C%20credit%20provider%20or%20file%20number%20recipient
+  action: AUTO:take%20steps%20to%20notify
+  object: AUTO:individual%20of%20the%20contents%20of%20a%20statement%20that%20relates%20to%20the%20loss
+  conditions:
+  - statement: loss of information is covered
+    source_provision: 26WE(2)(b)
+  - statement: entity takes action in relation to the loss after there is unauthorised access to, or unauthorised
+      disclosure of, the information and before the access or disclosure results in serious harm
+  - statement: a reasonable person would conclude that the access or disclosure would not be likely to
+      result in serious harm.
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:any%20other%20entity
+  action: AUTO:take%20steps%20to%20notify%20the%20individual%20of%20the%20contents%20of%20a%20statement
+  object: AUTO:a%20statement%20that%20relates%20to%20the%20loss
+  conditions:
+  - statement: a loss of information is covered
+    source_provision: 26WE(2)(b)
+  - statement: The entity takes action in relation to the loss after there is unauthorised access to,
+      or unauthorised disclosure of, the information and before the access or disclosure results in serious
+      harm.
+  - statement: a reasonable person would conclude that the access or disclosure would not be likely to
+      result in serious harm.
+cross_references:
+- 26WE(2)(b)

@@ -1,0 +1,71 @@
+provision_id: '8.2'
+norms:
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:APP%20entity
+  action: AUTO:disclose
+  object: AUTO:personal%20information%20about%20an%20individual
+  conditions:
+  - statement: The entity reasonably believes that the recipient of the information is subject to a law,
+      or binding scheme, that has the effect of protecting the information in a way that, overall, is
+      at least substantially similar to the way in which the Australian Privacy Principles protect the
+      information.
+  - statement: The individual can access mechanisms to take action to enforce the protection of the law
+      or binding scheme.
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:APP%20entity
+  action: AUTO:disclose
+  object: AUTO:personal%20information%20about%20an%20individual
+  conditions:
+  - statement: Subclause 8.3 applies in relation to the disclosure of the information.
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:APP%20entity
+  action: AUTO:disclose
+  object: AUTO:personal%20information%20about%20an%20individual
+  conditions:
+  - statement: both of the following apply
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:APP%20entity
+  action: AUTO:disclose
+  object: AUTO:personal%20information%20about%20an%20individual
+  conditions:
+  - statement: Disclosure of personal information about an individual by an APP entity to the overseas
+      recipient.
+  exceptions:
+  - statement: Disclosure of the information is required or authorised by or under an Australian law or
+      a court/tribunal order.
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:APP%20entity
+  action: AUTO:disclose
+  object: AUTO:personal%20information%20about%20an%20individual
+  scope_qualifier: to the overseas recipient
+  conditions:
+  - statement: A permitted general situation exists in relation to the disclosure of the information by
+      the APP entity.
+  exceptions:
+  - statement: the situation referred to in item 4 or 5 of the table in subsection 16A(1)
+    source_provision: 16A(1)
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:APP%20entity
+  action: AUTO:disclose
+  object: AUTO:personal%20information%20about%20an%20individual
+  conditions:
+  - statement: entity is an agency
+  - statement: Disclosure of the information is required or authorised by or under an international agreement
+      relating to information sharing to which Australia is a party.
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:APP%20entity
+  action: AUTO:disclose
+  object: AUTO:personal%20information%20about%20an%20individual%20to%20the%20overseas%20recipient
+  conditions:
+  - statement: 'The entity is an agency and both of the following apply: the entity reasonably believes
+      that the disclosure of the information is reasonably necessary for one or more enforcement related
+      activities conducted by, or on behalf of, an enforcement body and the recipient is a body that performs
+      functions, or exercises powers, that are similar to those performed or exercised by an enforcement
+      body.'
+disapplies:
+- '8.1'
+cross_references:
+- '8.1'
+- '8.3'
+- section 16A
+- subsection 16A(1)

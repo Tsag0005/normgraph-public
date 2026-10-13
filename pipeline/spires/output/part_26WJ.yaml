@@ -1,0 +1,45 @@
+---
+input_text: |
+  26WJ Exception - eligible data breaches of other entities If: (a) an entity complies with section 26WH in relation to an eligible data breach of the entity; and (b) the access, disclosure or loss that constituted the eligible data breach of the entity is an eligible data breach of one or more other entities; that section does not apply in relation to those eligible data breaches of those other entities.
+raw_completion_output: |-
+  provision_id: 26WJ  
+  norms: Section 26WH does not apply in relation to eligible data breaches of other entities if an entity complies with section 26WH in relation to an eligible data breach of the entity and the access, disclosure, or loss that constituted the eligible data breach of the entity is an eligible data breach of one or more other entities.  
+  disapplies: 26WH  
+  cross_references: 26WH  
+prompt: |+
+  From the text below, extract the following entities in the following format:
+
+  statement: <The exception in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this exception, written as the text writes it. Blank when the exception is stated here in full.>
+  is_exhaustive: <"true" if the text signals these are the only exceptions, otherwise blank.>
+
+
+  Text:
+  if an entity complies with section 26WH in relation to an eligible data breach of the entity and the access, disclosure, or loss that constituted the eligible data breach of the entity is an eligible data breach of one or more other entities
+
+  ===
+
+extracted_object:
+  provision_id: 26WJ
+  norms:
+    - deontic_modality: DISAPPLICATION
+      bearer: AUTO:Section%2026WH
+      action: AUTO:apply
+      exceptions:
+        - statement: <If an entity complies with section 26WH in relation to an 
+            eligible data breach of the entity.>
+          source_provision: <Blank>
+          is_exhaustive: <Blank>
+  disapplies:
+    - 26WH
+  cross_references:
+    - 26WH
+named_entities:
+  - id: AUTO:Section%2026WH
+    label: Section 26WH
+    original_spans:
+      - 90:101
+  - id: AUTO:apply
+    label: apply
+    original_spans:
+      - 332:336

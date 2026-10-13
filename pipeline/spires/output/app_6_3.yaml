@@ -1,0 +1,68 @@
+---
+input_text: |
+  6.3 This subclause applies in relation to the disclosure of personal information about an individual by an APP entity that is an agency if: (a) the agency is not an enforcement body; and (b) the information is biometric information or biometric templates; and (c) the recipient of the information is an enforcement body; and (d) the disclosure is conducted in accordance with the guidelines made by the Commissioner for the purposes of this paragraph.
+raw_completion_output: |-
+  provision_id: 6.3  
+  norms: This subclause applies in relation to the disclosure of personal information about an individual by an APP entity that is an agency if the agency is not an enforcement body; This subclause applies in relation to the disclosure of personal information about an individual by an APP entity that is an agency if the information is biometric information or biometric templates; This subclause applies in relation to the disclosure of personal information about an individual by an APP entity that is an agency if the recipient of the information is an enforcement body; This subclause applies in relation to the disclosure of personal information about an individual by an APP entity that is an agency if the disclosure is conducted in accordance with the guidelines made by the Commissioner for the purposes of this paragraph.  
+  disapplies:   
+  cross_references:   
+prompt: |+
+  From the text below, extract the following entities in the following format:
+
+  statement: <The condition in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this condition when the text points elsewhere for it, e.g. "4.3". Blank when the condition is stated here.>
+
+
+  Text:
+  the disclosure is conducted in accordance with the guidelines made by the Commissioner for the purposes of this paragraph
+
+  ===
+
+extracted_object:
+  provision_id: '6.3'
+  norms:
+    - deontic_modality: NONE
+      bearer: AUTO:APP%20entity%20that%20is%20an%20agency
+      action: AUTO:disclosure
+      object: AUTO:personal%20information%20about%20an%20individual
+      conditions:
+        - statement: <the agency is not an enforcement body>
+          source_provision: <Blank>
+    - deontic_modality: NONE
+      bearer: AUTO:APP%20entity%20that%20is%20an%20agency
+      action: AUTO:disclosure
+      object: AUTO:personal%20information%20about%20an%20individual
+      conditions:
+        - statement: information is biometric information or biometric templates
+    - deontic_modality: NONE
+      bearer: AUTO:APP%20entity%20that%20is%20an%20agency
+      action: AUTO:disclosure
+      object: AUTO:personal%20information%20about%20an%20individual
+      conditions:
+        - statement: <recipient of the information is an enforcement body>
+          source_provision: <Blank>
+    - deontic_modality: NONE
+      bearer: AUTO:APP%20entity%20that%20is%20an%20agency
+      action: AUTO:disclose
+      object: AUTO:personal%20information%20about%20an%20individual
+      conditions:
+        - statement: <The disclosure is conducted in accordance with the 
+            guidelines made by the Commissioner for the purposes of this 
+            paragraph.>
+          source_provision: <Blank>
+named_entities:
+  - id: AUTO:APP%20entity%20that%20is%20an%20agency
+    label: APP entity that is an agency
+    original_spans:
+      - 107:134
+  - id: AUTO:disclosure
+    label: disclosure
+    original_spans:
+      - 46:55
+      - 333:342
+  - id: AUTO:personal%20information%20about%20an%20individual
+    label: personal information about an individual
+    original_spans:
+      - 60:99
+  - id: AUTO:disclose
+    label: disclose

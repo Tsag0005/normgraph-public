@@ -1,0 +1,98 @@
+---
+input_text: |
+  7.7 If an individual makes a request under subclause 7.6, the first organisation must not charge the individual for the making of, or to give effect to, the request and: (a) if the request is of a kind referred to in paragraph 7.6(c) or (d) - the first organisation must give effect to the request within a reasonable period after the request is made; and (b) if the request is of a kind referred to in paragraph 7.6(e) - the organisation must, within a reasonable period after the request is made, notify the individual of its source unless it is impracticable or unreasonable to do so. Interaction with other legislation
+raw_completion_output: |-
+  provision_id: 7.7  
+  norms: If an individual makes a request under subclause 7.6, the first organisation must not charge the individual for the making of, or to give effect to, the request; If an individual makes a request under subclause 7.6 and the request is of a kind referred to in paragraph 7.6(c) or (d), the first organisation must give effect to the request within a reasonable period after the request is made; If an individual makes a request under subclause 7.6 and the request is of a kind referred to in paragraph 7.6(e), the organisation must, within a reasonable period after the request is made, notify the individual of its source unless it is impracticable or unreasonable to do so.  
+  disapplies:   
+  cross_references: 7.6; 7.6(c); 7.6(d); 7.6(e)  
+prompt: |+
+  Split the following piece of text into fields in the following format:
+
+  statement: <The exception in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this exception, e.g. "6.2" or "6.2(b)". Blank when the exception is stated here in full.>
+  is_exhaustive: <"true" if the text signals these are the only exceptions, otherwise blank.>
+
+
+  Text:
+  unless it is impracticable or unreasonable to do so
+
+  ===
+
+extracted_object:
+  provision_id: '7.7'
+  norms:
+    - deontic_modality: PROHIBITION
+      bearer: AUTO:first%20organisation
+      action: AUTO:charge
+      object: AUTO:the%20individual
+      conditions:
+        - statement: \<individual makes a request\>
+          source_provision: \<7.6\>
+    - deontic_modality: OBLIGATION
+      bearer: AUTO:first%20organisation
+      action: AUTO:give%20effect%20to%20the%20request
+      object: AUTO:request
+      conditions:
+        - statement: \<individual makes a request\>
+          source_provision: \<7.6\>
+        - statement: <request is of a kind referred to in paragraph 7.6(c) or 
+            (d)>
+          source_provision: <7.6>
+    - deontic_modality: OBLIGATION
+      bearer: AUTO:organisation
+      action: AUTO:notify
+      object: AUTO:individual%20of%20its%20source
+      conditions:
+        - statement: <an individual makes a request>
+          source_provision: <7.6>
+        - statement: <The request is of a kind referred to in paragraph 7.6(e).>
+          source_provision: <7.6(e)>
+      exceptions:
+        - statement: <unless it is impracticable or unreasonable to do so>
+          source_provision: <>
+          is_exhaustive: <>
+      scope_qualifier: within a reasonable period after the request is made
+named_entities:
+  - id: AUTO:first%20organisation
+    label: first organisation
+    original_spans:
+      - 62:79
+      - 247:264
+  - id: AUTO:charge
+    label: charge
+    original_spans:
+      - 90:95
+  - id: AUTO:the%20individual
+    label: the individual
+    original_spans:
+      - 97:110
+      - 506:519
+  - id: AUTO:give%20effect%20to%20the%20request
+    label: give effect to the request
+    original_spans:
+      - 271:296
+  - id: AUTO:request
+    label: request
+    original_spans:
+      - 29:35
+      - 157:163
+      - 181:187
+      - 290:296
+      - 335:341
+      - 367:373
+      - 482:488
+  - id: AUTO:organisation
+    label: organisation
+    original_spans:
+      - 68:79
+      - 253:264
+      - 426:437
+  - id: AUTO:notify
+    label: notify
+    original_spans:
+      - 499:504
+  - id: AUTO:individual%20of%20its%20source
+    label: individual of its source
+    original_spans:
+      - 510:533

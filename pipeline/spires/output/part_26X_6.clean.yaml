@@ -1,0 +1,14 @@
+provision_id: 26X(6)
+norms:
+- deontic_modality: PERMISSION
+  bearer: AUTO:An%20eligible%20data%20breach%20declaration
+  action: AUTO:provide%20differently
+  object: AUTO:different%20kinds%20of%20personal%20information
+- deontic_modality: PERMISSION
+  bearer: AUTO:An%20eligible%20data%20breach%20declaration
+  action: AUTO:provide%20differently
+  object: AUTO:for%20different%20entities%20or%20classes%20of%20entities
+- deontic_modality: PERMISSION
+  bearer: AUTO:An%20eligible%20data%20breach%20declaration
+  action: AUTO:provide%20differently
+  object: AUTO:different%20permitted%20purposes

@@ -1,0 +1,10 @@
+provision_id: 26WC(1)
+norms:
+- deontic_modality: APPLICABILITY
+  bearer: AUTO:APP%20entity
+  action: AUTO:were%20held
+  object: AUTO:personal%20information
+- deontic_modality: OBLIGATION
+  bearer: AUTO:APP%20entity
+  action: AUTO:not%20do%20an%20act%2C%20or%20engage%20in%20a%20practice
+  object: AUTO:that%20breaches%20Australian%20Privacy%20Principle%2011.1%20in%20relation%20to%20the%20personal%20information

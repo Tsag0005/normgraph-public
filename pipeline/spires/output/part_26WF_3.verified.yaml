@@ -1,0 +1,9 @@
+provision_id: 26WF(3)
+norms:
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:Provision%2026WE%282%29%28b%29
+  action: AUTO:does%20not%20apply
+disapplies:
+- 26WE(2)(b)
+cross_references:
+- 26WE(2)(b)

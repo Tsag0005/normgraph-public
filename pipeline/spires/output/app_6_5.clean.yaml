@@ -1,0 +1,9 @@
+provision_id: '6.5'
+norms:
+- deontic_modality: OBLIGATION
+  bearer: AUTO:APP%20entity
+  action: AUTO:make%20a%20written%20note
+  object: AUTO:the%20use%20or%20disclosure
+  conditions:
+  - statement: If an APP entity uses or discloses personal information in accordance with paragraph 6.2(e)
+    source_provision: 6.2(e)

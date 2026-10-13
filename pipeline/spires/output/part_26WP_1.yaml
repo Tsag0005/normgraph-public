@@ -1,0 +1,39 @@
+---
+input_text: |
+  26WP(1) (1) For the purposes of this section, secrecy provision means a provision that: (a) is a provision of a law of the Commonwealth (other than this Act); and (b) prohibits or regulates the use or disclosure of information.
+raw_completion_output: |-
+  provision_id: 26WP(1)  
+  norms: This section applies for the purposes of a secrecy provision that is a provision of a law of the Commonwealth (other than this Act) and prohibits or regulates the use or disclosure of information.  
+  disapplies:  
+  cross_references:  
+prompt: |+
+  Split the following piece of text into fields in the following format:
+
+  statement: <The exception in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this exception, written as the text writes it. Blank when the exception is stated here in full.>
+  is_exhaustive: <"true" if the text signals these are the only exceptions, otherwise blank.>
+
+
+  Text:
+  other than this Act
+
+  ===
+
+extracted_object:
+  provision_id: 26WP(1)
+  norms:
+    - deontic_modality: APPLICABILITY
+      bearer: AUTO:%5BNone%20specified%5D
+      action: AUTO:%5BNone%20specified%5D
+      object: AUTO:%5BNone%20specified%5D
+      conditions:
+        - statement: <For the purposes of a secrecy provision that is a 
+            provision of a law of the Commonwealth.>
+          source_provision: <Blank>
+      exceptions:
+        - statement: <other than this Act>
+          source_provision: <>
+          is_exhaustive: <>
+named_entities:
+  - id: AUTO:%5BNone%20specified%5D
+    label: '[None specified]'

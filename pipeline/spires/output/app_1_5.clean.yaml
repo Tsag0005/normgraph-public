@@ -1,0 +1,10 @@
+provision_id: '1.5'
+norms:
+- deontic_modality: OBLIGATION
+  bearer: AUTO:APP%20entity
+  action: AUTO:take%20such%20steps%20as%20are%20reasonable%20in%20the%20circumstances%20to%20make%20its%20APP%20privacy%20policy%20available%20free%20of%20charge
+  object: AUTO:APP%20privacy%20policy
+- deontic_modality: OBLIGATION
+  bearer: AUTO:APP%20entity
+  action: AUTO:take%20such%20steps%20as%20are%20reasonable%20in%20the%20circumstances%20to%20make%20available
+  object: AUTO:its%20APP%20privacy%20policy

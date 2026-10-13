@@ -1,0 +1,6 @@
+provision_id: '10.1'
+norms:
+- deontic_modality: OBLIGATION
+  bearer: AUTO:APP%20entity
+  action: AUTO:take%20such%20steps%20as%20are%20reasonable%20in%20the%20circumstances%20to%20ensure
+  object: AUTO:personal%20information%20that%20the%20entity%20collects

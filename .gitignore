@@ -1,0 +1,13 @@
+.venv*/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.npm-cache/
+*.tsbuildinfo
+pipeline_ui/data/
+pipeline_ui/.runtime/
+pipeline_ui/node_modules/
+pipeline_ui/dist/
+.env
+.env.*
+!.env.example

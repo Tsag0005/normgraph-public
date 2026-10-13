@@ -1,0 +1,58 @@
+---
+input_text: |
+  11.2 If: (a) an APP entity holds personal information about an individual; and (b) the entity no longer needs the information for any purpose for which the information may be used or disclosed by the entity under this Schedule; and (c) the information is not contained in a Commonwealth record; and (d) the entity is not required by or under an Australian law, or a court/tribunal order, to retain the information; the entity must take such steps as are reasonable in the circumstances to destroy the information or to ensure that the information is de-identified.
+raw_completion_output: |-
+  provision_id: 11.2  
+  norms: If an APP entity holds personal information about an individual and the entity no longer needs the information for any purpose for which the information may be used or disclosed by the entity under this Schedule and the information is not contained in a Commonwealth record and the entity is not required by or under an Australian law, or a court/tribunal order, to retain the information, the entity must take such steps as are reasonable in the circumstances to destroy the information or to ensure that the information is de-identified.  
+  disapplies:   
+  cross_references:  
+prompt: |+
+  From the text below, extract the following entities in the following format:
+
+  statement: <The exception in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this exception, e.g. "6.2" or "6.2(b)". Blank when the exception is stated here in full.>
+  is_exhaustive: <"true" if the text signals these are the only exceptions, otherwise blank.>
+
+
+  Text:
+  entity is required by or under an Australian law, or a court/tribunal order, to retain the information
+
+  ===
+
+extracted_object:
+  provision_id: '11.2'
+  norms:
+    - deontic_modality: OBLIGATION
+      bearer: AUTO:APP%20entity
+      action: 
+        AUTO:take%20such%20steps%20as%20are%20reasonable%20in%20the%20circumstances%20to%20destroy%20the%20information%20or%20to%20ensure%20that%20the%20information%20is%20de-identified
+      object: AUTO:personal%20information%20about%20an%20individual
+      conditions:
+        - statement: <APP entity holds personal information about an individual>
+          source_provision: < >
+        - statement: <The entity no longer needs the information for any purpose
+            for which the information may be used or disclosed by the entity 
+            under this Schedule.>
+          source_provision: <Blank>
+        - statement: <information is not contained in a Commonwealth record>
+          source_provision: <Blank>
+      exceptions:
+        - statement: <entity is required by or under an Australian law, or a 
+            court/tribunal order, to retain the information>
+          source_provision: <>
+          is_exhaustive: <>
+named_entities:
+  - id: AUTO:APP%20entity
+    label: APP entity
+    original_spans:
+      - 16:25
+  - id: 
+      AUTO:take%20such%20steps%20as%20are%20reasonable%20in%20the%20circumstances%20to%20destroy%20the%20information%20or%20to%20ensure%20that%20the%20information%20is%20de-identified
+    label: take such steps as are reasonable in the circumstances to destroy the
+      information or to ensure that the information is de-identified
+    original_spans:
+      - 431:562
+  - id: AUTO:personal%20information%20about%20an%20individual
+    label: personal information about an individual
+    original_spans:
+      - 33:72

@@ -1,0 +1,25 @@
+provision_id: 26WQ(9)
+norms:
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:Sections%2026WK%20and%2026WL
+  action: AUTO:do%20not%20apply
+  object: AUTO:N/A
+  scope_qualifier: in relation to the eligible data breach; until the Commissioner makes a decision in
+    response to the application for the declaration
+  conditions:
+  - statement: an entity applies to the Commissioner for a declaration that relates to the eligible data
+      breach of the entity
+    source_provision: paragraph (5)(b)
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:Sections%2026WK%20and%2026WL
+  action: AUTO:do%20not%20apply
+  object: AUTO:eligible%20data%20breach%20of%20other%20entities
+  conditions:
+  - statement: Access, disclosure, or loss that constituted the eligible data breach of the entity is
+      also an eligible data breach of one or more other entities.
+disapplies:
+- 26WK
+- 26WL
+cross_references:
+- 26WK
+- 26WL

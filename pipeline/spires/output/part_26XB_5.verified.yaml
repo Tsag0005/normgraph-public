@@ -1,0 +1,9 @@
+provision_id: 26XB(5)
+norms:
+- deontic_modality: PERMISSION
+  bearer: AUTO:officer%20or%20employee%20of%20an%20agency
+  action: AUTO:collect%2C%20use%2C%20or%20disclose
+  object: AUTO:personal%20information
+  conditions:
+  - statement: in the course of duty as an officer or employee
+  - statement: officer or employee is authorised by the agency

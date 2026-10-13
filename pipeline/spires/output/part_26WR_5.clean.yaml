@@ -1,0 +1,8 @@
+provision_id: 26WR(5)
+norms:
+- deontic_modality: PERMISSION
+  bearer: AUTO:A%20direction%20under%20subsection%20%281%29
+  action: AUTO:require
+  object: AUTO:the%20statement%20referred%20to%20in%20paragraph%20%281%29%28a%29%20to%20set%20out%20specified%20information%20that%20relates%20to%20the%20eligible%20data%20breach
+  conditions:
+  - statement: The Commissioner has reasonable grounds to believe has happened.

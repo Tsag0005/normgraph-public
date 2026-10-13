@@ -1,0 +1,8 @@
+provision_id: 26X(7)
+norms:
+- deontic_modality: PERMISSION
+  bearer: AUTO:The%20declaration
+  action: AUTO:specify
+  object: AUTO:a%20matter%20mentioned%20in%20subsection%20%282%29
+  conditions:
+  - statement: subject to conditions

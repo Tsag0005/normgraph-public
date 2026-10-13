@@ -1,0 +1,9 @@
+provision_id: 26X(4)
+norms:
+- deontic_modality: OBLIGATION
+  bearer: AUTO:A%20permitted%20purpose
+  action: AUTO:be
+  object: AUTO:a%20purpose%20that%20is%20directly%20related%20to%20preventing%20or%20reducing%20a%20risk%20of%20harm%20mentioned%20in%20paragraph%20%281%29%28b%29%20to%20one%20or%20more%20individuals%20at%20risk%20from%20the%20eligible%20data%20breach
+  conditions:
+  - statement: specified for the purposes of paragraph (2)(d) in relation to an eligible data breach
+    source_provision: 2(d)

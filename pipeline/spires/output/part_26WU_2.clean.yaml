@@ -1,0 +1,33 @@
+provision_id: 26WU(2)
+norms:
+- deontic_modality: PERMISSION
+  bearer: AUTO:The%20relevant%20matters
+  action: AUTO:relate%20to
+  object: AUTO:whether%20the%20entity%20is%20required%20to%20comply%20with%20one%20or%20more%20of%20those%20requirements
+- deontic_modality: PERMISSION
+  bearer: AUTO:matters
+  action: AUTO:relate%20to
+  object: AUTO:the%20conduct%20or%20events
+  conditions:
+  - statement: The application of one or more of those requirements to the entity.
+  - statement: may have led to the application of one or more of those requirements to the entity.
+- deontic_modality: PERMISSION
+  bearer: AUTO:the%20entity
+  action: AUTO:relate%20to%20the%20actions%20taken
+  object: AUTO:the%20relevant%20matters
+  conditions:
+  - statement: to comply with one or more of those requirements
+- deontic_modality: PERMISSION
+  bearer: AUTO:The%20relevant%20matters
+  action: AUTO:relate%20to
+  object: AUTO:the%20actual%20or%20suspected%20eligible%20data%20breach
+  conditions:
+  - statement: happened, or may have happened
+- deontic_modality: PERMISSION
+  bearer: AUTO:The%20relevant%20matters
+  action: AUTO:relate%20to
+  object: AUTO:the%20particular%20kind%20or%20kinds%20of%20information%20involved%20in%20the%20actual%20or%20suspected%20eligible%20data%20breach
+- deontic_modality: PERMISSION
+  bearer: AUTO:The%20relevant%20matters
+  action: AUTO:relate%20to%20the%20steps%20taken%20to%20notify
+  object: AUTO:individuals%20affected%20by%20the%20actual%20or%20suspected%20eligible%20data%20breach

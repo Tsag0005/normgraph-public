@@ -1,0 +1,47 @@
+---
+input_text: |
+  1.6 If a person or body requests a copy of the APP privacy policy of an APP entity in a particular form, the entity must take such steps as are reasonable in the circumstances to give the person or body a copy in that form.
+raw_completion_output: |-
+  provision_id: 1.6  
+  norms: If a person or body requests a copy of the APP privacy policy of an APP entity in a particular form, the entity must take such steps as are reasonable in the circumstances to give the person or body a copy in that form.  
+  disapplies:   
+  cross_references:   
+prompt: |+
+  From the text below, extract the following entities in the following format:
+
+  statement: <The condition in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this condition when the text points elsewhere for it, e.g. "4.3". Blank when the condition is stated here.>
+
+
+  Text:
+  a person or body requests a copy of the APP privacy policy of an APP entity in a particular form
+
+  ===
+
+extracted_object:
+  provision_id: '1.6'
+  norms:
+    - deontic_modality: OBLIGATION
+      bearer: AUTO:APP%20entity
+      action: 
+        AUTO:take%20such%20steps%20as%20are%20reasonable%20in%20the%20circumstances%20to%20give%20the%20person%20or%20body%20a%20copy%20in%20that%20form
+      object: AUTO:APP%20privacy%20policy
+      conditions:
+        - statement: <A person or body requests a copy of the APP privacy policy
+            of an APP entity in a particular form.>
+          source_provision: <Blank>
+named_entities:
+  - id: AUTO:APP%20entity
+    label: APP entity
+    original_spans:
+      - 72:81
+  - id: 
+      AUTO:take%20such%20steps%20as%20are%20reasonable%20in%20the%20circumstances%20to%20give%20the%20person%20or%20body%20a%20copy%20in%20that%20form
+    label: take such steps as are reasonable in the circumstances to give the 
+      person or body a copy in that form
+    original_spans:
+      - 121:221
+  - id: AUTO:APP%20privacy%20policy
+    label: APP privacy policy
+    original_spans:
+      - 47:64

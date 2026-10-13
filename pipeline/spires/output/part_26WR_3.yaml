@@ -1,0 +1,46 @@
+---
+input_text: |
+  26WR(3) (3) Before giving a direction to an entity under subsection (1), the Commissioner must invite the entity to make a submission to the Commissioner in relation to the direction within the period specified in the invitation.
+raw_completion_output: |-
+  provision_id: 26WR(3)  
+  norms: Before giving a direction to an entity under subsection (1), the Commissioner must invite the entity to make a submission to the Commissioner in relation to the direction within the period specified in the invitation.  
+  disapplies:  
+  cross_references: 26WR(1)  
+prompt: |+
+  Split the following piece of text into fields in the following format:
+
+  statement: <The condition in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this condition when the text points elsewhere for it, e.g. "4.3". Blank when the condition is stated here.>
+
+
+  Text:
+  before giving a direction to an entity under subsection (1)
+
+  ===
+
+extracted_object:
+  provision_id: 26WR(3)
+  norms:
+    - deontic_modality: OBLIGATION
+      bearer: AUTO:the%20Commissioner
+      action: 
+        AUTO:invite%20the%20entity%20to%20make%20a%20submission%20to%20the%20Commissioner
+      object: AUTO:the%20direction
+      conditions:
+        - statement: before giving a direction to an entity under subsection (1)
+          source_provision: (1)
+named_entities:
+  - id: AUTO:the%20Commissioner
+    label: the Commissioner
+    original_spans:
+      - 73:88
+      - 137:152
+  - id: 
+      AUTO:invite%20the%20entity%20to%20make%20a%20submission%20to%20the%20Commissioner
+    label: invite the entity to make a submission to the Commissioner
+    original_spans:
+      - 95:152
+  - id: AUTO:the%20direction
+    label: the direction
+    original_spans:
+      - 169:181

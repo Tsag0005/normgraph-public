@@ -1,0 +1,21 @@
+provision_id: '5.1'
+norms:
+- deontic_modality: OBLIGATION
+  bearer: AUTO:APP%20entity
+  action: AUTO:take%20such%20steps%20as%20are%20reasonable%20in%20the%20circumstances%20to%20notify%20the%20individual%20of%20such%20matters%20referred%20to%20in%20subclause%205.2
+  object: AUTO:personal%20information
+  conditions:
+  - statement: The entity must collect personal information about an individual at or before a specific
+      time.
+  - statement: As soon as practicable after the entity collects personal information about an individual
+      if that is not practicable.
+- deontic_modality: OBLIGATION
+  bearer: AUTO:APP%20entity
+  action: AUTO:take%20such%20steps%20as%20are%20reasonable%20in%20the%20circumstances%20to%20otherwise%20ensure%20that%20the%20individual%20is%20aware%20of%20any%20such%20matters
+  object: AUTO:%28none%20explicitly%20specified%2C%20but%20implied%20to%20be%20the%20awareness%20of%20the%20individual%20regarding%20certain%20matters%29
+  scope_qualifier: At or before the time or, if that is not practicable, as soon as practicable after
+    collection
+  conditions:
+  - statement: APP entity collects personal information about an individual
+  exceptions:
+  - statement: (none specified)

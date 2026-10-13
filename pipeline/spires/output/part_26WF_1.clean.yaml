@@ -1,0 +1,26 @@
+provision_id: 26WF(1)
+norms:
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:APP%20entity%2C%20credit%20reporting%20body%2C%20credit%20provider%20or%20file%20number%20recipient
+  action: AUTO:be
+  object: AUTO:an%20eligible%20data%20breach%20of%20the%20APP%20entity%2C%20credit%20reporting%20body%2C%20credit%20provider%20or%20file%20number%20recipient
+  conditions:
+  - statement: Access to, or disclosure of, information is covered.
+    source_provision: 26WE(2)(a)
+  - statement: The APP entity, credit reporting body, credit provider, or file number recipient takes
+      action in relation to the access or disclosure before it results in serious harm to any individuals
+      to whom the information relates.
+  - statement: A reasonable person would conclude that the access or disclosure would not be likely to
+      result in serious harm to any of those individuals.
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:access%20or%20disclosure
+  action: AUTO:is%20not%2C%20and%20is%20taken%20never%20to%20have%20been%2C%20an%20eligible%20data%20breach
+  object: AUTO:any%20other%20entity
+  conditions:
+  - statement: Access to, or disclosure of, information is covered.
+    source_provision: 26WE(2)(a)
+  - statement: The APP entity, credit reporting body, credit provider, or file number recipient takes
+      action in relation to the access or disclosure before it results in serious harm to any individuals
+      to whom the information relates.
+  - statement: A reasonable person would conclude that the access or disclosure would not be likely to
+      result in serious harm to any of those individuals as a result of the action.

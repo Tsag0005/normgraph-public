@@ -1,0 +1,64 @@
+---
+input_text: |
+  26WP(3) (3) If compliance by an entity with section 26WL in relation to a statement would, to any extent, be inconsistent with a secrecy provision (other than a prescribed secrecy provision), section 26WL does not apply to the entity, in relation to the statement, to the extent of the inconsistency. Prescribed secrecy provisions
+raw_completion_output: |-
+  provision_id: 26WP(3)  
+  norms: Section 26WL does not apply if compliance by an entity in relation to a statement would be inconsistent with a secrecy provision, other than a prescribed secrecy provision; Section 26WL does not apply to the extent of the inconsistency if compliance by an entity in relation to a statement would be inconsistent with a secrecy provision, other than a prescribed secrecy provision.  
+  disapplies: 26WL  
+  cross_references: 26WL  
+prompt: |+
+  Split the following piece of text into fields in the following format:
+
+  statement: <The exception in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this exception, written as the text writes it. Blank when the exception is stated here in full.>
+  is_exhaustive: <"true" if the text signals these are the only exceptions, otherwise blank.>
+
+
+  Text:
+  other than a prescribed secrecy provision
+
+  ===
+
+extracted_object:
+  provision_id: 26WP(3)
+  norms:
+    - deontic_modality: DISAPPLICATION
+      bearer: AUTO:entity
+      action: AUTO:comply
+      object: AUTO:statement
+      conditions:
+        - statement: compliance by an entity in relation to a statement would be
+            inconsistent with a secrecy provision
+      exceptions:
+        - statement: <other than a prescribed secrecy provision.>
+          source_provision: <>
+          is_exhaustive: <>
+    - deontic_modality: DISAPPLICATION
+      bearer: AUTO:entity
+      action: AUTO:comply
+      object: AUTO:statement
+      conditions:
+        - statement: compliance by an entity in relation to a statement would be
+            inconsistent with a secrecy provision
+      exceptions:
+        - statement: <other than a prescribed secrecy provision.>
+          source_provision: <>
+          is_exhaustive: <>
+      scope_qualifier: to the extent of the inconsistency
+  disapplies:
+    - 26WL
+  cross_references:
+    - 26WL
+named_entities:
+  - id: AUTO:entity
+    label: entity
+    original_spans:
+      - 32:37
+      - 227:232
+  - id: AUTO:comply
+    label: comply
+  - id: AUTO:statement
+    label: statement
+    original_spans:
+      - 74:82
+      - 254:262

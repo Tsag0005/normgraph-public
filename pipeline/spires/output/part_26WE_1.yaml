@@ -1,0 +1,128 @@
+---
+input_text: |
+  26WE(1) (1) This section applies if: (a) both: (i) an APP entity holds personal information relating to one or more individuals; and (ii) the APP entity is required under section 15 not to do an act, or engage in a practice, that breaches Australian Privacy Principle 11.1 in relation to the personal information; or (b) both: (i) a credit reporting body holds credit reporting information relating to one or more individuals; and (ii) the credit reporting body is required to comply with section 20Q in relation to the credit reporting information; or (c) both: (i) a credit provider holds credit eligibility information relating to one or more individuals; and (ii) the credit provider is required to comply with subsection 21S(1) in relation to the credit eligibility information; or (d) both: (i) a file number recipient holds tax file number information relating to one or more individuals; and (ii) the file number recipient is required under section 18 not to do an act, or engage in a practice, that breaches a section 17 rule that relates to the tax file number information. Eligible data breach
+raw_completion_output: |-
+  provision_id: 26WE(1)  
+  norms: This section applies if both an APP entity holds personal information relating to one or more individuals and the APP entity is required under section 15 not to do an act, or engage in a practice, that breaches Australian Privacy Principle 11.1 in relation to the personal information; This section applies if both a credit reporting body holds credit reporting information relating to one or more individuals and the credit reporting body is required to comply with section 20Q in relation to the credit reporting information; This section applies if both a credit provider holds credit eligibility information relating to one or more individuals and the credit provider is required to comply with subsection 21S(1) in relation to the credit eligibility information; This section applies if both a file number recipient holds tax file number information relating to one or more individuals and the file number recipient is required under section 18 not to do an act, or engage in a practice, that breaches a section 17 rule that relates to the tax file number information.  
+  disapplies:   
+  cross_references: section 15; Australian Privacy Principle 11.1; section 20Q; subsection 21S(1); section 18; section 17
+prompt: |+
+  From the text below, extract the following entities in the following format:
+
+  statement: <The condition in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this condition when the text points elsewhere for it, e.g. "4.3". Blank when the condition is stated here.>
+
+
+  Text:
+  the file number recipient is required under section 18 not to do an act, or engage in a practice, that breaches a section 17 rule that relates to the tax file number information
+
+  ===
+
+extracted_object:
+  provision_id: 26WE(1)
+  norms:
+    - deontic_modality: APPLICABILITY
+      bearer: AUTO:APP%20entity
+      action: AUTO:hold
+      object: 
+        AUTO:personal%20information%20relating%20to%20one%20or%20more%20individuals
+      conditions:
+        - statement: <an APP entity holds personal information relating to one 
+            or more individuals>
+          source_provision: <Blank>
+        - statement: The APP entity is required not to do an act, or engage in a
+            practice, that breaches Australian Privacy Principle 11.1 in 
+            relation to the personal information.
+          source_provision: section 15
+    - deontic_modality: APPLICABILITY
+      bearer: AUTO:credit%20reporting%20body
+      action: AUTO:holds
+      object: 
+        AUTO:credit%20reporting%20information%20relating%20to%20one%20or%20more%20individuals
+      conditions:
+        - statement: <a credit reporting body holds credit reporting 
+            information>
+          source_provision: <Blank>
+        - statement: <The credit reporting body is required to comply with 
+            section 20Q in relation to the credit reporting information.>
+          source_provision: <20Q>
+    - deontic_modality: APPLICABILITY
+      bearer: AUTO:credit%20provider
+      action: AUTO:applies
+      object: AUTO:credit%20eligibility%20information
+      conditions:
+        - statement: both a credit provider holds credit eligibility information
+            relating to one or more individuals
+        - statement: <The credit provider is required to comply with subsection 
+            21S(1) in relation to the credit eligibility information.>
+          source_provision: <21S(1)>
+    - deontic_modality: APPLICABILITY
+      bearer: AUTO:file%20number%20recipient
+      action: AUTO:holds
+      object: 
+        AUTO:tax%20file%20number%20information%20relating%20to%20one%20or%20more%20individuals
+      conditions:
+        - statement: A file number recipient holds tax file number information.
+        - statement: <The file number recipient is required not to do an act, or
+            engage in a practice, that breaches a section 17 rule that relates 
+            to the tax file number information.>
+          source_provision: <18>
+named_entities:
+  - id: AUTO:APP%20entity
+    label: APP entity
+    original_spans:
+      - 54:63
+      - 142:151
+  - id: AUTO:hold
+    label: hold
+    original_spans:
+      - 65:68
+      - 355:358
+      - 585:588
+      - 825:828
+  - id: 
+      AUTO:personal%20information%20relating%20to%20one%20or%20more%20individuals
+    label: personal information relating to one or more individuals
+    original_spans:
+      - 71:126
+  - id: AUTO:credit%20reporting%20body
+    label: credit reporting body
+    original_spans:
+      - 333:353
+      - 440:460
+  - id: AUTO:holds
+    label: holds
+    original_spans:
+      - 65:69
+      - 355:359
+      - 585:589
+      - 825:829
+  - id: 
+      AUTO:credit%20reporting%20information%20relating%20to%20one%20or%20more%20individuals
+    label: credit reporting information relating to one or more individuals
+    original_spans:
+      - 361:424
+  - id: AUTO:credit%20provider
+    label: credit provider
+    original_spans:
+      - 569:583
+      - 672:686
+  - id: AUTO:applies
+    label: applies
+    original_spans:
+      - 25:31
+  - id: AUTO:credit%20eligibility%20information
+    label: credit eligibility information
+    original_spans:
+      - 591:620
+      - 752:781
+  - id: AUTO:file%20number%20recipient
+    label: file number recipient
+    original_spans:
+      - 803:823
+      - 909:929
+  - id: 
+      AUTO:tax%20file%20number%20information%20relating%20to%20one%20or%20more%20individuals
+    label: tax file number information relating to one or more individuals
+    original_spans:
+      - 831:893

@@ -1,0 +1,20 @@
+provision_id: '7.6'
+norms:
+- deontic_modality: PERMISSION
+  bearer: AUTO:individual
+  action: AUTO:request%20not%20to%20receive
+  object: AUTO:direct%20marketing%20communications
+  conditions:
+  - statement: The organisation uses or discloses personal information about an individual for the purpose
+      of direct marketing by the organisation.
+- deontic_modality: PERMISSION
+  bearer: AUTO:the%20individual
+  action: AUTO:request%20the%20organisation%20not%20to%20use%20or%20disclose
+  object: AUTO:the%20information
+  conditions:
+  - statement: An organisation uses or discloses personal information about an individual for the purpose
+      of facilitating direct marketing by other organisations.
+- deontic_modality: PERMISSION
+  bearer: AUTO:individual
+  action: AUTO:request
+  object: AUTO:the%20first%20organisation%20to%20provide%20its%20source%20of%20the%20information

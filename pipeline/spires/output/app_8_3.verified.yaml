@@ -1,0 +1,22 @@
+provision_id: '8.3'
+norms:
+- deontic_modality: APPLICABILITY
+  bearer: AUTO:APP%20entity
+  action: AUTO:disclose
+  object: AUTO:personal%20information%20about%20an%20individual
+  conditions:
+  - statement: recipient is subject to the laws of a country that is prescribed by the regulations
+- deontic_modality: APPLICABILITY
+  bearer: AUTO:APP%20entity
+  action: AUTO:disclose
+  object: AUTO:personal%20information%20about%20an%20individual
+  conditions:
+  - statement: the disclosure is to an overseas recipient.
+  - statement: The recipient is a participant in a binding scheme that is prescribed by the regulations.
+- deontic_modality: APPLICABILITY
+  bearer: AUTO:APP%20entity
+  action: AUTO:disclose
+  object: AUTO:personal%20information%20about%20an%20individual
+  conditions:
+  - statement: The country or binding scheme is prescribed subject to conditions.
+  - statement: those conditions are satisfied.

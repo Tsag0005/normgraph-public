@@ -1,0 +1,43 @@
+---
+input_text: |
+  6.6 If: (a) an APP entity is a body corporate; and (b) the entity collects personal information from a related body corporate; this principle applies as if the entity's primary purpose for the collection of the information were the primary purpose for which the related body corporate collected the information. Exceptions
+raw_completion_output: |-
+  provision_id: 6.6  
+  norms: This principle applies as if the entity's primary purpose for the collection of the information were the primary purpose for which the related body corporate collected the information, if an APP entity is a body corporate and the entity collects personal information from a related body corporate.  
+  disapplies:  
+  cross_references:  
+prompt: |+
+  From the text below, extract the following entities in the following format:
+
+  statement: <The condition in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this condition when the text points elsewhere for it, e.g. "4.3". Blank when the condition is stated here.>
+
+
+  Text:
+  the entity collects personal information from a related body corporate
+
+  ===
+
+extracted_object:
+  provision_id: '6.6'
+  norms:
+    - deontic_modality: DISAPPLICATION
+      bearer: AUTO:APP%20entity
+      action: AUTO:%5BThis%20principle%5D%20applies
+      object: AUTO:the%20collection%20of%20the%20information
+      conditions:
+        - statement: an APP entity is a body corporate
+        - statement: <The entity collects personal information from a related 
+            body corporate.>
+          source_provision: <>
+named_entities:
+  - id: AUTO:APP%20entity
+    label: APP entity
+    original_spans:
+      - 15:24
+  - id: AUTO:%5BThis%20principle%5D%20applies
+    label: '[This principle] applies'
+  - id: AUTO:the%20collection%20of%20the%20information
+    label: the collection of the information
+    original_spans:
+      - 189:221

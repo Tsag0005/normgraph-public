@@ -1,0 +1,92 @@
+---
+input_text: |
+  26WF(2) (2) If: (a) an access to, or disclosure of, information is covered by paragraph 26WE(2)(a); and (b) the APP entity, credit reporting body, credit provider or file number recipient, as the case may be, takes action in relation to the access or disclosure; and (c) the APP entity, credit reporting body, credit provider or file number recipient, as the case may be, does so before the access or disclosure results in serious harm to a particular individual to whom the information relates; and (d) as a result of the action, a reasonable person would conclude that the access or disclosure would not be likely to result in serious harm to the individual; this Part does not require: (e) the APP entity, credit reporting body, credit provider or file number recipient, as the case may be; or (f) any other entity; to take steps to notify the individual of the contents of a statement that relates to the access or disclosure. Loss of information
+raw_completion_output: |-
+  provision_id: 26WF(2)
+
+  norms: This Part does not require the APP entity, credit reporting body, credit provider or file number recipient, as the case may be, to take steps to notify the individual of the contents of a statement that relates to the access or disclosure if an access to, or disclosure of, information is covered by paragraph 26WE(2)(a), the APP entity, credit reporting body, credit provider or file number recipient, as the case may be, takes action in relation to the access or disclosure, the APP entity, credit reporting body, credit provider or file number recipient, as the case may be, does so before the access or disclosure results in serious harm to a particular individual to whom the information relates, and as a result of the action, a reasonable person would conclude that the access or disclosure would not be likely to result in serious harm to the individual; This Part does not require any other entity to take steps to notify the individual of the contents of a statement that relates to the access or disclosure if an access to, or disclosure of, information is covered by paragraph 26WE(2)(a), the APP entity, credit reporting body, credit provider or file number recipient, as the case may be, takes action in relation to the access or disclosure, the APP entity, credit reporting body, credit provider or file number recipient, as the case may be, does so before the access or disclosure results in serious harm to a particular individual to whom the information relates, and as a result of the action, a reasonable person would conclude that the access or disclosure would not be likely to result in serious harm to the individual.
+
+  disapplies: 
+
+  cross_references: 26WE(2)(a)
+prompt: |+
+  From the text below, extract the following entities in the following format:
+
+  statement: <The condition in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this condition when the text points elsewhere for it, e.g. "4.3". Blank when the condition is stated here.>
+
+
+  Text:
+  as a result of the action, a reasonable person would conclude that the access or disclosure would not be likely to result in serious harm to the individual.
+
+  ===
+
+extracted_object:
+  provision_id: 26WF(2)
+  norms:
+    - deontic_modality: DISAPPLICATION
+      bearer: 
+        AUTO:APP%20entity%2C%20credit%20reporting%20body%2C%20credit%20provider%2C%20or%20file%20number%20recipient
+      action: AUTO:take%20steps%20to%20notify
+      object: 
+        AUTO:the%20individual%20of%20the%20contents%20of%20a%20statement%20that%20relates%20to%20the%20access%20or%20disclosure
+      conditions:
+        - statement: <An access to, or disclosure of, information is covered by 
+            paragraph 26WE(2)(a).>
+          source_provision: <26WE(2)(a)>
+        - statement: <The APP entity, credit reporting body, credit provider, or
+            file number recipient takes action in relation to the access or 
+            disclosure.>
+          source_provision: <Blank>
+        - statement: <The APP entity, credit reporting body, credit provider, or
+            file number recipient does so before the access or disclosure 
+            results in serious harm to a particular individual to whom the 
+            information relates.>
+          source_provision: <Blank>
+        - statement: <As a result of the action, a reasonable person would 
+            conclude that the access or disclosure would not be likely to result
+            in serious harm to the individual.>
+          source_provision: <Blank>
+    - deontic_modality: DISAPPLICATION
+      bearer: AUTO:any%20other%20entity
+      action: AUTO:take%20steps%20to%20notify
+      object: 
+        AUTO:the%20individual%20of%20the%20contents%20of%20a%20statement%20that%20relates%20to%20the%20access%20or%20disclosure
+      conditions:
+        - statement: <An access to, or disclosure of, information is covered by 
+            paragraph 26WE(2)(a).>
+          source_provision: <26WE(2)(a)>
+        - statement: <The APP entity, credit reporting body, credit provider or 
+            file number recipient, as the case may be, takes action in relation 
+            to the access or disclosure.>
+          source_provision: <Blank>
+        - statement: <The APP entity, credit reporting body, credit provider or 
+            file number recipient does so before the access or disclosure 
+            results in serious harm to a particular individual to whom the 
+            information relates.>
+          source_provision: <Blank>
+        - statement: <a reasonable person would conclude that the access or 
+            disclosure would not be likely to result in serious harm to the 
+            individual.>
+          source_provision: <Blank>
+  cross_references:
+    - 26WE(2)(a)
+named_entities:
+  - id: 
+      AUTO:APP%20entity%2C%20credit%20reporting%20body%2C%20credit%20provider%2C%20or%20file%20number%20recipient
+    label: APP entity, credit reporting body, credit provider, or file number 
+      recipient
+  - id: AUTO:take%20steps%20to%20notify
+    label: take steps to notify
+    original_spans:
+      - 822:841
+  - id: 
+      AUTO:the%20individual%20of%20the%20contents%20of%20a%20statement%20that%20relates%20to%20the%20access%20or%20disclosure
+    label: the individual of the contents of a statement that relates to the 
+      access or disclosure
+    original_spans:
+      - 843:928
+  - id: AUTO:any%20other%20entity
+    label: any other entity
+    original_spans:
+      - 801:816

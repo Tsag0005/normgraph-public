@@ -1,0 +1,12 @@
+provision_id: '6.4'
+norms:
+- deontic_modality: OBLIGATION
+  bearer: AUTO:The%20entity
+  action: AUTO:take%20such%20steps%20as%20are%20reasonable%20in%20the%20circumstances%20to%20ensure%20that%20the%20information%20is%20de-identified
+  object: AUTO:the%20information
+  conditions:
+  - statement: Before the entity discloses it.
+    source_provision: 6.1 or 6.2
+  - statement: the APP entity is an organisation
+  - statement: subsection 16B(2) applied in relation to the collection of the personal information by
+      the entity

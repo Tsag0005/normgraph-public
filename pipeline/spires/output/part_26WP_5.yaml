@@ -1,0 +1,52 @@
+---
+input_text: |
+  26WP(5) (5) For the purposes of a prescribed secrecy provision: (a) subparagraph 26WK(2)(a)(ii); and (b) section 26WL; are taken not to be provisions that require or authorise the use or disclosure of information.
+raw_completion_output: |-
+  provision_id: 26WP(5)  
+  norms: For the purposes of a prescribed secrecy provision, subparagraph 26WK(2)(a)(ii) is taken not to be a provision that requires or authorises the use or disclosure of information; For the purposes of a prescribed secrecy provision, section 26WL is taken not to be a provision that requires or authorises the use or disclosure of information.  
+  disapplies:   
+  cross_references: 26WK(2)(a)(ii); 26WL  
+prompt: |+
+  Split the following piece of text into fields in the following format:
+
+  statement: <The condition in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this condition when the text points elsewhere for it, e.g. "4.3". Blank when the condition is stated here.>
+
+
+  Text:
+  For the purposes of a prescribed secrecy provision
+
+  ===
+
+extracted_object:
+  provision_id: 26WP(5)
+  norms:
+    - deontic_modality: DISAPPLICATION
+      bearer: AUTO:subparagraph%2026WK%282%29%28a%29%28ii%29
+      action: AUTO:requires%20or%20authorises%20the%20use%20or%20disclosure
+      object: AUTO:information
+      conditions:
+        - statement: <for the purposes of a prescribed secrecy provision>
+          source_provision: < >
+    - deontic_modality: DISAPPLICATION
+      bearer: AUTO:section%2026WL
+      action: AUTO:requires%20or%20authorises%20the%20use%20or%20disclosure
+      object: AUTO:information
+      conditions:
+        - statement: <For the purposes of a prescribed secrecy provision>
+          source_provision: <>
+named_entities:
+  - id: AUTO:subparagraph%2026WK%282%29%28a%29%28ii%29
+    label: subparagraph 26WK(2)(a)(ii)
+    original_spans:
+      - 68:94
+  - id: AUTO:requires%20or%20authorises%20the%20use%20or%20disclosure
+    label: requires or authorises the use or disclosure
+  - id: AUTO:information
+    label: information
+    original_spans:
+      - 201:211
+  - id: AUTO:section%2026WL
+    label: section 26WL
+    original_spans:
+      - 105:116

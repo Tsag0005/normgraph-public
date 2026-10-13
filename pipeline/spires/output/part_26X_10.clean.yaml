@@ -1,0 +1,11 @@
+provision_id: 26X(10)
+norms:
+- deontic_modality: NONE
+- deontic_modality: DISAPPLICATION
+  bearer: AUTO:Section%2042%20of%20the%20Legislation%20Act%202003
+  action: AUTO:apply
+  object: AUTO:the%20declaration
+disapplies:
+- Section 42
+cross_references:
+- subsection (1)

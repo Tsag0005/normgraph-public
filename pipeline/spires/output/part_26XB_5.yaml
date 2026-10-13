@@ -1,0 +1,43 @@
+---
+input_text: |
+  26XB(5) (5) A collection, use or disclose of personal information by an officer or employee of an agency in the course of duty as an officer or employee is authorised by subsection (1) only if the officer or employee is authorised by the agency to collect, use or disclose the personal information.
+raw_completion_output: |-
+  provision_id: 26XB(5)  
+  norms: A collection, use, or disclosure of personal information by an officer or employee of an agency in the course of duty as an officer or employee is authorised by subsection (1) only if the officer or employee is authorised by the agency to collect, use, or disclose the personal information.  
+  disapplies:   
+  cross_references: 26XB(1)  
+prompt: |+
+  Split the following piece of text into fields in the following format:
+
+  statement: <The condition in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this condition when the text points elsewhere for it, e.g. "4.3". Blank when the condition is stated here.>
+
+
+  Text:
+  officer or employee is authorised by the agency
+
+  ===
+
+extracted_object:
+  provision_id: 26XB(5)
+  norms:
+    - deontic_modality: PERMISSION
+      bearer: AUTO:officer%20or%20employee%20of%20an%20agency
+      action: AUTO:collect%2C%20use%2C%20or%20disclose
+      object: AUTO:personal%20information
+      conditions:
+        - statement: <in the course of duty as an officer or employee>
+          source_provision: <Blank>
+        - statement: officer or employee is authorised by the agency
+named_entities:
+  - id: AUTO:officer%20or%20employee%20of%20an%20agency
+    label: officer or employee of an agency
+    original_spans:
+      - 72:103
+  - id: AUTO:collect%2C%20use%2C%20or%20disclose
+    label: collect, use, or disclose
+  - id: AUTO:personal%20information
+    label: personal information
+    original_spans:
+      - 45:64
+      - 277:296

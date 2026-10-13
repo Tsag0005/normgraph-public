@@ -1,0 +1,66 @@
+---
+input_text: |
+  9.3 This subclause applies in relation to the adoption, use or disclosure by an organisation of a government related identifier of an individual if: (a) the identifier is prescribed by the regulations; and (b) the organisation is prescribed by the regulations, or is included in a class of organisations prescribed by the regulations; and (c) the adoption, use or disclosure occurs in the circumstances prescribed by the regulations. Note: There are prerequisites that must be satisfied before the matters mentioned in this subclause are prescribed, see subsections 100(2) and (3).
+raw_completion_output: |-
+  provision_id: 9.3  
+  norms: This subclause applies in relation to the adoption, use or disclosure by an organisation of a government related identifier of an individual if the identifier is prescribed by the regulations; This subclause applies in relation to the adoption, use or disclosure by an organisation of a government related identifier of an individual if the organisation is prescribed by the regulations, or is included in a class of organisations prescribed by the regulations; This subclause applies in relation to the adoption, use or disclosure by an organisation of a government related identifier of an individual if the adoption, use or disclosure occurs in the circumstances prescribed by the regulations.  
+  disapplies:   
+  cross_references: subsections 100(2); subsections 100(3)  
+prompt: |+
+  From the text below, extract the following entities in the following format:
+
+  statement: <The condition in a single clause, as stated in the text.>
+  source_provision: <The identifier of the provision that supplies this condition when the text points elsewhere for it, e.g. "4.3". Blank when the condition is stated here.>
+
+
+  Text:
+  the adoption, use or disclosure occurs in the circumstances prescribed by the regulations
+
+  ===
+
+extracted_object:
+  provision_id: '9.3'
+  norms:
+    - deontic_modality: NONE
+      bearer: AUTO:organisation
+      action: AUTO:adopt%2C%20use%20or%20disclose
+      object: AUTO:government%20related%20identifier%20of%20an%20individual
+      conditions:
+        - statement: <identifier is prescribed by the regulations.>
+          source_provision: <Blank>
+    - deontic_modality: NONE
+      bearer: AUTO:organisation
+      action: AUTO:adoption%2C%20use%20or%20disclosure
+      object: AUTO:government%20related%20identifier%20of%20an%20individual
+      conditions:
+        - statement: <organisation is prescribed by the regulations.>
+          source_provision: <Blank>
+        - statement: <Organisation is included in a class of organisations 
+            prescribed by the regulations.>
+          source_provision: <Blank>
+    - deontic_modality: NONE
+      bearer: AUTO:organisation
+      action: AUTO:adoption%2C%20use%20or%20disclosure
+      object: AUTO:government%20related%20identifier%20of%20an%20individual
+      conditions:
+        - statement: <The adoption, use, or disclosure occurs in the 
+            circumstances prescribed by the regulations.>
+          source_provision: <Blank>
+named_entities:
+  - id: AUTO:organisation
+    label: organisation
+    original_spans:
+      - 80:91
+      - 214:225
+      - 290:301
+  - id: AUTO:adopt%2C%20use%20or%20disclose
+    label: adopt, use or disclose
+  - id: AUTO:government%20related%20identifier%20of%20an%20individual
+    label: government related identifier of an individual
+    original_spans:
+      - 98:143
+  - id: AUTO:adoption%2C%20use%20or%20disclosure
+    label: adoption, use or disclosure
+    original_spans:
+      - 46:72
+      - 347:373

@@ -1,0 +1,14 @@
+provision_id: '11.2'
+norms:
+- deontic_modality: OBLIGATION
+  bearer: AUTO:APP%20entity
+  action: AUTO:take%20such%20steps%20as%20are%20reasonable%20in%20the%20circumstances%20to%20destroy%20the%20information%20or%20to%20ensure%20that%20the%20information%20is%20de-identified
+  object: AUTO:personal%20information%20about%20an%20individual
+  conditions:
+  - statement: APP entity holds personal information about an individual
+  - statement: The entity no longer needs the information for any purpose for which the information may
+      be used or disclosed by the entity under this Schedule.
+  - statement: information is not contained in a Commonwealth record
+  exceptions:
+  - statement: entity is required by or under an Australian law, or a court/tribunal order, to retain
+      the information
