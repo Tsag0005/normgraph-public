@@ -708,17 +708,17 @@ export default function Home() {
           </CardContent>
         </Card>
         <Tabs value={view} onValueChange={setView}>
-          <TabsList className="mb-5 h-auto flex-wrap justify-start gap-1">
-            <TabsTrigger value="generate">
+          <TabsList className="mb-5 grid h-auto w-full grid-cols-2 gap-1 p-1 group-data-horizontal/tabs:h-auto sm:grid-cols-4">
+            <TabsTrigger value="generate" className="h-auto min-h-10 w-full flex-none px-3 py-2 text-center whitespace-normal">
               <FileCode2 className="h-4 w-4" />
               Generate scenarios
             </TabsTrigger>
-            <TabsTrigger value="build">
+            <TabsTrigger value="build" className="h-auto min-h-10 w-full flex-none px-3 py-2 text-center whitespace-normal">
               <Database className="h-4 w-4" />
               Build graph
             </TabsTrigger>
-            <TabsTrigger value="corpus">Add corpus</TabsTrigger>
-            <TabsTrigger value="history">History</TabsTrigger>
+            <TabsTrigger value="corpus" className="h-auto min-h-10 w-full flex-none px-3 py-2 text-center whitespace-normal">Add corpus</TabsTrigger>
+            <TabsTrigger value="history" className="h-auto min-h-10 w-full flex-none px-3 py-2 text-center whitespace-normal">History</TabsTrigger>
           </TabsList>
           <div className="grid items-start gap-6 xl:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)]">
             <div className="min-w-0">
