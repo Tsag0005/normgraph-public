@@ -39,6 +39,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Progress } from '@/components/ui/progress';
 import { api, API_BASE, setCredentials, type Corpus, type Job, type Run } from '@/lib/api';
 import { exportWorkspace, importWorkspace, syncWorkspace } from '@/lib/workspace';
+import { PolicyReviewForm, PolicyReviewResults } from '@/app/policy-review';
 
 const active = (job?: Job) =>
   !!job && ['queued', 'running', 'cancelling'].includes(job.status);
@@ -130,7 +131,7 @@ function TextOutput({ value }: { value: string }) {
     </div>
   );
 }
-function RunOutput({ run }: { run: Run }) {
+function RunOutput({ run, onEvaluate }: { run: Run; onEvaluate: (feature: string) => void }) {
   const d = run.details;
   return (
     <section className="space-y-3 border-b border-border pb-6 last:border-0">
@@ -180,7 +181,12 @@ function RunOutput({ run }: { run: Run }) {
       )}
       {run.feature && (
         <>
-          <h4 className="text-sm font-semibold">Generated Gherkin</h4>
+          <div className="flex flex-wrap items-center justify-between gap-2">
+            <h4 className="text-sm font-semibold">Generated Gherkin</h4>
+            <Button size="sm" variant="outline" onClick={() => onEvaluate(run.feature || '')}>
+              Evaluate against a document
+            </Button>
+          </div>
           <TextOutput value={run.feature} />
         </>
       )}
@@ -215,7 +221,7 @@ function RunOutput({ run }: { run: Run }) {
     </section>
   );
 }
-function Results({ job, cancel }: { job?: Job; cancel: () => void }) {
+function Results({ job, cancel, onEvaluate }: { job?: Job; cancel: () => void; onEvaluate: (feature: string) => void }) {
   const result = job?.result;
   return (
     <Card className="min-w-0 border-border/80 shadow-sm">
@@ -308,8 +314,9 @@ function Results({ job, cancel }: { job?: Job; cancel: () => void }) {
                 <TabsTrigger value="settings">Reproduce</TabsTrigger>
               </TabsList>
               <TabsContent value="output" className="space-y-5 pt-3">
+                {job.kind === 'review' && <PolicyReviewResults job={job} />}
                 {(result?.runs || result?.items || []).map((run, i) => (
-                  <RunOutput key={i} run={run} />
+                  <RunOutput key={i} run={run} onEvaluate={onEvaluate} />
                 ))}
                 {result?.profile && <TextOutput value={result.profile} />}
                 {result?.verification && (
@@ -338,7 +345,8 @@ function Results({ job, cancel }: { job?: Job; cancel: () => void }) {
                 {!(
                   result?.runs?.length ||
                   result?.items?.length ||
-                  result?.profile
+                  result?.profile ||
+                  result?.estimate
                 ) && (
                   <>
                     <p className="text-sm text-muted-foreground">
@@ -413,6 +421,7 @@ export default function Home() {
   const [graphBackend, setGraphBackend] = useState<'local' | 'neo4j'>('local');
   const [neo4j, setNeo4j] = useState({ uri: '', username: '', password: '', database: 'neo4j' });
   const [view, setView] = useState('generate');
+  const [reviewFeatureText, setReviewFeatureText] = useState('');
   const [query, setQuery] = useState('');
   const [selection, setSelection] = useState<string[]>([]);
   const [manual, setManual] = useState(false);
@@ -708,17 +717,21 @@ export default function Home() {
           </CardContent>
         </Card>
         <Tabs value={view} onValueChange={setView}>
-          <TabsList className="mb-5 grid h-auto w-full grid-cols-2 gap-1 p-1 group-data-horizontal/tabs:h-auto sm:grid-cols-4">
+          <TabsList className="mb-5 grid h-auto w-full grid-cols-2 gap-1 p-1 group-data-horizontal/tabs:h-auto sm:grid-cols-5">
             <TabsTrigger value="generate" className="h-auto min-h-10 w-full flex-none px-3 py-2 text-center whitespace-normal">
               <FileCode2 className="h-4 w-4" />
               Generate scenarios
+            </TabsTrigger>
+            <TabsTrigger value="review" className="h-auto min-h-10 w-full flex-none px-3 py-2 text-center whitespace-normal">
+              <Gauge className="h-4 w-4" />
+              Evaluate document
             </TabsTrigger>
             <TabsTrigger value="build" className="h-auto min-h-10 w-full flex-none px-3 py-2 text-center whitespace-normal">
               <Database className="h-4 w-4" />
               Build graph
             </TabsTrigger>
             <TabsTrigger value="corpus" className="h-auto min-h-10 w-full flex-none px-3 py-2 text-center whitespace-normal">Add corpus</TabsTrigger>
-            <TabsTrigger value="history" className="h-auto min-h-10 w-full flex-none px-3 py-2 text-center whitespace-normal">History</TabsTrigger>
+            <TabsTrigger value="history" className="col-span-2 h-auto min-h-10 w-full flex-none px-3 py-2 text-center whitespace-normal sm:col-span-1">History</TabsTrigger>
           </TabsList>
           <div className="grid items-start gap-6 xl:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)]">
             <div className="min-w-0">
@@ -997,6 +1010,11 @@ export default function Home() {
                     </div>
                   </CardContent>
                 </Card>
+              </TabsContent>
+              <TabsContent value="review" keepMounted className="mt-0">
+                <PolicyReviewForm jobs={jobs} featureText={reviewFeatureText}
+                  setFeatureText={setReviewFeatureText} hasApiKey={!!openaiKey.trim()}
+                  busy={busy} start={start} onError={setError} />
               </TabsContent>
               <TabsContent value="build" className="mt-0">
                 <Card>
@@ -1309,6 +1327,7 @@ export default function Home() {
                             <strong className="block truncate text-sm">
                               {job.kind} ·{' '}
                               {corpusNames.get(String(job.request.corpusId)) ||
+                                (job.request.documentName as string) ||
                                 (job.request.name as string) ||
                                 'Earlier run'}
                             </strong>
@@ -1331,6 +1350,10 @@ export default function Home() {
             <Results
               key={jobId}
               job={selectedJob}
+              onEvaluate={(feature) => {
+                setReviewFeatureText(feature);
+                setView('review');
+              }}
               cancel={() => {
                 if (jobId)
                   void api<Job>(`/api/jobs/${jobId}/cancel`, {

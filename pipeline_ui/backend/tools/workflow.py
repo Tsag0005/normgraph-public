@@ -325,7 +325,10 @@ def main():
     os.environ["GRAPH_BACKEND"] = backend
     result = {}
     try:
-        if kind == "register":
+        if kind in ("review-preview", "review"):
+            from policy_review import preview, run_review
+            result = preview(data) if kind == "review-preview" else run_review(data, directory, emit)
+        elif kind == "register":
             result = register(data, directory)
         else:
             if kind == "build":
@@ -412,6 +415,8 @@ def main():
         message = f"{type(exc).__name__}: {exc}"
         if "Configured node label" in message and "not present" in message:
             message = ("The selected corpus graph is unavailable. Check the selected graph storage and build or import its graph.\n\n" + message)
+        if kind == "review" and Path(args.result).exists():
+            result = json.loads(Path(args.result).read_text(encoding="utf-8"))
         result.update(error=message)
         Path(args.result).write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
         emit("error", result["error"])

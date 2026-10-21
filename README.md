@@ -2,8 +2,8 @@
 
 Public, self-hosted edition of the legal-norm graph and Gherkin generator. This is a
 separate repository containing the production pipeline, the website, and two bundled
-example graphs. Evaluation notebooks, reports, and previous site runtime files are
-excluded.
+example graphs. The website includes document review; research notebooks,
+historical reports, and previous site runtime files are excluded.
 
 ## How it works
 
@@ -20,12 +20,42 @@ excluded.
   Schedule 1 and Part IIIC have bundled, immediately usable graphs. A visitor can
   optionally select Neo4j and enter their own URI, username, password, and database.
   Neo4j data lives in that visitor's Neo4j account, outside the browser backup.
+- The **Evaluate document** tab checks each generated or uploaded Gherkin against
+  one supplied policy document. This uses the visitor's OpenAI key but does not
+  require a graph or Neo4j credentials. The document and Gherkins are sent to
+  OpenAI, and the document, per-scenario verdicts, citations, and usage are saved
+  in the visitor's browser workspace.
 
 The full flow remains available: discover built-in corpora, register and validate a
 custom statute, induce its structural profile, run a free build preflight, extract
 norms, verify exceptions, build a graph, preview context, and generate/download
 Gherkin for one or multiple provisions. New extraction requires OntoGPT and the
 visitor's OpenAI key. Pre-existing artifacts can be reused by the build.
+
+## Review a policy document
+
+1. Generate Gherkin, then choose **Evaluate against a document** beside that
+   output. You can also select a saved generation run or upload/paste a `.feature`
+   file in **Evaluate document**.
+2. Paste the complete policy or upload UTF-8 `.txt` or `.md` text. Keep the
+   original headings and line breaks for evidence citations.
+3. Select Luna, Sol, Astra, or the legacy GPT-4o option. Run the free estimate,
+   review its token and cost range, set an approximate spending cap, then run
+   the paid review. High-end settings require an explicit token warning check.
+4. Read each PASS, FAIL, PARTIAL, or UNCERTAIN result with its explanation and
+   checked policy quotes. Download `review.md` or `result.json` from the job's
+   Files tab. If the job stops, select it under **Continue a saved review** and
+   raise the cap if needed; completed verdicts are reused.
+
+The reviewer judges the supplied document's wording against each Gherkin's
+`Then` assertion. PARTIAL means some material parts are supported; UNCERTAIN
+means the document cannot settle a material condition. Neither a PASS nor a
+FAIL establishes legal compliance or the legal soundness of the Gherkin. The
+model can make mistakes; a citation marked **Evidence needs review** was not
+verified against the uploaded line and requires human inspection. The free
+estimate uses an approximate local token count and indicative list prices;
+actual provider billing may differ. Model availability depends on the user's
+OpenAI account.
 
 ## Local development
 

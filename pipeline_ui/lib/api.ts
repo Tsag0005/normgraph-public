@@ -86,6 +86,26 @@ export type Run = {
   };
   record?: Record<string, unknown>;
 };
+export type ReviewVerdict = {
+  index: number;
+  name: string;
+  gherkin: string;
+  verdict: 'PASS' | 'FAIL' | 'YELLOW';
+  yellowReason: 'PARTIAL' | 'UNCERTAIN' | null;
+  explanation: string;
+  evidence: { line: number; section: string; quote: string }[];
+  evidenceProblems: string[];
+  usage: { inputTokens: number; outputTokens: number };
+};
+export type ReviewEstimate = {
+  scenarios: number;
+  model: string;
+  inputTokensApprox: number;
+  outputTokensAllowance: number;
+  estimatedInputUsd: number;
+  estimatedMaximumUsd: number;
+  pricingBasis: string;
+};
 export type Job = {
   id: string;
   kind: string;
@@ -101,6 +121,7 @@ export type Job = {
   request: Record<string, unknown>;
   command?: string;
   result?: {
+    signature?: string;
     summary?: string;
     error?: string;
     warnings?: string[];
@@ -110,5 +131,9 @@ export type Job = {
     files?: string[];
     items?: Run[];
     runs?: Run[];
+    estimate?: ReviewEstimate;
+    verdicts?: ReviewVerdict[];
+    actualUsage?: { inputTokens: number; outputTokens: number; estimatedUsd: number };
+    complete?: boolean;
   };
 };

@@ -110,7 +110,7 @@ def _result(directory):
         result["runs"] = [_run_payload(path.parent) for path in runs]
     files = []
     for path in sorted(directory.rglob("*")):
-        if path.is_file() and path.suffix in (".feature", ".csv", ".json", ".txt", ".yaml", ".log") and path.name != "job.json":
+        if path.is_file() and path.suffix in (".feature", ".csv", ".json", ".txt", ".yaml", ".log", ".md") and path.name != "job.json":
             files.append(str(path.relative_to(directory)).replace("\\", "/"))
     result["files"] = files
     return result
@@ -163,8 +163,12 @@ def _fingerprint(item, data):
 def _validate_request(kind, data):
     if not isinstance(data, dict):
         raise ValueError("Request must be a JSON object")
-    if kind not in {"build", "preview", "generate", "register", "provisions", "graph-status"}:
+    if kind not in {"build", "preview", "generate", "register", "provisions", "graph-status", "review-preview", "review"}:
         raise ValueError("Unknown operation")
+    if kind in {"review-preview", "review"}:
+        from backend.tools.policy_review import validate_request
+        validate_request({**data, "kind": kind})
+        return
     if data.get("contextMode", "spires") != "spires":
         raise ValueError("Only SPIRES is available in production")
     for key in ("provisions", "onlyProvisions"):

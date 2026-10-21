@@ -33,12 +33,15 @@ SCRATCH = Path(os.environ.get("PIPELINE_UI_SCRATCH") or Path(tempfile.gettempdir
 HOST = os.environ.get("PIPELINE_UI_HOST", "127.0.0.1")
 PORT = int(os.environ.get("PORT") or os.environ.get("PIPELINE_UI_PORT", "8765"))
 MAX_SNAPSHOT = 30 * 1024 * 1024
-ALLOWED_SUFFIXES = {".yaml", ".json", ".csv", ".txt", ".log", ".feature"}
+ALLOWED_SUFFIXES = {".yaml", ".json", ".csv", ".txt", ".log", ".feature", ".md"}
 STATES = {}
 STATES_LOCK = threading.RLock()
 
 
 def _python():
+    override = os.environ.get("PIPELINE_UI_PYTHON")
+    if override and Path(override).is_file():
+        return override
     for path in (ROOT.parent / ".venv-testgen/Scripts/python.exe", ROOT.parent / ".venv-testgen/bin/python"):
         if path.exists():
             return str(path)
@@ -122,7 +125,7 @@ class Workspace:
         backend = data.get("graphBackend", "local")
         if backend not in ("local", "neo4j"):
             raise ValueError("Select local or Neo4j graph storage")
-        paid = (kind in {"generate", "build"} or
+        paid = (kind in {"generate", "build", "review"} or
                 kind == "register" and not data.get("estimateOnly") and not str(data.get("profileText", "")).strip())
         if paid and not supplied.get("OPENAI_API_KEY"):
             raise ValueError("Enter your OpenAI API key before this operation")
@@ -131,7 +134,7 @@ class Workspace:
                 supplied.get(key) for key in ("NEO4J_URI", "NEO4J_USERNAME", "NEO4J_PASSWORD")):
             raise ValueError("Enter your Neo4j connection details for this operation")
         item = None
-        if kind != "register":
+        if kind not in {"register", "review-preview", "review"}:
             item = next((x for x in self.corpora() if x["id"] == data.get("corpusId")), None)
             if not item or item.get("errors"):
                 raise ValueError("Unknown or invalid corpus")
@@ -149,6 +152,20 @@ class Workspace:
                                                       and j["status"] in core.ACTIVE for j in self.jobs.values()):
                 raise ValueError("Another build or corpus registration is active")
             fingerprint = core._fingerprint(item, data) if item else None
+            if kind == "review":
+                from backend.tools.policy_review import request_signature
+                preflight = self.jobs.get(data.get("preflightId"))
+                if (not preflight or preflight["kind"] != "review-preview" or
+                        preflight["status"] != "succeeded" or
+                        preflight.get("result", {}).get("signature") != request_signature(data)):
+                    raise ValueError("Run a matching free review estimate before evaluating")
+                if data.get("resumeJobId"):
+                    previous = self.jobs.get(data["resumeJobId"])
+                    if (not previous or previous["kind"] != "review" or
+                            previous["status"] in core.ACTIVE or
+                            previous.get("result", {}).get("signature") != request_signature(data) or
+                            previous.get("result", {}).get("complete")):
+                        raise ValueError("Choose an incomplete saved review with the same inputs")
             if kind == "build" and not data.get("estimateOnly"):
                 preflight = self.jobs.get(data.get("preflightId"))
                 if not preflight or preflight["kind"] != "build" or preflight["status"] != "succeeded" or not preflight["request"].get("estimateOnly") or preflight.get("fingerprint") != fingerprint:
@@ -161,7 +178,7 @@ class Workspace:
             command = [_python(), "-B", str(ROOT / "backend/tools/workflow.py"),
                        "--request", str(directory / "request.json"), "--result", str(directory / "result.json")]
             job = {"id": jid, "kind": kind,
-                   "label": f"{kind} · {(item or {}).get('name', data.get('name', 'New corpus'))}",
+                   "label": f"{kind} · {(item or {}).get('name', data.get('documentName', data.get('name', 'New corpus')))}",
                    "status": "queued", "createdAt": time.time(), "logs": [],
                    "request": request, "command": subprocess.list2cmdline(command),
                    "fingerprint": fingerprint, "stage": "queued"}
@@ -202,6 +219,8 @@ class Workspace:
                         progress = re.search(r"\[\s*(\d+)\s*/\s*(\d+)\]", line)
                         if progress:
                             job["progress"] = {"done": int(progress[1]), "total": int(progress[2])}
+                        if job["kind"] == "review":
+                            job["result"] = core._result(directory)
                         self.save(job)
             process.stdout.close()
             code = process.wait()
