@@ -61,25 +61,26 @@ multi-platform `latest`, release, and commit tags to GitHub Container Registry:
 - `ghcr.io/tsag0005/normgraph-public-web:latest`
 
 The images contain the application and its bundled example corpora, but no operator
-API keys or Neo4j credentials. After receiving a copy of [compose.pull.yaml](compose.pull.yaml),
-anyone can run the complete site without cloning the source repository:
+API keys or Neo4j credentials. Anyone can download the [public Compose file](https://gist.github.com/Tsag0005/436f8abd35f412cdddafddd9b7605b65)
+without access to this source repository. Save its `compose.yaml` in an empty folder,
+then run:
 
 ```bash
-docker compose -f compose.pull.yaml pull
-docker compose -f compose.pull.yaml up -d
+docker compose pull
+docker compose up -d
 ```
 
 Open `http://localhost` on that computer. To stop it, run
-`docker compose -f compose.pull.yaml down`. When running on a public server, set
+`docker compose down`. This public Compose file pins the `v0.1.0` release;
+collaborators with repository access can use [compose.pull.yaml](compose.pull.yaml)
+for the current `latest` images. When running on a public server, set
 `SITE_ADDRESS` to a hostname pointing to that server and allow ports 80 and 443;
 Caddy will provide HTTPS. The browser workspace still holds each visitor's durable
 data. OpenAI usage is charged to the visitor's own key.
 
-GitHub creates new container packages as private. The owner must set **both** packages
-to **Public** in their package settings before anonymous pulls work. GitHub warns
-that changing a package to Public cannot be reversed. Publishing public images also
-exposes the application code and bundled artifacts inside those images, even when
-this source repository is private. No source file outside this repository is copied
+Both container packages are Public and can be pulled without a GitHub login.
+Publishing public images exposes the application code and bundled artifacts inside
+them, even while this source repository remains private. No source file outside this repository is copied
 into the images.
 
 For a public deployment, follow [the OCI Always Free guide](deploy/OCI.md).
@@ -90,8 +91,8 @@ to enter keys over HTTP.
 No operator OpenAI or Neo4j credentials belong in the container environment.
 
 An OCI Always Free Ampere A1 VM is a practical target for the Python extraction
-stack, subject to account eligibility and capacity. Build on the VM with Docker
-Compose. Do not assume a static-site host can run the Python pipeline. The app
+stack, subject to account eligibility and capacity. Run the published images
+on the VM with Docker Compose. Do not assume a static-site host can run the Python pipeline. The app
 needs long-running compute and enough memory for OntoGPT. The operator still needs
 to create the VM; this repo alone does not provision cloud resources.
 
