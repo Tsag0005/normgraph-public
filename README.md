@@ -51,6 +51,37 @@ The Docker deployment includes both Python environments:
 docker compose up --build -d
 ```
 
+## Run the published images
+
+Release tags (`v*`) and manual runs of the [image publishing workflow](.github/workflows/publish-images.yml)
+build separate API and web images for Linux x86-64 and ARM64. The workflow publishes
+multi-platform `latest`, release, and commit tags to GitHub Container Registry:
+
+- `ghcr.io/tsag0005/normgraph-public-api:latest`
+- `ghcr.io/tsag0005/normgraph-public-web:latest`
+
+The images contain the application and its bundled example corpora, but no operator
+API keys or Neo4j credentials. After receiving a copy of [compose.pull.yaml](compose.pull.yaml),
+anyone can run the complete site without cloning the source repository:
+
+```bash
+docker compose -f compose.pull.yaml pull
+docker compose -f compose.pull.yaml up -d
+```
+
+Open `http://localhost` on that computer. To stop it, run
+`docker compose -f compose.pull.yaml down`. When running on a public server, set
+`SITE_ADDRESS` to a hostname pointing to that server and allow ports 80 and 443;
+Caddy will provide HTTPS. The browser workspace still holds each visitor's durable
+data. OpenAI usage is charged to the visitor's own key.
+
+GitHub creates new container packages as private. The owner must set **both** packages
+to **Public** in their package settings before anonymous pulls work. GitHub warns
+that changing a package to Public cannot be reversed. Publishing public images also
+exposes the application code and bundled artifacts inside those images, even when
+this source repository is private. No source file outside this repository is copied
+into the images.
+
 For a public deployment, follow [the OCI Always Free guide](deploy/OCI.md).
 You can use a free `PUBLIC_IP.sslip.io` hostname, so a purchased domain and a
 DNS account are optional. Set `SITE_ADDRESS` to that hostname. Caddy obtains
