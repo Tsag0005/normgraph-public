@@ -51,6 +51,35 @@ The Docker deployment includes both Python environments:
 docker compose up --build -d
 ```
 
+## Run one image locally
+
+The standalone image contains the website, Caddy, and both Python environments.
+No Compose file or source checkout is needed:
+
+```sh
+docker run -d --name normgraph -p 127.0.0.1:8080:80 --tmpfs /tmp/normgraph-visitors:size=1g,mode=1777 ghcr.io/tsag0005/normgraph-public:latest
+```
+
+Open `http://localhost:8080`. Stop it with `docker stop normgraph`; remove
+the stopped container with `docker rm normgraph`. The default listens on HTTP
+for local use. Browser workspaces persist in each visitor's browser.
+
+To run that same image on a public server, point a hostname at the server and
+allow inbound ports 80 and 443. Set `SITE_ADDRESS` to the hostname and persist
+Caddy's certificate data:
+
+```sh
+docker run -d --name normgraph --restart unless-stopped -p 80:80 -p 443:443 \
+  -e SITE_ADDRESS=your.hostname.example \
+  --tmpfs /tmp/normgraph-visitors:size=1g,mode=1777 \
+  -v normgraph_caddy_data:/data -v normgraph_caddy_config:/config \
+  ghcr.io/tsag0005/normgraph-public:latest
+```
+
+Caddy obtains HTTPS after DNS and the ports are ready. Ask visitors to enter
+API keys only over HTTPS. The two-container Compose setup below remains
+available for operators who prefer separate web and API services.
+
 ## Run the published images
 
 Release tags (`v*`) and manual runs of the [image publishing workflow](.github/workflows/publish-images.yml)
