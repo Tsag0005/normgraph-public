@@ -50,9 +50,21 @@ preview = result("/api/jobs/preview", {
 })
 item = wait_for_job(preview["id"])["items"][0]
 assert item["details"]["norms_included"] > 0, item
+review_preview = result("/api/jobs/review-preview", {
+    "featureText": "Feature: Privacy\nScenario: Contact\n  Then the policy lists a contact\n"
+                   "Scenario: Erasure\n  Then the policy explains erasure\n",
+    "selectedScenarioIndices": [2],
+    "documentText": "# Privacy policy\nContact us by email.",
+    "documentName": "Smoke policy",
+    "reviewModel": "gpt-6.1-sol",
+    "reasoningEffort": "medium",
+})
+review_result = wait_for_job(review_preview["id"])
+assert review_result["estimate"]["scenarios"] == 1, review_result
+assert review_result["selectedScenarioIndices"] == [2], review_result
 with call("/api/workspace/snapshot") as response:
     assert "attachment" in response.headers["Content-Disposition"]
     with ZipFile(BytesIO(response.read())) as archive:
         assert archive.testzip() is None
         assert any(name.endswith("job.json") for name in archive.namelist())
-print("Published workbench: GDPR graph check, preview, and ZIP export passed")
+print("Published workbench: GDPR graph, selected review estimate, and ZIP export passed")

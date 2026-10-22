@@ -26,8 +26,9 @@ historical reports, and previous site runtime files are excluded.
   optionally select Neo4j and enter their own URI, username, password, and database.
   Neo4j data lives in that visitor's Neo4j account, outside the browser backup.
 - The **Evaluate document** tab checks each generated or uploaded Gherkin against
-  one supplied policy document. This uses the visitor's OpenAI key but does not
-  require a graph or Neo4j credentials. The document and Gherkins are sent to
+  one supplied policy document. Visitors can select individual scenarios from a
+  saved generation run or uploaded feature file. This uses the visitor's OpenAI key but does not
+  require a graph or Neo4j credentials. The document and selected Gherkins are sent to
   OpenAI, and the document, per-scenario verdicts, citations, and usage are saved
   in the visitor's browser workspace.
 - The document reviewer offers historical GitHub Privacy Statements effective
@@ -49,14 +50,17 @@ potentially costly extraction and is unnecessary for that demo.
 
 1. Generate Gherkin, then choose **Evaluate against a document** beside that
    output. You can also select a saved generation run or upload/paste a `.feature`
-   file in **Evaluate document**.
-2. Choose a dated GitHub policy example, paste the complete policy, or upload
+   file in **Evaluate document**. For a batch generation job, choose its **all
+   generated sets** option to pick scenarios across provisions.
+2. Under **Choose Gherkins**, search and check the individual scenarios to
+   review. The free estimate and paid calls include only checked scenarios.
+3. Choose a dated GitHub policy example, paste the complete policy, or upload
    UTF-8 `.txt` or `.md` text. Keep the
    original headings and line breaks for evidence citations.
-3. Select Luna, Sol, Astra, or the legacy GPT-4o option. Run the free estimate,
+4. Select Luna, Sol, Astra, or the legacy GPT-4o option. Run the free estimate,
    review its token and cost range, set an approximate spending cap, then run
    the paid review. High-end settings require an explicit token warning check.
-4. Read each PASS, FAIL, PARTIAL, or UNCERTAIN result with its explanation and
+5. Read each PASS, FAIL, PARTIAL, or UNCERTAIN result with its explanation and
    checked policy quotes. Download `review.md` or `result.json` from the job's
    Files tab. If the job stops, select it under **Continue a saved review** and
    raise the cap if needed; completed verdicts are reused.

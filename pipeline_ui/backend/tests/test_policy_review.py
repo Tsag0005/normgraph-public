@@ -77,6 +77,40 @@ class ReviewTests(unittest.TestCase):
         self.assertGreater(xhigh["estimate"]["estimatedMaximumUsd"],
                            medium["estimate"]["estimatedMaximumUsd"])
 
+    def test_only_selected_scenario_is_estimated_reviewed_and_reported(self):
+        selected = request("review", selectedScenarioIndices=[2], maxCostUsd=5)
+        estimate = policy_review.preview(selected)
+        self.assertEqual(estimate["estimate"]["scenarios"], 1)
+        self.assertEqual(estimate["selectedScenarioIndices"], [2])
+        self.assertNotEqual(estimate["signature"],
+                            policy_review.preview(request(selectedScenarioIndices=[1]))["signature"])
+        with tempfile.TemporaryDirectory() as folder:
+            client = FakeClient()
+            result = policy_review.run_review(selected, Path(folder), lambda *_: None, client=client)
+            self.assertEqual(len(client.calls), 1)
+            self.assertEqual([row["name"] for row in result["verdicts"]], ["Delete records"])
+            self.assertIn("Source scenarios selected: 2", (Path(folder) / "review.md").read_text(encoding="utf-8"))
+
+    def test_selection_validation_and_legacy_all_signature(self):
+        self.assertEqual(policy_review.request_signature(request()),
+                         policy_review.request_signature(request(selectedScenarioIndices=[1, 2])))
+        for indices in ([], [0], [3], [2, 1], [1, 1], [True]):
+            with self.subTest(indices=indices), self.assertRaisesRegex(ValueError, "Select between"):
+                policy_review.preview(request(selectedScenarioIndices=indices))
+
+    def test_can_choose_one_scenario_from_more_than_one_hundred(self):
+        many = "Feature: many\n" + "".join(
+            f"Scenario: Case {index}\n  Then it is stated\n" for index in range(1, 102))
+        estimate = policy_review.preview(request(featureText=many, selectedScenarioIndices=[101]))
+        self.assertEqual(estimate["estimate"]["scenarios"], 1)
+        self.assertEqual(estimate["selectedScenarioIndices"], [101])
+
+    def test_can_select_across_joined_generation_sets(self):
+        combined = FEATURE + "\n" + FEATURE
+        cases = policy_review.selected_scenarios(
+            request(featureText=combined, selectedScenarioIndices=[1, 4]))
+        self.assertEqual([case["name"] for case in cases], ["Contact address", "Delete records"])
+
     def test_evidence_must_match_the_cited_line(self):
         value = {"verdict": "PASS", "yellow_reason": None, "explanation": "Contact is listed.",
                  "policy_evidence": [{"line": 3, "section": "Privacy Policy",
@@ -133,20 +167,25 @@ class ReviewTests(unittest.TestCase):
             with patch.object(public_server, "SCRATCH", Path(folder)), patch.object(public_server, "_python", return_value=sys.executable):
                 public_server.STATES.clear()
                 workspace = public_server._workspace("e" * 64)
-                job = workspace.start("review-preview", request(), {"OPENAI_API_KEY": ""})
+                job = workspace.start("review-preview", request(selectedScenarioIndices=[2]),
+                                      {"OPENAI_API_KEY": ""})
                 for _ in range(100):
                     if workspace.jobs[job["id"]]["status"] not in public_server.core.ACTIVE:
                         break
                     time.sleep(0.1)
                 finished = workspace.jobs[job["id"]]
                 self.assertEqual(finished["status"], "succeeded", finished.get("error"))
-                self.assertEqual(finished["result"]["estimate"]["scenarios"], 2)
+                self.assertEqual(finished["result"]["estimate"]["scenarios"], 1)
                 with zipfile.ZipFile(io.BytesIO(workspace.snapshot())) as archive:
                     saved = json.loads(archive.read(f"jobs/{job['id']}/result.json"))
-                    self.assertEqual(saved["estimate"]["scenarios"], 2)
+                    self.assertEqual(saved["selectedScenarioIndices"], [2])
                 with self.assertRaisesRegex(ValueError, "OpenAI API key"):
                     workspace.start("review", request("review", preflightId=job["id"], maxCostUsd=5),
                                     {"OPENAI_API_KEY": ""})
+                with self.assertRaisesRegex(ValueError, "matching free review estimate"):
+                    workspace.start("review", request("review", selectedScenarioIndices=[1],
+                                                       preflightId=job["id"], maxCostUsd=5),
+                                    {"OPENAI_API_KEY": "test-key"})
 
 
 if __name__ == "__main__":

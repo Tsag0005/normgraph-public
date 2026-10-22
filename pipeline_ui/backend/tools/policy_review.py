@@ -74,10 +74,17 @@ def _sha(text):
 
 def request_signature(data):
     fields = ("featureText", "documentText", "documentName", "reviewModel", "reasoningEffort")
-    return _sha(json.dumps({key: data.get(key) for key in fields}, sort_keys=True, ensure_ascii=False))
+    signed = {key: data.get(key) for key in fields}
+    selected = data.get("selectedScenarioIndices")
+    if selected is not None:
+        total = len(parse_scenarios(data.get("featureText", ""), enforce_limit=False,
+                                    require_assertions=False))
+        if selected != list(range(1, total + 1)):
+            signed["selectedScenarioIndices"] = selected
+    return _sha(json.dumps(signed, sort_keys=True, ensure_ascii=False))
 
 
-def parse_scenarios(feature_text):
+def parse_scenarios(feature_text, *, enforce_limit=True, require_assertions=True):
     """Parse the generated Gherkin subset while retaining its full scenario text."""
     scenarios = []
     pending = []
@@ -116,13 +123,32 @@ def parse_scenarios(feature_text):
         scenarios.append(current)
     if not scenarios:
         raise ValueError("No Gherkin scenarios found. Provide a .feature file with Scenario: and Then steps.")
-    if len(scenarios) > MAX_SCENARIOS:
+    if enforce_limit and len(scenarios) > MAX_SCENARIOS:
         raise ValueError(f"Select at most {MAX_SCENARIOS} scenarios per review")
     for case in scenarios:
-        if not case["assertions"]:
+        if require_assertions and not case["assertions"]:
             raise ValueError(f"Scenario at line {case['line']} has no Then assertion")
         case["gherkin"] = "\n".join(case.pop("lines")).strip()
     return scenarios
+
+
+def selected_scenarios(data):
+    """Keep source order while reviewing only the explicitly chosen scenarios."""
+    selected = data.get("selectedScenarioIndices")
+    cases = parse_scenarios(data["featureText"], enforce_limit=selected is None,
+                            require_assertions=selected is None)
+    if selected is None:
+        return cases
+    if (not isinstance(selected, list) or not selected or len(selected) > MAX_SCENARIOS or
+            any(isinstance(index, bool) or not isinstance(index, int) or
+                index < 1 or index > len(cases) for index in selected) or
+            selected != sorted(set(selected))):
+        raise ValueError(f"Select between 1 and {MAX_SCENARIOS} valid Gherkin scenarios")
+    chosen = [cases[index - 1] for index in selected]
+    for case in chosen:
+        if not case["assertions"]:
+            raise ValueError(f"Scenario at line {case['line']} has no Then assertion")
+    return chosen
 
 
 def validate_request(data):
@@ -149,7 +175,7 @@ def validate_request(data):
         if resume is not None and (not isinstance(resume, str) or
                                    not re.fullmatch(r"[0-9]{8}-[0-9]{6}-[a-f0-9]{8}", resume)):
             raise ValueError("Invalid saved review identifier")
-    parse_scenarios(feature)
+    selected_scenarios(data)
 
 
 def _numbered(document):
@@ -177,7 +203,7 @@ def _output_allowance(model, effort):
 
 def preview(data):
     validate_request(data)
-    cases = parse_scenarios(data["featureText"])
+    cases = selected_scenarios(data)
     numbered = _numbered(data["documentText"])
     model = data["reviewModel"]
     allowance = _output_allowance(model, data.get("reasoningEffort", "medium"))
@@ -201,6 +227,7 @@ def preview(data):
         },
         "documentSha256": _sha(data["documentText"]),
         "featureSha256": _sha(data["featureText"]),
+        "selectedScenarioIndices": data.get("selectedScenarioIndices") or list(range(1, len(cases) + 1)),
         "signature": request_signature(data),
     }
 
@@ -255,7 +282,8 @@ def _write_report(path, result):
     lines = [f"# Policy review: {result['summary']}", "",
              f"Document SHA-256: `{result['documentSha256']}`  ",
              f"Gherkin SHA-256: `{result['featureSha256']}`  ",
-             f"Model: `{result['estimate']['model']}`", "",
+             f"Model: `{result['estimate']['model']}`  ",
+             f"Source scenarios selected: {', '.join(map(str, result['selectedScenarioIndices']))}", "",
              "These are assessments of the supplied document text, not legal compliance findings.", ""]
     for row in result["verdicts"]:
         label = row["verdict"]
@@ -273,7 +301,7 @@ def _write_report(path, result):
 
 def run_review(data, directory, emit, client=None):
     estimate = preview(data)
-    cases = parse_scenarios(data["featureText"])
+    cases = selected_scenarios(data)
     policy = data["documentText"]
     model = data["reviewModel"]
     pin, pout = MODEL_PRICES[model]

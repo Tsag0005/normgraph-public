@@ -43,6 +43,21 @@ const policyPresets = [
   },
 ];
 
+type ScenarioChoice = { index: number; name: string; assertion: string };
+
+function listScenarios(feature: string): ScenarioChoice[] {
+  const choices: ScenarioChoice[] = [];
+  for (const line of feature.split(/\r?\n/)) {
+    const heading = line.match(/^\s*Scenario:\s*(.*)$/);
+    if (heading) {
+      choices.push({ index: choices.length + 1, name: heading[1].trim(), assertion: '' });
+    } else if (choices.length && !choices[choices.length - 1].assertion && /^\s*Then\s+/.test(line)) {
+      choices[choices.length - 1].assertion = line.trim();
+    }
+  }
+  return choices;
+}
+
 export function PolicyReviewForm({ jobs, featureText, setFeatureText, hasApiKey, busy, start, onError }: Props) {
   const [documentText, setDocumentText] = useState('');
   const [documentName, setDocumentName] = useState('');
@@ -54,29 +69,55 @@ export function PolicyReviewForm({ jobs, featureText, setFeatureText, hasApiKey,
   const [maxCostUsd, setMaxCostUsd] = useState(5);
   const [acknowledged, setAcknowledged] = useState(false);
   const [resumeJobId, setResumeJobId] = useState('');
-  const sources = useMemo(() => jobs.flatMap((job) =>
-    (job.result?.runs || []).filter((run) => !!run.feature).map((run, index) => ({
+  const [scenarioSearch, setScenarioSearch] = useState('');
+  const [scenarioSelection, setScenarioSelection] = useState<{ source: string; indices: number[] }>({ source: '', indices: [] });
+  const sources = useMemo(() => jobs.flatMap((job) => {
+    const runs = (job.result?.runs || []).filter((run) => !!run.feature);
+    const individual = runs.map((run, index) => ({
       id: `${job.id}:${index}`,
       label: `${job.label} · ${run.provision || `scenario set ${index + 1}`}`,
       feature: run.feature || '',
-    }))), [jobs]);
+      origins: listScenarios(run.feature || '').map(() => run.provision || `scenario set ${index + 1}`),
+    }));
+    if (runs.length < 2) return individual;
+    return [{
+      id: `${job.id}:all`,
+      label: `${job.label} · all ${runs.length} generated sets`,
+      feature: runs.map((run) => run.feature).join('\n\n'),
+      origins: individual.flatMap((item) => item.origins),
+    }, ...individual];
+  }), [jobs]);
   const selectedSource = sources.find((item) => item.feature === featureText)?.id || '';
-  const payload = { featureText, documentText, documentName, reviewModel, reasoningEffort };
+  const scenarios = useMemo(() => listScenarios(featureText), [featureText]);
+  const origins = sources.find((item) => item.id === selectedSource)?.origins || [];
+  const selectedScenarioIndices = scenarioSelection.source === featureText ? scenarioSelection.indices : [];
+  const visibleScenarios = scenarios.filter((item) =>
+    `${item.name} ${item.assertion} ${origins[item.index - 1] || ''}`
+      .toLowerCase().includes(scenarioSearch.toLowerCase()));
+  const allScenarioIndices = scenarios.map((item) => item.index);
+  const matchesSelection = (request: Record<string, unknown>) => {
+    const saved = Array.isArray(request.selectedScenarioIndices)
+      ? request.selectedScenarioIndices : allScenarioIndices;
+    return saved.length === selectedScenarioIndices.length &&
+      saved.every((index, position) => index === selectedScenarioIndices[position]);
+  };
+  const payload = { featureText, selectedScenarioIndices, documentText, documentName, reviewModel, reasoningEffort };
   const resumable = jobs.filter((job) => job.kind === 'review' &&
     !['queued', 'running', 'cancelling'].includes(job.status) &&
     !!job.result?.signature && !job.result?.complete);
   const resumeMatch = resumable.find((job) => job.id === resumeJobId &&
     job.request.featureText === featureText && job.request.documentText === documentText &&
     job.request.documentName === documentName && job.request.reviewModel === reviewModel &&
-    job.request.reasoningEffort === reasoningEffort);
+    job.request.reasoningEffort === reasoningEffort && matchesSelection(job.request));
   const preview = jobs.find((job) => job.kind === 'review-preview' && job.status === 'succeeded' &&
     job.request.featureText === featureText && job.request.documentText === documentText &&
     job.request.documentName === documentName && job.request.reviewModel === reviewModel &&
-    job.request.reasoningEffort === reasoningEffort);
+    job.request.reasoningEffort === reasoningEffort && matchesSelection(job.request));
   const estimate = preview?.result?.estimate;
   const selectedPolicy = policyPresets.find((item) => item.id === selectedPolicyId);
   const highEnd = reviewModel === 'gpt-6-astra' || reasoningEffort === 'xhigh';
-  const ready = !loadingPolicy && !!featureText.trim() && !!documentText.trim() && !!documentName.trim();
+  const ready = !loadingPolicy && selectedScenarioIndices.length > 0 &&
+    selectedScenarioIndices.length <= 100 && !!documentText.trim() && !!documentName.trim();
 
   async function choosePolicy(id: string) {
     const request = ++policyRequest.current;
@@ -131,7 +172,14 @@ export function PolicyReviewForm({ jobs, featureText, setFeatureText, hasApiKey,
               const job = resumable.find((item) => item.id === event.target.value);
               setResumeJobId(job?.id || '');
               if (!job) return;
-              setFeatureText(String(job.request.featureText || ''));
+              const savedFeature = String(job.request.featureText || '');
+              setFeatureText(savedFeature);
+              setScenarioSelection({
+                source: savedFeature,
+                indices: Array.isArray(job.request.selectedScenarioIndices)
+                  ? job.request.selectedScenarioIndices.filter((index): index is number => typeof index === 'number')
+                  : listScenarios(savedFeature).map((item) => item.index),
+              });
               ++policyRequest.current;
               setLoadingPolicy(false);
               setSelectedPolicyId('');
@@ -151,7 +199,11 @@ export function PolicyReviewForm({ jobs, featureText, setFeatureText, hasApiKey,
         <div className="space-y-2">
           <label htmlFor="review-saved" className="text-sm font-semibold">Generated Gherkins</label>
           <NativeSelect id="review-saved" className="w-full" value={selectedSource}
-            onChange={(event) => setFeatureText(sources.find((item) => item.id === event.target.value)?.feature || '')}>
+            onChange={(event) => {
+              const source = sources.find((item) => item.id === event.target.value)?.feature || '';
+              setFeatureText(source);
+              setScenarioSelection({ source, indices: [] });
+            }}>
             <NativeSelectOption value="">Paste or upload a feature file</NativeSelectOption>
             {sources.map((item) => <NativeSelectOption key={item.id} value={item.id}>{item.label}</NativeSelectOption>)}
           </NativeSelect>
@@ -159,12 +211,67 @@ export function PolicyReviewForm({ jobs, featureText, setFeatureText, hasApiKey,
           <input aria-label="Upload Gherkin feature" type="file" accept=".feature,.txt,text/plain"
             className="block w-full text-sm" onChange={(event) => {
               const file = event.target.files?.[0];
-              if (file) void readFile(file, setFeatureText);
+              if (file) void readFile(file, (source) => {
+                setFeatureText(source);
+                setScenarioSelection({ source, indices: [] });
+              });
               event.currentTarget.value = '';
             }} />
-          <Textarea aria-label="Gherkin scenarios" className="min-h-40 font-mono text-sm"
-            value={featureText} onChange={(event) => setFeatureText(event.target.value)}
+          <Textarea aria-label="Gherkin scenarios" className="min-h-32 font-mono text-sm"
+            value={featureText} onChange={(event) => {
+              setFeatureText(event.target.value);
+              setScenarioSelection({ source: event.target.value, indices: [] });
+            }}
             placeholder="Feature: ...&#10;Scenario: ...&#10;  Given ...&#10;  When ...&#10;  Then ..." />
+        </div>
+        <div className="space-y-3">
+          <div className="flex flex-wrap items-center justify-between gap-2">
+            <span className="text-sm font-semibold">
+              Choose Gherkins · {selectedScenarioIndices.length} of {scenarios.length} selected
+            </span>
+            <div className="flex gap-2">
+              <Button variant="outline" size="sm" disabled={!visibleScenarios.length}
+                onClick={() => setScenarioSelection({
+                  source: featureText,
+                  indices: [...new Set([...selectedScenarioIndices, ...visibleScenarios.map((item) => item.index)])]
+                    .sort((a, b) => a - b),
+                })}>
+                Select visible
+              </Button>
+              <Button variant="ghost" size="sm" disabled={!selectedScenarioIndices.length}
+                onClick={() => setScenarioSelection({ source: featureText, indices: [] })}>
+                Clear selection
+              </Button>
+            </div>
+          </div>
+          <Input aria-label="Search Gherkins" placeholder="Search scenario names or Then assertions"
+            value={scenarioSearch} onChange={(event) => setScenarioSearch(event.target.value)} />
+          <div className="max-h-72 space-y-2 overflow-y-auto rounded-lg border p-3">
+            {visibleScenarios.length ? visibleScenarios.map((item) => (
+              <label key={item.index} className="flex cursor-pointer items-start gap-3 rounded-lg p-2 text-sm hover:bg-muted">
+                <Checkbox aria-label={`Select scenario ${item.index}: ${item.name}`}
+                  checked={selectedScenarioIndices.includes(item.index)}
+                  onCheckedChange={(checked) => setScenarioSelection({
+                    source: featureText,
+                    indices: checked
+                      ? [...selectedScenarioIndices, item.index].sort((a, b) => a - b)
+                      : selectedScenarioIndices.filter((index) => index !== item.index),
+                  })} />
+                <span className="space-y-1">
+                  <span className="block font-medium">{item.index}. {item.name || 'Unnamed scenario'}</span>
+                  {origins[item.index - 1] && <span className="block text-muted-foreground">
+                    Provision {origins[item.index - 1]}
+                  </span>}
+                  <span className="block text-muted-foreground">{item.assertion || 'No Then assertion found'}</span>
+                </span>
+              </label>
+            )) : <p className="text-sm text-muted-foreground">
+              {scenarios.length ? 'No matching scenarios.' : 'Load or paste a feature file to list its scenarios.'}
+            </p>}
+          </div>
+          <p className="text-sm text-muted-foreground">
+            Only selected scenarios are estimated and sent for review, in their original order. Select at most 100 per review.
+          </p>
         </div>
         <div className="space-y-2">
           <label htmlFor="review-policy-preset" className="text-sm font-semibold">Example policy (optional)</label>
@@ -241,7 +348,7 @@ export function PolicyReviewForm({ jobs, featureText, setFeatureText, hasApiKey,
         <Alert>
           <AlertTitle>{highEnd ? 'High-end evaluation can use many tokens' : 'Evaluation uses your API credits'}</AlertTitle>
           <AlertDescription>
-            The complete document is sent once for every Gherkin. Large policies and many
+            The complete document is sent once for every selected Gherkin. Large policies and many
             scenarios can consume hundreds of thousands or millions of tokens. Your OpenAI
             account pays for these calls. The estimate is approximate, and your account&apos;s
             actual pricing may differ.
@@ -265,6 +372,8 @@ export function PolicyReviewForm({ jobs, featureText, setFeatureText, hasApiKey,
             ...(resumeMatch ? { resumeJobId: resumeMatch.id } : {}) })}>
           {resumeMatch ? 'Continue document review · paid' : 'Run document review · paid'}
         </Button>
+        {!selectedScenarioIndices.length && <p className="text-sm text-muted-foreground">Select at least one Gherkin to estimate and review.</p>}
+        {selectedScenarioIndices.length > 100 && <p className="text-sm text-destructive">Select at most 100 Gherkins per review.</p>}
         {!preview && <p className="text-sm text-muted-foreground">Run a matching free estimate to enable review.</p>}
         {!hasApiKey && <p className="text-sm text-muted-foreground">Enter your OpenAI API key in Workspace and credentials.</p>}
       </CardContent>

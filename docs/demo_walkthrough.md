@@ -36,14 +36,16 @@ review setup without building a graph during the meeting.
    again, combines it with the selected provision, asks the model for Gherkin,
    and records the result in the browser workspace. Generation consumes tokens.
 5. **Evaluate against a policy.** From the generated result click
-   **Evaluate against a document**. In **Evaluate document**, select the
+   **Evaluate against a document**. In **Evaluate document**, check one or more
+   scenarios under **Choose Gherkins**. Search by scenario name or Then assertion
+   to select a small, useful subset. Then select the
    **GitHub Privacy Statement (2017)** preset. You can instead upload or paste
    any legal document. The preset fills the document name and full document
    text without an API call.
 6. **Estimate, then review.** Click **Estimate review · no model call** to
-   inspect the scenario count and estimated token cost. Choose a review model,
+   inspect the selected scenario count and estimated token cost. Choose a review model,
    read its token warning, then click **Run document review · paid**. The model
-   receives the Gherkins and policy text and returns pass, fail, or partial
+   receives only the selected Gherkins and policy text and returns pass, fail, or partial
    with reasons for each scenario. Review can use many tokens, especially with
    larger documents or high-end models.
 7. **Optional comparison.** Repeat the review with the 2018 policy preset to
