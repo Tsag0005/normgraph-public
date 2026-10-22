@@ -193,7 +193,7 @@ function RunOutput({ run, onEvaluate }: { run: Run; onEvaluate: (feature: string
       {(run.queryContext || run.text) && (
         <details open={!run.feature}>
           <summary className="cursor-pointer text-sm font-semibold">
-            Rendered SPIRES context
+            Retrieved graph context
           </summary>
           <TextOutput value={run.queryContext || run.text || ''} />
         </details>
@@ -238,7 +238,7 @@ function Results({ job, cancel, onEvaluate }: { job?: Job; cancel: () => void; o
         </div>
         <CardDescription>
           {job?.label ||
-            'Preview context, run a preflight, or select a past job.'}
+            'Preview extracted graph context, run a preflight, or select a past job.'}
         </CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
@@ -556,7 +556,7 @@ export default function Home() {
         <header className="flex flex-wrap items-start justify-between gap-4">
           <div>
             <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-primary">
-              SPIRES · Browser workspace
+              Browser workspace
             </p>
             <h1 className="text-3xl font-semibold tracking-tight">
               From legislation to test scenarios
@@ -564,6 +564,9 @@ export default function Home() {
             <p className="mt-2 max-w-3xl leading-7 text-muted-foreground">
               Choose a corpus, inspect its graph context, and generate Gherkin.
               Build and validate new corpora in the same workspace.
+            </p>
+            <p className="mt-2 text-xs text-muted-foreground">
+              Method: knowledge graph extraction uses SPIRES with a LinkML schema.
             </p>
           </div>
           <Button variant="outline" onClick={() => void refresh()}>
@@ -741,8 +744,8 @@ export default function Home() {
                     <CardTitle>Provision and retrieval</CardTitle>
                     <CardDescription>
                       Generates Gherkin assertions for a person reviewing
-                      privacy policies. Production uses SPIRES; evaluation arms
-                      are separate.
+                      privacy policies. The selected clause and its retrieved
+                      graph context inform each scenario.
                     </CardDescription>
                   </CardHeader>
                   <CardContent className="space-y-5">
@@ -981,7 +984,9 @@ export default function Home() {
                       </div>
                     </details>
                     <div className="rounded-lg bg-muted p-4 text-sm leading-6">
-                      Preview uses the same retrieval settings without calling
+                      Preview retrieves what the graph extracted for the selected
+                      clause: norms, linked provisions, and any available conditions
+                      or exceptions. It displays this context as text without calling
                       the scenario model. Generation retrieves again, so a graph
                       changed after preview can produce different context. The
                       generated prompt records what was actually sent.
@@ -998,7 +1003,7 @@ export default function Home() {
                         onClick={() => void start('preview', generation)}
                       >
                         <Network className="h-4 w-4" />
-                        Preview context · free
+                        Preview extracted graph context · free
                       </Button>
                       <Button
                         disabled={busy || !canGenerate || !openaiKey.trim()}

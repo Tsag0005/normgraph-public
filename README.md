@@ -1,14 +1,15 @@
 # NormGraph Public Workbench
 
 Public, self-hosted edition of the legal-norm graph and Gherkin generator. This is a
-separate repository containing the production pipeline, the website, and two bundled
+separate repository containing the production pipeline, the website, and three bundled
 example graphs. The website includes document review; research notebooks,
 historical reports, and previous site runtime files are excluded.
 
 ## How it works
 
-- Each browser keeps its corpus files, graph CSVs, job history, prompts, and generated
-  features in IndexedDB. **Export workspace** makes a ZIP backup; **Import workspace**
+- Each browser keeps visitor-added corpus files, graphs, job history, prompts, and
+  generated features in IndexedDB. The bundled examples remain in the image.
+  **Export workspace** makes a ZIP backup; **Import workspace**
   restores it in another browser. Clearing browser site data deletes its workspace.
 - The Python API is a temporary compute worker. It restores a browser's ZIP when its
   working copy is missing. The default Docker deployment stores working copies on
@@ -17,7 +18,9 @@ historical reports, and previous site runtime files are excluded.
   in page memory and is passed to that job's process environment. It is never written
   into a workspace ZIP, job request, or repository. Preview and graph checks are free.
 - The default graph backend reads the pipeline's SPIRES node and relationship CSVs.
-  Schedule 1 and Part IIIC have bundled, immediately usable graphs. A visitor can
+  Schedule 1, Part IIIC, and a focused GDPR Article 13 demo corpus have bundled,
+  immediately usable graphs. The GDPR demo contains Articles 4, 6, 12, 13, 22,
+  46, 47 and 49; it is not the complete regulation. A visitor can
   optionally select Neo4j and enter their own URI, username, password, and database.
   Neo4j data lives in that visitor's Neo4j account, outside the browser backup.
 - The **Evaluate document** tab checks each generated or uploaded Gherkin against
@@ -25,6 +28,9 @@ historical reports, and previous site runtime files are excluded.
   require a graph or Neo4j credentials. The document and Gherkins are sent to
   OpenAI, and the document, per-scenario verdicts, citations, and usage are saved
   in the visitor's browser workspace.
+- The document reviewer offers historical GitHub Privacy Statements effective
+  11 October 2017 and 25 May 2018 as optional presets. The user can still upload
+  or paste any document. These are dated examples, not GitHub's current policy.
 
 The full flow remains available: discover built-in corpora, register and validate a
 custom statute, induce its structural profile, run a free build preflight, extract
@@ -37,7 +43,8 @@ visitor's OpenAI key. Pre-existing artifacts can be reused by the build.
 1. Generate Gherkin, then choose **Evaluate against a document** beside that
    output. You can also select a saved generation run or upload/paste a `.feature`
    file in **Evaluate document**.
-2. Paste the complete policy or upload UTF-8 `.txt` or `.md` text. Keep the
+2. Choose a dated GitHub policy example, paste the complete policy, or upload
+   UTF-8 `.txt` or `.md` text. Keep the
    original headings and line breaks for evidence citations.
 3. Select Luna, Sol, Astra, or the legacy GPT-4o option. Run the free estimate,
    review its token and cost range, set an approximate spending cap, then run
@@ -56,6 +63,23 @@ verified against the uploaded line and requires human inspection. The free
 estimate uses an approximate local token count and indicative list prices;
 actual provider billing may differ. Model availability depends on the user's
 OpenAI account.
+
+## Demo materials and provenance
+
+The [demo walkthrough](docs/demo_walkthrough.md) shows the GDPR Article 13(2)
+preview, generation, and document-review flow. It includes a small hand-authored
+[fallback feature file](docs/gdpr_article13_hand_authored_sample.feature) for a
+demo when a live model response is too slow. Preview retrieves the extracted
+graph context as text without calling the scenario model.
+
+The GDPR source and graph were copied from the original project's frozen Article
+13 experiment snapshot. Source SHA-256:
+`f1fc995ab1881e49eed428db0bb414e3955de52d3e45af793cdc17e9f8f07cb0`.
+The policy presets are from GitHub's CC0 [site-policy repository](https://github.com/github/site-policy):
+[2017 snapshot](https://github.com/github/site-policy/blob/2017-10-11/Policies/github-privacy-statement.md)
+and [2018 snapshot](https://github.com/github/site-policy/blob/2018-05-25/Policies/github-privacy-statement.md).
+Reviewing the 2017 policy against GDPR scenarios is a counterfactual comparison,
+not a finding that GitHub breached law in 2017.
 
 ## Local development
 

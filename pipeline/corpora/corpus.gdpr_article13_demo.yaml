@@ -1,0 +1,21 @@
+name: gdpr_article13_demo
+description: Selected GDPR Articles 4, 6, 12, 13, 22, 46, 47 and 49 for the Article 13 demonstration
+file_prefix: gdpr13
+node_prefix: GDPR1_
+
+paths:
+  raw: corpora/GDPR_article13_demo.txt
+  spires_dir: spires
+  profile: profiles/gdpr_article13_demo.yaml
+  schema: spires/norm.yaml
+
+modality_overrides: {}
+
+prompt:
+  citation_examples: '"article 4(1)", "Selected complete GDPR articles supporting the Article 13 experiment"'
+  example_provision: article 4(1)
+  provision_plural: articles
+
+provision:
+  pattern: '\b((?:4|6|12|13|22|46|47|49)(?:\(\d+\))?)(?!\d)'
+  key_prefix: article

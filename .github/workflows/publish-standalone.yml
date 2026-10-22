@@ -95,6 +95,11 @@ jobs:
                curl -fs http://127.0.0.1:18080/ -o index.html; then
               python3 -c 'import json; assert json.load(open("status.json"))["api"] == "ready"'
               grep -q '<div id="root"' index.html
+              curl -fs http://127.0.0.1:18080/policies/github_privacy_2017.md -o policy-2017.md
+              curl -fs http://127.0.0.1:18080/policies/github_privacy_2018.md -o policy-2018.md
+              grep -q 'October 11, 2017' policy-2017.md
+              grep -q 'May 25, 2018' policy-2018.md
+              docker exec normgraph sh -c 'test -s /app/pipeline/corpora/GDPR_article13_demo.txt && test -s /app/seed_graphs/gdpr_article13_demo/nodes.csv && test -s /app/seed_graphs/gdpr_article13_demo/edges.csv'
               exit 0
             fi
             sleep 2

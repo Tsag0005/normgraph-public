@@ -9,13 +9,16 @@ FROM python:3.11-slim-bookworm AS api
 ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 PYTHONPATH=/app \
     PIPELINE_UI_HOST=0.0.0.0 PORT=8765 \
     PIPELINE_UI_SCRATCH=/tmp/normgraph-visitors \
+    TIKTOKEN_CACHE_DIR=/app/tiktoken-cache \
     ONTOGPT=/app/.venv-ontogpt/bin/ontogpt
 WORKDIR /app
 COPY pipeline/requirements/ /app/pipeline/requirements/
 RUN python -m venv /app/.venv-testgen && \
     /app/.venv-testgen/bin/pip install --no-cache-dir -r /app/pipeline/requirements/pipeline.txt && \
     python -m venv /app/.venv-ontogpt && \
-    /app/.venv-ontogpt/bin/pip install --no-cache-dir -r /app/pipeline/requirements/ontogpt.txt
+    /app/.venv-ontogpt/bin/pip install --no-cache-dir -r /app/pipeline/requirements/ontogpt.txt && \
+    mkdir -p "$TIKTOKEN_CACHE_DIR" && \
+    /app/.venv-testgen/bin/python -c "import tiktoken; tiktoken.get_encoding('o200k_base'); tiktoken.get_encoding('cl100k_base')"
 COPY pipeline/ /app/pipeline/
 COPY pipeline_ui/backend/ /app/pipeline_ui/backend/
 COPY seed_graphs/ /app/seed_graphs/

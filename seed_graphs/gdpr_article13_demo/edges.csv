@@ -1,0 +1,840 @@
+from_key,rel,to_key
+provision:12(1),GDPR1_HAS_NORM,norm:12(1):1
+norm:12(1):1,GDPR1_BEARER,GDPR1_Actor:the controller
+norm:12(1):1,GDPR1_ACTION,GDPR1_Action:take appropriate measures to provide
+norm:12(1):1,GDPR1_OBJECT,GDPR1_InfoType:any information referred to in articles 13 and 14 and any communication under articles 15 to 22 and 34 relating to processing
+norm:12(1):1,GDPR1_CONDITION,gdpr1_condition:12(1):1:1
+provision:12(1),GDPR1_HAS_NORM,norm:12(1):2
+norm:12(1):2,GDPR1_BEARER,GDPR1_Actor:\[not explicitly stated in the text\]
+norm:12(1):2,GDPR1_ACTION,GDPR1_Action:provide
+norm:12(1):2,GDPR1_OBJECT,GDPR1_InfoType:information
+norm:12(1):2,GDPR1_CONDITION,gdpr1_condition:12(1):2:1
+norm:12(1):2,GDPR1_EXCEPTION,gdpr1_exemption:12(1):2:1
+provision:12(1),GDPR1_HAS_NORM,norm:12(1):3
+norm:12(1):3,GDPR1_BEARER,GDPR1_Actor:data subject
+norm:12(1):3,GDPR1_ACTION,GDPR1_Action:be provided orally
+norm:12(1):3,GDPR1_OBJECT,GDPR1_InfoType:information
+norm:12(1):3,GDPR1_CONDITION,gdpr1_condition:12(1):3:1
+norm:12(1):3,GDPR1_CONDITION,gdpr1_condition:12(1):3:2
+provision:12(2),GDPR1_HAS_NORM,norm:12(2):1
+norm:12(2):1,GDPR1_BEARER,GDPR1_Actor:controller
+norm:12(2):1,GDPR1_ACTION,GDPR1_Action:facilitate
+norm:12(2):1,GDPR1_OBJECT,GDPR1_InfoType:the exercise of data subject rights
+norm:12(2):1,GDPR1_CONDITION,gdpr1_condition:12(2):1:1
+provision:12(2),GDPR1_HAS_NORM,norm:12(2):2
+norm:12(2):2,GDPR1_BEARER,GDPR1_Actor:the controller
+norm:12(2):2,GDPR1_ACTION,GDPR1_Action:refuse to act on the request of the data subject
+norm:12(2):2,GDPR1_OBJECT,GDPR1_InfoType:his or her rights under articles 15 to 22
+norm:12(2):2,GDPR1_CONDITION,gdpr1_condition:12(2):2:1
+norm:12(2):2,GDPR1_EXCEPTION,gdpr1_exemption:12(2):2:1
+norm:12(2):2,GDPR1_EXCEPTION,gdpr1_exemption:12(2):2:2
+provision:12(3),GDPR1_HAS_NORM,norm:12(3):1
+norm:12(3):1,GDPR1_BEARER,GDPR1_Actor:the controller
+norm:12(3):1,GDPR1_ACTION,GDPR1_Action:provide information on action taken on a request
+norm:12(3):1,GDPR1_OBJECT,GDPR1_InfoType:a request under articles 15 to 22
+norm:12(3):1,GDPR1_CONDITION,gdpr1_condition:12(3):1:1
+provision:12(3),GDPR1_HAS_NORM,norm:12(3):2
+norm:12(3):2,GDPR1_BEARER,GDPR1_Actor:the controller
+norm:12(3):2,GDPR1_ACTION,GDPR1_Action:extend
+norm:12(3):2,GDPR1_OBJECT,GDPR1_InfoType:the period by two further months
+norm:12(3):2,GDPR1_CONDITION,gdpr1_condition:12(3):2:1
+provision:12(3),GDPR1_HAS_NORM,norm:12(3):3
+norm:12(3):3,GDPR1_BEARER,GDPR1_Actor:the controller
+norm:12(3):3,GDPR1_ACTION,GDPR1_Action:inform
+norm:12(3):3,GDPR1_OBJECT,GDPR1_InfoType:the data subject of any such extension together with the reasons for the delay
+norm:12(3):3,GDPR1_CONDITION,gdpr1_condition:12(3):3:1
+provision:12(3),GDPR1_HAS_NORM,norm:12(3):4
+norm:12(3):4,GDPR1_BEARER,GDPR1_Actor:information
+norm:12(3):4,GDPR1_ACTION,GDPR1_Action:be provided
+norm:12(3):4,GDPR1_OBJECT,GDPR1_InfoType:(implied object: the information requested)
+norm:12(3):4,GDPR1_CONDITION,gdpr1_condition:12(3):4:1
+norm:12(3):4,GDPR1_CONDITION,gdpr1_condition:12(3):4:2
+norm:12(3):4,GDPR1_EXCEPTION,gdpr1_exemption:12(3):4:1
+provision:12(4),GDPR1_HAS_NORM,norm:12(4):1
+norm:12(4):1,GDPR1_BEARER,GDPR1_Actor:controller
+norm:12(4):1,GDPR1_ACTION,GDPR1_Action:inform
+norm:12(4):1,GDPR1_OBJECT,GDPR1_InfoType:the data subject
+norm:12(4):1,GDPR1_CONDITION,gdpr1_condition:12(4):1:1
+provision:12(4),GDPR1_HAS_NORM,norm:12(4):2
+norm:12(4):2,GDPR1_BEARER,GDPR1_Actor:the controller
+norm:12(4):2,GDPR1_ACTION,GDPR1_Action:inform
+norm:12(4):2,GDPR1_OBJECT,GDPR1_InfoType:the data subject on the possibility of lodging a complaint with a supervisory authority and seeking a judicial remedy
+norm:12(4):2,GDPR1_CONDITION,gdpr1_condition:12(4):2:1
+provision:12(5),GDPR1_HAS_NORM,norm:12(5):1
+norm:12(5):1,GDPR1_BEARER,"GDPR1_Actor:;the text does not explicitly specify a single bearer. however, it implies that the party providing information under the specified articles is the bearer."
+norm:12(5):1,GDPR1_ACTION,GDPR1_Action:provide
+norm:12(5):1,GDPR1_OBJECT,GDPR1_InfoType:information provided under articles 13 and 14 and any communication and any actions taken under articles 15 to 22 and 34
+norm:12(5):1,GDPR1_CONDITION,gdpr1_condition:12(5):1:1
+norm:12(5):1,GDPR1_EXCEPTION,gdpr1_exemption:12(5):1:1
+provision:12(5),GDPR1_HAS_NORM,norm:12(5):2
+norm:12(5):2,GDPR1_BEARER,GDPR1_Actor:controller
+norm:12(5):2,GDPR1_ACTION,GDPR1_Action:charge a reasonable fee
+norm:12(5):2,GDPR1_OBJECT,GDPR1_InfoType:information or communication or action requested
+norm:12(5):2,GDPR1_CONDITION,gdpr1_condition:12(5):2:1
+provision:12(5),GDPR1_HAS_NORM,norm:12(5):3
+norm:12(5):3,GDPR1_BEARER,GDPR1_Actor:controller
+norm:12(5):3,GDPR1_ACTION,GDPR1_Action:refuse to act
+norm:12(5):3,GDPR1_OBJECT,GDPR1_InfoType:request
+norm:12(5):3,GDPR1_CONDITION,gdpr1_condition:12(5):3:1
+provision:12(5),GDPR1_HAS_NORM,norm:12(5):4
+norm:12(5):4,GDPR1_BEARER,GDPR1_Actor:the controller
+norm:12(5):4,GDPR1_ACTION,GDPR1_Action:bear
+norm:12(5):4,GDPR1_OBJECT,GDPR1_InfoType:the burden of demonstrating the manifestly unfounded or excessive character of the request
+provision:12(6),GDPR1_HAS_NORM,norm:12(6):1
+norm:12(6):1,GDPR1_BEARER,GDPR1_Actor:the controller
+norm:12(6):1,GDPR1_ACTION,GDPR1_Action:request
+norm:12(6):1,GDPR1_OBJECT,GDPR1_InfoType:the provision of additional information necessary to confirm the identity of the data subject
+norm:12(6):1,GDPR1_CONDITION,gdpr1_condition:12(6):1:1
+provision:12(7),GDPR1_HAS_NORM,norm:12(7):1
+norm:12(7):1,GDPR1_BEARER,GDPR1_Actor:the information
+norm:12(7):1,GDPR1_ACTION,GDPR1_Action:be provided
+norm:12(7):1,GDPR1_OBJECT,GDPR1_InfoType:data subjects
+norm:12(7):1,GDPR1_CONDITION,gdpr1_condition:12(7):1:1
+provision:12(7),GDPR1_HAS_NORM,norm:12(7):2
+norm:12(7):2,GDPR1_BEARER,GDPR1_Actor:the icons
+norm:12(7):2,GDPR1_ACTION,GDPR1_Action:be
+norm:12(7):2,GDPR1_OBJECT,GDPR1_InfoType:machine-readable
+norm:12(7):2,GDPR1_CONDITION,gdpr1_condition:12(7):2:1
+provision:12(8),GDPR1_HAS_NORM,norm:12(8):1
+norm:12(8):1,GDPR1_BEARER,GDPR1_Actor:the commission
+norm:12(8):1,GDPR1_ACTION,GDPR1_Action:adopt
+norm:12(8):1,GDPR1_OBJECT,GDPR1_InfoType:delegated acts
+norm:12(8):1,GDPR1_CONDITION,gdpr1_condition:12(8):1:1
+norm:12(8):1,GDPR1_CONDITION,gdpr1_condition:12(8):1:2
+provision:12(8),GDPR1_HAS_NORM,norm:12(8):2
+norm:12(8):2,GDPR1_BEARER,GDPR1_Actor:the commission
+norm:12(8):2,GDPR1_ACTION,GDPR1_Action:adopt
+norm:12(8):2,GDPR1_OBJECT,GDPR1_InfoType:delegated acts
+norm:12(8):2,GDPR1_CONDITION,gdpr1_condition:12(8):2:1
+norm:12(8):2,GDPR1_CONDITION,gdpr1_condition:12(8):2:2
+provision:13(1),GDPR1_HAS_NORM,norm:13(1):1
+norm:13(1):1,GDPR1_BEARER,GDPR1_Actor:the controller
+norm:13(1):1,GDPR1_ACTION,GDPR1_Action:provide
+norm:13(1):1,GDPR1_OBJECT,"GDPR1_InfoType:the data subject with the identity and the contact details of the controller and, where applicable, of the controller's representative"
+norm:13(1):1,GDPR1_CONDITION,gdpr1_condition:13(1):1:1
+norm:13(1):1,GDPR1_CONDITION,gdpr1_condition:13(1):1:2
+provision:13(1),GDPR1_HAS_NORM,norm:13(1):2
+norm:13(1):2,GDPR1_BEARER,GDPR1_Actor:the controller
+norm:13(1):2,GDPR1_ACTION,GDPR1_Action:provide
+norm:13(1):2,GDPR1_OBJECT,GDPR1_InfoType:the data subject with the contact details of the data protection officer
+norm:13(1):2,GDPR1_CONDITION,gdpr1_condition:13(1):2:1
+norm:13(1):2,GDPR1_CONDITION,gdpr1_condition:13(1):2:2
+provision:13(1),GDPR1_HAS_NORM,norm:13(1):3
+norm:13(1):3,GDPR1_BEARER,GDPR1_Actor:the controller
+norm:13(1):3,GDPR1_ACTION,GDPR1_Action:provide
+norm:13(1):3,GDPR1_OBJECT,GDPR1_InfoType:the data subject with the purposes of the processing for which the personal data are intended as well as the legal basis for the processing
+norm:13(1):3,GDPR1_CONDITION,gdpr1_condition:13(1):3:1
+norm:13(1):3,GDPR1_CONDITION,gdpr1_condition:13(1):3:2
+provision:13(1),GDPR1_HAS_NORM,norm:13(1):4
+norm:13(1):4,GDPR1_BEARER,GDPR1_Actor:controller
+norm:13(1):4,GDPR1_ACTION,GDPR1_Action:provide
+norm:13(1):4,GDPR1_OBJECT,GDPR1_InfoType:the data subject with the legitimate interests pursued by the controller or by a third party
+norm:13(1):4,GDPR1_CONDITION,gdpr1_condition:13(1):4:1
+norm:13(1):4,GDPR1_CONDITION,gdpr1_condition:13(1):4:2
+norm:13(1):4,GDPR1_CONDITION,gdpr1_condition:13(1):4:3
+provision:13(1),GDPR1_HAS_NORM,norm:13(1):5
+norm:13(1):5,GDPR1_BEARER,GDPR1_Actor:controller
+norm:13(1):5,GDPR1_ACTION,GDPR1_Action:provide
+norm:13(1):5,GDPR1_OBJECT,GDPR1_InfoType:the data subject with the recipients or categories of recipients of the personal data
+norm:13(1):5,GDPR1_CONDITION,gdpr1_condition:13(1):5:1
+norm:13(1):5,GDPR1_CONDITION,gdpr1_condition:13(1):5:2
+provision:13(1),GDPR1_HAS_NORM,norm:13(1):6
+norm:13(1):6,GDPR1_BEARER,GDPR1_Actor:controller
+norm:13(1):6,GDPR1_ACTION,GDPR1_Action:provide
+norm:13(1):6,GDPR1_OBJECT,GDPR1_InfoType:the data subject with the fact that the controller intends to transfer personal data to a third country or international organisation and the existence or absence of an adequacy decision by the commission
+norm:13(1):6,GDPR1_CONDITION,gdpr1_condition:13(1):6:1
+norm:13(1):6,GDPR1_CONDITION,gdpr1_condition:13(1):6:2
+provision:13(1),GDPR1_HAS_NORM,norm:13(1):7
+norm:13(1):7,GDPR1_BEARER,GDPR1_Actor:the controller
+norm:13(1):7,GDPR1_ACTION,GDPR1_Action:provide
+norm:13(1):7,GDPR1_OBJECT,"GDPR1_InfoType:the data subject with, in the case of transfers referred to in article 46 or 47, or the second subparagraph of article 49(1), reference to the appropriate or suitable safeguards and the means by which to obtain a copy of them or where they have been made available"
+norm:13(1):7,GDPR1_CONDITION,gdpr1_condition:13(1):7:1
+norm:13(1):7,GDPR1_CONDITION,gdpr1_condition:13(1):7:2
+provision:13(2),GDPR1_HAS_NORM,norm:13(2):1
+norm:13(2):1,GDPR1_BEARER,GDPR1_Actor:the controller
+norm:13(2):1,GDPR1_ACTION,GDPR1_Action:provide
+norm:13(2):1,GDPR1_OBJECT,"GDPR1_InfoType:the data subject with the period for which the personal data will be stored, or if that is not possible, the criteria used to determine that period"
+provision:13(2),GDPR1_HAS_NORM,norm:13(2):2
+norm:13(2):2,GDPR1_BEARER,GDPR1_Actor:the controller
+norm:13(2):2,GDPR1_ACTION,GDPR1_Action:provide
+norm:13(2):2,GDPR1_OBJECT,GDPR1_InfoType:the data subject with the existence of the right to request access to and rectification or erasure of personal data or restriction of processing concerning the data subject or to object to processing as well as the right to data portability
+provision:13(2),GDPR1_HAS_NORM,norm:13(2):3
+norm:13(2):3,GDPR1_BEARER,GDPR1_Actor:controller
+norm:13(2):3,GDPR1_ACTION,GDPR1_Action:provide
+norm:13(2):3,GDPR1_OBJECT,"GDPR1_InfoType:information regarding where the processing is based on point (a) of article 6(1) or point (a) of article 9(2), including the existence of the right to withdraw consent at any time"
+provision:13(2),GDPR1_HAS_NORM,norm:13(2):4
+norm:13(2):4,GDPR1_BEARER,GDPR1_Actor:the controller
+norm:13(2):4,GDPR1_ACTION,GDPR1_Action:provide
+norm:13(2):4,GDPR1_OBJECT,GDPR1_InfoType:the data subject with the right to lodge a complaint with a supervisory authority
+provision:13(2),GDPR1_HAS_NORM,norm:13(2):5
+norm:13(2):5,GDPR1_BEARER,GDPR1_Actor:the controller
+norm:13(2):5,GDPR1_ACTION,GDPR1_Action:provide
+norm:13(2):5,GDPR1_OBJECT,"GDPR1_InfoType:the data subject with information on whether the provision of personal data is a statutory or contractual requirement, or a requirement necessary to enter into a contract, as well as whether the data subject is obliged to provide the personal data and of the possible consequences of failure to provide such data"
+provision:13(2),GDPR1_HAS_NORM,norm:13(2):6
+norm:13(2):6,GDPR1_BEARER,GDPR1_Actor:the controller
+norm:13(2):6,GDPR1_ACTION,GDPR1_Action:provide
+norm:13(2):6,GDPR1_OBJECT,"GDPR1_InfoType:the data subject with information on the existence of automated decision-making, including profiling, referred to in article 22(1) and (4), and at least in those cases, meaningful information about the logic involved, as well as the significance and the envisaged consequences of such processing for the data subject"
+provision:13(3),GDPR1_HAS_NORM,norm:13(3):1
+norm:13(3):1,GDPR1_BEARER,GDPR1_Actor:the controller
+norm:13(3):1,GDPR1_ACTION,GDPR1_Action:provide
+norm:13(3):1,GDPR1_OBJECT,GDPR1_InfoType:the data subject with information on that other purpose and with any relevant further information as referred to in paragraph 2
+norm:13(3):1,GDPR1_CONDITION,gdpr1_condition:13(3):1:1
+provision:13(4),GDPR1_HAS_NORM,norm:13(4):1
+norm:13(4):1,GDPR1_BEARER,"GDPR1_Actor:paragraphs 1, 2 and 3"
+norm:13(4):1,GDPR1_ACTION,GDPR1_Action:apply
+provision:22(1),GDPR1_HAS_NORM,norm:22(1):1
+norm:22(1):1,GDPR1_BEARER,GDPR1_Actor:data subject
+norm:22(1):1,GDPR1_ACTION,GDPR1_Action:be subject
+norm:22(1):1,GDPR1_OBJECT,"GDPR1_InfoType:decision based solely on automated processing, including profiling"
+provision:22(2),GDPR1_HAS_NORM,norm:22(2):1
+norm:22(2):1,GDPR1_BEARER,GDPR1_Actor:paragraph 1
+norm:22(2):1,GDPR1_ACTION,GDPR1_Action:apply
+provision:22(3),GDPR1_HAS_NORM,norm:22(3):1
+norm:22(3):1,GDPR1_BEARER,GDPR1_Actor:data controller
+norm:22(3):1,GDPR1_ACTION,GDPR1_Action:implement
+norm:22(3):1,GDPR1_OBJECT,GDPR1_InfoType:suitable measures to safeguard the data subject's rights and freedoms and legitimate interests
+norm:22(3):1,GDPR1_CONDITION,gdpr1_condition:22(3):1:1
+provision:22(3),GDPR1_HAS_NORM,norm:22(3):2
+norm:22(3):2,GDPR1_BEARER,GDPR1_Actor:the data subject
+norm:22(3):2,GDPR1_ACTION,GDPR1_Action:obtain human intervention
+norm:22(3):2,GDPR1_OBJECT,GDPR1_InfoType:on the part of the controller
+norm:22(3):2,GDPR1_CONDITION,gdpr1_condition:22(3):2:1
+provision:22(3),GDPR1_HAS_NORM,norm:22(3):3
+norm:22(3):3,GDPR1_BEARER,GDPR1_Actor:<the data subject>
+norm:22(3):3,GDPR1_ACTION,GDPR1_Action:<express his or her point of view>
+norm:22(3):3,GDPR1_OBJECT,GDPR1_InfoType:<>
+norm:22(3):3,GDPR1_CONDITION,gdpr1_condition:22(3):3:1
+provision:22(3),GDPR1_HAS_NORM,norm:22(3):4
+norm:22(3):4,GDPR1_BEARER,GDPR1_Actor:data subject
+norm:22(3):4,GDPR1_ACTION,GDPR1_Action:contest
+norm:22(3):4,GDPR1_OBJECT,GDPR1_InfoType:the decision
+norm:22(3):4,GDPR1_CONDITION,gdpr1_condition:22(3):4:1
+provision:22(4),GDPR1_HAS_NORM,norm:22(4):1
+norm:22(4):1,GDPR1_BEARER,GDPR1_Actor:decisions referred to in paragraph 2
+norm:22(4):1,GDPR1_ACTION,GDPR1_Action:be based on
+norm:22(4):1,GDPR1_OBJECT,GDPR1_InfoType:special categories of personal data referred to in article 9(1)
+norm:22(4):1,GDPR1_EXCEPTION,gdpr1_exemption:22(4):1:1
+provision:4(1),GDPR1_HAS_NORM,norm:4(1):1
+norm:4(1):1,GDPR1_BEARER,GDPR1_Actor:<data subject>
+norm:4(1):1,GDPR1_ACTION,GDPR1_Action:<>
+norm:4(1):1,GDPR1_OBJECT,GDPR1_InfoType:<personal data>
+provision:4(1),GDPR1_HAS_NORM,norm:4(1):2
+norm:4(1):2,GDPR1_BEARER,GDPR1_Actor:<an identifiable natural person>
+norm:4(1):2,GDPR1_ACTION,GDPR1_Action:<can be identified>
+norm:4(1):2,GDPR1_OBJECT,GDPR1_InfoType:<>
+norm:4(1):2,GDPR1_CONDITION,gdpr1_condition:4(1):2:1
+provision:4(1),GDPR1_HAS_NORM,norm:4(1):3
+norm:4(1):3,GDPR1_BEARER,GDPR1_Actor:<an identifiable natural person>
+norm:4(1):3,GDPR1_ACTION,GDPR1_Action:<can be identified>
+norm:4(1):3,GDPR1_OBJECT,GDPR1_InfoType:<one>
+norm:4(1):3,GDPR1_CONDITION,gdpr1_condition:4(1):3:1
+norm:4(1):3,GDPR1_CONDITION,gdpr1_condition:4(1):3:2
+provision:4(1),GDPR1_HAS_NORM,norm:4(1):4
+norm:4(1):4,GDPR1_BEARER,GDPR1_Actor:<an identifiable natural person>
+norm:4(1):4,GDPR1_ACTION,GDPR1_Action:<is>
+norm:4(1):4,GDPR1_OBJECT,"GDPR1_InfoType:<one who can be identified, directly or indirectly, by reference to location data>"
+provision:4(1),GDPR1_HAS_NORM,norm:4(1):5
+norm:4(1):5,GDPR1_BEARER,GDPR1_Actor:<an identifiable natural person>
+norm:4(1):5,GDPR1_ACTION,GDPR1_Action:<can be identified>
+norm:4(1):5,GDPR1_OBJECT,GDPR1_InfoType:<by reference to an online identifier>
+norm:4(1):5,GDPR1_CONDITION,gdpr1_condition:4(1):5:1
+provision:4(1),GDPR1_HAS_NORM,norm:4(1):6
+norm:4(1):6,GDPR1_BEARER,GDPR1_Actor:<an identifiable natural person>
+norm:4(1):6,GDPR1_ACTION,GDPR1_Action:<can be identified>
+norm:4(1):6,GDPR1_OBJECT,GDPR1_InfoType:<>
+provision:4(1),GDPR1_HAS_NORM,norm:4(1):7
+norm:4(1):7,GDPR1_BEARER,GDPR1_Actor:<natural person>
+norm:4(1):7,GDPR1_ACTION,GDPR1_Action:<can be identified>
+norm:4(1):7,GDPR1_OBJECT,GDPR1_InfoType:<one who>
+norm:4(1):7,GDPR1_CONDITION,gdpr1_condition:4(1):7:1
+provision:4(1),GDPR1_HAS_NORM,norm:4(1):8
+provision:4(1),GDPR1_HAS_NORM,norm:4(1):9
+norm:4(1):9,GDPR1_BEARER,GDPR1_Actor:identifiable natural person
+norm:4(1):9,GDPR1_ACTION,GDPR1_Action:is
+norm:4(1):9,GDPR1_OBJECT,"GDPR1_InfoType:one who can be identified, directly or indirectly, by reference to one or more factors specific to the mental identity of that natural person"
+provision:4(1),GDPR1_HAS_NORM,norm:4(1):10
+norm:4(1):10,GDPR1_BEARER,GDPR1_Actor:<natural person>
+norm:4(1):10,GDPR1_ACTION,GDPR1_Action:<can be identified>
+norm:4(1):10,GDPR1_OBJECT,GDPR1_InfoType:<one who>
+norm:4(1):10,GDPR1_CONDITION,gdpr1_condition:4(1):10:1
+provision:4(1),GDPR1_HAS_NORM,norm:4(1):11
+norm:4(1):11,GDPR1_BEARER,GDPR1_Actor:<an identifiable natural person>
+norm:4(1):11,GDPR1_ACTION,GDPR1_Action:<can be identified>
+norm:4(1):11,GDPR1_OBJECT,GDPR1_InfoType:<one or more factors specific to the cultural identity>
+provision:4(10),GDPR1_HAS_NORM,norm:4(10):1
+norm:4(10):1,GDPR1_BEARER,GDPR1_Actor:third party
+norm:4(10):1,GDPR1_ACTION,GDPR1_Action:are authorised to process
+norm:4(10):1,GDPR1_OBJECT,GDPR1_InfoType:personal data
+norm:4(10):1,GDPR1_EXCEPTION,gdpr1_exemption:4(10):1:1
+provision:4(11),GDPR1_HAS_NORM,norm:4(11):1
+norm:4(11):1,GDPR1_BEARER,GDPR1_Actor:<data subject>
+norm:4(11):1,GDPR1_ACTION,GDPR1_Action:<signifies agreement>
+norm:4(11):1,GDPR1_OBJECT,GDPR1_InfoType:<processing of personal data relating to him or her>
+norm:4(11):1,GDPR1_CONDITION,gdpr1_condition:4(11):1:1
+norm:4(11):1,GDPR1_CONDITION,gdpr1_condition:4(11):1:2
+norm:4(11):1,GDPR1_CONDITION,gdpr1_condition:4(11):1:3
+norm:4(11):1,GDPR1_CONDITION,gdpr1_condition:4(11):1:4
+provision:4(12),GDPR1_HAS_NORM,norm:4(12):1
+norm:4(12):1,GDPR1_BEARER,GDPR1_Actor:<>
+norm:4(12):1,GDPR1_ACTION,GDPR1_Action:<>
+norm:4(12):1,GDPR1_OBJECT,GDPR1_InfoType:<>
+provision:4(12),GDPR1_HAS_NORM,norm:4(12):2
+provision:4(13),GDPR1_HAS_NORM,norm:4(13):1
+norm:4(13):1,GDPR1_BEARER,GDPR1_Actor:<>
+norm:4(13):1,GDPR1_ACTION,GDPR1_Action:<>
+norm:4(13):1,GDPR1_OBJECT,GDPR1_InfoType:<>
+provision:4(13),GDPR1_HAS_NORM,norm:4(13):2
+provision:4(14),GDPR1_HAS_NORM,norm:4(14):1
+norm:4(14):1,GDPR1_BEARER,GDPR1_Actor:<>
+norm:4(14):1,GDPR1_ACTION,GDPR1_Action:<>
+norm:4(14):1,GDPR1_OBJECT,GDPR1_InfoType:<>
+provision:4(15),GDPR1_HAS_NORM,norm:4(15):1
+norm:4(15):1,GDPR1_BEARER,GDPR1_Actor:<>
+norm:4(15):1,GDPR1_ACTION,GDPR1_Action:<>
+norm:4(15):1,GDPR1_OBJECT,GDPR1_InfoType:<>
+provision:4(15),GDPR1_HAS_NORM,norm:4(15):2
+norm:4(15):2,GDPR1_BEARER,GDPR1_Actor:<>
+norm:4(15):2,GDPR1_ACTION,GDPR1_Action:<>
+norm:4(15):2,GDPR1_OBJECT,GDPR1_InfoType:<data concerning health>
+provision:4(16),GDPR1_HAS_NORM,norm:4(16):1
+norm:4(16):1,GDPR1_EXCEPTION,gdpr1_exemption:4(16):1:1
+provision:4(16),GDPR1_HAS_NORM,norm:4(16):2
+norm:4(16):2,GDPR1_BEARER,GDPR1_Actor:<processor>
+norm:4(16):2,GDPR1_ACTION,GDPR1_Action:<is regarded>
+norm:4(16):2,GDPR1_OBJECT,GDPR1_InfoType:<>
+norm:4(16):2,GDPR1_CONDITION,gdpr1_condition:4(16):2:1
+provision:4(16),GDPR1_HAS_NORM,norm:4(16):3
+norm:4(16):3,GDPR1_BEARER,GDPR1_Actor:processor
+norm:4(16):3,GDPR1_ACTION,GDPR1_Action:is subject
+norm:4(16):3,GDPR1_OBJECT,GDPR1_InfoType:specific obligations under this regulation
+norm:4(16):3,GDPR1_CONDITION,gdpr1_condition:4(16):3:1
+norm:4(16):3,GDPR1_CONDITION,gdpr1_condition:4(16):3:2
+norm:4(16):3,GDPR1_CONDITION,gdpr1_condition:4(16):3:3
+provision:4(17),GDPR1_HAS_NORM,norm:4(17):1
+norm:4(17):1,GDPR1_BEARER,GDPR1_Actor:controller or processor
+norm:4(17):1,GDPR1_ACTION,GDPR1_Action:represent
+norm:4(17):1,GDPR1_OBJECT,GDPR1_InfoType:the controller or processor with regard to their respective obligations under this regulation
+norm:4(17):1,GDPR1_CONDITION,gdpr1_condition:4(17):1:1
+norm:4(17):1,GDPR1_CONDITION,gdpr1_condition:4(17):1:2
+provision:4(18),GDPR1_HAS_NORM,norm:4(18):1
+norm:4(18):1,GDPR1_BEARER,GDPR1_Actor:<
+norm:4(18):1,GDPR1_ACTION,GDPR1_Action:<
+norm:4(18):1,GDPR1_OBJECT,GDPR1_InfoType:<
+provision:4(18),GDPR1_HAS_NORM,norm:4(18):2
+norm:4(18):2,GDPR1_BEARER,GDPR1_Actor:'enterprise'
+norm:4(18):2,GDPR1_ACTION,GDPR1_Action:includes
+norm:4(18):2,GDPR1_OBJECT,GDPR1_InfoType:partnerships or associations regularly engaged in an economic activity
+provision:4(19),GDPR1_HAS_NORM,norm:4(19):1
+norm:4(19):1,GDPR1_BEARER,GDPR1_Actor:<group of undertakings>
+norm:4(19):1,GDPR1_ACTION,GDPR1_Action:<
+norm:4(19):1,GDPR1_OBJECT,GDPR1_InfoType:<
+provision:4(2),GDPR1_HAS_NORM,norm:4(2):1
+norm:4(2):1,GDPR1_BEARER,GDPR1_Actor:<>
+norm:4(2):1,GDPR1_ACTION,GDPR1_Action:<operation or set of operations which is performed>
+norm:4(2):1,GDPR1_OBJECT,GDPR1_InfoType:<personal data or sets of personal data>
+provision:4(2),GDPR1_HAS_NORM,norm:4(2):2
+provision:4(20),GDPR1_HAS_NORM,norm:4(20):1
+norm:4(20):1,GDPR1_BEARER,GDPR1_Actor:controller or processor
+norm:4(20):1,GDPR1_ACTION,GDPR1_Action:adhered to
+norm:4(20):1,GDPR1_OBJECT,GDPR1_InfoType:personal data protection policies
+norm:4(20):1,GDPR1_CONDITION,gdpr1_condition:4(20):1:1
+provision:4(20),GDPR1_HAS_NORM,norm:4(20):2
+norm:4(20):2,GDPR1_BEARER,GDPR1_Actor:controller or processor
+norm:4(20):2,GDPR1_ACTION,GDPR1_Action:adhered to
+norm:4(20):2,GDPR1_OBJECT,GDPR1_InfoType:personal data protection policies
+norm:4(20):2,GDPR1_CONDITION,gdpr1_condition:4(20):2:1
+provision:4(21),GDPR1_HAS_NORM,norm:4(21):1
+norm:4(21):1,GDPR1_BEARER,GDPR1_Actor:supervisory authority
+norm:4(21):1,GDPR1_ACTION,GDPR1_Action:means
+norm:4(21):1,GDPR1_OBJECT,GDPR1_InfoType:an independent public authority
+provision:4(22),GDPR1_HAS_NORM,norm:4(22):1
+norm:4(22):1,GDPR1_BEARER,GDPR1_Actor:<supervisory authority>
+norm:4(22):1,GDPR1_ACTION,GDPR1_Action:<is concerned by the processing>
+norm:4(22):1,GDPR1_OBJECT,GDPR1_InfoType:<personal data>
+norm:4(22):1,GDPR1_CONDITION,gdpr1_condition:4(22):1:1
+provision:4(22),GDPR1_HAS_NORM,norm:4(22):2
+norm:4(22):2,GDPR1_BEARER,GDPR1_Actor:supervisory authority
+norm:4(22):2,GDPR1_ACTION,GDPR1_Action:is concerned
+norm:4(22):2,GDPR1_OBJECT,GDPR1_InfoType:by the processing of personal data
+norm:4(22):2,GDPR1_CONDITION,gdpr1_condition:4(22):2:1
+norm:4(22):2,GDPR1_CONDITION,gdpr1_condition:4(22):2:2
+provision:4(22),GDPR1_HAS_NORM,norm:4(22):3
+norm:4(22):3,GDPR1_BEARER,GDPR1_Actor:supervisory authority
+norm:4(22):3,GDPR1_ACTION,GDPR1_Action:is concerned
+norm:4(22):3,GDPR1_OBJECT,GDPR1_InfoType:processing of personal data
+norm:4(22):3,GDPR1_CONDITION,gdpr1_condition:4(22):3:1
+provision:4(23),GDPR1_HAS_NORM,norm:4(23):1
+norm:4(23):1,GDPR1_BEARER,GDPR1_Actor:<controller or processor>
+norm:4(23):1,GDPR1_ACTION,GDPR1_Action:<processing>
+norm:4(23):1,GDPR1_OBJECT,GDPR1_InfoType:<personal data>
+norm:4(23):1,GDPR1_CONDITION,gdpr1_condition:4(23):1:1
+norm:4(23):1,GDPR1_CONDITION,gdpr1_condition:4(23):1:2
+provision:4(23),GDPR1_HAS_NORM,norm:4(23):2
+norm:4(23):2,GDPR1_BEARER,GDPR1_Actor:controller or processor
+norm:4(23):2,GDPR1_ACTION,GDPR1_Action:processing
+norm:4(23):2,GDPR1_OBJECT,GDPR1_InfoType:personal data
+norm:4(23):2,GDPR1_CONDITION,gdpr1_condition:4(23):2:1
+norm:4(23):2,GDPR1_CONDITION,gdpr1_condition:4(23):2:2
+provision:4(24),GDPR1_HAS_NORM,norm:4(24):1
+provision:4(25),GDPR1_HAS_NORM,norm:4(25):1
+norm:4(25):1,GDPR1_BEARER,GDPR1_Actor:<>
+norm:4(25):1,GDPR1_ACTION,GDPR1_Action:<>
+norm:4(25):1,GDPR1_OBJECT,GDPR1_InfoType:<>
+provision:4(26),GDPR1_HAS_NORM,norm:4(26):1
+norm:4(26):1,GDPR1_BEARER,GDPR1_Actor:<international organisation>
+norm:4(26):1,GDPR1_ACTION,GDPR1_Action:<>
+norm:4(26):1,GDPR1_OBJECT,GDPR1_InfoType:<>
+provision:4(3),GDPR1_HAS_NORM,norm:4(3):1
+norm:4(3):1,GDPR1_BEARER,GDPR1_Actor:[blank]
+norm:4(3):1,GDPR1_ACTION,GDPR1_Action:means
+norm:4(3):1,GDPR1_OBJECT,GDPR1_InfoType:the marking of stored personal data
+provision:4(4),GDPR1_HAS_NORM,norm:4(4):1
+norm:4(4):1,GDPR1_BEARER,GDPR1_Actor:<entity>
+norm:4(4):1,GDPR1_ACTION,GDPR1_Action:<use or disclose>
+norm:4(4):1,GDPR1_OBJECT,GDPR1_InfoType:<personal information>
+norm:4(4):1,GDPR1_CONDITION,gdpr1_condition:4(4):1:1
+norm:4(4):1,GDPR1_CONDITION,gdpr1_condition:4(4):1:2
+norm:4(4):1,GDPR1_EXCEPTION,gdpr1_exemption:4(4):1:1
+norm:4(4):1,GDPR1_EXCEPTION,gdpr1_exemption:4(4):1:2
+provision:4(5),GDPR1_HAS_NORM,norm:4(5):1
+norm:4(5):1,GDPR1_OBJECT,GDPR1_InfoType:personal data
+provision:4(5),GDPR1_HAS_NORM,norm:4(5):2
+norm:4(5):2,GDPR1_OBJECT,GDPR1_InfoType:personal data
+norm:4(5):2,GDPR1_CONDITION,gdpr1_condition:4(5):2:1
+provision:4(5),GDPR1_HAS_NORM,norm:4(5):3
+provision:4(6),GDPR1_HAS_NORM,norm:4(6):1
+norm:4(6):1,GDPR1_BEARER,GDPR1_Actor:<>
+norm:4(6):1,GDPR1_ACTION,GDPR1_Action:<>
+norm:4(6):1,GDPR1_OBJECT,GDPR1_InfoType:<>
+provision:4(7),GDPR1_HAS_NORM,norm:4(7):1
+norm:4(7):1,GDPR1_BEARER,GDPR1_Actor:<controller>
+norm:4(7):1,GDPR1_ACTION,GDPR1_Action:<determines>
+norm:4(7):1,GDPR1_OBJECT,GDPR1_InfoType:<the purposes and means of the processing of personal data>
+provision:4(7),GDPR1_HAS_NORM,norm:4(7):2
+norm:4(7):2,GDPR1_BEARER,GDPR1_Actor:the controller or the specific criteria for its nomination
+norm:4(7):2,GDPR1_ACTION,GDPR1_Action:may be provided for
+norm:4(7):2,GDPR1_OBJECT,GDPR1_InfoType:purposes and means of such processing
+norm:4(7):2,GDPR1_CONDITION,gdpr1_condition:4(7):2:1
+provision:4(8),GDPR1_HAS_NORM,norm:4(8):1
+norm:4(8):1,GDPR1_BEARER,GDPR1_Actor:processor
+norm:4(8):1,GDPR1_ACTION,GDPR1_Action:processes
+norm:4(8):1,GDPR1_OBJECT,GDPR1_InfoType:personal data
+provision:4(9),GDPR1_HAS_NORM,norm:4(9):1
+norm:4(9):1,GDPR1_BEARER,GDPR1_Actor:'recipient'
+norm:4(9):1,GDPR1_ACTION,GDPR1_Action:are disclosed
+norm:4(9):1,GDPR1_OBJECT,GDPR1_InfoType:personal data
+provision:4(9),GDPR1_HAS_NORM,norm:4(9):2
+norm:4(9):2,GDPR1_BEARER,GDPR1_Actor:public authorities
+norm:4(9):2,GDPR1_ACTION,GDPR1_Action:receive
+norm:4(9):2,GDPR1_OBJECT,GDPR1_InfoType:personal data
+norm:4(9):2,GDPR1_CONDITION,gdpr1_condition:4(9):2:1
+provision:4(9),GDPR1_HAS_NORM,norm:4(9):3
+norm:4(9):3,GDPR1_BEARER,GDPR1_Actor:those public authorities
+norm:4(9):3,GDPR1_ACTION,GDPR1_Action:processing
+norm:4(9):3,GDPR1_OBJECT,GDPR1_InfoType:personal data
+provision:46(1),GDPR1_HAS_NORM,norm:46(1):1
+norm:46(1):1,GDPR1_BEARER,GDPR1_Actor:controller or processor
+norm:46(1):1,GDPR1_ACTION,GDPR1_Action:transfer
+norm:46(1):1,GDPR1_OBJECT,GDPR1_InfoType:personal data
+norm:46(1):1,GDPR1_CONDITION,gdpr1_condition:46(1):1:1
+norm:46(1):1,GDPR1_CONDITION,gdpr1_condition:46(1):1:2
+provision:46(1),GDPR1_HAS_NORM,norm:46(1):2
+norm:46(1):2,GDPR1_BEARER,GDPR1_Actor:controller or processor
+norm:46(1):2,GDPR1_ACTION,GDPR1_Action:transfer
+norm:46(1):2,GDPR1_OBJECT,GDPR1_InfoType:personal data
+norm:46(1):2,GDPR1_CONDITION,gdpr1_condition:46(1):2:1
+norm:46(1):2,GDPR1_CONDITION,gdpr1_condition:46(1):2:2
+provision:46(2),GDPR1_HAS_NORM,norm:46(2):1
+norm:46(2):1,GDPR1_BEARER,GDPR1_Actor:public authorities or bodies
+norm:46(2):1,GDPR1_ACTION,GDPR1_Action:provide appropriate safeguards
+norm:46(2):1,GDPR1_OBJECT,GDPR1_InfoType:a legally binding and enforceable instrument
+norm:46(2):1,GDPR1_CONDITION,gdpr1_condition:46(2):1:1
+provision:46(2),GDPR1_HAS_NORM,norm:46(2):2
+norm:46(2):2,GDPR1_BEARER,GDPR1_Actor:safeguards
+norm:46(2):2,GDPR1_ACTION,GDPR1_Action:be provided for
+norm:46(2):2,GDPR1_OBJECT,GDPR1_InfoType:binding corporate rules
+norm:46(2):2,GDPR1_CONDITION,gdpr1_condition:46(2):2:1
+provision:46(2),GDPR1_HAS_NORM,norm:46(2):3
+norm:46(2):3,GDPR1_BEARER,"GDPR1_Actor:(implicit, not explicitly stated in the text)"
+norm:46(2):3,GDPR1_ACTION,GDPR1_Action:provide
+norm:46(2):3,GDPR1_OBJECT,GDPR1_InfoType:appropriate safeguards
+norm:46(2):3,GDPR1_CONDITION,gdpr1_condition:46(2):3:1
+norm:46(2):3,GDPR1_CONDITION,gdpr1_condition:46(2):3:2
+provision:46(2),GDPR1_HAS_NORM,norm:46(2):4
+norm:46(2):4,GDPR1_BEARER,GDPR1_Actor:standard data protection clauses
+norm:46(2):4,GDPR1_ACTION,GDPR1_Action:be provided for
+norm:46(2):4,GDPR1_OBJECT,GDPR1_InfoType:appropriate safeguards referred to in paragraph 1
+norm:46(2):4,GDPR1_CONDITION,gdpr1_condition:46(2):4:1
+norm:46(2):4,GDPR1_CONDITION,gdpr1_condition:46(2):4:2
+norm:46(2):4,GDPR1_CONDITION,gdpr1_condition:46(2):4:3
+provision:46(2),GDPR1_HAS_NORM,norm:46(2):5
+norm:46(2):5,GDPR1_BEARER,GDPR1_Actor:an approved code of conduct pursuant to article 40 together with binding and enforceable commitments of the controller or processor in the third country
+norm:46(2):5,GDPR1_ACTION,GDPR1_Action:provide
+norm:46(2):5,GDPR1_OBJECT,GDPR1_InfoType:the appropriate safeguards referred to in paragraph 1
+norm:46(2):5,GDPR1_CONDITION,gdpr1_condition:46(2):5:1
+provision:46(2),GDPR1_HAS_NORM,norm:46(2):6
+norm:46(2):6,GDPR1_BEARER,GDPR1_Actor:the controller or processor in the third country
+norm:46(2):6,GDPR1_ACTION,GDPR1_Action:apply
+norm:46(2):6,GDPR1_OBJECT,"GDPR1_InfoType:the appropriate safeguards, including as regards data subjects' rights"
+norm:46(2):6,GDPR1_CONDITION,gdpr1_condition:46(2):6:1
+provision:46(3),GDPR1_HAS_NORM,norm:46(3):1
+norm:46(3):1,GDPR1_BEARER,"GDPR1_Actor:contractual clauses between the controller or processor and the controller, processor, or the recipient of the personal data"
+norm:46(3):1,GDPR1_ACTION,GDPR1_Action:be provided
+norm:46(3):1,GDPR1_OBJECT,GDPR1_InfoType:appropriate safeguards
+norm:46(3):1,GDPR1_CONDITION,gdpr1_condition:46(3):1:1
+provision:46(3),GDPR1_HAS_NORM,norm:46(3):2
+norm:46(3):2,GDPR1_BEARER,GDPR1_Actor:public authorities or bodies
+norm:46(3):2,GDPR1_ACTION,GDPR1_Action:provide
+norm:46(3):2,GDPR1_OBJECT,GDPR1_InfoType:appropriate safeguards
+norm:46(3):2,GDPR1_CONDITION,gdpr1_condition:46(3):2:1
+provision:46(4),GDPR1_HAS_NORM,norm:46(4):1
+norm:46(4):1,GDPR1_BEARER,GDPR1_Actor:supervisory authority
+norm:46(4):1,GDPR1_ACTION,GDPR1_Action:apply
+norm:46(4):1,GDPR1_OBJECT,GDPR1_InfoType:the consistency mechanism referred to in article 63
+norm:46(4):1,GDPR1_CONDITION,gdpr1_condition:46(4):1:1
+provision:46(5),GDPR1_HAS_NORM,norm:46(5):1
+norm:46(5):1,GDPR1_BEARER,GDPR1_Actor:member state or supervisory authority
+norm:46(5):1,GDPR1_ACTION,GDPR1_Action:remain valid
+norm:46(5):1,GDPR1_OBJECT,GDPR1_InfoType:authorisations
+norm:46(5):1,GDPR1_CONDITION,gdpr1_condition:46(5):1:1
+norm:46(5):1,GDPR1_EXCEPTION,gdpr1_exemption:46(5):1:1
+provision:46(5),GDPR1_HAS_NORM,norm:46(5):2
+norm:46(5):2,GDPR1_BEARER,GDPR1_Actor:commission
+norm:46(5):2,GDPR1_ACTION,GDPR1_Action:remain in force
+norm:46(5):2,GDPR1_OBJECT,GDPR1_InfoType:decisions adopted by the commission on the basis of article 26(4) of directive 95/46/ec
+norm:46(5):2,GDPR1_CONDITION,gdpr1_condition:46(5):2:1
+norm:46(5):2,GDPR1_CONDITION,gdpr1_condition:46(5):2:2
+provision:47(1),GDPR1_HAS_NORM,norm:47(1):1
+norm:47(1):1,GDPR1_BEARER,GDPR1_Actor:the competent supervisory authority
+norm:47(1):1,GDPR1_ACTION,GDPR1_Action:approve
+norm:47(1):1,GDPR1_OBJECT,GDPR1_InfoType:binding corporate rules
+norm:47(1):1,GDPR1_CONDITION,gdpr1_condition:47(1):1:1
+norm:47(1):1,GDPR1_CONDITION,gdpr1_condition:47(1):1:2
+provision:47(1),GDPR1_HAS_NORM,norm:47(1):2
+norm:47(1):2,GDPR1_BEARER,GDPR1_Actor:competent supervisory authority
+norm:47(1):2,GDPR1_ACTION,GDPR1_Action:approve
+norm:47(1):2,GDPR1_OBJECT,GDPR1_InfoType:binding corporate rules
+norm:47(1):2,GDPR1_CONDITION,gdpr1_condition:47(1):2:1
+norm:47(1):2,GDPR1_CONDITION,gdpr1_condition:47(1):2:2
+provision:47(1),GDPR1_HAS_NORM,norm:47(1):3
+norm:47(1):3,GDPR1_BEARER,GDPR1_Actor:competent supervisory authority
+norm:47(1):3,GDPR1_ACTION,GDPR1_Action:approve
+norm:47(1):3,GDPR1_OBJECT,GDPR1_InfoType:binding corporate rules
+norm:47(1):3,GDPR1_CONDITION,gdpr1_condition:47(1):3:1
+provision:47(2),GDPR1_HAS_NORM,norm:47(2):1
+norm:47(2):1,GDPR1_BEARER,"GDPR1_Actor:group of undertakings, or group of enterprises engaged in a joint economic activity and each of its members"
+norm:47(2):1,GDPR1_ACTION,GDPR1_Action:specify
+norm:47(2):1,GDPR1_OBJECT,GDPR1_InfoType:structure and contact details
+norm:47(2):1,GDPR1_CONDITION,gdpr1_condition:47(2):1:1
+provision:47(2),GDPR1_HAS_NORM,norm:47(2):2
+norm:47(2):2,GDPR1_OBJECT,"GDPR1_InfoType:the data transfers or set of transfers, including the categories of personal data, the type of processing and its purposes, the type of data subjects affected, and the identification of the third country or countries in question"
+norm:47(2):2,GDPR1_CONDITION,gdpr1_condition:47(2):2:1
+provision:47(2),GDPR1_HAS_NORM,norm:47(2):3
+norm:47(2):3,GDPR1_BEARER,GDPR1_Actor:the binding corporate rules
+norm:47(2):3,GDPR1_ACTION,GDPR1_Action:specify
+norm:47(2):3,GDPR1_OBJECT,GDPR1_InfoType:their legally binding nature
+norm:47(2):3,GDPR1_CONDITION,gdpr1_condition:47(2):3:1
+provision:47(2),GDPR1_HAS_NORM,norm:47(2):4
+provision:47(2),GDPR1_HAS_NORM,norm:47(2):5
+norm:47(2):5,GDPR1_BEARER,GDPR1_Actor:data subjects
+norm:47(2):5,GDPR1_ACTION,GDPR1_Action:specify the rights; exercise those rights; lodge a complaint; obtain redress; obtain compensation
+norm:47(2):5,GDPR1_OBJECT,GDPR1_InfoType:processing; decisions based solely on automated processing; complaint; breach of the binding corporate rules
+provision:47(2),GDPR1_HAS_NORM,norm:47(2):6
+norm:47(2):6,GDPR1_BEARER,GDPR1_Actor:controller or processor established on the territory of a member state
+norm:47(2):6,GDPR1_ACTION,GDPR1_Action:specify
+norm:47(2):6,GDPR1_OBJECT,GDPR1_InfoType:the acceptance by the controller or processor of liability for any breaches of the binding corporate rules
+norm:47(2):6,GDPR1_CONDITION,gdpr1_condition:47(2):6:1
+provision:47(2),GDPR1_HAS_NORM,norm:47(2):7
+norm:47(2):7,GDPR1_BEARER,GDPR1_Actor:<the controller or the processor>
+norm:47(2):7,GDPR1_ACTION,GDPR1_Action:<be exempt from liability>
+norm:47(2):7,GDPR1_OBJECT,GDPR1_InfoType:<>
+norm:47(2):7,GDPR1_CONDITION,gdpr1_condition:47(2):7:1
+provision:47(2),GDPR1_HAS_NORM,norm:47(2):8
+norm:47(2):8,GDPR1_BEARER,GDPR1_Actor:the binding corporate rules referred to in paragraph 1
+norm:47(2):8,GDPR1_ACTION,GDPR1_Action:specify how the information on the binding corporate rules is provided
+norm:47(2):8,GDPR1_OBJECT,GDPR1_InfoType:the data subjects
+norm:47(2):8,GDPR1_CONDITION,gdpr1_condition:47(2):8:1
+provision:47(2),GDPR1_HAS_NORM,norm:47(2):9
+norm:47(2):9,GDPR1_BEARER,GDPR1_Actor:any data protection officer designated in accordance with article 37 or any other person or entity in charge
+norm:47(2):9,GDPR1_ACTION,GDPR1_Action:monitoring compliance
+norm:47(2):9,GDPR1_OBJECT,GDPR1_InfoType:binding corporate rules
+norm:47(2):9,GDPR1_CONDITION,gdpr1_condition:47(2):9:1
+norm:47(2):9,GDPR1_CONDITION,gdpr1_condition:47(2):9:2
+provision:47(2),GDPR1_HAS_NORM,norm:47(2):10
+norm:47(2):10,GDPR1_BEARER,GDPR1_Actor:binding corporate rules
+norm:47(2):10,GDPR1_ACTION,GDPR1_Action:specify
+norm:47(2):10,GDPR1_OBJECT,GDPR1_InfoType:the complaint procedures
+provision:47(2),GDPR1_HAS_NORM,norm:47(2):11
+norm:47(2):11,GDPR1_BEARER,"GDPR1_Actor:group of undertakings, or group of enterprises engaged in a joint economic activity"
+norm:47(2):11,GDPR1_ACTION,GDPR1_Action:specify the mechanisms
+norm:47(2):11,GDPR1_OBJECT,GDPR1_InfoType:verification of compliance with the binding corporate rules
+norm:47(2):11,GDPR1_CONDITION,gdpr1_condition:47(2):11:1
+provision:47(2),GDPR1_HAS_NORM,norm:47(2):12
+norm:47(2):12,GDPR1_BEARER,GDPR1_Actor:the binding corporate rules referred to in paragraph 1
+norm:47(2):12,GDPR1_ACTION,GDPR1_Action:specify
+norm:47(2):12,GDPR1_OBJECT,GDPR1_InfoType:the mechanisms for reporting and recording changes to the rules and reporting those changes to the supervisory authority
+provision:47(2),GDPR1_HAS_NORM,norm:47(2):13
+norm:47(2):13,GDPR1_BEARER,"GDPR1_Actor:any member of the group of undertakings, or group of enterprises engaged in a joint economic activity"
+norm:47(2):13,GDPR1_ACTION,GDPR1_Action:ensure compliance
+norm:47(2):13,GDPR1_OBJECT,"GDPR1_InfoType:(implicitly understood, not explicitly mentioned in the text)"
+norm:47(2):13,GDPR1_EXCEPTION,gdpr1_exemption:47(2):13:1
+provision:47(2),GDPR1_HAS_NORM,norm:47(2):14
+norm:47(2):14,GDPR1_BEARER,GDPR1_Actor:the binding corporate rules referred to in paragraph 1
+norm:47(2):14,GDPR1_ACTION,GDPR1_Action:specify
+norm:47(2):14,GDPR1_OBJECT,GDPR1_InfoType:the mechanisms for reporting to the competent supervisory authority any legal requirements
+norm:47(2):14,GDPR1_CONDITION,gdpr1_condition:47(2):14:1
+norm:47(2):14,GDPR1_CONDITION,gdpr1_condition:47(2):14:2
+provision:47(2),GDPR1_HAS_NORM,norm:47(2):15
+norm:47(2):15,GDPR1_BEARER,GDPR1_Actor:personnel
+norm:47(2):15,GDPR1_ACTION,GDPR1_Action:having
+norm:47(2):15,GDPR1_OBJECT,GDPR1_InfoType:permanent or regular access to personal data
+norm:47(2):15,GDPR1_CONDITION,gdpr1_condition:47(2):15:1
+provision:47(3),GDPR1_HAS_NORM,norm:47(3):1
+norm:47(3):1,GDPR1_BEARER,GDPR1_Actor:the commission
+norm:47(3):1,GDPR1_ACTION,GDPR1_Action:specify the format and procedures for the exchange of information
+norm:47(3):1,GDPR1_OBJECT,"GDPR1_InfoType:between controllers, processors, and supervisory authorities for binding corporate rules"
+norm:47(3):1,GDPR1_CONDITION,gdpr1_condition:47(3):1:1
+provision:49(1),GDPR1_HAS_NORM,norm:49(1):1
+norm:49(1):1,GDPR1_BEARER,GDPR1_Actor:a transfer or a set of transfers of personal data to a third country or an international organisation
+norm:49(1):1,GDPR1_ACTION,GDPR1_Action:take place
+norm:49(1):1,GDPR1_OBJECT,GDPR1_InfoType:personal data
+norm:49(1):1,GDPR1_CONDITION,gdpr1_condition:49(1):1:1
+norm:49(1):1,GDPR1_CONDITION,gdpr1_condition:49(1):1:2
+norm:49(1):1,GDPR1_CONDITION,gdpr1_condition:49(1):1:3
+provision:49(1),GDPR1_HAS_NORM,norm:49(1):2
+norm:49(1):2,GDPR1_BEARER,GDPR1_Actor:transfer or a set of transfers of personal data
+norm:49(1):2,GDPR1_ACTION,GDPR1_Action:take place
+norm:49(1):2,GDPR1_OBJECT,GDPR1_InfoType:personal data
+norm:49(1):2,GDPR1_CONDITION,gdpr1_condition:49(1):2:1
+norm:49(1):2,GDPR1_CONDITION,gdpr1_condition:49(1):2:2
+norm:49(1):2,GDPR1_CONDITION,gdpr1_condition:49(1):2:3
+norm:49(1):2,GDPR1_CONDITION,gdpr1_condition:49(1):2:4
+provision:49(1),GDPR1_HAS_NORM,norm:49(1):3
+norm:49(1):3,GDPR1_BEARER,GDPR1_Actor:a transfer or a set of transfers of personal data
+norm:49(1):3,GDPR1_ACTION,GDPR1_Action:take place
+norm:49(1):3,GDPR1_OBJECT,GDPR1_InfoType:a transfer or a set of transfers of personal data
+norm:49(1):3,GDPR1_CONDITION,gdpr1_condition:49(1):3:1
+norm:49(1):3,GDPR1_CONDITION,gdpr1_condition:49(1):3:2
+norm:49(1):3,GDPR1_CONDITION,gdpr1_condition:49(1):3:3
+provision:49(1),GDPR1_HAS_NORM,norm:49(1):4
+norm:49(1):4,GDPR1_BEARER,GDPR1_Actor:a transfer or a set of transfers of personal data to a third country or an international organisation
+norm:49(1):4,GDPR1_ACTION,GDPR1_Action:take place
+norm:49(1):4,GDPR1_OBJECT,GDPR1_InfoType:personal data
+norm:49(1):4,GDPR1_CONDITION,gdpr1_condition:49(1):4:1
+provision:49(1),GDPR1_HAS_NORM,norm:49(1):5
+norm:49(1):5,GDPR1_BEARER,GDPR1_Actor:a transfer or a set of transfers of personal data
+norm:49(1):5,GDPR1_ACTION,GDPR1_Action:take place
+norm:49(1):5,GDPR1_OBJECT,GDPR1_InfoType:personal data
+norm:49(1):5,GDPR1_CONDITION,gdpr1_condition:49(1):5:1
+norm:49(1):5,GDPR1_CONDITION,gdpr1_condition:49(1):5:2
+provision:49(1),GDPR1_HAS_NORM,norm:49(1):6
+norm:49(1):6,GDPR1_BEARER,GDPR1_Actor:a transfer or a set of transfers of personal data
+norm:49(1):6,GDPR1_ACTION,GDPR1_Action:take place
+norm:49(1):6,GDPR1_OBJECT,GDPR1_InfoType:personal data
+norm:49(1):6,GDPR1_CONDITION,gdpr1_condition:49(1):6:1
+norm:49(1):6,GDPR1_CONDITION,gdpr1_condition:49(1):6:2
+provision:49(1),GDPR1_HAS_NORM,norm:49(1):7
+norm:49(1):7,GDPR1_BEARER,GDPR1_Actor:a transfer or a set of transfers of personal data
+norm:49(1):7,GDPR1_ACTION,GDPR1_Action:take place
+norm:49(1):7,GDPR1_OBJECT,GDPR1_InfoType:personal data
+norm:49(1):7,GDPR1_CONDITION,gdpr1_condition:49(1):7:1
+norm:49(1):7,GDPR1_CONDITION,gdpr1_condition:49(1):7:2
+norm:49(1):7,GDPR1_CONDITION,gdpr1_condition:49(1):7:3
+norm:49(1):7,GDPR1_CONDITION,gdpr1_condition:49(1):7:4
+provision:49(1),GDPR1_HAS_NORM,norm:49(1):8
+norm:49(1):8,GDPR1_BEARER,GDPR1_Actor:the controller
+norm:49(1):8,GDPR1_ACTION,GDPR1_Action:transfer
+norm:49(1):8,GDPR1_OBJECT,GDPR1_InfoType:personal data
+norm:49(1):8,GDPR1_CONDITION,gdpr1_condition:49(1):8:1
+norm:49(1):8,GDPR1_CONDITION,gdpr1_condition:49(1):8:2
+norm:49(1):8,GDPR1_CONDITION,gdpr1_condition:49(1):8:3
+norm:49(1):8,GDPR1_CONDITION,gdpr1_condition:49(1):8:4
+norm:49(1):8,GDPR1_CONDITION,gdpr1_condition:49(1):8:5
+norm:49(1):8,GDPR1_CONDITION,gdpr1_condition:49(1):8:6
+provision:49(2),GDPR1_HAS_NORM,norm:49(2):1
+norm:49(2):1,GDPR1_BEARER,GDPR1_Actor:a transfer
+norm:49(2):1,GDPR1_ACTION,GDPR1_Action:involve
+norm:49(2):1,GDPR1_OBJECT,GDPR1_InfoType:the entirety of the personal data or entire categories of the personal data contained in the register
+norm:49(2):1,GDPR1_CONDITION,gdpr1_condition:49(2):1:1
+provision:49(2),GDPR1_HAS_NORM,norm:49(2):2
+norm:49(2):2,GDPR1_BEARER,GDPR1_Actor:the transfer
+norm:49(2):2,GDPR1_ACTION,GDPR1_Action:be made
+norm:49(2):2,GDPR1_OBJECT,GDPR1_InfoType:the register
+norm:49(2):2,GDPR1_CONDITION,gdpr1_condition:49(2):2:1
+norm:49(2):2,GDPR1_EXCEPTION,gdpr1_exemption:49(2):2:1
+norm:49(2):2,GDPR1_EXCEPTION,gdpr1_exemption:49(2):2:2
+provision:49(3),GDPR1_HAS_NORM,norm:49(3):1
+norm:49(3):1,GDPR1_BEARER,GDPR1_Actor:public authorities
+norm:49(3):1,GDPR1_ACTION,GDPR1_Action:carry out
+norm:49(3):1,GDPR1_OBJECT,GDPR1_InfoType:activities
+provision:49(4),GDPR1_HAS_NORM,norm:49(4):1
+norm:49(4):1,GDPR1_BEARER,GDPR1_Actor:the public interest
+norm:49(4):1,GDPR1_ACTION,GDPR1_Action:be recognised
+norm:49(4):1,GDPR1_OBJECT,GDPR1_InfoType:in union law
+norm:49(4):1,GDPR1_CONDITION,gdpr1_condition:49(4):1:1
+provision:49(4),GDPR1_HAS_NORM,norm:49(4):2
+norm:49(4):2,GDPR1_BEARER,GDPR1_Actor:member state
+norm:49(4):2,GDPR1_ACTION,GDPR1_Action:recognise
+norm:49(4):2,GDPR1_OBJECT,GDPR1_InfoType:public interest referred to in point (d) of the first subparagraph of paragraph 1
+norm:49(4):2,GDPR1_CONDITION,gdpr1_condition:49(4):2:1
+provision:49(5),GDPR1_HAS_NORM,norm:49(5):1
+norm:49(5):1,GDPR1_BEARER,GDPR1_Actor:union or member state law
+norm:49(5):1,GDPR1_ACTION,GDPR1_Action:set limits
+norm:49(5):1,GDPR1_OBJECT,GDPR1_InfoType:transfer of specific categories of personal data to a third country or an international organisation
+norm:49(5):1,GDPR1_CONDITION,gdpr1_condition:49(5):1:1
+norm:49(5):1,GDPR1_CONDITION,gdpr1_condition:49(5):1:2
+provision:49(5),GDPR1_HAS_NORM,norm:49(5):2
+norm:49(5):2,GDPR1_BEARER,GDPR1_Actor:member states
+norm:49(5):2,GDPR1_ACTION,GDPR1_Action:notify
+norm:49(5):2,GDPR1_OBJECT,GDPR1_InfoType:such provisions
+provision:49(6),GDPR1_HAS_NORM,norm:49(6):1
+norm:49(6):1,GDPR1_BEARER,GDPR1_Actor:the controller or processor
+norm:49(6):1,GDPR1_ACTION,GDPR1_Action:document
+norm:49(6):1,GDPR1_OBJECT,GDPR1_InfoType:the assessment
+norm:49(6):1,GDPR1_CONDITION,gdpr1_condition:49(6):1:1
+provision:49(6),GDPR1_HAS_NORM,norm:49(6):2
+norm:49(6):2,GDPR1_BEARER,GDPR1_Actor:the controller or processor
+norm:49(6):2,GDPR1_ACTION,GDPR1_Action:document
+norm:49(6):2,GDPR1_OBJECT,GDPR1_InfoType:the suitable safeguards referred to in the second subparagraph of paragraph 1 of this article in the records referred to in article 30
+provision:6(1),GDPR1_HAS_NORM,norm:6(1):1
+norm:6(1):1,GDPR1_BEARER,GDPR1_Actor:processing
+norm:6(1):1,GDPR1_ACTION,GDPR1_Action:be lawful
+norm:6(1):1,GDPR1_EXCEPTION,gdpr1_exemption:6(1):1:1
+norm:6(1):1,GDPR1_EXCEPTION,gdpr1_exemption:6(1):1:2
+provision:6(1),GDPR1_HAS_NORM,norm:6(1):2
+norm:6(1):2,GDPR1_BEARER,GDPR1_Actor:controller
+norm:6(1):2,GDPR1_ACTION,GDPR1_Action:processing
+provision:6(1),GDPR1_HAS_NORM,norm:6(1):3
+norm:6(1):3,GDPR1_BEARER,GDPR1_Actor:public authorities
+norm:6(1):3,GDPR1_ACTION,GDPR1_Action:processing
+provision:6(2),GDPR1_HAS_NORM,norm:6(2):1
+norm:6(2):1,GDPR1_BEARER,GDPR1_Actor:member states
+norm:6(2):1,GDPR1_ACTION,GDPR1_Action:maintain or introduce more specific provisions
+norm:6(2):1,GDPR1_OBJECT,GDPR1_InfoType:application of the rules of this regulation
+norm:6(2):1,GDPR1_CONDITION,gdpr1_condition:6(2):1:1
+provision:6(2),GDPR1_HAS_NORM,norm:6(2):2
+norm:6(2):2,GDPR1_BEARER,GDPR1_Actor:member states
+norm:6(2):2,GDPR1_ACTION,GDPR1_Action:maintain or introduce more specific provisions
+norm:6(2):2,GDPR1_OBJECT,GDPR1_InfoType:specific requirements for the processing and other measures
+norm:6(2):2,GDPR1_CONDITION,gdpr1_condition:6(2):2:1
+provision:6(3),GDPR1_HAS_NORM,norm:6(3):1
+norm:6(3):1,GDPR1_BEARER,GDPR1_Actor:the controller
+norm:6(3):1,GDPR1_ACTION,GDPR1_Action:be laid down
+norm:6(3):1,GDPR1_OBJECT,GDPR1_InfoType:the basis for the processing referred to in point (c) and (e) of paragraph 1
+norm:6(3):1,GDPR1_CONDITION,gdpr1_condition:6(3):1:1
+provision:6(3),GDPR1_HAS_NORM,norm:6(3):2
+norm:6(3):2,GDPR1_BEARER,GDPR1_Actor:the processing
+norm:6(3):2,GDPR1_ACTION,GDPR1_Action:be determined
+norm:6(3):2,GDPR1_OBJECT,GDPR1_InfoType:purpose
+provision:6(3),GDPR1_HAS_NORM,norm:6(3):3
+norm:6(3):3,GDPR1_BEARER,GDPR1_Actor:controller
+norm:6(3):3,GDPR1_ACTION,GDPR1_Action:performance of a task
+provision:6(3),GDPR1_HAS_NORM,norm:6(3):4
+norm:6(3):4,GDPR1_OBJECT,GDPR1_InfoType:the application of rules of this regulation
+provision:6(3),GDPR1_HAS_NORM,norm:6(3):5
+norm:6(3):5,GDPR1_BEARER,GDPR1_Actor:provisions
+norm:6(3):5,GDPR1_ACTION,GDPR1_Action:adapt
+norm:6(3):5,GDPR1_OBJECT,GDPR1_InfoType:general conditions governing the lawfulness of processing
+norm:6(3):5,GDPR1_CONDITION,gdpr1_condition:6(3):5:1
+provision:6(3),GDPR1_HAS_NORM,norm:6(3):6
+norm:6(3):6,GDPR1_BEARER,GDPR1_Actor:specific provisions
+norm:6(3):6,GDPR1_ACTION,GDPR1_Action:adapt
+norm:6(3):6,GDPR1_OBJECT,GDPR1_InfoType:the types of data
+provision:6(3),GDPR1_HAS_NORM,norm:6(3):7
+norm:6(3):7,GDPR1_BEARER,GDPR1_Actor:provisions
+norm:6(3):7,GDPR1_ACTION,GDPR1_Action:adapt
+norm:6(3):7,GDPR1_OBJECT,GDPR1_InfoType:the data subjects concerned
+provision:6(3),GDPR1_HAS_NORM,norm:6(3):8
+norm:6(3):8,GDPR1_BEARER,GDPR1_Actor:entities
+norm:6(3):8,GDPR1_ACTION,GDPR1_Action:be disclosed
+norm:6(3):8,GDPR1_OBJECT,GDPR1_InfoType:personal data
+provision:6(3),GDPR1_HAS_NORM,norm:6(3):9
+norm:6(3):9,GDPR1_BEARER,GDPR1_Actor:provisions
+norm:6(3):9,GDPR1_ACTION,GDPR1_Action:adapt
+norm:6(3):9,GDPR1_OBJECT,GDPR1_InfoType:the purpose limitation
+provision:6(3),GDPR1_HAS_NORM,norm:6(3):10
+norm:6(3):10,GDPR1_BEARER,GDPR1_Actor:provisions
+norm:6(3):10,GDPR1_ACTION,GDPR1_Action:adapt
+norm:6(3):10,GDPR1_OBJECT,GDPR1_InfoType:storage periods
+provision:6(3),GDPR1_HAS_NORM,norm:6(3):11
+norm:6(3):11,GDPR1_BEARER,GDPR1_Actor:provisions
+norm:6(3):11,GDPR1_ACTION,GDPR1_Action:adapt
+norm:6(3):11,GDPR1_OBJECT,GDPR1_InfoType:processing operations and processing procedures
+norm:6(3):11,GDPR1_CONDITION,gdpr1_condition:6(3):11:1
+provision:6(3),GDPR1_HAS_NORM,norm:6(3):12
+norm:6(3):12,GDPR1_BEARER,GDPR1_Actor:the union or the member state law
+norm:6(3):12,GDPR1_ACTION,GDPR1_Action:meet
+norm:6(3):12,GDPR1_OBJECT,GDPR1_InfoType:an objective of public interest
+provision:6(4),GDPR1_HAS_NORM,norm:6(4):1
+norm:6(4):1,GDPR1_BEARER,GDPR1_Actor:controller
+norm:6(4):1,GDPR1_ACTION,GDPR1_Action:take into account
+norm:6(4):1,GDPR1_OBJECT,GDPR1_InfoType:any link between the purposes for which the personal data have been collected and the purposes of the intended further processing
+norm:6(4):1,GDPR1_CONDITION,gdpr1_condition:6(4):1:1
+norm:6(4):1,GDPR1_CONDITION,gdpr1_condition:6(4):1:2
+provision:6(4),GDPR1_HAS_NORM,norm:6(4):2
+norm:6(4):2,GDPR1_BEARER,GDPR1_Actor:controller
+norm:6(4):2,GDPR1_ACTION,GDPR1_Action:take into account
+norm:6(4):2,GDPR1_OBJECT,GDPR1_InfoType:context in which the personal data have been collected
+norm:6(4):2,GDPR1_CONDITION,gdpr1_condition:6(4):2:1
+provision:6(4),GDPR1_HAS_NORM,norm:6(4):3
+norm:6(4):3,GDPR1_BEARER,GDPR1_Actor:the controller
+norm:6(4):3,GDPR1_ACTION,GDPR1_Action:take into account
+norm:6(4):3,GDPR1_OBJECT,GDPR1_InfoType:the nature of the personal data
+norm:6(4):3,GDPR1_CONDITION,gdpr1_condition:6(4):3:1
+norm:6(4):3,GDPR1_CONDITION,gdpr1_condition:6(4):3:2
+norm:6(4):3,GDPR1_CONDITION,gdpr1_condition:6(4):3:3
+provision:6(4),GDPR1_HAS_NORM,norm:6(4):4
+norm:6(4):4,GDPR1_BEARER,GDPR1_Actor:controller
+norm:6(4):4,GDPR1_ACTION,GDPR1_Action:take into account
+norm:6(4):4,GDPR1_OBJECT,GDPR1_InfoType:the possible consequences of the intended further processing for data subjects
+norm:6(4):4,GDPR1_CONDITION,gdpr1_condition:6(4):4:1
+norm:6(4):4,GDPR1_CONDITION,gdpr1_condition:6(4):4:2
+provision:6(4),GDPR1_HAS_NORM,norm:6(4):5
+norm:6(4):5,GDPR1_BEARER,GDPR1_Actor:the controller
+norm:6(4):5,GDPR1_ACTION,GDPR1_Action:take into account
+norm:6(4):5,GDPR1_OBJECT,GDPR1_InfoType:the existence of appropriate safeguards
+norm:6(4):5,GDPR1_CONDITION,gdpr1_condition:6(4):5:1
+provision:12(1),GDPR1_REFERS_TO,provision:13(1)
+provision:12(1),GDPR1_REFERS_TO,provision:13(2)
+provision:12(1),GDPR1_REFERS_TO,provision:13(3)
+provision:12(1),GDPR1_REFERS_TO,provision:13(4)
+provision:12(5),GDPR1_REFERS_TO,provision:13(1)
+provision:12(5),GDPR1_REFERS_TO,provision:13(2)
+provision:12(5),GDPR1_REFERS_TO,provision:13(3)
+provision:12(5),GDPR1_REFERS_TO,provision:13(4)
+provision:12(7),GDPR1_REFERS_TO,provision:13(1)
+provision:12(7),GDPR1_REFERS_TO,provision:13(2)
+provision:12(7),GDPR1_REFERS_TO,provision:13(3)
+provision:12(7),GDPR1_REFERS_TO,provision:13(4)
+provision:13(1),GDPR1_REFERS_TO,provision:6(1)
+provision:13(1),GDPR1_REFERS_TO,provision:46(1)
+provision:13(1),GDPR1_REFERS_TO,provision:46(2)
+provision:13(1),GDPR1_REFERS_TO,provision:46(3)
+provision:13(1),GDPR1_REFERS_TO,provision:46(4)
+provision:13(1),GDPR1_REFERS_TO,provision:46(5)
+provision:13(1),GDPR1_REFERS_TO,provision:47(1)
+provision:13(1),GDPR1_REFERS_TO,provision:47(2)
+provision:13(1),GDPR1_REFERS_TO,provision:47(3)
+provision:13(1),GDPR1_REFERS_TO,provision:49(1)
+provision:13(2),GDPR1_REFERS_TO,provision:6(1)
+provision:13(2),GDPR1_REFERS_TO,provision:22(1)
+provision:46(2),GDPR1_REFERS_TO,provision:47(1)
+provision:46(2),GDPR1_REFERS_TO,provision:47(2)
+provision:46(2),GDPR1_REFERS_TO,provision:47(3)
+provision:47(2),GDPR1_REFERS_TO,provision:22(1)
+provision:47(2),GDPR1_REFERS_TO,provision:22(2)
+provision:47(2),GDPR1_REFERS_TO,provision:22(3)
+provision:47(2),GDPR1_REFERS_TO,provision:22(4)
+provision:47(2),GDPR1_REFERS_TO,provision:13(1)
+provision:47(2),GDPR1_REFERS_TO,provision:13(2)
+provision:47(2),GDPR1_REFERS_TO,provision:13(3)
+provision:47(2),GDPR1_REFERS_TO,provision:13(4)
+provision:49(1),GDPR1_REFERS_TO,provision:46(1)
+provision:49(1),GDPR1_REFERS_TO,provision:46(2)
+provision:49(1),GDPR1_REFERS_TO,provision:46(3)
+provision:49(1),GDPR1_REFERS_TO,provision:46(4)
+provision:49(1),GDPR1_REFERS_TO,provision:46(5)
+provision:49(1),GDPR1_REFERS_TO,provision:13(1)
+provision:49(1),GDPR1_REFERS_TO,provision:13(2)
+provision:49(1),GDPR1_REFERS_TO,provision:13(3)
+provision:49(1),GDPR1_REFERS_TO,provision:13(4)

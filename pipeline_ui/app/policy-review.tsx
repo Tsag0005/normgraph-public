@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useMemo, useRef, useState } from 'react';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -28,9 +28,27 @@ const models = [
   { id: 'gpt-4o', label: 'GPT-4o · legacy comparison' },
 ];
 
+const policyPresets = [
+  {
+    id: 'github-2017',
+    label: 'GitHub Privacy Statement · 11 Oct 2017',
+    path: '/policies/github_privacy_2017.md',
+    source: 'https://github.com/github/site-policy/blob/2017-10-11/Policies/github-privacy-statement.md',
+  },
+  {
+    id: 'github-2018',
+    label: 'GitHub Privacy Statement · 25 May 2018',
+    path: '/policies/github_privacy_2018.md',
+    source: 'https://github.com/github/site-policy/blob/2018-05-25/Policies/github-privacy-statement.md',
+  },
+];
+
 export function PolicyReviewForm({ jobs, featureText, setFeatureText, hasApiKey, busy, start, onError }: Props) {
   const [documentText, setDocumentText] = useState('');
   const [documentName, setDocumentName] = useState('');
+  const [selectedPolicyId, setSelectedPolicyId] = useState('');
+  const [loadingPolicy, setLoadingPolicy] = useState(false);
+  const policyRequest = useRef(0);
   const [reviewModel, setReviewModel] = useState('gpt-6.1-sol');
   const [reasoningEffort, setReasoningEffort] = useState('medium');
   const [maxCostUsd, setMaxCostUsd] = useState(5);
@@ -56,8 +74,36 @@ export function PolicyReviewForm({ jobs, featureText, setFeatureText, hasApiKey,
     job.request.documentName === documentName && job.request.reviewModel === reviewModel &&
     job.request.reasoningEffort === reasoningEffort);
   const estimate = preview?.result?.estimate;
+  const selectedPolicy = policyPresets.find((item) => item.id === selectedPolicyId);
   const highEnd = reviewModel === 'gpt-6-astra' || reasoningEffort === 'xhigh';
-  const ready = !!featureText.trim() && !!documentText.trim() && !!documentName.trim();
+  const ready = !loadingPolicy && !!featureText.trim() && !!documentText.trim() && !!documentName.trim();
+
+  async function choosePolicy(id: string) {
+    const request = ++policyRequest.current;
+    setSelectedPolicyId(id);
+    setDocumentText('');
+    const preset = policyPresets.find((item) => item.id === id);
+    setDocumentName(preset?.label || '');
+    if (!preset) {
+      setLoadingPolicy(false);
+      return;
+    }
+    setLoadingPolicy(true);
+    try {
+      const response = await fetch(preset.path);
+      if (!response.ok) throw new Error(`Could not load ${preset.label}`);
+      const text = await response.text();
+      if (request === policyRequest.current) setDocumentText(text);
+    } catch (error) {
+      if (request === policyRequest.current) {
+        setSelectedPolicyId('');
+        setDocumentName('');
+        onError(error instanceof Error ? error.message : String(error));
+      }
+    } finally {
+      if (request === policyRequest.current) setLoadingPolicy(false);
+    }
+  }
 
   async function readFile(file: File, receive: (value: string) => void) {
     try {
@@ -86,6 +132,9 @@ export function PolicyReviewForm({ jobs, featureText, setFeatureText, hasApiKey,
               setResumeJobId(job?.id || '');
               if (!job) return;
               setFeatureText(String(job.request.featureText || ''));
+              ++policyRequest.current;
+              setLoadingPolicy(false);
+              setSelectedPolicyId('');
               setDocumentText(String(job.request.documentText || ''));
               setDocumentName(String(job.request.documentName || ''));
               setReviewModel(String(job.request.reviewModel || 'gpt-6.1-sol'));
@@ -118,21 +167,43 @@ export function PolicyReviewForm({ jobs, featureText, setFeatureText, hasApiKey,
             placeholder="Feature: ...&#10;Scenario: ...&#10;  Given ...&#10;  When ...&#10;  Then ..." />
         </div>
         <div className="space-y-2">
+          <label htmlFor="review-policy-preset" className="text-sm font-semibold">Example policy (optional)</label>
+          <NativeSelect id="review-policy-preset" className="w-full" value={selectedPolicyId}
+            onChange={(event) => void choosePolicy(event.target.value)}>
+            <NativeSelectOption value="">Upload or paste my own document</NativeSelectOption>
+            {policyPresets.map((item) => <NativeSelectOption key={item.id} value={item.id}>
+              {item.label}
+            </NativeSelectOption>)}
+          </NativeSelect>
+          <p className="text-sm text-muted-foreground">
+            These are historical examples from GitHub&apos;s site-policy repository (CC0-1.0),
+            not its current policy. {selectedPolicy && <a className="underline" href={selectedPolicy.source}
+              target="_blank" rel="noreferrer">View this version at GitHub.</a>}
+          </p>
+          {loadingPolicy && <p className="text-sm text-muted-foreground">Loading example policy…</p>}
           <label htmlFor="review-document-name" className="text-sm font-semibold">Document name</label>
           <Input id="review-document-name" value={documentName}
-            onChange={(event) => setDocumentName(event.target.value)}
+            onChange={(event) => { setSelectedPolicyId(''); setDocumentName(event.target.value); }}
             placeholder="GitHub Privacy Statement, 2017" />
           <input aria-label="Upload policy document" type="file" accept=".txt,.md,text/plain,text/markdown"
             className="block w-full text-sm" onChange={(event) => {
               const file = event.target.files?.[0];
               if (file) {
+                ++policyRequest.current;
+                setLoadingPolicy(false);
+                setSelectedPolicyId('');
                 setDocumentName(file.name);
                 void readFile(file, setDocumentText);
               }
               event.currentTarget.value = '';
             }} />
           <Textarea aria-label="Policy document text" className="min-h-44 font-mono text-sm"
-            value={documentText} onChange={(event) => setDocumentText(event.target.value)}
+            value={documentText} onChange={(event) => {
+              ++policyRequest.current;
+              setLoadingPolicy(false);
+              setSelectedPolicyId('');
+              setDocumentText(event.target.value);
+            }}
             placeholder="Paste the complete policy here. Keep headings and line breaks for citations." />
           <p className="text-sm text-muted-foreground">The document and scenarios are sent to OpenAI for review. Their text and the results are saved in your browser workspace backup.</p>
         </div>

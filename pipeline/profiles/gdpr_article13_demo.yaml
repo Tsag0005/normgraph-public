@@ -1,0 +1,20 @@
+# Hand-authored structural profile for the focused eight-article GDPR corpus.
+# Article 4 numbers paragraphs as "(1)" while the other selected articles use "1.".
+# The lookahead in the paragraph pattern captures the digits in either representation.
+name: eu_gdpr_article13_context
+description: Selected complete GDPR articles supporting the Article 13 experiment
+levels:
+  - name: article
+    role: container
+    pattern: '^Article\s+(4|6|12|13|22|46|47|49)$'
+  - name: article_title
+    role: heading
+    pattern: '^(?:Lawfulness of processing|Transparent information, communication and modalities for the exercise of the rights of the data subject|Information to be provided where personal data are collected from the data subject|Automated individual decision-making, including profiling|Transfers subject to appropriate safeguards|Binding corporate rules|Derogations for specific situations)$'
+  - name: paragraph
+    role: provision
+    pattern: '^(?=\(?(\d+))(?:\(\d+\)|\d+\.)\s+'
+id_template: '{article}({paragraph})'
+identifier_pattern: '\b((?:4|6|12|13|22|46|47|49)(?:\(\d+\))?)(?!\d)'
+citation_nouns:
+  - article
+min_provision_words: 8
