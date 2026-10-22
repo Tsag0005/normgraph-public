@@ -481,6 +481,20 @@ export default function Home() {
   const buildActive = jobs.some(
     (j) => ['build', 'register'].includes(j.kind) && active(j),
   );
+  const nodePrefix = draft.nodePrefix.trim().toUpperCase();
+  const registerBlockedReason = busy
+    ? 'Wait for the current request to finish.'
+    : buildActive
+      ? 'Wait for the running graph build or corpus registration to finish.'
+      : !draft.name.trim()
+        ? 'Enter a corpus name.'
+        : !draft.text.trim()
+          ? 'Paste or upload the source text.'
+          : !/^[A-Z][A-Z0-9]{0,7}_$/.test(nodePrefix)
+            ? 'Enter a graph prefix such as DPR_: one to eight letters or digits, starting with a letter and ending in an underscore.'
+            : !draft.profileText.trim() && !openaiKey.trim()
+              ? 'Paste a structural profile, or enter your OpenAI API key to induce one.'
+              : '';
   const validCorpus = !!corpus && !corpus.errors.length && corpus.sourceExists;
   const canGenerate =
     validCorpus && (manual ? !!requirement.trim() : !!selection.length);
@@ -1245,8 +1259,8 @@ export default function Home() {
                       />
                     </Field>
                     <Field
-                      label="Neo4j node prefix"
-                      help="Choose a unique prefix: 1–8 uppercase letters or numbers, beginning with a letter and ending in an underscore. For example, TX_. Existing prefixes are shown in the corpus selector."
+                      label="Graph prefix"
+                      help="Required for local and Neo4j graphs. Use a unique prefix of 1–8 uppercase letters or numbers, beginning with a letter and ending in an underscore, such as DPR_. Existing prefixes are shown in the corpus selector."
                     >
                       <Input
                         aria-label="New node prefix"
@@ -1326,16 +1340,12 @@ export default function Home() {
                       )}
                       <Button
                         disabled={
-                          busy ||
-                          buildActive ||
-                          !draft.text.trim() ||
-                          !draft.name.trim() ||
-                          (!draft.profileText.trim() && !openaiKey.trim()) ||
-                          !/^[A-Z][A-Z0-9]{0,7}_$/.test(draft.nodePrefix)
+                          !!registerBlockedReason
                         }
                         onClick={() =>
                           void start('register', {
                             ...draft,
+                            nodePrefix,
                             extractionModel,
                             estimateOnly: false,
                           })
@@ -1346,6 +1356,11 @@ export default function Home() {
                           : 'Induce profile & save · paid'}
                       </Button>
                     </div>
+                    {registerBlockedReason && (
+                      <p role="status" className="text-sm text-muted-foreground">
+                        To enable save: {registerBlockedReason}
+                      </p>
+                    )}
                   </CardContent>
                 </Card>
               </TabsContent>
