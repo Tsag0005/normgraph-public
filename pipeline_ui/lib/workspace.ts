@@ -134,18 +134,6 @@ export function syncWorkspace(): Promise<void> {
   return syncing;
 }
 
-export async function exportWorkspace(): Promise<void> {
-  await syncWorkspace();
-  const snapshot = await get<Blob>('snapshot');
-  if (!snapshot) throw new Error('No workspace snapshot is available');
-  const url = URL.createObjectURL(snapshot);
-  const link = document.createElement('a');
-  link.href = url;
-  link.download = `normgraph-workspace-${new Date().toISOString().slice(0, 10)}.zip`;
-  link.click();
-  window.setTimeout(() => URL.revokeObjectURL(url), 60_000);
-}
-
 export async function importWorkspace(file: File): Promise<void> {
   if (file.size > 30 * 1024 * 1024) throw new Error('Workspace archive exceeds 30 MB');
   await ensureWorkspace();

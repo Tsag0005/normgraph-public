@@ -23,6 +23,16 @@ class DemoAssetsTests(unittest.TestCase):
                               if item.get("name") == "gdpr_article13_demo")
                 self.assertEqual(corpus["errors"], [])
                 self.assertEqual(corpus["buildStatus"], "Local graph ready")
+                check = workspace.start("graph-status", {
+                    "corpusId": corpus["id"], "graphBackend": "local",
+                }, {"OPENAI_API_KEY": ""})
+                for _ in range(100):
+                    if workspace.jobs[check["id"]]["status"] not in public_server.core.ACTIVE:
+                        break
+                    time.sleep(0.1)
+                checked = workspace.jobs[check["id"]]
+                self.assertEqual(checked["status"], "succeeded", checked.get("error"))
+                self.assertGreater(checked["result"]["provisions"], 0)
                 job = workspace.start("preview", {
                     "corpusId": corpus["id"], "provisions": ["13(2)"],
                     "graphBackend": "local",

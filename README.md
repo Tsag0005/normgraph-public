@@ -10,7 +10,9 @@ historical reports, and previous site runtime files are excluded.
 - Each browser keeps visitor-added corpus files, graphs, job history, prompts, and
   generated features in IndexedDB. The bundled examples remain in the image.
   **Export workspace** makes a ZIP backup; **Import workspace**
-  restores it in another browser. Clearing browser site data deletes its workspace.
+  restores it in another browser. The ZIP downloads to the computer running the
+  browser, not the Docker container. Wait for jobs to finish and confirm the
+  download before replacing a container or clearing browser site data.
 - The Python API is a temporary compute worker. It restores a browser's ZIP when its
   working copy is missing. The default Docker deployment stores working copies on
   tmpfs, so a restart clears them.
@@ -37,6 +39,11 @@ custom statute, induce its structural profile, run a free build preflight, extra
 norms, verify exceptions, build a graph, preview context, and generate/download
 Gherkin for one or multiple provisions. New extraction requires OntoGPT and the
 visitor's OpenAI key. Pre-existing artifacts can be reused by the build.
+
+For the bundled GDPR demo, select `gdpr_article13_demo`, load the provision
+list, choose `13(2)`, and preview or generate. Its local graph is already
+available; **Check local graph** is optional. **Build graph** starts a new,
+potentially costly extraction and is unnecessary for that demo.
 
 ## Review a policy document
 

@@ -345,7 +345,7 @@ class Handler(BaseHTTPRequestHandler):
         parsed = urlparse(origin)
         return parsed.netloc == self.headers.get("Host") or origin == "http://localhost:3000"
 
-    def _send(self, value, status=200, *, raw=False, cookie=None):
+    def _send(self, value, status=200, *, raw=False, cookie=None, download=None):
         payload = value if raw else json.dumps(value, ensure_ascii=False).encode("utf-8")
         self.send_response(status)
         if cookie:
@@ -357,6 +357,8 @@ class Handler(BaseHTTPRequestHandler):
         self.send_header("Access-Control-Allow-Headers", "Content-Type,X-OpenAI-Key,X-Neo4j-URI,X-Neo4j-Username,X-Neo4j-Password,X-Neo4j-Database")
         self.send_header("Access-Control-Allow-Methods", "GET,POST,PUT,OPTIONS")
         self.send_header("Content-Type", "application/zip" if raw else "application/json; charset=utf-8")
+        if download:
+            self.send_header("Content-Disposition", f'attachment; filename="{download}"')
         self.send_header("Cache-Control", "no-store")
         self.send_header("Content-Length", str(len(payload)))
         self.end_headers()
@@ -387,7 +389,7 @@ class Handler(BaseHTTPRequestHandler):
                 with workspace.lock:
                     self._send(sorted(workspace.jobs.values(), key=lambda x: x["createdAt"], reverse=True))
             elif path == "/api/workspace/snapshot":
-                self._send(workspace.snapshot(), raw=True)
+                self._send(workspace.snapshot(), raw=True, download="normgraph-workspace.zip")
             elif path.startswith("/api/jobs/") and "/files/" in path:
                 jid, filename = path[len("/api/jobs/"):].split("/files/", 1)
                 base = (workspace.jobs_dir / jid).resolve()

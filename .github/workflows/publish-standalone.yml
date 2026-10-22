@@ -78,6 +78,7 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 20
     steps:
+      - uses: actions/checkout@v4
       - uses: docker/login-action@v3
         with:
           registry: ghcr.io
@@ -100,6 +101,7 @@ jobs:
               grep -q 'October 11, 2017' policy-2017.md
               grep -q 'May 25, 2018' policy-2018.md
               docker exec normgraph sh -c 'test -s /app/pipeline/corpora/GDPR_article13_demo.txt && test -s /app/seed_graphs/gdpr_article13_demo/nodes.csv && test -s /app/seed_graphs/gdpr_article13_demo/edges.csv'
+              python3 deploy/smoke_published.py
               exit 0
             fi
             sleep 2

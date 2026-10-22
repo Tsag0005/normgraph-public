@@ -198,6 +198,11 @@ def build(data, result=None):
             result["warnings"].extend(problems)
         else:
             graph_dir = Path(corpus.SPIRES_GRAPH_DIR)
+            from kg_testgen.local_graph import LocalGraphClient
+            graph = LocalGraphClient()
+            graph.directory = graph_dir
+            with graph:
+                result["graphProvisions"] = len(graph.provisions)
             (graph_dir / "ready.json").write_text(json.dumps({"corpus": corpus.NAME}), encoding="utf-8")
             result.update(loaded=True, summary="Selected corpus graph is ready in local storage")
     elif data.get("loadGraph"):

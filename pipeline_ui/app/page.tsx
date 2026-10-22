@@ -38,8 +38,9 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Progress } from '@/components/ui/progress';
 import { api, API_BASE, setCredentials, type Corpus, type Job, type Run } from '@/lib/api';
-import { exportWorkspace, importWorkspace, syncWorkspace } from '@/lib/workspace';
+import { importWorkspace, syncWorkspace } from '@/lib/workspace';
 import { PolicyReviewForm, PolicyReviewResults } from '@/app/policy-review';
+import { buttonVariants } from '@/components/ui/button';
 
 const active = (job?: Job) =>
   !!job && ['queued', 'running', 'cancelling'].includes(job.status);
@@ -416,6 +417,7 @@ export default function Home() {
   const [jobs, setJobs] = useState<Job[]>([]);
   const [jobId, setJobId] = useState('');
   const [error, setError] = useState('');
+  const [exportNotice, setExportNotice] = useState('');
   const [busy, setBusy] = useState(false);
   const [openaiKey, setOpenaiKey] = useState('');
   const [graphBackend, setGraphBackend] = useState<'local' | 'neo4j'>('local');
@@ -537,7 +539,7 @@ export default function Home() {
       setJobs((current) => [job, ...current]);
       if (reveal) setJobId(job.id);
       if (kind === 'preview') setPreviewSignature(signature);
-      await syncWorkspace();
+      void syncWorkspace().catch((e: Error) => setError(e.message));
     } catch (e) {
       setError(e instanceof Error ? e.message : String(e));
     } finally {
@@ -612,9 +614,12 @@ export default function Home() {
               </div>
             )}
             <div className="flex flex-wrap items-center gap-3 lg:col-span-2">
-              <Button variant="outline" onClick={() => void exportWorkspace().catch((e: Error) => setError(e.message))}>
+              <a className={buttonVariants({ variant: 'outline' })}
+                href={`${API_BASE}/api/workspace/snapshot`}
+                download="normgraph-workspace.zip"
+                onClick={() => setExportNotice('Download requested. Check this browser’s Downloads for normgraph-workspace.zip.')}>
                 <Download className="h-4 w-4" /> Export workspace
-              </Button>
+              </a>
               <label className="cursor-pointer rounded-md border px-4 py-2 text-sm font-medium hover:bg-muted">
                 Import workspace
                 <input type="file" accept=".zip,application/zip" className="sr-only"
@@ -624,6 +629,11 @@ export default function Home() {
                     e.currentTarget.value = '';
                   }} />
               </label>
+              {exportNotice && <p role="status" className="w-full text-sm text-muted-foreground">{exportNotice}</p>}
+              <p className="w-full text-sm text-muted-foreground">
+                Wait for running jobs to finish before exporting. Workspace ZIPs download to the
+                device running this browser, not the Docker container.
+              </p>
             </div>
           </CardContent>
         </Card>
@@ -695,7 +705,7 @@ export default function Home() {
                         variant="outline"
                         disabled={busy || active(graphStatus)}
                         onClick={() =>
-                          void start('graph-status', { corpusId }, false)
+                          void start('graph-status', { corpusId })
                         }
                       >
                         Check {graphBackend === 'local' ? 'local graph' : 'Neo4j'}
@@ -708,6 +718,12 @@ export default function Home() {
                             'Graph status has not been checked.'}
                       </span>
                     </div>
+                    {graphBackend === 'local' && corpus.buildStatus === 'Local graph ready' && (
+                      <p className="text-sm text-muted-foreground">
+                        The local graph is ready. This status check is optional; select a provision
+                        below to preview or generate a scenario.
+                      </p>
+                    )}
                     {graphStatus?.result?.warnings?.map((w, i) => (
                       <p className="text-sm text-destructive" key={i}>
                         {w}
@@ -1013,6 +1029,19 @@ export default function Home() {
                         Generate · paid
                       </Button>
                     </div>
+                    <p className="text-sm text-muted-foreground">
+                      {!validCorpus
+                        ? 'Choose a valid corpus first.'
+                        : busy
+                          ? 'Starting a job; controls will re-enable when its request is accepted.'
+                          : !canGenerate
+                            ? manual
+                              ? 'Enter the clause text to enable preview and generation.'
+                              : 'Load the provision list and select at least one provision to enable preview and generation.'
+                            : !openaiKey.trim()
+                              ? 'Preview is ready. Enter your OpenAI API key to enable paid generation.'
+                              : 'Preview and generation are ready. The graph status check is optional.'}
+                    </p>
                   </CardContent>
                 </Card>
               </TabsContent>
@@ -1031,6 +1060,15 @@ export default function Home() {
                     </CardDescription>
                   </CardHeader>
                   <CardContent className="space-y-5">
+                    {graphBackend === 'local' && corpus?.builtIn && corpus.buildStatus === 'Local graph ready' && (
+                      <Alert>
+                        <AlertTitle>Bundled graph already available</AlertTitle>
+                        <AlertDescription>
+                          For the demo, go to Generate scenarios and select a provision. Building again
+                          runs paid extraction and is only needed if you intend to replace this graph.
+                        </AlertDescription>
+                      </Alert>
+                    )}
                     <div className="rounded-xl bg-muted p-4">
                       <p className="font-semibold">
                         Reuse existing corpus artifacts

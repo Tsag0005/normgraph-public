@@ -19,7 +19,9 @@ review setup without building a graph during the meeting.
 1. **Select the built-in corpus.** Choose `gdpr_article13_demo` under
    **Selected corpus**. Explain that this focused corpus contains selected GDPR
    articles relevant to the Article 13 experiment. Its graph was built in
-   advance and is available immediately through the local CSV backend.
+   advance and is available immediately through the local CSV backend. You do
+   not need **Build graph** for this demo. **Check local graph** is an optional
+   diagnostic; it does not unlock scenario generation.
 2. **Choose the provision.** Open **Generate scenarios**, load the free
    provision list, and select `13(2)` (or another Article 13 paragraph). The
    source text for that identifier comes from the corpus.
