@@ -182,7 +182,7 @@ def stage_clean(dry_run: bool) -> None:
 
 
 def gate_modalities() -> dict:
-    """4. Did the schema land? Every norm NONE means it did not."""
+    """4. Did extraction identify the norms' deontic force?"""
     import glob
     import yaml
     counts = {}
@@ -198,11 +198,15 @@ def gate_modalities() -> dict:
     top, top_count = max(counts.items(), key=lambda kv: kv[1])
     _say("modality", "%d norms: %s" % (total, ", ".join(
         "%s %d" % (k, v) for k, v in sorted(counts.items(), key=lambda kv: -kv[1]))))
-    if top_count / float(total) > MAX_SINGLE_MODALITY_SHARE:
+    if (top in ("NONE", "UNSPECIFIED") and
+            top_count / float(total) > MAX_SINGLE_MODALITY_SHARE):
         raise GateFailed(
             "%.0f%% of norms are %s. The schema's distinctions did not land -- check the "
             "worked examples in %s." % (100 * top_count / total, top,
                                         corpus_config.SPIRES_SCHEMA))
+    if top_count / float(total) > MAX_SINGLE_MODALITY_SHARE:
+        _say("modality", "note: the source may legitimately contain only %s rules; "
+                         "review a sample of the cleaned extraction" % top)
     return counts
 
 

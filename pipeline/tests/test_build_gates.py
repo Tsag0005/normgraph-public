@@ -27,6 +27,7 @@ import io
 import os
 import sys
 import tempfile
+from unittest.mock import patch
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)
@@ -98,13 +99,42 @@ def test_a_provision_pattern_matching_every_line_is_caught():
     _expect_stop(mutate, "a provision pattern matching every line")
 
 
-def test_the_modality_gate_rejects_a_single_label():
-    """Every norm NONE means the schema's distinctions did not land."""
+def test_the_real_corpus_has_multiple_modalities():
     assert build_corpus.MAX_SINGLE_MODALITY_SHARE < 1.0
     counts = build_corpus.gate_modalities()
     assert len(counts) > 1, "the real corpus should use several modalities: %s" % counts
     top = max(counts.values()) / float(sum(counts.values()))
     assert top <= build_corpus.MAX_SINGLE_MODALITY_SHARE, counts
+
+
+def test_modality_gate_allows_a_corpus_of_obligations():
+    """A short document containing only 'must' rules still has valid modalities."""
+    import yaml
+    with tempfile.TemporaryDirectory() as directory:
+        path = os.path.join(directory, "example.clean.yaml")
+        with io.open(path, "w", encoding="utf-8") as fh:
+            yaml.safe_dump({"norms": [{"deontic_modality": "OBLIGATION"}] * 3}, fh)
+        with patch.object(build_corpus.corpus_config, "provision_glob",
+                          return_value=os.path.join(directory, "*.clean.yaml")):
+            assert build_corpus.gate_modalities() == {"OBLIGATION": 3}
+
+
+def test_modality_gate_stops_unclassified_norms():
+    """Uniform NONE or missing modalities still indicate a failed extraction."""
+    import yaml
+    with tempfile.TemporaryDirectory() as directory:
+        path = os.path.join(directory, "example.clean.yaml")
+        with patch.object(build_corpus.corpus_config, "provision_glob",
+                          return_value=os.path.join(directory, "*.clean.yaml")):
+            for norms in ([{"deontic_modality": "NONE"}], [{}]):
+                with io.open(path, "w", encoding="utf-8") as fh:
+                    yaml.safe_dump({"norms": norms}, fh)
+                try:
+                    build_corpus.gate_modalities()
+                except build_corpus.GateFailed:
+                    pass
+                else:
+                    raise AssertionError("unclassified norms passed the modality gate")
 
 
 def test_bootstrap_finds_a_config_by_what_it_points_at():
